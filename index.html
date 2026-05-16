@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hướng dẫn sử dụng KLASSA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="Bộ tài liệu hướng dẫn sử dụng phần mềm quản lý trung tâm dạy học KLASSA — đầy đủ 23 nhóm chức năng, kèm hình ảnh thực tế.">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Docsify Vue theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style>
+    :root {
+      --theme-color: #4f46e5;
+      --theme-color-secondary: #6366f1;
+    }
+
+    /* Hero gradient header */
+    .sidebar > h1 {
+      background: linear-gradient(135deg, #4f46e5 0%, #2563eb 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    /* Improve readability for Vietnamese text */
+    .markdown-section {
+      max-width: 900px;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .markdown-section h1 {
+      margin-top: 0;
+      background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .markdown-section h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.4rem;
+      color: #1f2937;
+    }
+
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background: #f5f3ff;
+    }
+
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+
+    .markdown-section code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    /* Sidebar polish */
+    .sidebar {
+      border-right: 1px solid #e5e7eb;
+    }
+    .sidebar ul li a {
+      font-size: 14px;
+    }
+    .sidebar ul li.active > a {
+      color: var(--theme-color);
+      font-weight: 600;
+    }
+
+    /* Cover page */
+    .cover {
+      background: linear-gradient(135deg, #ede9fe 0%, #dbeafe 50%, #cffafe 100%) !important;
+    }
+    .cover h1 {
+      background: linear-gradient(135deg, #4f46e5 0%, #2563eb 50%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Search box */
+    .search input {
+      border-radius: 8px;
+    }
+
+    /* Images caption-like */
+    .markdown-section img {
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Đang tải tài liệu...</div>
+
+  <script>
+    window.$docsify = {
+      name: '<strong>KLASSA</strong> — Hướng dẫn',
+      repo: 'silasle123/klassa-docs',
+      loadSidebar: '_sidebar.md',
+      subMaxLevel: 2,
+      auto2top: true,
+      homepage: 'README.md',
+      coverpage: '_coverpage.md',
+      onlyCover: false,
+
+      // Search
+      search: {
+        placeholder: 'Tìm trong tài liệu...',
+        noData: 'Không tìm thấy kết quả',
+        depth: 6,
+        hideOtherSidebarContent: false,
+      },
+
+      // Pagination (Next / Previous)
+      pagination: {
+        previousText: '← Bài trước',
+        nextText: 'Bài tiếp →',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      // Copy code button
+      'copyCode': {
+        buttonText: 'Sao chép',
+        errorText: 'Lỗi',
+        successText: 'Đã sao chép',
+      },
+
+      // Image zoom
+      plugins: [
+        function (hook, vm) {
+          hook.beforeEach(function (html) {
+            // Edit on GitHub link
+            var url = 'https://github.com/silasle123/klassa-docs/blob/main/' + vm.route.file;
+            var editHtml = '\n\n----\n\n<small>📝 [Sửa bài này trên GitHub](' + url + ') · 🐛 [Báo lỗi](https://github.com/silasle123/klassa-docs/issues/new)</small>\n';
+            return html + editHtml;
+          });
+        }
+      ],
+    };
+  </script>
+
+  <!-- Docsify core -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2"></script>
+</body>
+</html>
