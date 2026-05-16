@@ -1,0 +1,141 @@
+[
+  {
+    "text": "KLASSA — Hướng dẫn",
+    "href": "/klassa-docs/",
+    "status": "❌ EMPTY",
+    "contentLen": 0,
+    "h1": "NO_SECTION",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "netFails": [
+      "404 https://silasle123.github.io/klassa-docs//klassa-docs/"
+    ]
+  },
+  {
+    "text": "Mục lục",
+    "href": "#/README?id=m%e1%bb%a5c-l%e1%bb%a5c",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "Giới thiệu",
+    "href": "#/README",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "Tài liệu này dành cho ai?",
+    "href": "#/README?id=t%c3%a0i-li%e1%bb%87u-n%c3%a0y-d%c3%a0nh-cho-ai",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "Cách đọc tài liệu",
+    "href": "#/README?id=c%c3%a1ch-%c4%91%e1%bb%8dc-t%c3%a0i-li%e1%bb%87u",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "Cần hỗ trợ thêm?",
+    "href": "#/README?id=c%e1%ba%a7n-h%e1%bb%97-tr%e1%bb%a3-th%c3%aam",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "Mục lục",
+    "href": "#/README?id=m%e1%bb%a5c-l%e1%bb%a5c",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "1. Bắt đầu",
+    "href": "#/README?id=_1-b%e1%ba%aft-%c4%91%e1%ba%a7u",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "2. Tuyển sinh & Lead",
+    "href": "#/README?id=_2-tuy%e1%bb%83n-sinh-amp-lead",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "3. Học sinh",
+    "href": "#/README?id=_3-h%e1%bb%8dc-sinh",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "4. Lớp học & Lịch dạy",
+    "href": "#/README?id=_4-l%e1%bb%9bp-h%e1%bb%8dc-amp-l%e1%bb%8bch-d%e1%ba%a1y",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "5. Điểm danh",
+    "href": "#/README?id=_5-%c4%90i%e1%bb%83m-danh",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "6. Học tập & Đánh giá",
+    "href": "#/README?id=_6-h%e1%bb%8dc-t%e1%ba%adp-amp-%c4%90%c3%a1nh-gi%c3%a1",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "7. Học phí & Hoá đơn",
+    "href": "#/README?id=_7-h%e1%bb%8dc-ph%c3%ad-amp-ho%c3%a1-%c4%91%c6%a1n",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  },
+  {
+    "text": "8. Nhân sự (HR)",
+    "href": "#/README?id=_8-nh%c3%a2n-s%e1%bb%b1-hr",
+    "status": "✅ OK",
+    "contentLen": 1358,
+    "h1": "Hướng dẫn sử dụng KLASSA",
+    "errors": [],
+    "netFails": []
+  }
+]

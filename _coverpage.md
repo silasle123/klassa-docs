@@ -9,5 +9,5 @@
 - 🔍 Tìm kiếm nhanh trên toàn bộ tài liệu
 - 📱 Hoạt động trên cả máy tính + điện thoại
 
-[Bắt đầu đọc](README.md)
-[Mục lục đầy đủ](#mục-lục)
+[Bắt đầu đọc](#/)
+[Vào bài đầu tiên](#/bat-dau/dang-nhap)
