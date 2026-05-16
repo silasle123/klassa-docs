@@ -195,6 +195,8 @@
 * [Cấu hình hệ thống chung](cai-dat/cau-hinh-chung.md)
 * [Bảo mật — 2FA, IP, khoá tài khoản](cai-dat/bao-mat.md)
 * [Nhật ký truy cập (Audit log)](cai-dat/audit-log.md)
+* [Duyệt đăng ký người dùng](cai-dat/duyet-dang-ky-nguoi-dung.md)
+* [Công cụ Admin (Tools)](cai-dat/cong-cu-admin.md)
 * [Thiết lập ban đầu (Setup wizard)](cai-dat/setup-wizard.md)
 
 ## 23. Câu hỏi thường gặp & Xử lý sự cố

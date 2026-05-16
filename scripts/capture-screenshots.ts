@@ -154,6 +154,8 @@ const SHOTS: ShotSpec[] = [
   { slug: 'plugin-marketplace', path: '/plugins', description: 'Plugin' },
   { slug: 'cai-dat-thuong-hieu', path: '/admin/branding', description: 'Thương hiệu' },
   { slug: 'cai-dat-audit-log', path: '/admin/audit-logs', description: 'Audit log' },
+  { slug: 'cai-dat-duyet-dang-ky', path: '/admin/registrations', description: 'Duyệt đăng ký user' },
+  { slug: 'cai-dat-cong-cu', path: '/tools', description: 'Công cụ admin' },
 ]
 
 // ============================================================
