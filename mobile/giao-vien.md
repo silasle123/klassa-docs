@@ -10,8 +10,6 @@
 
 URL: **/mobile/teacher** (hoặc đăng nhập tài khoản GV trên điện thoại).
 
-![Chấm điểm danh trên điện thoại](../assets/screenshots/mobile-cham-diem-danh.png)
-
 ## Cách dùng
 
 ### Mở buổi học

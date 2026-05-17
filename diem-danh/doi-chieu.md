@@ -32,8 +32,6 @@ Trong buổi học, giáo viên chấm như bình thường (xem [Chấm điểm
 
 Sau buổi, **lễ tân / tư vấn viên** vào **Điểm danh → Đối chiếu** → chọn buổi vừa kết thúc → chấm độc lập theo quan sát của mình (không thấy được giáo viên đã chấm gì).
 
-![Trang điểm danh đối chiếu](../assets/screenshots/diem-danh-doi-chieu.png)
-
 ### Bước 3 — Hệ thống đối chiếu
 
 - **Khớp** → tự xác nhận, dữ liệu chính thức được ghi
