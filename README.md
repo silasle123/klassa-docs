@@ -1,8 +1,8 @@
 # Hướng dẫn sử dụng KLASSA
 
-Phần mềm quản lý trung tâm dạy học toàn diện — dành cho chủ trung tâm, quản lý, lễ tân, giáo viên, kế toán và phụ huynh.
+Phần mềm quản lý trung tâm dạy học toàn diện — **hơn 800 tính năng** trải đều **23 nhóm chức năng**, phục vụ đầy đủ từ chủ trung tâm, quản lý, lễ tân, giáo viên, kế toán đến phụ huynh.
 
-Bộ tài liệu này hướng dẫn từng bước cách sử dụng phần mềm, kèm hình ảnh thực tế từ chính giao diện anh chị sẽ thao tác.
+Bộ tài liệu **134 bài hướng dẫn** kèm **79 ảnh thực tế** từ chính giao diện anh chị sẽ thao tác — viết bằng tiếng Việt thuần, không có yếu tố kỹ thuật.
 
 ## Tài liệu này dành cho ai?
 
@@ -33,9 +33,9 @@ Mỗi bài hướng dẫn trình bày theo 4 phần đồng nhất:
 - **Lưu ý** — những điểm dễ nhầm hoặc cần chú ý
 - **Câu hỏi thường gặp** — giải đáp các thắc mắc phổ biến
 
-## 134 bài · 23 nhóm chức năng
+## 23 nhóm chức năng — bao phủ toàn bộ vận hành trung tâm
 
-Từ Tuyển sinh, Học sinh, Lớp học, Điểm danh, Học phí, Nhân sự đến AI Hub, Tự động hoá, Marketing, Cổng phụ huynh, Cổng nhân viên — tất cả được trình bày bằng tiếng Việt thuần, không có yếu tố kỹ thuật.
+Tuyển sinh · Học sinh · Lớp học · Điểm danh · Học tập & Đánh giá · Học phí & Hoá đơn · Nhân sự (HR) · Giáo viên · Báo cáo · Tin nhắn · AI Hub · Tự động hoá · Marketing · Cổng phụ huynh · Cổng nhân viên · Ứng dụng di động · Kho vật tư · Phản hồi · Tích hợp · Plugin · Cài đặt hệ thống · Hỏi đáp.
 
 ## Cần hỗ trợ thêm?
 
