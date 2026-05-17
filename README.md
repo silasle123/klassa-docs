@@ -1,7 +1,5 @@
 # Hướng dẫn sử dụng KLASSA
 
-> 🌐 **Đọc trực tuyến**: https://silasle123.github.io/klassa-docs/
-
 Chào mừng anh chị đến với **KLASSA** — phần mềm quản lý trung tâm dạy học toàn diện.
 
 Bộ tài liệu này hướng dẫn từng bước cách sử dụng phần mềm, kèm hình ảnh thực tế từ chính giao diện anh chị sẽ thao tác. Anh chị có thể đọc theo thứ tự từ trên xuống nếu mới làm quen, hoặc tra cứu nhanh theo nghiệp vụ ở mục lục bên trái.
