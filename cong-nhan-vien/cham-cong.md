@@ -4,6 +4,8 @@
 
 Cổng Nhân viên → tab **"Chấm công"**.
 
+![Chấm công cá nhân](../assets/screenshots/cong-nhan-vien-cham-cong.png)
+
 ## Tính năng
 
 ### Check-in / Check-out

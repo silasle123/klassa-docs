@@ -10,6 +10,8 @@ Mọi nhân viên đều có quyền vào Cổng Nhân viên, không phụ thu�
 
 URL: **/employee-portal**
 
+![Cổng nhân viên](../assets/screenshots/cong-nhan-vien-gioi-thieu.png)
+
 Hoặc bấm avatar → **"Cổng nhân viên"**.
 
 ## Nhân viên xem được gì?

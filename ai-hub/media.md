@@ -13,6 +13,8 @@ Sinh ảnh / video / âm thanh bằng AI:
 
 Menu trái → **AI Hub → Media** (hoặc **/ai-hub/media**).
 
+![AI tạo media](../assets/screenshots/ai-hub-media.png)
+
 ## Cách dùng
 
 ### Sinh ảnh

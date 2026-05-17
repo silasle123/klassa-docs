@@ -8,6 +8,8 @@ Tập trung **riêng các hoá đơn đã quá hạn** — phân biệt với b�
 
 Menu **Báo cáo → Quá hạn** (hoặc **/reports/overdue**).
 
+![Báo cáo quá hạn](../assets/screenshots/bao-cao-qua-han.png)
+
 ## Phân loại theo mức nghiêm trọng
 
 | Mức | Quá hạn | Hành động |

@@ -10,6 +10,8 @@
 
 Menu **Báo cáo → Theo giáo viên** (hoặc **/reports/teachers**).
 
+![Báo cáo theo giáo viên](../assets/screenshots/bao-cao-theo-giao-vien.png)
+
 ## Các chỉ số đo
 
 ### Năng suất

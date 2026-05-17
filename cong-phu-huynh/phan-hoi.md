@@ -11,6 +11,8 @@
 
 Cổng Phụ huynh → tab **"Phản hồi"** → bấm **"+ Gửi phản hồi"**:
 
+![Gửi phản hồi](../assets/screenshots/cong-phu-huynh-phan-hoi.png)
+
 - **Loại**: Khen / Chê / Góp ý / Báo lỗi / Khác
 - **Đối tượng**: Trung tâm chung / Giáo viên X / Lễ tân X
 - **Đánh giá sao** (1-5 sao)

@@ -8,6 +8,8 @@ Báo cáo tổng hợp [phễu tuyển sinh](../tuyen-sinh/pheu-tuyen-sinh.md) t
 
 Menu **Báo cáo → Phễu tuyển sinh** (hoặc **/reports/funnel**).
 
+![Báo cáo phễu tuyển sinh](../assets/screenshots/bao-cao-pheu-tuyen-sinh.png)
+
 ## Các góc nhìn
 
 ### 1. Phễu theo nguồn

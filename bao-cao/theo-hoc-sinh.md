@@ -10,6 +10,8 @@
 
 Menu **Báo cáo → Theo học sinh** (hoặc **/reports/students**).
 
+![Báo cáo theo học sinh](../assets/screenshots/bao-cao-theo-hoc-sinh.png)
+
 ## Nội dung báo cáo
 
 ### Tổng quan

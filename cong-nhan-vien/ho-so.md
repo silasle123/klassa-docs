@@ -4,6 +4,8 @@
 
 Cổng Nhân viên → bấm avatar → **"Hồ sơ"**.
 
+![Hồ sơ NV](../assets/screenshots/cong-nhan-vien-ho-so.png)
+
 ## Cập nhật được
 
 - Ảnh đại diện

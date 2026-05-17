@@ -4,6 +4,8 @@
 
 Cổng Nhân viên → trang chủ → bảng **"Việc cần làm hôm nay"**.
 
+![Việc cần làm hôm nay](../assets/screenshots/cong-nhan-vien-viec-can-lam.png)
+
 ## Phần mềm tự sinh việc cần làm
 
 Tuỳ vai trò:

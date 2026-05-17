@@ -12,6 +12,8 @@
 
 Menu **Báo cáo → Tín chỉ** (hoặc **/reports/credit**).
 
+![Báo cáo tín chỉ](../assets/screenshots/bao-cao-tin-chi.png)
+
 ## Nội dung
 
 ### Tổng quan

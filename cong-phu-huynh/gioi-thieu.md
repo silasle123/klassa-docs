@@ -10,6 +10,8 @@ Phụ huynh KHÔNG thấy thông tin của học sinh khác, KHÔNG thấy lươ
 
 Phụ huynh đăng nhập tại địa chỉ phần mềm của trung tâm → tự động vào Cổng Phụ huynh.
 
+![Cổng phụ huynh](../assets/screenshots/cong-phu-huynh-gioi-thieu.png)
+
 URL: **/parent-portal**
 
 ## Phụ huynh xem được gì?

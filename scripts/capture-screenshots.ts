@@ -156,6 +156,31 @@ const SHOTS: ShotSpec[] = [
   { slug: 'cai-dat-audit-log', path: '/admin/audit-logs', description: 'Audit log' },
   { slug: 'cai-dat-duyet-dang-ky', path: '/admin/registrations', description: 'Duyệt đăng ký user' },
   { slug: 'cai-dat-cong-cu', path: '/tools', description: 'Công cụ admin' },
+
+  // ===== Bổ sung: Cổng Nhân viên =====
+  { slug: 'cong-nhan-vien-gioi-thieu', path: '/employee-portal', description: 'Cổng NV — trang chủ' },
+  { slug: 'cong-nhan-vien-cham-cong', path: '/employee-portal/attendance', description: 'NV chấm công' },
+  { slug: 'cong-nhan-vien-chat', path: '/employee-portal/chat', description: 'Chat nội bộ' },
+  { slug: 'cong-nhan-vien-ho-so', path: '/employee-portal/profile', description: 'Hồ sơ NV' },
+  { slug: 'cong-nhan-vien-viec-can-lam', path: '/employee-portal/tasks', description: 'Việc cần làm' },
+
+  // ===== Bổ sung: Cổng Phụ huynh =====
+  { slug: 'cong-phu-huynh-gioi-thieu', path: '/parent-portal', description: 'Cổng PH — trang chủ' },
+  { slug: 'cong-phu-huynh-ho-so', path: '/parent-portal/profile', description: 'PH hồ sơ' },
+  { slug: 'cong-phu-huynh-lich-hoc', path: '/parent-portal/schedule', description: 'PH lịch học' },
+  { slug: 'cong-phu-huynh-phan-hoi', path: '/parent-portal/feedback', description: 'PH phản hồi' },
+
+  // ===== Bổ sung: AI Hub =====
+  { slug: 'ai-hub-chat', path: '/ai-hub/chat', description: 'AI chat' },
+  { slug: 'ai-hub-media', path: '/ai-hub/media', description: 'AI tạo media' },
+
+  // ===== Bổ sung: Báo cáo =====
+  { slug: 'bao-cao-qua-han', path: '/reports/overdue', description: 'BC quá hạn' },
+  { slug: 'bao-cao-at-risk', path: '/reports/at-risk', description: 'BC nguy cơ' },
+  { slug: 'bao-cao-tin-chi', path: '/reports/credit', description: 'BC tín chỉ' },
+  { slug: 'bao-cao-pheu-tuyen-sinh', path: '/reports/funnel', description: 'BC phễu' },
+  { slug: 'bao-cao-theo-giao-vien', path: '/reports/teachers', description: 'BC GV' },
+  { slug: 'bao-cao-theo-hoc-sinh', path: '/reports/students', description: 'BC HS' },
 ]
 
 // ============================================================

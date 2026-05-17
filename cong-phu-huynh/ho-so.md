@@ -4,6 +4,8 @@
 
 Cổng Phụ huynh → bấm avatar góc phải → **"Hồ sơ cá nhân"**.
 
+![Hồ sơ phụ huynh](../assets/screenshots/cong-phu-huynh-ho-so.png)
+
 ## Cập nhật được
 
 - Họ tên (phụ huynh)

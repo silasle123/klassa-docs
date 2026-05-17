@@ -13,6 +13,8 @@
 
 Menu trái → **AI Hub → Chat** (hoặc **/ai-hub/chat**).
 
+![AI Chat](../assets/screenshots/ai-hub-chat.png)
+
 ## Cách dùng
 
 - Gõ câu hỏi/yêu cầu vào ô chat

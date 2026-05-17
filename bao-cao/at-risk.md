@@ -8,6 +8,8 @@ KLASSA dùng AI + quy tắc để **phát hiện học sinh có nguy cơ bỏ h�
 
 Menu **Báo cáo → Học sinh có nguy cơ** (hoặc **/reports/at-risk**).
 
+![Học sinh có nguy cơ](../assets/screenshots/bao-cao-at-risk.png)
+
 ## Các tín hiệu cảnh báo
 
 | Tín hiệu | Trọng số |

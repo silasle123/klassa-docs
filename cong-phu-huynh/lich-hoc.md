@@ -4,6 +4,8 @@
 
 Cổng Phụ huynh → tab **"Lịch học"**.
 
+![Lịch học của con](../assets/screenshots/cong-phu-huynh-lich-hoc.png)
+
 ## Hiển thị
 
 - **Buổi gần nhất sắp diễn ra** — nổi bật
