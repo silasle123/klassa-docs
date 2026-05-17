@@ -11,16 +11,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 
   <style>
+    /* ============================================================
+       DESIGN TOKENS
+       ============================================================ */
     :root {
       --brand-1: #4f46e5;
       --brand-2: #2563eb;
       --brand-3: #06b6d4;
       --brand-grad: linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 50%, var(--brand-3) 100%);
       --theme-color: var(--brand-1);
-      --theme-color-secondary: var(--brand-2);
+
       --bg: #ffffff;
       --bg-elevated: #ffffff;
       --bg-subtle: #f8fafc;
@@ -31,17 +33,16 @@
       --border: #e2e8f0;
       --border-strong: #cbd5e1;
       --accent: var(--brand-1);
-      --accent-hover: var(--brand-2);
       --code-bg: #f1f5f9;
       --code-fg: #4f46e5;
       --shadow-sm: 0 1px 2px rgba(15, 23, 42, .04);
       --shadow-md: 0 4px 12px rgba(15, 23, 42, .06), 0 1px 2px rgba(15, 23, 42, .04);
-      --shadow-lg: 0 12px 32px rgba(15, 23, 42, .08), 0 2px 6px rgba(15, 23, 42, .04);
+      --shadow-lg: 0 12px 32px rgba(15, 23, 42, .08);
       --ring: rgba(79, 70, 229, .2);
+
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
-      --radius-xl: 24px;
       --sidebar-width: 300px;
       --ease: cubic-bezier(.4, 0, .2, 1);
     }
@@ -57,7 +58,6 @@
       --border: #1e293b;
       --border-strong: #334155;
       --accent: #818cf8;
-      --accent-hover: #a5b4fc;
       --code-bg: #1e293b;
       --code-fg: #a5b4fc;
       --shadow-sm: 0 1px 2px rgba(0, 0, 0, .3);
@@ -66,17 +66,21 @@
       --ring: rgba(129, 140, 248, .25);
     }
 
+    /* ============================================================
+       BASE
+       ============================================================ */
     * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      background: var(--bg) !important;
-      color: var(--fg) !important;
+      background: var(--bg);
+      color: var(--fg);
       transition: background-color .3s var(--ease), color .3s var(--ease);
-      margin: 0;
+      line-height: 1.6;
     }
     ::selection { background: var(--brand-1); color: white; }
     ::-webkit-scrollbar { width: 10px; height: 10px; }
@@ -84,212 +88,36 @@
     ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 8px; }
     ::-webkit-scrollbar-thumb:hover { background: var(--fg-subtle); }
 
-    /* ============================================================
-       COVER PAGE — fixed: only display when .show active
-       ============================================================ */
-    section.cover {
-      display: none;
-      min-height: 100vh;
-      height: auto;
-      max-width: 100%;
-      padding: 0;
-      background: var(--bg) !important;
-      color: var(--fg) !important;
-      position: relative;
-      overflow: hidden;
-      align-items: center;
-      justify-content: center;
-    }
-    section.cover.show {
-      display: flex;
-    }
-
-    section.cover::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 60% at 20% 30%, rgba(79, 70, 229, .18), transparent 70%),
-        radial-gradient(ellipse 50% 50% at 80% 20%, rgba(37, 99, 235, .15), transparent 70%),
-        radial-gradient(ellipse 60% 60% at 70% 80%, rgba(6, 182, 212, .18), transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-    }
-    [data-theme="dark"] section.cover::before {
-      background:
-        radial-gradient(ellipse 60% 60% at 20% 30%, rgba(79, 70, 229, .28), transparent 70%),
-        radial-gradient(ellipse 50% 50% at 80% 20%, rgba(37, 99, 235, .22), transparent 70%),
-        radial-gradient(ellipse 60% 60% at 70% 80%, rgba(6, 182, 212, .25), transparent 70%);
-    }
-
-    section.cover::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 56px 56px;
-      mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-      -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
-      opacity: .3;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    section.cover .cover-main {
-      position: relative;
-      z-index: 1;
-      max-width: 760px;
-      width: 100%;
-      padding: 40px 24px;
-      text-align: center;
-      margin: 0 auto;
-    }
-
-    section.cover h1 {
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(2.25rem, 6vw, 4.5rem);
-      font-weight: 800;
-      letter-spacing: -.04em;
-      line-height: 1.05;
-      margin-bottom: 24px;
-      color: var(--fg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    section.cover h1 a {
-      background: var(--brand-grad);
-      background-size: 200% 100%;
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: transparent !important;
-      animation: shimmer 8s linear infinite;
-      text-decoration: none;
-      border: none !important;
-    }
-    @keyframes shimmer {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-    }
-    section.cover h1 small {
-      font-size: .85rem;
-      font-weight: 600;
-      background: var(--bg-muted);
-      color: var(--fg-muted);
-      padding: 4px 12px;
-      border-radius: 999px;
-      -webkit-text-fill-color: var(--fg-muted);
-      background-clip: padding-box;
-      letter-spacing: 0;
-    }
-
-    section.cover blockquote {
-      font-size: 1.125rem;
-      font-weight: 400;
-      color: var(--fg-muted);
-      line-height: 1.6;
-      border: none;
-      margin: 0 auto 36px;
-      padding: 0;
-      max-width: 600px;
-    }
-    section.cover blockquote p { margin: 0 0 8px; }
-    section.cover blockquote strong { color: var(--fg); font-weight: 600; }
-
-    section.cover ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      max-width: 720px;
-    }
-    section.cover ul li {
-      color: var(--fg-muted);
-      font-size: .9rem;
-      padding: 14px 18px;
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      transition: all .25s var(--ease);
-      text-align: left;
-    }
-    section.cover ul li:hover {
-      transform: translateY(-2px);
-      border-color: var(--brand-1);
-      box-shadow: var(--shadow-md);
-    }
-
-    section.cover p:last-of-type {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 0;
-    }
-    section.cover p:last-of-type a {
-      display: inline-flex;
-      align-items: center;
-      padding: 14px 28px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: var(--radius-md);
-      transition: all .2s var(--ease);
-      text-decoration: none;
-      border: none !important;
-      letter-spacing: -.01em;
-    }
-    section.cover p:last-of-type a:first-child {
-      background: var(--brand-grad);
-      color: white !important;
-      box-shadow: 0 4px 12px rgba(79, 70, 229, .3);
-    }
-    section.cover p:last-of-type a:first-child:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(79, 70, 229, .4);
-    }
-    section.cover p:last-of-type a:last-child {
-      background: var(--bg-elevated);
-      color: var(--fg) !important;
-      border: 1px solid var(--border-strong) !important;
-    }
-    section.cover p:last-of-type a:last-child:hover {
-      border-color: var(--brand-1) !important;
-      color: var(--brand-1) !important;
-    }
+    /* Hide cover entirely (we use README as landing) */
+    section.cover { display: none !important; }
 
     /* ============================================================
        SIDEBAR
        ============================================================ */
     body .sidebar {
-      background: var(--bg-elevated) !important;
-      border-right: 1px solid var(--border) !important;
-      width: var(--sidebar-width) !important;
-      padding: 24px 0 80px !important;
+      background: var(--bg-elevated);
+      border-right: 1px solid var(--border);
+      width: var(--sidebar-width);
+      padding: 20px 0 80px;
       transition: transform .3s var(--ease), background-color .3s var(--ease);
     }
     .sidebar > h1 {
-      padding: 0 24px 20px !important;
-      margin: 0 !important;
+      padding: 8px 24px 20px;
+      margin: 0;
       border-bottom: 1px solid var(--border);
     }
     .sidebar > h1 a {
-      font-size: 1.125rem !important;
-      font-weight: 700 !important;
+      font-size: 1.125rem;
+      font-weight: 700;
       background: var(--brand-grad);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
       letter-spacing: -.02em;
+      text-decoration: none;
     }
     .sidebar .search {
-      padding: 16px 20px !important;
+      padding: 16px 20px;
       margin: 0 !important;
       border-bottom: 1px solid var(--border);
     }
@@ -310,7 +138,6 @@
       box-shadow: 0 0 0 3px var(--ring) !important;
     }
     .sidebar .search input::placeholder { color: var(--fg-subtle); }
-
     .sidebar-nav { padding: 16px 12px !important; margin: 0 !important; }
     .sidebar-nav > ul { padding: 0 !important; margin: 0 !important; list-style: none; }
     .sidebar-nav > ul > li { list-style: none; margin: 2px 0; }
@@ -339,14 +166,13 @@
       position: relative;
       line-height: 1.4;
       border: none !important;
+      text-decoration: none !important;
     }
     .sidebar-nav a:hover {
       background: var(--bg-muted) !important;
       color: var(--fg) !important;
-      text-decoration: none !important;
     }
-    .sidebar-nav li.active > a,
-    .sidebar-nav a.active {
+    .sidebar-nav li.active > a {
       background: var(--bg-muted) !important;
       color: var(--accent) !important;
       font-weight: 600 !important;
@@ -363,66 +189,73 @@
     }
 
     /* ============================================================
-       MAIN CONTENT
+       CONTENT
        ============================================================ */
-    main { background: var(--bg) !important; }
+    main { background: var(--bg) !important; position: relative; }
     .content { padding-top: 0 !important; }
+
     .markdown-section {
-      max-width: 860px !important;
-      padding: 56px 56px 64px !important;
+      max-width: 880px !important;
+      padding: 64px 64px 80px !important;
       font-size: 16px;
       line-height: 1.75;
-      color: var(--fg) !important;
+      color: var(--fg);
+      margin: 0 auto;
     }
-    @media (max-width: 768px) {
-      .markdown-section { padding: 64px 20px 32px !important; }
+
+    .markdown-section > *:first-child {
+      margin-top: 0 !important;
     }
 
     .markdown-section h1, .markdown-section h2, .markdown-section h3,
     .markdown-section h4, .markdown-section h5, .markdown-section h6 {
-      font-family: 'Inter', sans-serif !important;
-      font-weight: 700 !important;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
       letter-spacing: -.02em;
-      line-height: 1.25 !important;
-      color: var(--fg) !important;
+      line-height: 1.25;
+      color: var(--fg);
       scroll-margin-top: 24px;
     }
     .markdown-section h1 {
-      font-size: clamp(1.875rem, 4vw, 2.5rem) !important;
-      font-weight: 800 !important;
-      letter-spacing: -.03em;
-      margin-top: 0 !important;
-      margin-bottom: 24px !important;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      letter-spacing: -.035em;
+      margin: 0 0 16px;
       background: var(--brand-grad);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
-      padding-bottom: 0 !important;
-      border: none !important;
+      padding-bottom: 0;
+      border: none;
     }
     .markdown-section h2 {
-      font-size: 1.5rem !important;
-      margin-top: 48px !important;
-      margin-bottom: 16px !important;
-      padding-bottom: 12px !important;
-      border-bottom: 1px solid var(--border) !important;
+      font-size: 1.5rem;
+      margin-top: 56px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
     }
     .markdown-section h3 {
-      font-size: 1.2rem !important;
-      margin-top: 32px !important;
-      margin-bottom: 12px !important;
+      font-size: 1.2rem;
+      margin-top: 36px;
+      margin-bottom: 12px;
     }
     .markdown-section h4 {
-      font-size: 1.05rem !important;
-      margin-top: 24px !important;
-      margin-bottom: 8px !important;
+      font-size: 1.05rem;
+      margin-top: 28px;
+      margin-bottom: 8px;
     }
     .markdown-section p {
-      margin: 16px 0 !important;
-      color: var(--fg) !important;
+      margin: 16px 0;
+      color: var(--fg);
+    }
+    .markdown-section p:first-of-type {
+      font-size: 1.075rem;
+      color: var(--fg-muted);
+      line-height: 1.7;
     }
     .markdown-section a {
-      color: var(--accent) !important;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 500;
       border-bottom: 1px solid transparent;
@@ -431,73 +264,84 @@
     .markdown-section a:hover { border-bottom-color: var(--accent); }
 
     .markdown-section blockquote {
-      margin: 24px 0 !important;
-      padding: 16px 20px !important;
-      background: var(--bg-subtle) !important;
-      border-left: 4px solid var(--brand-1) !important;
+      margin: 24px 0;
+      padding: 16px 20px;
+      background: var(--bg-subtle);
+      border-left: 4px solid var(--brand-1);
       border-radius: var(--radius-md);
-      color: var(--fg-muted) !important;
-      font-style: normal !important;
+      color: var(--fg-muted);
+      font-style: normal;
     }
-    .markdown-section blockquote p { margin: 0 !important; }
-    .markdown-section blockquote strong { color: var(--fg) !important; }
+    .markdown-section blockquote p { margin: 0; }
+    .markdown-section blockquote strong { color: var(--fg); }
 
     .markdown-section code {
-      background: var(--code-bg) !important;
-      color: var(--code-fg) !important;
-      padding: 2px 6px !important;
+      background: var(--code-bg);
+      color: var(--code-fg);
+      padding: 2px 6px;
       border-radius: 5px;
-      font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace !important;
+      font-family: 'JetBrains Mono', 'SF Mono', Menlo, monospace;
       font-size: .875em;
       font-weight: 500;
-      border: none !important;
+      border: none;
     }
     .markdown-section pre {
-      background: var(--bg-subtle) !important;
-      border: 1px solid var(--border) !important;
-      border-radius: var(--radius-md) !important;
-      padding: 16px !important;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
       overflow-x: auto;
     }
     .markdown-section pre code {
-      background: transparent !important;
-      color: var(--fg) !important;
-      padding: 0 !important;
+      background: transparent;
+      color: var(--fg);
+      padding: 0;
     }
 
+    /* Tables */
     .markdown-section table {
       width: 100%;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       margin: 24px 0 !important;
       border: 1px solid var(--border) !important;
       border-radius: var(--radius-md);
       overflow: hidden;
       font-size: .95rem;
       display: table !important;
+      background: var(--bg-elevated);
     }
     .markdown-section table th {
       background: var(--bg-subtle) !important;
       color: var(--fg) !important;
       font-weight: 600 !important;
-      padding: 12px 16px !important;
+      padding: 14px 18px !important;
       text-align: left;
       border: none !important;
+      border-bottom: 1px solid var(--border) !important;
+      font-size: .9rem;
     }
     .markdown-section table td {
-      padding: 12px 16px !important;
+      padding: 14px 18px !important;
       border-top: 1px solid var(--border) !important;
       border-left: none !important;
       border-right: none !important;
       border-bottom: none !important;
-      background: var(--bg) !important;
+      background: transparent !important;
       color: var(--fg) !important;
     }
+    .markdown-section table tr:first-child td { border-top: none !important; }
     .markdown-section table tr:hover td { background: var(--bg-subtle) !important; }
 
-    .markdown-section ul, .markdown-section ol { padding-left: 24px; margin: 16px 0; }
-    .markdown-section li { margin: 6px 0; }
+    /* Lists */
+    .markdown-section ul, .markdown-section ol {
+      padding-left: 24px;
+      margin: 16px 0;
+    }
+    .markdown-section li { margin: 8px 0; }
     .markdown-section li::marker { color: var(--accent); }
 
+    /* Images */
     .markdown-section img {
       max-width: 100%;
       height: auto;
@@ -518,6 +362,46 @@
       height: 1px;
       background: var(--border);
       margin: 48px 0;
+    }
+
+    /* ============================================================
+       LANDING HERO — when on README route, beautify first H1
+       ============================================================ */
+    body[data-route="/"] .markdown-section,
+    body[data-route=""] .markdown-section {
+      max-width: 1100px !important;
+    }
+    body[data-route="/"] .markdown-section > h1:first-child,
+    body[data-route=""] .markdown-section > h1:first-child {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      text-align: left;
+      margin-bottom: 12px;
+    }
+    body[data-route="/"] .markdown-section > p:first-of-type,
+    body[data-route=""] .markdown-section > p:first-of-type {
+      font-size: 1.25rem;
+      color: var(--fg-muted);
+      max-width: 720px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    body[data-route="/"] .markdown-section::before,
+    body[data-route=""] .markdown-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 360px;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        radial-gradient(ellipse 50% 60% at 15% 0%, rgba(79, 70, 229, .12), transparent 70%),
+        radial-gradient(ellipse 40% 50% at 80% 10%, rgba(6, 182, 212, .10), transparent 70%);
+    }
+    [data-theme="dark"] body[data-route="/"] .markdown-section::before,
+    [data-theme="dark"] body[data-route=""] .markdown-section::before {
+      background:
+        radial-gradient(ellipse 50% 60% at 15% 0%, rgba(79, 70, 229, .22), transparent 70%),
+        radial-gradient(ellipse 40% 50% at 80% 10%, rgba(6, 182, 212, .18), transparent 70%);
     }
 
     /* ============================================================
@@ -559,7 +443,10 @@
       background: var(--bg-elevated) !important;
       color: var(--fg) !important;
     }
-    .search .matching-post { border-bottom: 1px solid var(--border) !important; }
+    .search .matching-post {
+      border-bottom: 1px solid var(--border) !important;
+      padding: 12px 0 !important;
+    }
     .search .matching-post:hover { background: var(--bg-subtle) !important; }
     .search .matching-post h2, .search .matching-post p { color: var(--fg) !important; }
     .search .search-keyword {
@@ -575,10 +462,10 @@
        PAGINATION
        ============================================================ */
     .docsify-pagination-container {
-      max-width: 860px;
-      padding: 32px 56px 48px !important;
+      max-width: 880px !important;
+      padding: 32px 64px 64px !important;
       border-top: 1px solid var(--border);
-      margin-top: 48px;
+      margin: 56px auto 0 !important;
     }
     .pagination-item-label {
       color: var(--fg-subtle) !important;
@@ -604,7 +491,7 @@
     }
 
     /* ============================================================
-       MOBILE — sidebar slide-in, FAB toggle, content padding
+       MOBILE
        ============================================================ */
     .sidebar-toggle {
       position: fixed !important;
@@ -632,7 +519,6 @@
 
     @media (min-width: 769px) {
       .sidebar-toggle { display: none !important; }
-      body.close .sidebar { transform: translateX(0) !important; }
     }
 
     @media (max-width: 768px) {
@@ -641,9 +527,7 @@
         transform: translateX(-100%);
         box-shadow: var(--shadow-lg);
         position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
+        top: 0; bottom: 0; left: 0;
         z-index: 50;
       }
       body.close .sidebar { transform: translateX(0); }
@@ -654,34 +538,21 @@
         background: rgba(0, 0, 0, .4);
         z-index: 49;
       }
-      .content {
-        left: 0 !important;
-        padding-top: 0 !important;
-      }
-      section.cover .cover-main { padding: 64px 20px 40px; }
-      section.cover h1 { font-size: 2.25rem; }
+      .content { left: 0 !important; padding-top: 0 !important; }
+      .markdown-section { padding: 72px 20px 40px !important; }
+      .docsify-pagination-container { padding: 24px 20px 40px !important; }
       .theme-toggle {
         top: 12px;
         right: 12px;
         width: 38px;
         height: 38px;
       }
-      .docsify-pagination-container { padding: 24px 20px 40px !important; }
       .markdown-section table {
         font-size: .85rem;
         display: block !important;
         overflow-x: auto;
+        white-space: nowrap;
       }
-    }
-
-    #app { font-family: 'Inter', sans-serif; }
-    #app:not(:empty):not(:has(.cover)):not(:has(.sidebar)) {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--fg-subtle);
-      font-size: .95rem;
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -714,6 +585,19 @@
       localStorage.setItem('klassa-theme', next);
     });
 
+    // Mark body with current route (for landing hero styling)
+    function updateRoute() {
+      var hash = location.hash.replace(/^#/, '');
+      if (!hash || hash === '/' || hash === '/README' || hash === '/README.md') {
+        document.body.setAttribute('data-route', '/');
+      } else {
+        document.body.setAttribute('data-route', hash);
+      }
+    }
+    window.addEventListener('hashchange', updateRoute);
+    window.addEventListener('DOMContentLoaded', updateRoute);
+    updateRoute();
+
     window.$docsify = {
       name: 'KLASSA Docs',
       loadSidebar: '_sidebar.md',
@@ -721,8 +605,6 @@
       maxLevel: 3,
       auto2top: true,
       homepage: 'README.md',
-      coverpage: '_coverpage.md',
-      onlyCover: false,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md',
       },
