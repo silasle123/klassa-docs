@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KLASSA — Catalogue giới thiệu sản phẩm</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #1E3A8A; --navy-deep: #1E3060; --navy-light: #DBEAFE;
+    --gold: #F59E0B; --gold-warm: #FDE68A; --cream: #FEFCE8;
+    --success: #059669; --error: #DC2626;
+    --text: #1F2937; --text-soft: #6B7280; --border: #E5E7EB; --bg-soft: #F9FAFB;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4 landscape; margin: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif; color: var(--text);
+    background: #525659; font-size: 13.5px; line-height: 1.55;
+  }
+
+  /* ---- A4 LANDSCAPE page ---- */
+  .page {
+    width: 297mm; height: 210mm; margin: 0 auto 7mm;
+    background: #fff; position: relative; overflow: hidden;
+    page-break-after: always; display: flex; flex-direction: column;
+  }
+  .page:last-child { page-break-after: auto; }
+  .pad { padding: 14mm 16mm 16mm; flex: 1; display: flex; flex-direction: column; min-height: 0; }
+
+  h1,h2,h3,.display { font-family: 'Manrope', sans-serif; color: var(--navy); }
+
+  .kicker {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-family: 'Manrope'; font-weight: 700; font-size: 11px;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 9px;
+  }
+  .kicker::before { content:""; width:22px; height:3px; background:var(--gold); border-radius:2px; }
+  .sec-title { font-size: 27px; font-weight: 800; line-height: 1.12; letter-spacing: -.02em; }
+  .sec-sub { color: var(--text-soft); font-size: 14px; margin-top: 8px; max-width: 150mm; }
+
+  .feats { list-style: none; margin-top: 14px; display: grid; gap: 11px; }
+  .feats.two { grid-template-columns: 1fr 1fr; column-gap: 9mm; }
+  .feats li { position: relative; padding-left: 28px; font-size: 13.5px; }
+  .feats li b { color: var(--navy); font-weight: 700; }
+  .feats li::before {
+    content:"✓"; position:absolute; left:0; top:0;
+    width:19px; height:19px; border-radius:50%; background:var(--navy-light); color:var(--navy);
+    font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center;
+  }
+
+  /* screenshot frame */
+  .shot { border-radius:11px; overflow:hidden; box-shadow:0 16px 38px -16px rgba(30,48,96,.45), 0 0 0 1px var(--border); background:#fff; }
+  .shot .bar { height:24px; background:#f1f3f7; display:flex; align-items:center; gap:6px; padding:0 11px; border-bottom:1px solid var(--border); }
+  .shot .bar i { width:8px; height:8px; border-radius:50%; display:inline-block; }
+  .shot .bar i:nth-child(1){background:#ff5f57;} .shot .bar i:nth-child(2){background:#febc2e;} .shot .bar i:nth-child(3){background:#28c840;}
+  .shot .bar span { margin-left:9px; font-size:9.5px; color:#9aa3b2; }
+  .shot img { display:block; width:100%; height:86mm; object-fit:cover; object-position:top; }
+  .shot.s-lg img { height:126mm; }
+  .shot.s-sm img { height:58mm; }
+  /* full landscape image — no crop; browser-chrome frame is the border */
+  .shot.fit img { height:auto; object-fit:contain; }
+
+  .caption { font-size:11px; color:var(--text-soft); margin-top:6px; text-align:center; font-style:italic; }
+
+  /* ---- Zalo group mockup ---- */
+  .zalo { border-radius:14px; overflow:hidden; box-shadow:0 16px 38px -16px rgba(30,48,96,.45), 0 0 0 1px var(--border); }
+  .zalo .zhead { background:#0068FF; color:#fff; padding:11px 14px; display:flex; align-items:center; gap:11px; }
+  .zalo .zhead .gv { width:34px; height:34px; border-radius:50%; background:rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:17px; }
+  .zalo .zhead .nm { font-family:'Manrope'; font-weight:700; font-size:14px; line-height:1.2; }
+  .zalo .zhead .nm span { display:block; font-size:10.5px; font-weight:500; opacity:.85; margin-top:2px; }
+  .zalo .zbody { background:#d6e4f2; padding:16px 14px 18px; }
+  .zalo .daydiv { text-align:center; margin-bottom:13px; }
+  .zalo .daydiv span { background:rgba(0,0,0,.08); color:#5a6b80; font-size:9.5px; padding:3px 11px; border-radius:999px; }
+  .zalo .msg { display:flex; gap:9px; align-items:flex-end; }
+  .zalo .bot { width:30px; height:30px; border-radius:50%; flex-shrink:0; overflow:hidden; box-shadow:0 1px 2px rgba(0,0,0,.15); }
+  .zalo .bot img { width:100%; height:100%; object-fit:cover; }
+  .zalo .bcol { max-width:88%; }
+  .zalo .sender { font-size:10px; color:#5a6b80; margin:0 0 3px 3px; font-weight:600; }
+  .zalo .bubble { background:#fff; border-radius:3px 13px 13px 13px; padding:12px 14px; font-size:11.5px; line-height:1.62; box-shadow:0 1px 2px rgba(0,0,0,.1); }
+  .zalo .bubble .rt { font-family:'Manrope'; font-weight:800; color:var(--navy); font-size:12.5px; }
+  .zalo .bubble .ln { display:block; margin-top:6px; }
+  .zalo .bubble b { color:#0f1b33; }
+  .zalo .time { font-size:9px; color:#7c8aa0; margin:5px 0 0 3px; }
+
+  /* generic split: text left, visual right */
+  .split { display:grid; grid-template-columns: 0.82fr 1.18fr; gap:12mm; flex:1; align-items:center; min-height:0; }
+  .split.rev { grid-template-columns: 1.18fr 0.82fr; }
+  .visual { min-height:0; }
+
+  .pfoot {
+    position:absolute; bottom:7mm; left:16mm; right:16mm; display:flex;
+    justify-content:space-between; align-items:center; font-size:9.5px; color:var(--text-soft);
+    border-top:1px solid var(--border); padding-top:5px;
+  }
+  .pfoot .wm { font-family:'Plus Jakarta Sans'; font-weight:800; color:var(--navy); }
+  .pfoot .wm b { color:var(--gold); }
+
+  /* ============ COVER ============ */
+  .cover { background: linear-gradient(135deg,#1E3060 0%,#1E3A8A 55%,#2547a8 100%); color:#fff; padding:0; }
+  .cover .inner { flex:1; display:grid; grid-template-columns: 1.05fr 0.95fr; }
+  .cover .left { padding:20mm 14mm 32mm 20mm; display:flex; flex-direction:column; justify-content:space-between; z-index:1; }
+  .cover .logo { width:78mm; height:auto; align-self:flex-start; }
+  .cover .slo { font-family:'Plus Jakarta Sans'; font-weight:800; font-size:52px; line-height:1.0; letter-spacing:-.03em; }
+  .cover .slo b { color:var(--gold); }
+  .cover .vn { font-family:'Manrope'; font-weight:700; font-size:20px; color:var(--gold-warm); margin-top:13px; }
+  .cover .desc { font-size:14.5px; color:#dbe4ff; margin-top:15px; max-width:120mm; line-height:1.65; }
+  .cover .badge { display:inline-block; margin-top:18px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); border-radius:999px; padding:8px 18px; font-family:'Manrope'; font-weight:700; font-size:12px; letter-spacing:.04em; align-self:flex-start; }
+  .cover .org { font-family:'Manrope'; font-weight:700; font-size:12.5px; }
+  .cover .org span { display:block; font-weight:500; font-size:11px; color:#b9c5e8; margin-top:3px; }
+  .cover .right { position:relative; display:flex; align-items:center; justify-content:center; padding:16mm 18mm 24mm 2mm; }
+  .cover .right::before { content:""; position:absolute; right:-26mm; top:-16mm; width:150mm; height:150mm; border-radius:50%; background:radial-gradient(circle, rgba(245,158,11,.20), transparent 62%); }
+  .cover .device { width:132mm; border-radius:14px; overflow:hidden; box-shadow:0 32px 66px -18px rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.18); transform: rotate(-1.5deg); z-index:1; background:#fff; }
+  .cover .device .bar { height:24px; background:#f1f3f7; display:flex; align-items:center; gap:6px; padding:0 11px; }
+  .cover .device .bar i { width:8px; height:8px; border-radius:50%; }
+  .cover .device .bar i:nth-child(1){background:#ff5f57;}.cover .device .bar i:nth-child(2){background:#febc2e;}.cover .device .bar i:nth-child(3){background:#28c840;}
+  .cover .device img { display:block; width:100%; height:auto; }
+  .cover .web { font-family:'Plus Jakarta Sans'; font-weight:800; font-size:18px; color:var(--gold); }
+  .cover .cfootbar { position:absolute; left:20mm; right:18mm; bottom:11mm; display:flex; justify-content:space-between; align-items:flex-end; z-index:2; border-top:1px solid rgba(255,255,255,.2); padding-top:10px; }
+
+  /* ============ PROBLEM ============ */
+  .twocol-vs { display:grid; grid-template-columns:1fr auto 1fr; gap:9mm; align-items:stretch; flex:1; min-height:0; margin-top:5mm; }
+  .vscol { display:flex; flex-direction:column; }
+  .vshead { font-family:'Manrope'; font-weight:800; font-size:15px; padding:8px 0; text-align:center; border-radius:10px; margin-bottom:8mm; }
+  .vshead.bad { background:#FEF2F2; color:var(--error); border:1px solid #FECACA; }
+  .vshead.good { background:#ECFDF5; color:var(--success); border:1px solid #A7F3D0; }
+  .stat { border-radius:12px; padding:13px 14px; margin-bottom:6mm; display:flex; align-items:center; gap:13px; }
+  .stat.bad { background:#FEF2F2; border:1px solid #FECACA; } .stat.good { background:#ECFDF5; border:1px solid #A7F3D0; }
+  .stat .ico { font-size:24px; } .stat .num { font-family:'Manrope'; font-weight:800; font-size:21px; }
+  .stat.bad .num { color:var(--error); } .stat.good .num { color:var(--success); }
+  .stat .lbl { font-size:12px; color:var(--text-soft); }
+  .vsmid { display:flex; align-items:center; }
+  .vsmid .arrow { width:46px; height:46px; border-radius:50%; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:22px; }
+  .sumline { text-align:center; font-family:'Manrope'; font-weight:800; font-size:17px; color:var(--navy); margin-top:4mm; }
+  .sumline em { color:var(--gold); font-style:normal; }
+
+  /* ============ PILLARS ============ */
+  .pillars { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; }
+  .pill { border:1px solid var(--border); border-radius:12px; padding:13px; background:var(--bg-soft); }
+  .pill .ico { width:34px; height:34px; border-radius:9px; background:var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:17px; }
+  .pill h3 { font-size:14px; margin-top:9px; font-weight:700; }
+  .pill p { font-size:11.5px; color:var(--text-soft); margin-top:4px; line-height:1.5; }
+
+  /* ============ WHY ============ */
+  .why { display:grid; grid-template-columns:repeat(3,1fr); gap:5mm; flex:1; align-content:center; }
+  .whyc { border-radius:12px; padding:15px; background:var(--bg-soft); border:1px solid var(--border); border-left:4px solid var(--gold); }
+  .whyc h3 { font-size:14.5px; font-weight:700; } .whyc p { font-size:12px; color:var(--text-soft); margin-top:5px; }
+
+  /* ============ PRICING ============ */
+  .plans { display:grid; grid-template-columns:repeat(3,1fr); gap:6mm; flex:1; align-content:center; }
+  .plan { border:1px solid var(--border); border-radius:14px; padding:18px 16px; display:flex; flex-direction:column; }
+  .plan.feat { border:2px solid var(--navy); box-shadow:0 14px 30px -18px rgba(30,58,138,.5); position:relative; }
+  .plan.feat .tag { position:absolute; top:-11px; left:50%; transform:translateX(-50%); white-space:nowrap; background:var(--gold); color:#fff; font-family:'Manrope'; font-weight:800; font-size:10.5px; padding:5px 15px; border-radius:999px; letter-spacing:.05em; }
+  .plan .pn { font-family:'Manrope'; font-weight:800; font-size:19px; color:var(--navy); }
+  .plan .scale { font-size:12px; color:var(--text-soft); margin:3px 0 12px; }
+  .plan ul { list-style:none; display:grid; gap:8px; }
+  .plan li { font-size:12.5px; padding-left:21px; position:relative; }
+  .plan li::before { content:"✓"; position:absolute; left:0; color:var(--success); font-weight:700; }
+  .plan li.off { color:#c0c6d0; } .plan li.off::before { content:"—"; color:#c0c6d0; }
+  .price-note { margin-top:5mm; text-align:center; background:var(--cream); border:1px solid var(--gold-warm); border-radius:11px; padding:12px; font-size:13px; }
+  .price-note b { color:var(--navy); }
+
+  /* ============ CTA ============ */
+  .cta { background: linear-gradient(135deg,#1E3060 0%,#1E3A8A 60%,#2547a8 100%); color:#fff; align-items:center; justify-content:center; text-align:center; }
+  .cta .logo { width:62mm; height:auto; margin-bottom:9mm; }
+  .cta h2 { color:#fff; font-size:34px; font-weight:800; line-height:1.12; letter-spacing:-.02em; max-width:170mm; }
+  .cta h2 b { color:var(--gold); }
+  .cta .sub { color:#dbe4ff; font-size:15px; margin-top:12px; max-width:160mm; }
+  .cta .contacts { display:flex; gap:6mm; margin-top:11mm; }
+  .cta .cc { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); border-radius:13px; padding:14px 24px; min-width:50mm; }
+  .cta .cc .l { font-size:10.5px; color:#b9c5e8; letter-spacing:.08em; text-transform:uppercase; }
+  .cta .cc .v { font-family:'Manrope'; font-weight:800; font-size:17px; margin-top:5px; }
+  .cta .slo { margin-top:11mm; font-family:'Plus Jakarta Sans'; font-weight:800; font-size:21px; }
+  .cta .slo b { color:var(--gold); }
+  .cta .org { margin-top:8mm; font-size:11px; color:#aab6dd; line-height:1.6; }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. COVER ============ -->
+<section class="page cover">
+  <div class="inner">
+    <div class="left">
+      <img class="logo" src="img/klassa-logo-white.svg" alt="KLASSA" />
+      <div>
+        <div class="slo">Every class,<br><b>a Klassa.</b></div>
+        <div class="vn">Lớp hay không khó, có Klassa lo.</div>
+        <div class="desc">Phần mềm quản lý trung tâm dạy thêm toàn diện — tuyển sinh, điểm danh, học phí, lương giáo viên, báo cáo — tất cả trong một.</div>
+      </div>
+      <div class="badge">CATALOGUE GIỚI THIỆU SẢN PHẨM · 2026</div>
+    </div>
+    <div class="right">
+      <div class="device">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <img src="img/dashboard-tong-quan.png" alt="Bảng điều khiển KLASSA" />
+      </div>
+    </div>
+  </div>
+  <div class="cfootbar">
+    <div class="org">KLASSA<span>Phần mềm quản lý trung tâm dạy thêm</span></div>
+    <div class="web">klassa.vn</div>
+  </div>
+</section>
+
+<!-- ============ 2. PROBLEM → SOLUTION ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">Vì sao cần KLASSA</div>
+    <div class="sec-title">Thầy cô đang mất bao nhiêu giờ mỗi tuần cho việc <span style="color:var(--gold)">không phải dạy học</span>?</div>
+    <div class="sec-sub">Đa số thầy cô mở trung tâm vì yêu việc dạy. Nhưng phân nửa thời gian lại bị cuốn vào sổ sách, tin nhắn thu phí và bảng lương Excel.</div>
+
+    <div class="twocol-vs">
+      <div class="vscol">
+        <div class="vshead bad">QUẢN LÝ THỦ CÔNG · EXCEL + SỔ GIẤY</div>
+        <div class="stat bad"><div class="ico">📋</div><div><div class="num">~3 giờ/tuần</div><div class="lbl">Điểm danh &amp; ghi sổ</div></div></div>
+        <div class="stat bad"><div class="ico">💰</div><div><div class="num">~4 giờ/tuần</div><div class="lbl">Thu phí &amp; nhắn Zalo từng phụ huynh</div></div></div>
+        <div class="stat bad"><div class="ico">🧮</div><div><div class="num">~3 giờ/tuần</div><div class="lbl">Tính lương giáo viên trên Excel</div></div></div>
+        <div class="sumline">= <em>40 giờ/tháng</em> — <em>40 buổi dạy</em> bị đánh mất</div>
+      </div>
+      <div class="vsmid"><div class="arrow">→</div></div>
+      <div class="vscol">
+        <div class="vshead good">VỚI KLASSA</div>
+        <div class="stat good"><div class="ico">✅</div><div><div class="num">5 phút</div><div class="lbl">Chạm điểm danh — phụ huynh nhận báo ngay</div></div></div>
+        <div class="stat good"><div class="ico">✅</div><div><div class="num">Tự động</div><div class="lbl">Hoá đơn xuất sẵn, nhắc phí tự động</div></div></div>
+        <div class="stat good"><div class="ico">✅</div><div><div class="num">1 chạm</div><div class="lbl">Cuối tháng lương tính sẵn, chỉ cần duyệt</div></div></div>
+        <div class="sumline">Tiết kiệm <em>38+ giờ/tháng</em> cho việc dạy</div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 3. OVERVIEW ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">Tổng quan</div>
+    <div class="sec-title">Tất cả trong một màn hình</div>
+    <div class="sec-sub">Mở KLASSA lên là thấy ngay sức khoẻ trung tâm: doanh thu, sĩ số, công nợ, tỷ lệ đi học — và gợi ý từ AI. Ra quyết định bằng dữ liệu, không bằng cảm tính.</div>
+    <div class="split" style="margin-top:5mm;">
+      <div class="pillars" style="grid-template-columns:1fr 1fr;">
+        <div class="pill"><div class="ico">🎯</div><h3>Tuyển sinh &amp; CRM</h3><p>Lead, phễu tuyển sinh, lịch học thử — không bỏ sót khách.</p></div>
+        <div class="pill"><div class="ico">✅</div><h3>Điểm danh</h3><p>Chạm là xong, phụ huynh nhận báo, cảnh báo vắng.</p></div>
+        <div class="pill"><div class="ico">💳</div><h3>Học phí &amp; hoá đơn</h3><p>Tự tính, chiết khấu nhiều môn, hoá đơn điện tử.</p></div>
+        <div class="pill"><div class="ico">🧮</div><h3>Lương giáo viên</h3><p>Theo buổi dạy &amp; sĩ số — cuối tháng chỉ cần duyệt.</p></div>
+        <div class="pill"><div class="ico">📊</div><h3>Báo cáo &amp; AI</h3><p>Doanh thu, công nợ, học sinh nguy cơ — phân tích AI.</p></div>
+        <div class="pill"><div class="ico">🔌</div><h3>Mở rộng</h3><p>Zalo, tự động hoá, cổng phụ huynh, kho plugin.</p></div>
+      </div>
+      <div class="visual">
+        <div class="shot fit"><div class="bar"><i></i><i></i><i></i><span>demo.klassa.vn/dashboard</span></div><img src="img/dashboard-tong-quan.png" alt="Bảng điều khiển" /></div>
+        <div class="caption">Bảng điều khiển tổng quan — số liệu thật, cập nhật theo thời gian thực</div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 4. TUYỂN SINH ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">01 · Tuyển sinh</div>
+    <div class="sec-title">Quản lý tuyển sinh từ lead đến học sinh</div>
+    <div class="split">
+      <div>
+        <div class="sec-sub" style="margin-top:0;">Mọi khách quan tâm đều được theo dõi đến cùng — không còn cảnh “lead rơi” giữa các tin nhắn Zalo.</div>
+        <ul class="feats">
+          <li><b>Phễu tuyển sinh trực quan</b> — nhìn rõ lead ở từng giai đoạn.</li>
+          <li><b>Lịch học thử</b> tự động nhắc, gắn với từng lead.</li>
+          <li><b>Lịch sử chăm sóc</b> — ai gọi, hẹn gì đều được lưu.</li>
+          <li><b>Chuyển lead thành học sinh</b> chỉ một thao tác.</li>
+          <li><b>Nguồn lead</b> rõ ràng để biết kênh nào hiệu quả.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="shot s-lg"><div class="bar"><i></i><i></i><i></i><span>demo.klassa.vn/leads</span></div><img src="img/leads-trang-chinh.png" alt="Quản lý tuyển sinh" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 5. HỌC SINH & LỚP HỌC ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">02 · Học sinh &amp; Lớp học</div>
+    <div class="sec-title">Toàn bộ trung tâm gọn trong tầm tay</div>
+    <div class="sec-sub">Học sinh, phụ huynh, lớp học, lịch dạy, cơ sở — quản lý tập trung, tìm kiếm tức thì.</div>
+    <div class="split rev" style="margin-top:4mm;">
+      <div class="visual" style="display:grid; grid-template-columns:1fr 1fr; gap:6mm;">
+        <div><div class="shot"><div class="bar"><i></i><i></i><i></i><span>/students</span></div><img src="img/hoc-sinh-danh-sach.png" alt="Danh sách học sinh" /></div><div class="caption">Danh sách học sinh</div></div>
+        <div><div class="shot"><div class="bar"><i></i><i></i><i></i><span>/classes</span></div><img src="img/lop-hoc-danh-sach.png" alt="Danh sách lớp" /></div><div class="caption">Quản lý lớp học</div></div>
+      </div>
+      <ul class="feats">
+        <li><b>Hồ sơ học sinh đầy đủ</b> — thông tin, phụ huynh, lịch sử học.</li>
+        <li><b>Quản lý lớp &amp; lịch dạy</b> theo tuần, phân giáo viên, phòng.</li>
+        <li><b>Ghi danh nhiều môn</b> với giá &amp; chiết khấu riêng.</li>
+        <li><b>Trạng thái học sinh</b> rõ ràng: đang học, bảo lưu, hoàn tất.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 6. ĐIỂM DANH ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">03 · Điểm danh</div>
+    <div class="sec-title">Điểm danh 1 chạm — phụ huynh biết ngay</div>
+    <div class="split">
+      <div>
+        <div class="sec-sub" style="margin-top:0;">Hết thời điểm danh bằng giấy rồi cuối tháng đếm lại. Giáo viên chạm trên điện thoại, phụ huynh nhận thông báo tự động sau buổi học.</div>
+        <ul class="feats">
+          <li><b>Chạm là xong</b> — có mặt, muộn, vắng, học bù một chạm.</li>
+          <li><b>Phụ huynh nhận thông báo</b> ngay sau buổi học.</li>
+          <li><b>Điểm danh đối chiếu</b> giáo viên × lễ tân, chống sai sót.</li>
+          <li><b>Cảnh báo vắng liên tiếp</b> để chăm sóc kịp thời.</li>
+          <li><b>Hỗ trợ học bù &amp; dạy thay</b> minh bạch, đúng công.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="shot fit"><div class="bar"><i></i><i></i><i></i><span>demo.klassa.vn/attendance</span></div><img src="img/diem-danh-cham.png" alt="Chấm điểm danh" /></div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 7. HỌC PHÍ & HOÁ ĐƠN ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">04 · Tài chính</div>
+    <div class="sec-title">Học phí &amp; hoá đơn — minh bạch từng đồng</div>
+    <div class="split rev">
+      <div class="visual">
+        <div class="shot s-lg"><div class="bar"><i></i><i></i><i></i><span>demo.klassa.vn/finance/overview</span></div><img src="img/tai-chinh-tong-quan.png" alt="Tài chính tổng quan" /></div>
+        <div class="caption">Tổng quan tài chính — doanh thu, đã thu, công nợ trong một màn hình</div>
+      </div>
+      <div>
+        <div class="sec-sub" style="margin-top:0;">Hệ thống tự tính phí theo số buổi, theo tháng hay theo khoá; hỗ trợ nhiều môn, chiết khấu tự động, và xuất hoá đơn điện tử.</div>
+        <ul class="feats">
+          <li><b>Tự tính học phí</b> theo buổi / tháng / khoá.</li>
+          <li><b>Chiết khấu nhiều môn</b> áp dụng tự động.</li>
+          <li><b>Hoá đơn điện tử</b> đúng quy định, xuất một chạm.</li>
+          <li><b>Theo dõi công nợ</b> — biết ngay ai nợ, nợ bao lâu.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 8. LƯƠNG GIÁO VIÊN ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">05 · Nhân sự &amp; Lương</div>
+    <div class="sec-title">Cuối tháng mở ra — lương đã tính sẵn</div>
+    <div class="sec-sub">Lương giáo viên tự tính dựa trên số buổi dạy thực tế, sĩ số lớp và buổi dạy thay. Chủ trung tâm chỉ cần duyệt — không cần mở Excel.</div>
+    <div class="split rev" style="margin-top:4mm;">
+      <div class="visual" style="display:grid; grid-template-columns:1fr 1fr; gap:6mm;">
+        <div><div class="shot"><div class="bar"><i></i><i></i><i></i><span>/hr/payroll</span></div><img src="img/hr-bang-luong.png" alt="Bảng lương" /></div><div class="caption">Bảng lương tự động</div></div>
+        <div><div class="shot"><div class="bar"><i></i><i></i><i></i><span>/hr/dashboard</span></div><img src="img/hr-tong-quan.png" alt="Nhân sự tổng quan" /></div><div class="caption">Tổng quan nhân sự</div></div>
+      </div>
+      <ul class="feats">
+        <li><b>Lương theo sĩ số / buổi dạy</b> — đúng công, minh bạch.</li>
+        <li><b>Hợp đồng, phép, chấm công</b> nhân viên tập trung.</li>
+        <li><b>Phiếu lương điện tử</b> cho từng giáo viên.</li>
+        <li><b>Kiểm tra lương</b> trước khi chốt, tránh sai sót.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 9. BÁO CÁO & AI ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">06 · Báo cáo &amp; AI</div>
+    <div class="sec-title">Ra quyết định bằng dữ liệu</div>
+    <div class="sec-sub">Doanh thu, công nợ, tỷ lệ đi học, học sinh có nguy cơ nghỉ — tổng hợp tự động và phân tích bằng AI.</div>
+    <div class="split" style="margin-top:4mm;">
+      <ul class="feats">
+        <li><b>Báo cáo doanh thu &amp; công nợ</b> theo thời gian thực.</li>
+        <li><b>Cảnh báo học sinh nguy cơ</b> nghỉ học để giữ chân kịp.</li>
+        <li><b>Báo cáo theo giáo viên / học sinh / phễu</b> đa chiều.</li>
+        <li><b>AI tóm tắt &amp; gợi ý</b> hành động cho chủ trung tâm.</li>
+      </ul>
+      <div class="visual" style="display:grid; grid-template-columns:1fr 1fr; gap:6mm;">
+        <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i><span>/reports/revenue</span></div><img src="img/bao-cao-doanh-thu.png" alt="Báo cáo doanh thu" /></div><div class="caption">Báo cáo doanh thu</div></div>
+        <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i><span>/reports/ai</span></div><img src="img/bao-cao-ai.png" alt="Báo cáo AI" /></div><div class="caption">Phân tích bằng AI</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ BÁO CÁO TỰ ĐỘNG ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">07 · Báo cáo tự động</div>
+    <div class="sec-title">Báo cáo cuối ngày tự gửi về Zalo</div>
+    <div class="split">
+      <div>
+        <div class="sec-sub" style="margin-top:0;">Mỗi tối, KLASSA tự tổng hợp toàn bộ hoạt động trong ngày và gửi báo cáo vào nhóm Zalo của trung tâm — không ai phải ngồi tổng kết thủ công nữa.</div>
+        <ul class="feats">
+          <li><b>Tự gửi đúng giờ</b> cài đặt mỗi ngày (ví dụ 21h, 23h).</li>
+          <li><b>Điểm danh, thu phí, tuyển sinh, sĩ số</b> — tổng hợp đầy đủ.</li>
+          <li><b>Nhắc việc cần để ý</b> — lớp chưa chấm, học sinh vắng nhiều.</li>
+          <li><b>AI viết giọng đồng nghiệp</b> — dễ đọc, thân thiện, không khô khan.</li>
+          <li><b>Gửi thẳng vào nhóm Zalo</b> — cả nhà cùng nắm tình hình.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="zalo">
+          <div class="zhead">
+            <div class="gv">👥</div>
+            <div class="nm">Vận hành Trung tâm<span>KLASSA Bot · 8 thành viên</span></div>
+          </div>
+          <div class="zbody">
+            <div class="daydiv"><span>Hôm nay · 23:00</span></div>
+            <div class="msg">
+              <div class="bot"><img src="img/klassa-icon-circle.png" alt="KLASSA" /></div>
+              <div class="bcol">
+                <div class="sender">KLASSA Bot</div>
+                <div class="bubble">
+                  <span class="rt">🌙 Báo cáo cuối ngày · 01/06</span>
+                  <span class="ln">Chào cả nhà, em tổng kết nhanh hôm nay nhé ạ 👇</span>
+                  <span class="ln">📋 <b>Điểm danh:</b> 142/156 buổi đã chấm (91%). Còn lớp cô Hương &amp; thầy Nam chưa chấm ạ.</span>
+                  <span class="ln">💰 <b>Thu phí:</b> 18.500.000đ từ 6 phụ huynh. Còn 4 bạn hẹn sang tháng.</span>
+                  <span class="ln">🎯 <b>Tuyển sinh:</b> thêm 5 lead mới, 2 bạn đặt lịch học thử cuối tuần.</span>
+                  <span class="ln">👶 <b>Sĩ số:</b> 312 bạn đang học, hôm nay có 3 bạn mới ghi danh.</span>
+                  <span class="ln">👀 <b>Để ý:</b> bạn Minh (9A) vắng 3 buổi liền, cả nhà gọi phụ huynh giúp em nha.</span>
+                  <span class="ln">Cả nhà nghỉ ngơi, mai mình lại chiến tiếp 💪💖</span>
+                </div>
+                <div class="time">23:00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="caption">Báo cáo cuối ngày do AI soạn, tự gửi vào nhóm Zalo trung tâm</div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 10. KẾT NỐI & TỰ ĐỘNG HOÁ ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">08 · Kết nối &amp; Tự động hoá</div>
+    <div class="sec-title">Gắn kết phụ huynh, nhân viên &amp; Zalo</div>
+    <div class="sec-sub">Mỗi vai trò có cổng riêng; tin nhắn Zalo và quy trình lặp lại được tự động hoá để không ai phải nhắn tay từng người.</div>
+    <div class="visual" style="display:grid; grid-template-columns:repeat(4,1fr); gap:5mm; margin-top:6mm;">
+      <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i></div><img src="img/cong-phu-huynh-gioi-thieu.png" alt="Cổng phụ huynh" /></div><div class="caption">Cổng phụ huynh</div></div>
+      <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i></div><img src="img/cong-nhan-vien-gioi-thieu.png" alt="Cổng nhân viên" /></div><div class="caption">Cổng nhân viên</div></div>
+      <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i></div><img src="img/tin-nhan-zalo.png" alt="Tin nhắn Zalo" /></div><div class="caption">Nhắn tin Zalo</div></div>
+      <div><div class="shot fit"><div class="bar"><i></i><i></i><i></i></div><img src="img/automation-trang-chinh.png" alt="Tự động hoá" /></div><div class="caption">Tự động hoá</div></div>
+    </div>
+    <ul class="feats two" style="margin-top:8mm;">
+      <li><b>Cổng phụ huynh</b> — xem điểm danh, hoá đơn, điểm số, lịch học.</li>
+      <li><b>Cổng nhân viên</b> — chấm công, phiếu lương, việc cần làm, chat.</li>
+      <li><b>Zalo tập trung</b> — nhắn nhóm/cá nhân, gửi thông báo hàng loạt.</li>
+      <li><b>Tự động hoá</b> — nhắc phí, chúc mừng sinh nhật, báo cáo cuối ngày.</li>
+    </ul>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 11. MỞ RỘNG ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">09 · Mở rộng linh hoạt</div>
+    <div class="sec-title">Bật đúng thứ trung tâm bạn cần</div>
+    <div class="split">
+      <div>
+        <div class="sec-sub" style="margin-top:0;">KLASSA được xây theo dạng plugin — trung tâm nhỏ dùng gọn nhẹ, trung tâm lớn bật thêm tính năng nâng cao mà không phải đổi phần mềm.</div>
+        <ul class="feats">
+          <li><b>Kho tính năng (plugin)</b> bật/tắt theo nhu cầu.</li>
+          <li><b>Ngân hàng câu hỏi &amp; ma trận đề</b> cho luyện thi.</li>
+          <li><b>Phân quyền theo vai trò</b> — mỗi người thấy phần mình.</li>
+          <li><b>Đa cơ sở</b> cho chuỗi trung tâm nhiều chi nhánh.</li>
+          <li><b>Thương hiệu riêng</b> — logo, màu sắc của trung tâm bạn.</li>
+        </ul>
+      </div>
+      <div class="visual">
+        <div class="shot fit"><div class="bar"><i></i><i></i><i></i><span>demo.klassa.vn/question-bank</span></div><img src="img/ngan-hang-cau-hoi.png" alt="Ngân hàng câu hỏi" /></div>
+        <div class="caption">Ngân hàng câu hỏi &amp; ma trận đề — một trong các tính năng bật thêm</div>
+      </div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 12. VÌ SAO CHỌN ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">Vì sao chọn KLASSA</div>
+    <div class="sec-title">Thiết kế riêng cho trung tâm dạy thêm Việt Nam</div>
+    <div class="sec-sub">Không phải phần mềm trường học “cắt gọt” lại. KLASSA hiểu đúng cách trung tâm dạy thêm vận hành.</div>
+    <div class="why" style="margin-top:5mm;">
+      <div class="whyc"><h3>🇻🇳 Hiểu mô hình Việt Nam</h3><p>Học phí nhiều môn, chiết khấu, lương theo sĩ số, điểm danh đối chiếu — đúng thực tế trung tâm dạy thêm.</p></div>
+      <div class="whyc"><h3>🔐 An toàn &amp; minh bạch</h3><p>Phân quyền theo vai trò, dữ liệu trung tâm được cô lập riêng, sao lưu hàng ngày.</p></div>
+      <div class="whyc"><h3>📱 Dễ dùng cho thầy cô</h3><p>Mở lên là thấy, bấm là xong. Giáo viên không rành công nghệ vẫn dùng được ngay.</p></div>
+      <div class="whyc"><h3>💬 Hỗ trợ qua Zalo</h3><p>Đội ngũ hỗ trợ tiếng Việt, hướng dẫn 1-1, đồng hành cùng trung tâm.</p></div>
+      <div class="whyc"><h3>🤖 Tích hợp AI</h3><p>Tự tổng hợp báo cáo, cảnh báo học sinh nguy cơ, gợi ý hành động.</p></div>
+      <div class="whyc"><h3>🧩 Lớn nhỏ đều hợp</h3><p>Từ 1 lớp đến chuỗi nhiều cơ sở — bật thêm tính năng khi phát triển.</p></div>
+    </div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 13. CÁC GÓI ============ -->
+<section class="page">
+  <div class="pad">
+    <div class="kicker">Các gói linh hoạt</div>
+    <div class="sec-title">Chọn gói theo quy mô trung tâm</div>
+    <div class="sec-sub">Mọi gói đều dùng thử miễn phí, hỗ trợ Zalo, cập nhật &amp; sao lưu dữ liệu hàng ngày.</div>
+    <div class="plans" style="margin-top:6mm;">
+      <div class="plan">
+        <div class="pn">Starter</div><div class="scale">Trung tâm mới, ít lớp</div>
+        <ul><li>Tuyển sinh &amp; học sinh</li><li>Điểm danh thông minh</li><li>Học phí cơ bản</li><li>Báo cáo cơ bản</li><li class="off">Lương giáo viên</li><li class="off">Phân quyền nhân sự</li></ul>
+      </div>
+      <div class="plan feat">
+        <div class="tag">PHỔ BIẾN NHẤT</div>
+        <div class="pn">Growth</div><div class="scale">Trung tâm đang phát triển</div>
+        <ul><li>Toàn bộ gói Starter</li><li>Học phí &amp; hoá đơn đầy đủ</li><li><b>Lương giáo viên tự động</b></li><li>Dạy thay &amp; phân quyền</li><li>Báo cáo nâng cao</li><li>Cổng phụ huynh &amp; nhân viên</li></ul>
+      </div>
+      <div class="plan">
+        <div class="pn">Pro</div><div class="scale">Chuỗi nhiều cơ sở</div>
+        <ul><li>Toàn bộ gói Growth</li><li>Đa cơ sở, không giới hạn</li><li>AI &amp; báo cáo chuyên sâu</li><li>Thương hiệu riêng</li><li>Kho plugin nâng cao</li><li>Hỗ trợ ưu tiên</li></ul>
+      </div>
+    </div>
+    <div class="price-note">💡 <b>Báo giá theo quy mô thực tế của trung tâm bạn.</b> Đặt một buổi demo để được tư vấn gói phù hợp nhất và nhận báo giá chi tiết.</div>
+  </div>
+  <div class="pfoot"><span>Catalogue giới thiệu sản phẩm</span><span class="wm">K<b>·</b>LASSA</span></div>
+</section>
+
+<!-- ============ 14. CTA ============ -->
+<section class="page cta">
+  <img class="logo" src="img/klassa-logo-white.svg" alt="KLASSA" />
+  <h2>Bạn lo dạy hay. <b>KLASSA lo phần còn lại.</b></h2>
+  <div class="sub">Đặt một buổi demo 15 phút — xem KLASSA chạy trên chính số liệu trung tâm của bạn.</div>
+  <div class="contacts">
+    <div class="cc"><div class="l">Website</div><div class="v">klassa.vn</div></div>
+    <div class="cc"><div class="l">Hotline / Zalo</div><div class="v">0853 364 888</div></div>
+  </div>
+  <div class="slo">Every class, <b>a Klassa.</b></div>
+  <div class="org">BT3-17 Khu Ngoại Giao Đoàn, Hà Nội · © 2026 KLASSA</div>
+</section>
+
+</body>
+</html>

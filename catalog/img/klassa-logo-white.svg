@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="72" viewBox="0 0 360 72">
+  <!-- KLASSA — White (transparent, for dark gradient) -->
+  <rect x="8" y="4" width="11" height="62" fill="#FFFFFF"/>
+  <path d="M19,28 L50,4 L60,4 L60,12 L28,33 Z" fill="#FFFFFF"/>
+  <path d="M19,40 L28,35 L60,56 L60,64 L50,64 Z" fill="#FFFFFF"/>
+  <polygon points="56,30 63,23 63,37" fill="#F59E0B"/>
+  <text x="72" y="52" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="46" fill="#FFFFFF" letter-spacing="1.5">LASSA</text>
+</svg>
