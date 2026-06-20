@@ -41,6 +41,7 @@ type Shot = {
   role: keyof typeof CONFIG.ROLES | 'none'
   full?: boolean
   openDialog?: string // regex nhãn nút mở dialog
+  scrollTo?: string   // regex text cuộn tới vùng trước khi chụp (viewport)
   waitMs?: number
 }
 
@@ -58,6 +59,10 @@ const SHOTS: Shot[] = [
   { slug: 'thu-chi-trang-chinh', url: '/finance/payments', role: 'admin', full: true },
   { slug: 'tuition-plan-billing-mode', url: '/finance/tuition?tab=tuition', role: 'admin', openDialog: 'Tạo gói học phí|Tạo gói học phí mới|Tạo gói|Thêm gói' },
   { slug: 'enrollment-billing-override-create', url: '/dashboard/enrollments/create', role: 'admin', full: true },
+
+  // ----- Zalo OA (cập nhật: Callback URL + hướng dẫn ZNS 7 bước) -----
+  { slug: 'zalo-oa-config-form', url: '/integrations?tab=zalo', role: 'admin', scrollTo: 'Callback URL' },
+  { slug: 'zalo-oa-zns-templates', url: '/integrations?tab=zalo', role: 'admin', scrollTo: 'Hướng dẫn đăng ký mẫu ZNS' },
 ]
 
 async function login(page: Page, role: string) {
@@ -91,8 +96,12 @@ async function capture(browser: Browser, shot: Shot) {
       if (!opened) console.log(`   ⚠ không mở được dialog cho ${shot.slug}`)
       else await page.waitForTimeout(1500)
     }
+    if (shot.scrollTo) {
+      try { await page.getByText(new RegExp(shot.scrollTo, 'i')).first().scrollIntoViewIfNeeded({ timeout: 5000 }); await page.waitForTimeout(800) }
+      catch { console.log(`   ⚠ không cuộn tới được vùng cho ${shot.slug}`) }
+    }
     const f = path.join(CONFIG.OUT, `${shot.slug}.png`)
-    await page.screenshot({ path: f, fullPage: !!shot.full && !shot.openDialog })
+    await page.screenshot({ path: f, fullPage: !!shot.full && !shot.openDialog && !shot.scrollTo })
     const kb = Math.round(fs.statSync(f).size / 1024)
     console.log(`${kb < 50 ? '⚠' : '✅'} ${shot.slug}.png (${kb}KB)`)
   } catch (e) {
