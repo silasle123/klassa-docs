@@ -64,6 +64,8 @@ Sau khi xuất bản, bấm nút **"Gửi cho phụ huynh"** → chọn kênh:
 
 Có thể gửi cùng lúc qua **nhiều kênh** để đảm bảo phụ huynh nhận được.
 
+> Gửi hàng loạt qua Zalo (cả lớp / theo khối / kèm mã QR thanh toán) — xem chi tiết [Gửi hoá đơn qua Zalo](gui-hoa-don-zalo.md).
+
 ## Phụ huynh xem hoá đơn
 
 - Mở link Zalo → trang xem hoá đơn không cần đăng nhập

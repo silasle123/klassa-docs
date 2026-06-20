@@ -53,6 +53,7 @@
   - [Tổng quan tài chính](hoc-phi/tong-quan.md)
   - [Quản lý học phí](hoc-phi/quan-ly-hoc-phi.md)
   - [Tạo và gửi hoá đơn](hoc-phi/tao-hoa-don.md)
+  - [Gửi hoá đơn qua Zalo](hoc-phi/gui-hoa-don-zalo.md)
   - [Thu - chi (thanh toán)](hoc-phi/thu-chi.md)
   - [Kế toán nội bộ](hoc-phi/ke-toan.md)
   - [Hoá đơn điện tử (e-Invoice)](hoc-phi/hoa-don-dien-tu.md)
