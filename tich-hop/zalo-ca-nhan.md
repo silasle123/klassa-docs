@@ -32,9 +32,6 @@ Các tab con khác: Mẫu trả lời nhanh · Trả lời tự động · Nhãn
 
 1. Bấm **"Thêm tài khoản"** → nhập **Tên gọi** (ví dụ "Sale Cam Linh") → bấm **"Tạo"**. Tài khoản hiện trạng thái **"Cần quét QR"**.
 2. Trên thẻ tài khoản, bấm **"Quét QR"** → mở hộp thoại **"Quét QR đăng nhập"** hiển thị mã QR.
-
-![Hộp thoại quét QR](../assets/screenshots/zalo-qr-login-dialog.png)
-
 3. Trên điện thoại: mở **Zalo → Cài đặt → Quét QR** → quét mã trên màn hình → **xác nhận trên điện thoại**.
 4. Đăng nhập thành công → trạng thái chuyển **"Đang hoạt động"**, hệ thống bắt đầu nhận tin.
 

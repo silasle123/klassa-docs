@@ -73,6 +73,7 @@
   - [Mẫu phiếu lương](nhan-su/mau-phieu-luong.md)
   - [Tạm ứng lương](nhan-su/tam-ung-luong.md)
   - [Kiểm tra lương trước khi chi trả](nhan-su/kiem-tra-luong.md)
+  - [Giao việc nội bộ](nhan-su/giao-viec.md)
   - [Chấm công nhân viên](nhan-su/cham-cong.md)
   - [Cấu hình chấm công (WiFi/GPS/Thiết bị)](nhan-su/cau-hinh-cham-cong.md)
   - [Quản lý ngày phép](nhan-su/ngay-phep.md)

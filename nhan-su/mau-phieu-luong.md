@@ -2,57 +2,55 @@
 
 ## Khi nào dùng
 
-Tuỳ chỉnh hình thức + nội dung phiếu lương PDF mà nhân viên nhận hàng tháng:
-- Logo + thông tin trung tâm
-- Các cột muốn hiển thị (cơ bản, phụ cấp, buổi dạy, trừ BHXH, thuế…)
-- Bố cục đẹp, có thể in chia 2 phần (giữ + giao)
-- Đa ngôn ngữ (Việt / Anh)
+Tuỳ chỉnh **thông tin in trên phiếu lương PDF** mà nhân viên nhận (tên công ty, địa chỉ, mã số thuế, ghi chú chân phiếu) — dùng chung cho cả phiếu lương lẫn hợp đồng.
 
 ## Truy cập
 
-Menu trái → **Nhân sự → Mẫu phiếu lương** (hoặc **/hr/payslip-template**).
+Menu trái → **Nhân sự → Mẫu phiếu lương** (`/hr/payslip-template`). Tiêu đề trang: **"Mẫu phiếu lương & hợp đồng"**. Cần quyền nhân sự (xem); sửa cần quyền cập nhật.
 
-![Mẫu phiếu lương](../assets/screenshots/hr-mau-phieu-luong.png)
+![Trang Mẫu phiếu lương & hợp đồng](../assets/screenshots/payslip-template-page.png)
 
-## Tính năng
+## Các trường tuỳ chỉnh
 
-### Mẫu có sẵn
+### Thông tin in trên phiếu (card chính)
+- **Tên công ty**
+- **Địa chỉ pháp nhân**
+- **Mã số thuế (MST)**
+- **Email liên hệ**
+- **Ghi chú chân phiếu** — hiển thị ở cuối mỗi phiếu lương PDF
 
-3 mẫu khởi tạo:
-- **Tối giản** — 1 trang, thông tin gọn
-- **Chi tiết** — hiển thị từng buổi dạy, từng khoản trừ
-- **Đầy đủ** — kèm chữ ký số trung tâm + dấu
+### Thông tin cho hợp đồng lao động (Bên A)
+Dùng khi xuất file hợp đồng, KHÔNG hiện trên phiếu lương:
+- Người đại diện ký hợp đồng
+- Chức vụ người đại diện
+- Điện thoại công ty
 
-### Tuỳ chỉnh
+### Logo
+Card Logo chỉ **hiển thị** logo hiện tại (lấy từ Cài đặt thương hiệu). Muốn đổi logo → bấm link **"Đổi logo tại Cài đặt thương hiệu"** (`/admin/branding`). **Không upload logo trực tiếp ở trang này.**
 
-- **Logo + Header** — upload logo, đổi màu, đổi font
-- **Các trường hiển thị** — tick / bỏ tick mỗi cột
-- **Văn bản tuỳ chỉnh** — thêm câu chúc, lời cảm ơn
-- **Footer** — thông tin liên hệ HR + Kế toán
+## Xem thử + Lưu
 
-### Xem trước
+- **"Xem thử phiếu mẫu"** (góc trên phải) → mở một phiếu lương PDF mẫu (số liệu giả) với thông tin thương hiệu hiện tại, để kiểm tra layout trước khi áp dụng.
+- **"Lưu mẫu phiếu"** → lưu cấu hình.
 
-Bấm **"Xem trước"** → hiển thị phiếu lương mẫu với dữ liệu của 1 nhân viên thật (lấy random từ DB) → kiểm tra layout trước khi áp dụng.
+> Cấu hình này **dùng chung** với hoá đơn và email (lưu trong cài đặt thương hiệu) — sửa ở đây cũng đổi thông tin in trên hoá đơn.
 
-### Áp dụng
+## Phiếu lương thật trông như thế nào
 
-- **Áp dụng cho toàn trung tâm** — mọi NV dùng chung mẫu
-- **Áp dụng theo phòng ban** — GV mẫu A, Nhân viên hỗ trợ mẫu B
-- **Áp dụng theo cơ sở** — mỗi chi nhánh có mẫu riêng (nếu trung tâm muốn nhận diện khác nhau)
+Sau khi cấu hình, phiếu lương xuất ra PDF như sau (mẫu thật từ hệ thống):
 
-## Tên file PDF
+![Phiếu lương PDF mẫu](../assets/screenshots/phieu-luong-mau-pdf.png)
 
-Mặc định tên file: `Phieu_luong_<MaNV>_<HoTen>_<Thang>.pdf` — chứa tên NV để khi gửi không nhầm.
+Bố cục: tiêu đề **PHIẾU LƯƠNG** + tháng + mã phiếu → bảng thông tin nhân viên → 4 ô tóm tắt công → bảng **Các khoản thu nhập** (có chi tiết lương dạy từng lớp) → bảng **Các khoản khấu trừ** → hộp **Lương thực nhận** kèm số tiền bằng chữ → chữ ký 2 bên → ghi chú chân phiếu.
 
-## Lưu ý
+## Mẫu email gửi phiếu lương (khác)
 
-- **Đổi mẫu áp dụng kỳ sau** — phiếu lương đã chốt không thay đổi.
-- **Test in giấy trước** — đảm bảo layout vừa A4, không cắt mất chữ ký.
+Mẫu **email** đính kèm khi gửi phiếu lương cho nhân viên **KHÔNG** cấu hình ở trang này. Vào **Tích hợp → Mẫu email & thông báo → "Email gửi phiếu lương"** để soạn mẫu email (tiêu đề + nội dung, có các biến như tên NV, kỳ lương, lương thực nhận). Chưa có mẫu này thì hệ thống chặn gửi phiếu qua email.
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn thêm chữ ký số của Chủ trung tâm, được không?**
-Có. Upload file ảnh chữ ký + cấu hình "Chèn chữ ký số" → PDF tự thêm khi sinh.
+**Tên file phiếu lương khi tải về là gì?**
+`Họ tên - Phiếu lương - MM.YYYY.pdf` (có sẵn tên nhân viên để không nhầm khi gửi).
 
-**Nhân viên xem phiếu lương ở đâu?**
-[Cổng Nhân viên → Phiếu lương](../cong-nhan-vien/phieu-luong.md).
+**Đổi logo mà phiếu chưa cập nhật?**
+Logo lấy từ Cài đặt thương hiệu (`/admin/branding`). Đổi ở đó rồi xem thử lại phiếu mẫu.
