@@ -2,73 +2,57 @@
 
 ## Khi nào dùng
 
-Khi khách quyết định đăng ký và đóng học phí — đây là **bước cuối** của phễu tuyển sinh, đồng thời là bước **đầu** của hồ sơ học sinh.
+Khi một Lead (khách quan tâm) quyết định đăng ký học → chuyển Lead đó thành **học sinh chính thức**. Đây là bước cuối của phễu tuyển sinh.
+
+> Cách này khác với [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md): chuyển từ Lead sẽ **giữ nguyên toàn bộ thông tin** đã thu thập trong quá trình tư vấn (môn quan tâm, trường, nguồn, ghi chú…), không phải gõ lại.
 
 ## Các bước
 
-### Bước 1 — Mở trang chi tiết Lead
+### Bước 1 — Mở Lead cần chuyển
 
-Từ phễu hoặc danh sách, bấm vào Lead khách hàng vừa đăng ký.
+Từ [Danh sách Lead](danh-sach-lead.md) hoặc [Phễu tuyển sinh](pheu-tuyen-sinh.md), bấm vào Lead → mở trang chi tiết. Hoặc dùng cửa sổ xem nhanh (quick view) ngay trên danh sách.
 
-### Bước 2 — Bấm "Chuyển thành Học sinh"
+### Bước 2 — Bấm "Chuyển thành học sinh"
 
-Nút này nằm ở góc trên bên phải trang chi tiết Lead.
+Một hộp thoại xác nhận hiện ra:
 
-![Nút chuyển Lead thành Học sinh](../assets/screenshots/lead-nut-chuyen-hs.png)
+> **Chuyển thành học sinh**
+> Chuyển **\<tên Lead\>** thành học sinh chính thức. Phiếu thu sẽ tạo sau.
 
-### Bước 3 — Điền thông tin còn thiếu
+Đây chỉ là **xác nhận một bước** — KHÔNG có form điền thêm, KHÔNG phải chọn lớp, KHÔNG phải nhập học phí. Phần mềm dùng luôn thông tin đã lưu trong Lead.
 
-Một cửa sổ hiện ra, phần mềm tự điền sẵn thông tin từ Lead. Anh chị chỉ cần bổ sung:
+### Bước 3 — Bấm "Xác nhận chuyển đổi"
 
-- **Mã học sinh** — phần mềm tự sinh, có thể đổi nếu trung tâm có quy tắc riêng
-- **Ngày sinh học sinh** (bắt buộc)
-- **Giới tính**
-- **Trường học hiện tại**
-- **Địa chỉ**
-- **Thông tin phụ huynh** — họ tên, SĐT, mối quan hệ
+Phần mềm tự động (trong một giao dịch an toàn):
 
-### Bước 4 — Chọn lớp ghi danh
+- Sinh **mã học sinh** dạng `HQ-L{khối}-{số thứ tự}`
+- Tạo hồ sơ học sinh, **sao chép toàn bộ** từ Lead: họ tên, SĐT, ngày sinh, địa chỉ, giới tính, trường, khối lớp, trình độ, **nguồn Lead**, môn quan tâm, ghi chú
+- Nếu có thông tin phụ huynh (tên + SĐT) → tạo **hồ sơ phụ huynh + tài khoản đăng nhập** (mật khẩu mặc định `12345678`, đăng nhập được ngay)
+- Đổi trạng thái Lead thành **"Đã chuyển đổi"** (khoá lại, không sửa được nữa)
+- Ghi nhật ký hoạt động trên Lead
 
-Bên dưới có phần **"Ghi danh vào lớp"**. Chọn:
+Báo thành công kèm mã HS rồi tự chuyển sang trang Học sinh.
 
-- Khoá học
-- Lớp cụ thể (theo ca, giáo viên)
-- Ngày bắt đầu
+## Sau khi chuyển — 2 việc cần làm tiếp
 
-Có thể chọn **"Để sau"** nếu chưa biết lớp — tạo hồ sơ học sinh trước, ghi danh sau.
+Phần mềm cố ý **tách** việc chuyển đổi khỏi ghi danh + thu tiền để anh chị linh hoạt:
 
-### Bước 5 — Tạo hoá đơn (tuỳ chọn)
-
-Bật công tắc **"Tạo hoá đơn ngay"** nếu khách đã đóng tiền hoặc cam kết đóng. Phần mềm sẽ:
-
-- Tính học phí theo khoá đã chọn
-- Áp dụng khuyến mãi nếu có (chọn từ danh sách)
-- Sinh hoá đơn nháp để anh chị xem trước khi gửi khách
-
-### Bước 6 — Bấm "Xác nhận chuyển đổi"
-
-Phần mềm thực hiện đồng loạt:
-
-- Tạo hồ sơ học sinh
-- Tạo hồ sơ phụ huynh (nếu chưa có)
-- Cấp tài khoản phụ huynh để xem điểm danh / hoá đơn
-- Ghi danh vào lớp
-- Tạo hoá đơn (nếu có chọn)
-- Đóng Lead với trạng thái **"Đã chuyển đổi"**
+1. **Ghi danh vào lớp** — vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md) (hoặc menu Ghi danh) để thêm em vào lớp cụ thể. Chuyển đổi KHÔNG tự xếp lớp.
+2. **Tạo phiếu thu học phí** — vào hồ sơ học sinh / [Tạo và gửi hoá đơn](../hoc-phi/tao-hoa-don.md). Chuyển đổi KHÔNG tự tạo hoá đơn.
 
 ## Lưu ý
 
-- **Không thể đảo ngược** sau khi chuyển — Lead trở thành học sinh chính thức. Nếu nhập sai, sửa thông tin trong hồ sơ học sinh, không xoá rồi tạo lại.
-- **Tài khoản phụ huynh** mặc định có mật khẩu chung `12345678` — phụ huynh đăng nhập sau sẽ được khuyến khích đổi.
-- **Nếu phụ huynh đã có học sinh khác** trong trung tâm, hệ thống tự nhận diện theo SĐT và gắn cùng tài khoản — 1 phụ huynh quản lý nhiều con.
+- **Không thể đảo ngược**: sau khi chuyển, Lead bị khoá trạng thái "Đã chuyển đổi". Nếu nhập sai, sửa trong hồ sơ học sinh, không thể "tách" lại thành Lead.
+- **Chống trùng**: nếu đã có học sinh cùng tên + SĐT + phụ huynh, phần mềm chặn và báo mã HS đang tồn tại — tránh tạo trùng.
+- **Nguồn Lead được giữ lại**: học sinh mới mang theo nguồn (Facebook Ads / Zalo / giới thiệu…) → phục vụ báo cáo tỷ lệ chuyển đổi theo nguồn.
 
 ## Câu hỏi thường gặp
 
-**Khách đã đóng cọc nhưng chưa đóng đủ học phí, có chuyển được không?**
-Có. Tạo hồ sơ + ghi danh, nhưng để công nợ trong hoá đơn. Phần mềm sẽ nhắc lễ tân thu nốt.
+**Sao chuyển xong em chưa có trong lớp nào?**
+Đúng thiết kế. Ghi danh vào lớp là bước riêng — vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md).
 
-**Một Lead có 2 con cùng đăng ký, làm sao?**
-Chuyển Lead thành học sinh đầu tiên, rồi vào hồ sơ phụ huynh → bấm **"Thêm học sinh"** để tạo bé thứ 2 với cùng phụ huynh.
+**Phụ huynh của Lead đã có tài khoản (con khác đang học) thì sao?**
+Phần mềm nhận diện theo SĐT/email và gắn học sinh mới vào tài khoản phụ huynh sẵn có — không tạo trùng.
 
-**Sau khi chuyển đổi, Lead có còn trong hệ thống không?**
-Có. Lead vẫn được lưu với trạng thái "Đã chuyển đổi" — phục vụ thống kê tỷ lệ chuyển đổi của tư vấn viên.
+**Lead có 2 con cùng đăng ký, xử lý thế nào?**
+Chuyển Lead thành học sinh thứ nhất, rồi vào [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md) tạo bé thứ hai với cùng SĐT phụ huynh.
