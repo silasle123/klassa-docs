@@ -2,6 +2,7 @@
 
 - **1. Bắt đầu**
   - [Đăng nhập vào phần mềm](bat-dau/dang-nhap.md)
+  - [Đăng ký tài khoản](bat-dau/dang-ky.md)
   - [Bảng tổng quan (Dashboard)](bat-dau/dashboard.md)
   - [Hồ sơ cá nhân](bat-dau/ho-so-ca-nhan.md)
   - [Đổi mật khẩu](bat-dau/doi-mat-khau.md)

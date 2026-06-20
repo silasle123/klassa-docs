@@ -39,6 +39,9 @@ Nếu thông tin đúng, phần mềm sẽ chuyển sang **Bảng tổng quan** 
 
 ## Câu hỏi thường gặp
 
+**Chưa có tài khoản thì làm sao?**
+Dưới ô đăng nhập có dòng **"Chưa có tài khoản? Đăng ký ngay"** → xem [Đăng ký tài khoản](dang-ky.md). Hoặc nhờ Chủ trung tâm tạo sẵn tài khoản trong [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+
 **Tôi có thể đăng nhập trên điện thoại không?**
 Có. Phần mềm hoạt động tốt trên trình duyệt điện thoại. Anh chị mở Chrome/Safari trên điện thoại và truy cập cùng địa chỉ.
 
