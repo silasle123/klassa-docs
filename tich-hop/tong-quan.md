@@ -14,20 +14,28 @@
 
 ## Truy cập
 
-Menu trái → **Tích hợp** (hoặc **/integrations**).
+Menu trái → **Tích hợp & API** (`/integrations`).
 
-![Trang tích hợp](../assets/screenshots/tich-hop-trang-chinh.png)
+![Trang Tích hợp & API](../assets/screenshots/tich-hop-trang-chinh.png)
 
-## Mô hình kết nối
+## Mô hình: 1 trang nhiều tab
 
-Mỗi tích hợp = 1 plugin. Bật / tắt từng cái độc lập.
+Tất cả tích hợp gom vào **một trang `/integrations`** dạng tab — không phải nhiều trang rời rạc. Các tab chính:
 
-Trạng thái mỗi tích hợp:
+| Tab | Dùng cho |
+|-----|----------|
+| **Tổng quan** | Bảng điều khiển nhanh: số API call, webhook, tỷ lệ lỗi |
+| **Zalo** | [Zalo OA](zalo-oa.md) + [Zalo cá nhân](zalo-ca-nhan.md) + Chọn kênh |
+| **Cron Jobs** | Tác vụ tự động chạy theo lịch (làm mới token, báo cáo…) |
+| **Email** | Kết nối [SMTP gửi email](email.md) + mẫu email & thông báo |
+| **SMS** | Kết nối [cổng SMS](sms.md) |
+| **Thông báo** | Ma trận định tuyến thông báo theo sự kiện + kênh |
+| **Lead từ web** | [Trang đăng ký công khai](../tuyen-sinh/yeu-cau-dang-ky.md) thu lead |
+| **API / Webhooks** | Khoá API + webhook cho tích hợp kỹ thuật |
 
-- 🟢 Đã kết nối, hoạt động bình thường
-- 🟡 Đã kết nối, có cảnh báo
-- 🔴 Lỗi kết nối, cần kiểm tra
-- ⚪ Chưa kết nối
+> Mẫu email (gồm **mẫu email gửi phiếu lương**) cấu hình trong tab **Email → Mẫu email & thông báo**.
+
+Trạng thái mỗi kết nối: 🟢 Đã kết nối · 🟡 Có cảnh báo · 🔴 Lỗi · ⚪ Chưa kết nối.
 
 ## Bảo mật
 

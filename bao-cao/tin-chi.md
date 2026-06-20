@@ -2,55 +2,44 @@
 
 ## Khái niệm
 
-**Tín chỉ học sinh** = số buổi học mà phụ huynh đã đóng tiền nhưng học sinh chưa học hết. Phục vụ:
+**Tín chỉ (credit)** trong KLASSA là **số tiền** (VNĐ) trung tâm còn "nợ" học sinh — sinh ra khi học sinh đã đóng tiền nhưng vắng buổi (ở chế độ [thu trước có khấu trừ](../hoc-phi/quan-ly-hoc-phi.md)), hoặc khi admin tặng / chuyển / hoàn thủ công. Tín chỉ này **tự trừ vào hoá đơn kỳ sau** thay cho hoàn tiền mặt.
 
-- Báo cáo "nợ buổi" của trung tâm với phụ huynh
-- Tính giá trị nghĩa vụ (deferred revenue)
-- Cảnh báo học sinh sắp hết buổi cần đóng tiếp
+> Tín chỉ là **TIỀN**, không phải đếm số buổi. Một học sinh có thể có số dư tín chỉ vài trăm nghìn đồng chờ khấu trừ.
 
 ## Truy cập
 
-Menu **Báo cáo → Tín chỉ** (hoặc **/reports/credit**).
+Menu **Báo cáo → Tín chỉ** (`/reports/credit`).
 
 ![Báo cáo tín chỉ](../assets/screenshots/bao-cao-tin-chi.png)
 
-## Nội dung
+## Nội dung báo cáo
 
-### Tổng quan
+Báo cáo tổng hợp theo **kỳ (tháng)**:
 
-- Tổng số buổi đã bán (toàn trung tâm)
-- Tổng số buổi đã dùng (đã chấm điểm danh "có mặt" hoặc "đi muộn")
-- **Tổng buổi còn lại** = bán - dùng
-- Giá trị tiền tương đương (số buổi × đơn giá)
+- **Tổng tín chỉ phát sinh** (VNĐ)
+- **Tổng đã khấu trừ** (đã áp vào hoá đơn)
+- **Tổng số dư còn lại** (chưa áp)
 
-### Theo học sinh
+Mỗi dòng tín chỉ có:
+- Học sinh + môn (gắn theo ghi danh)
+- Số tiền
+- Nguồn: **Vắng buổi** / **Điều chỉnh loại buổi** / **Thủ công** (admin tặng) / **Chuyển** (từ HS khác) / **Hoàn**
+- Trạng thái: **Chờ áp** (PENDING) / **Đã áp** (APPLIED)
 
-Bảng:
-- Học sinh
-- Khoá / lớp
-- Buổi đã đóng
-- Buổi đã học
-- Buổi còn lại
-- Hạn dùng (nếu có)
+## Tín chỉ hoạt động thế nào
 
-### Cảnh báo
-
-- Học sinh sắp hết buổi (≤ 3 buổi) — nhắc đóng tiếp
-- Học sinh có nhiều buổi (> 20 buổi còn) — kiểm tra có học không
-- Tín chỉ sắp hết hạn — chính sách bảo lưu
-
-## Hành động
-
-Từ danh sách:
-- 💬 Nhắn Zalo nhắc đóng tiếp
-- 📄 Tạo hoá đơn gia hạn
-
-## Lưu ý
-
-- **Tín chỉ là nghĩa vụ kế toán** — trung tâm phải dạy đủ số buổi đã bán.
-- **Quy đổi tiền tệ**: phục vụ báo cáo cuối năm cho kế toán thuế.
+- Sinh khi học sinh **vắng** (chế độ thu trước có khấu trừ) + đã có hoá đơn kỳ đó.
+- Gắn với **đúng một môn** → trừ vào hoá đơn kỳ sau của môn đó.
+- Học sinh **nghỉ hẳn một môn** → tín chỉ dư **tự tràn** sang môn còn học của cùng học sinh.
+- **Không có hoàn tiền mặt tự động** — tín chỉ chỉ khấu trừ vào hoá đơn.
 
 ## Câu hỏi thường gặp
 
-**Học sinh nghỉ học, tín chỉ còn lại xử lý sao?**
-Theo chính sách hoàn (Cài đặt tài chính): hoàn tiền hoặc bảo lưu cho khoá sau.
+**Học sinh nghỉ học hẳn toàn bộ, tín chỉ dư xử lý sao?**
+Tín chỉ kẹt ở trạng thái "Chờ áp". Admin xử lý thủ công: **chuyển** sang học sinh khác (anh/chị/em) hoặc **điều chỉnh** thủ công. Không tự hoàn tiền mặt.
+
+**Sao có học sinh tín chỉ = 0?**
+Học sinh ở chế độ "Thu trước trọn gói" (không trừ credit) hoặc "Thu sau theo buổi thực" thì không sinh tín chỉ vắng. Xem [3 chế độ thu học phí](../hoc-phi/quan-ly-hoc-phi.md).
+
+**Xuất báo cáo để đối soát kế toán?**
+Bấm xuất Excel ở góc bảng để lấy chi tiết từng dòng tín chỉ theo kỳ.

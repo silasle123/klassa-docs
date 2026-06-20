@@ -52,6 +52,12 @@ const SHOTS: Shot[] = [
   { slug: 'auth-signup', url: '/auth/signup', role: 'none', full: true },
   { slug: 'admin-registrations', url: '/admin/registrations', role: 'admin', full: true },
   { slug: 'admin-users', url: '/admin/users', role: 'admin', full: true },
+
+  // ----- Tài chính: gói học phí / cấu hình / thanh toán -----
+  { slug: 'finance-settings', url: '/finance/settings', role: 'admin', full: true },
+  { slug: 'thu-chi-trang-chinh', url: '/finance/payments', role: 'admin', full: true },
+  { slug: 'tuition-plan-billing-mode', url: '/finance/tuition?tab=tuition', role: 'admin', openDialog: 'Tạo gói học phí|Tạo gói học phí mới|Tạo gói|Thêm gói' },
+  { slug: 'enrollment-billing-override-create', url: '/dashboard/enrollments/create', role: 'admin', full: true },
 ]
 
 async function login(page: Page, role: string) {

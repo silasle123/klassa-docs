@@ -49,8 +49,8 @@ Menu trái → **Học phí & Hoá đơn → Tổng quan** (hoặc **/finance/ov
 
 ## Câu hỏi thường gặp
 
-**Doanh thu hiển thị có tính đến hoàn tiền không?**
-Có. Doanh thu thuần = Thu vào - Hoàn trả.
+**Doanh thu có bị trừ hoàn tiền không?**
+KLASSA dùng cơ chế **tín chỉ khấu trừ** (bù vào kỳ sau) thay vì hoàn tiền mặt — nên doanh thu phản ánh tiền thu thực tế. Xem [Báo cáo tín chỉ](../bao-cao/tin-chi.md).
 
-**Tôi muốn so sánh với cùng kỳ năm trước, có không?**
-Có. Bộ lọc thời gian → chọn "So sánh với năm trước" → biểu đồ overlay 2 đường.
+**Trang Tổng quan tài chính (CFO Dashboard) hiển thị gì?**
+Doanh thu theo ngày, chi phí theo danh mục (biểu đồ tròn), và dòng tiền 12 tháng kèm **dự báo 3 tháng tới**.

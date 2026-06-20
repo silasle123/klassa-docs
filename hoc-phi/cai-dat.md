@@ -2,90 +2,56 @@
 
 ## Khi nào dùng
 
-Cấu hình các quy tắc tài chính chung cho toàn trung tâm:
-
-- Đơn vị tiền tệ
-- Quy tắc thanh toán (đến hạn, nhắc nợ)
-- Khuyến mãi mặc định
-- Chính sách hoàn tiền
-- Tự động đối soát ngân hàng
+Đặt các quy tắc tính tiền + công nợ cho **từng cơ sở**, và nội dung học phí hiển thị cho phụ huynh.
 
 ## Truy cập
 
-Menu trái → **Học phí & Hoá đơn → Cài đặt** (hoặc **/finance/settings**).
+Menu trái → **Học phí → Cài đặt** (`/finance/settings`). Cấu hình lưu **theo từng cơ sở** — tài khoản chưa gắn cơ sở sẽ thấy công tắc bị khoá + cảnh báo.
 
-![Cài đặt tài chính](../assets/screenshots/tai-chinh-cai-dat.png)
+![Cấu hình tài chính](../assets/screenshots/finance-settings.png)
 
-## Các mục cấu hình
+> Lưu ý: **chế độ thu học phí (thu trước / thu sau / không trừ credit) KHÔNG đặt ở đây** — đặt ở [gói học phí](quan-ly-hoc-phi.md) và ghi đè theo từng học sinh khi ghi danh.
 
-### 1. Đơn vị tiền tệ
+## Nhóm 1 — Quy tắc tính tiền & công nợ
 
-- VNĐ (mặc định)
-- USD / EUR / khác (cho trung tâm phục vụ khách nước ngoài)
-- Định dạng số (1.000.000 vs 1,000,000)
+### 1. Tự động cộng buổi đã học chưa thu
+Công tắc **"Tự động cộng buổi đã học chưa thu vào hoá đơn kỳ mới"** (mặc định **TẮT**). Bật → buổi học sinh đã đi tháng trước nhưng chưa kịp xuất phiếu sẽ được gom vào mục "Nợ kỳ trước" của hoá đơn kỳ mới. *Khuyến nghị để TẮT khi mới triển khai* cho đỡ rối.
 
-### 2. Quy tắc đến hạn
+### 2. Trừ ngày nghỉ khỏi hoá đơn (lịch nghỉ)
+Công tắc **"Tự động trừ ngày nghỉ khỏi hoá đơn đầu kỳ"** (mặc định **TẮT**). Khi bật:
+- Hoá đơn đầu kỳ (chế độ thu trước) **không tính tiền các buổi rơi vào ngày nghỉ** đã khai báo.
+- Cạnh công tắc có nút **"Quản lý lịch nghỉ →"** dẫn sang trang [Ngày nghỉ lễ](../cai-dat/ngay-nghi-le.md) (`/settings/holidays`) để khai báo ngày nghỉ.
 
-- **Hoá đơn đến hạn** sau bao nhiêu ngày từ ngày xuất bản (mặc định 7 ngày)
-- **Nợ quá hạn** = quá hạn bao nhiêu ngày (mặc định 14 ngày)
-- **Tự động nhắc nợ** trước hạn X ngày + đúng hạn + quá hạn
+> Đây là **"lịch nghỉ trong cấu hình tài chính"**: bản thân ngày nghỉ khai ở trang Ngày nghỉ lễ chung, còn công tắc này quyết định **có trừ tiền** những ngày đó khỏi hoá đơn hay không. Chỉ áp dụng cho gói **thu trước**.
 
-### 3. Tự động gửi nhắc nợ
+### 3. Tự động tạo hoá đơn thu sau
+Công tắc **"Tự động tạo hoá đơn thu sau vào đầu tháng kế tiếp"** (mặc định **BẬT**) — chỉ áp cho gói **"Thu sau theo buổi thực"**. Bật → rạng sáng ngày 1 hệ thống tự xuất hoá đơn theo buổi đã học. Tắt → kế toán bấm tay nút **"Tạo hoá đơn thu sau"** ở trang chốt sổ.
 
-Bật để KLASSA tự gửi Zalo / email nhắc phụ huynh:
+### 4. Phụ thu thêm trên hoá đơn
+Công tắc **"Phụ thu"** (mặc định TẮT) + ô **Tên phụ thu** + **Số tiền phụ thu**. Bật → cộng một khoản cố định vào **mọi hoá đơn tạo sau khi lưu** (hoá đơn cũ giữ nguyên; chống thu trùng theo học sinh + kỳ).
 
-- 3 ngày trước hạn — nhắc lịch sự
-- Đúng hạn — báo đến hạn
-- 3 ngày quá hạn — nhắc lần 2
-- 7 ngày quá hạn — gọi điện (nhắc Kế toán gọi)
+### 5. Mẫu khoản phụ thu
+Bảng quản lý **danh mục phí đặt sẵn** (giáo trình, thi thử, cơ sở vật chất…): Tên khoản phí · Số tiền · Mô tả · Đang dùng. Khi sửa phụ thu trên từng hoá đơn, chọn nhanh từ danh mục này. Hoá đơn lưu lại tên + số tiền tại thời điểm tạo → sửa/xoá mẫu **không ảnh hưởng** hoá đơn cũ.
 
-### 4. Khuyến mãi tự động
+## Nhóm 2 — Nội dung hiển thị cho phụ huynh (chỉ marketing)
 
-- Anh chị em — con thứ N giảm bao nhiêu %
-- Đóng dài hạn — đóng X tháng giảm Y%
-- Học sinh giới thiệu bạn — giảm cho cả 2
+> Hai mục này **chỉ để hiển thị**, KHÔNG ảnh hưởng tính tiền.
 
-### 5. Chính sách hoàn tiền
+### 6. Thông tin học phí hiển thị
+2 ô văn bản: **"Quy định chung"** + **"Chính sách ưu đãi"** → hiển thị cho phụ huynh xem. Có nút "Lưu thông tin học phí" riêng.
 
-- **Không hoàn** — học phí đã đóng = không trả lại
-- **Hoàn theo tỷ lệ** — học X% thì hoàn (100-X)%
-- **Bảo lưu** — chuyển sang khoá khác
-
-### 6. Phí phạt quá hạn
-
-Một số trung tâm tính phí phạt khi phụ huynh đóng muộn (ví dụ 50k / tuần quá hạn). Bật / tắt + cấu hình tại đây.
-
-### 7. Tài khoản ngân hàng
-
-Liệt kê các tài khoản ngân hàng trung tâm dùng để nhận chuyển khoản:
-
-- Tên ngân hàng
-- Số tài khoản
-- Tên chủ TK
-- Mã QR VietQR (tự động sinh)
-
-Các thông tin này tự xuất hiện trên hoá đơn để phụ huynh chuyển.
-
-### 8. Tích hợp thanh toán online
-
-Kết nối các cổng thanh toán:
-
-- **VNPay** — thẻ ATM, thẻ tín dụng
-- **Momo**
-- **ZaloPay**
-- **VietQR** (mặc định, không phí)
-
-Phụ huynh có thể bấm link trong hoá đơn để thanh toán ngay không cần chuyển khoản thủ công.
+### 7. Cơ cấu học phí (tab Tổng quan)
+Công tắc bật/tắt + ô Phụ đề + ô "Thẻ giá" (mỗi dòng: `giá | nhãn | nhãn nổi bật`) + Chính sách ưu đãi. Hiển thị thành bảng giá đẹp ở trang Tổng quan tài chính. **Đây chỉ là bảng giá trưng bày, không phải gói học phí thật.**
 
 ## Lưu ý
 
-- **Khuyến mãi tự động** ảnh hưởng hoá đơn mới tạo, không ảnh hưởng hoá đơn cũ.
-- **Tự động gửi nhắc nợ**: chỉ bật khi đã kết nối Zalo OA hoặc email SMTP.
+- Cấu hình **theo từng cơ sở** — mỗi chi nhánh đặt riêng được.
+- Không có ở đây (docs cũ ghi nhầm): đơn vị tiền tệ, quy tắc đến hạn, tự động nhắc nợ, chính sách hoàn tiền, phí phạt quá hạn, cấu hình cổng thanh toán. Cổng thanh toán (MoMo/VNPay/SePay) cấu hình ở [Thu - chi](thu-chi.md).
 
 ## Câu hỏi thường gặp
 
-**Đổi đơn vị tiền tệ giữa chừng, dữ liệu cũ có bị ảnh hưởng không?**
-Không. Dữ liệu cũ vẫn hiển thị bằng đơn vị cũ. Đơn vị mới áp cho giao dịch sau khi đổi.
+**Tôi muốn buổi nghỉ lễ không tính tiền cho phụ huynh?**
+Bật công tắc "Tự động trừ ngày nghỉ khỏi hoá đơn", rồi khai ngày nghỉ trong [Ngày nghỉ lễ](../cai-dat/ngay-nghi-le.md). Áp cho gói thu trước.
 
-**Tôi muốn từng cơ sở có khuyến mãi riêng, được không?**
-Được. Trong Cài đặt → Khuyến mãi → mỗi khuyến mãi có "Phạm vi áp dụng" — chọn cơ sở cụ thể.
+**Phụ thu khác mẫu khoản phụ thu thế nào?**
+"Phụ thu" (mục 4) cộng cố định vào MỌI hoá đơn. "Mẫu khoản phụ thu" (mục 5) là danh mục để chọn nhanh khi thêm phí cho TỪNG hoá đơn cụ thể.

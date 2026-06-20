@@ -25,10 +25,12 @@ Menu trái → **Học phí & Hoá đơn**.
 ### Bước 4 — Xem hoá đơn nháp
 
 Phần mềm tự tính:
-- Đơn giá × số lượng
-- Khuyến mãi tự áp (nếu đủ điều kiện)
-- Thuế VAT (nếu có)
+- Đơn giá gói × số kỳ
+- Trừ giảm giá gói + giảm giá ghi danh (% hoặc số tiền)
+- Cộng phụ thu (nếu bật trong [Cài đặt tài chính](cai-dat.md))
 - **Tổng cuối cùng**
+
+> Hoá đơn học phí thường **không có dòng thuế VAT**. VAT chỉ áp dụng khi dùng [Hoá đơn điện tử](hoa-don-dien-tu.md).
 
 Có thể thêm dòng thủ công:
 
@@ -45,13 +47,12 @@ Có thể thêm dòng thủ công:
 
 Khi đầu tháng cần tạo hoá đơn cho tất cả học sinh:
 
-1. **Học phí & Hoá đơn → Tạo hàng loạt**
-2. Chọn:
-   - Cơ sở
-   - Khoá / Lớp (hoặc tất cả)
-   - Tháng áp dụng
-3. **Xem trước** — danh sách hoá đơn sẽ tạo, tổng tiền dự kiến
-4. **Tạo tất cả** — phần mềm tạo đồng thời hàng trăm hoá đơn
+1. Vào **Học phí → Kế toán** (`/finance/accounting`) → Hoá đơn → bấm **tạo hoá đơn tự động**.
+2. Chọn: **kỳ (tháng)** / **khối** / **lớp** áp dụng.
+3. **Xem trước** — danh sách hoá đơn sẽ tạo + tổng tiền dự kiến.
+4. **Tạo** — phần mềm tạo đồng thời hàng loạt. Có thể tải PDF / xoá hàng loạt sau đó.
+
+> Gói **"Thu sau theo buổi thực"** không tạo ở đầu tháng — hệ thống tự xuất hoá đơn cuối kỳ (xem [Quản lý học phí](quan-ly-hoc-phi.md)).
 
 ## Gửi hoá đơn cho phụ huynh
 
