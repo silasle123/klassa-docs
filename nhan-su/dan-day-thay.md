@@ -8,7 +8,9 @@ Khi một buổi học cần **đổi người dạy** (giáo viên chính bận
 
 ## Bước 1 — Tạo yêu cầu dạy thay (ở trang Điểm danh)
 
-Người quản lý (Chủ trung tâm / Quản lý / Quản lý chi nhánh) vào **Điểm danh** (`/attendance`) → tìm buổi cần đổi người → bấm **"Dạy thay"** → mở hộp thoại:
+Vào **Điểm danh** (`/attendance`) → tìm buổi cần đổi người → mở menu **⋯** trên buổi → bấm **"Dạy thay"** → mở hộp thoại:
+
+> **Ai tạo được:** mọi vai trò **trừ Giáo viên và Trợ giảng** — tức **Lễ tân, Kế toán, Quản lý, Quản lý chi nhánh, Chủ trung tâm** đều tạo được. Giáo viên/Trợ giảng không thấy nút này.
 
 - **GV dạy thay** — chọn:
   - *Giữ nguyên GV* (không đổi giáo viên)
@@ -49,7 +51,7 @@ Chọn **"Không có GV"** (và/hoặc "Không có TG") khi tạo yêu cầu →
 ## Lưu ý
 
 - **Tạo yêu cầu ở trang Điểm danh, duyệt ở trang Dạy thay** — hai nơi khác nhau.
-- **Chỉ Quản lý trở lên** thao tác (tạo + duyệt). Giáo viên không tự tạo/duyệt yêu cầu dạy thay.
+- **Tạo yêu cầu:** mọi vai trò trừ Giáo viên / Trợ giảng (gồm cả Lễ tân, Kế toán). **Duyệt:** chỉ Chủ trung tâm / Quản lý / Quản lý chi nhánh.
 - **Từ chối phải nêu lý do** — lưu lại để truy vết.
 
 ## Câu hỏi thường gặp
