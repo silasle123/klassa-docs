@@ -1,60 +1,64 @@
-# Đơn xin dạy thay
+# Dạy thay
 
 ## Khái niệm
 
-Khi giáo viên không thể dạy buổi đã đăng ký (ốm, có việc đột xuất), cần có **giáo viên khác dạy thay**. KLASSA quản lý quy trình này gồm:
+Khi một buổi học cần **đổi người dạy** (giáo viên chính bận, ốm, đi công tác…), quản lý tạo một **yêu cầu dạy thay** cho buổi đó — chọn giáo viên / trợ giảng thay (hoặc để "không có"), rồi Quản lý duyệt. Khi duyệt, buổi tự đổi người dạy và **lương buổi tính cho người dạy thay**.
 
-- Giáo viên nộp đơn xin nghỉ buổi đó
-- Đề xuất / tìm giáo viên thay
-- Duyệt đơn
-- Cập nhật lịch dạy + lương
+> Quy trình gồm **2 nơi**: tạo yêu cầu ở trang **Điểm danh**, duyệt ở **Nhân sự → Dạy thay**.
 
-## Truy cập
+## Bước 1 — Tạo yêu cầu dạy thay (ở trang Điểm danh)
 
-Menu trái → **Nhân sự → Đơn dạy thay** (hoặc **/hr/substitute-requests**).
+Người quản lý (Chủ trung tâm / Quản lý / Quản lý chi nhánh) vào **Điểm danh** (`/attendance`) → tìm buổi cần đổi người → bấm **"Dạy thay"** → mở hộp thoại:
 
-![Đơn dạy thay](../assets/screenshots/hr-day-thay.png)
+- **GV dạy thay** — chọn:
+  - *Giữ nguyên GV* (không đổi giáo viên)
+  - *Không có GV* (buổi diễn ra không có giáo viên chính)
+  - hoặc chọn **một giáo viên** trong danh sách để thay
+- **TG dạy thay** — tương tự: *Giữ nguyên TG* / *Không có TG* / chọn một trợ giảng
+- **Lý do dạy thay** \* — bắt buộc
 
-## Quy trình
+Bấm tạo → yêu cầu chuyển sang trạng thái **"Chờ duyệt"**.
 
-### Bước 1 — Giáo viên nộp đơn
+> Người tạo **tự chọn** ai dạy thay ngay trong hộp thoại — hệ thống KHÔNG tự gợi ý và KHÔNG cần người dạy thay bấm đồng ý.
 
-Trong **Cổng Nhân viên → Buổi dạy** → bấm buổi muốn nghỉ → **"Xin dạy thay"**:
+## Bước 2 — Duyệt yêu cầu (ở Nhân sự → Dạy thay)
 
-- Lý do
-- Đề xuất giáo viên thay (tuỳ chọn)
-- Thời gian thông báo (trước bao nhiêu ngày)
+Vào **Nhân sự → Dạy thay** (`/hr/substitute-requests`). Chỉ **Chủ trung tâm / Quản lý / Quản lý chi nhánh** vào được.
 
-### Bước 2 — Hệ thống đề xuất GV thay
+![Danh sách yêu cầu dạy thay](../assets/screenshots/hr-day-thay.png)
 
-Phần mềm tự gợi ý giáo viên rảnh đúng giờ + cùng môn dạy → thông báo Zalo cho họ.
+Mỗi yêu cầu hiển thị: trạng thái, tên lớp + ngày, **GV gốc → GV thay** (hoặc "Không có GV"), lý do, người yêu cầu. Lọc theo trạng thái ở góc phải (Tất cả / Chờ duyệt / Đã duyệt / Từ chối); số **"N chờ duyệt"** nổi ở đầu trang.
 
-### Bước 3 — Giáo viên thay nhận / từ chối
+Với yêu cầu **"Chờ duyệt"** có 2 nút:
+- **"Duyệt"** — chấp nhận đổi người dạy
+- **"Từ chối"** — mở hộp thoại **bắt buộc nhập lý do từ chối**
 
-GV thay nhận thông báo → bấm "Đồng ý" hoặc "Từ chối".
+## Bước 3 — Sau khi duyệt
 
-### Bước 4 — Quản lý duyệt
+Khi bấm "Duyệt", hệ thống tự động:
+- Đổi trạng thái yêu cầu thành **"Đã duyệt"**
+- **Ghi đè người dạy của buổi**: gán giáo viên / trợ giảng thay (hoặc để trống nếu chọn "Không có GV/TG")
+- **Lương buổi** tính cho **người dạy thay** (không tính cho GV gốc); nếu "Không có GV" thì buổi đó không phát sinh lương giáo viên
 
-Sau khi có GV thay, Quản lý xem + duyệt đơn cuối.
+Nếu **Từ chối**: buổi giữ nguyên người dạy cũ, ghi lại lý do từ chối.
 
-### Bước 5 — Cập nhật lịch
+## Trường hợp không có ai dạy thay
 
-- Lịch buổi tự đổi giáo viên thay
-- Học sinh + phụ huynh nhận thông báo
-- Lương: buổi đó tính cho GV thay, không tính cho GV gốc
-
-## Trường hợp không tìm được GV thay
-
-- Phần mềm cảnh báo Quản lý
-- Quản lý có thể **huỷ buổi** → tổ chức buổi bù sau
-- Hoặc tự đứng lớp (nếu là Quản lý có chuyên môn)
+Chọn **"Không có GV"** (và/hoặc "Không có TG") khi tạo yêu cầu → buổi vẫn được ghi nhận nhưng không gán giáo viên. Dùng khi buổi bị dồn/huỷ hoặc trợ giảng đứng lớp một mình.
 
 ## Lưu ý
 
-- **Báo trước càng sớm càng tốt** — dễ tìm người thay.
-- **Đơn cấp tốc** (báo trong vòng 24 giờ): cần Quản lý duyệt khẩn cấp.
+- **Tạo yêu cầu ở trang Điểm danh, duyệt ở trang Dạy thay** — hai nơi khác nhau.
+- **Chỉ Quản lý trở lên** thao tác (tạo + duyệt). Giáo viên không tự tạo/duyệt yêu cầu dạy thay.
+- **Từ chối phải nêu lý do** — lưu lại để truy vết.
 
 ## Câu hỏi thường gặp
 
-**GV thay không có quyền chấm điểm danh, làm sao?**
-Khi duyệt đơn, hệ thống tự cấp quyền tạm thời cho GV thay đối với buổi đó. Sau buổi, quyền tự hết.
+**Giáo viên có tự xin dạy thay được không?**
+Không. Yêu cầu dạy thay do quản lý tạo từ trang Điểm danh. Nếu giáo viên bận, báo quản lý để tạo yêu cầu.
+
+**Đã duyệt rồi muốn đổi lại?**
+Yêu cầu đã duyệt/từ chối không xử lý lại được. Nếu cần đổi tiếp, tạo một yêu cầu dạy thay mới cho buổi đó.
+
+**Lương của giáo viên gốc và giáo viên thay tính thế nào?**
+Sau khi duyệt, buổi thuộc về người dạy thay → lương buổi tính cho người thay. Xem cách tính ở [Bảng lương](bang-luong.md).
