@@ -124,12 +124,6 @@
   - [Tự động hoá quy trình (Workflow)](tu-dong-hoa/quy-trinh.md)
   - [Mẫu workflow có sẵn](tu-dong-hoa/mau-co-san.md)
 
-- **14. Marketing & Mạng xã hội**
-  - [Marketing tổng quan](marketing/tong-quan.md)
-  - [Quản lý bài đăng mạng xã hội](marketing/bai-dang-mxh.md)
-  - [Tạo bài đăng mới](marketing/tao-bai-dang.md)
-  - [Pixel Office — gắn pixel tracking](marketing/pixel-office.md)
-
 - **15. Cổng Phụ huynh**
   - [Giới thiệu cổng phụ huynh](cong-phu-huynh/gioi-thieu.md)
   - [Xem điểm danh của con](cong-phu-huynh/diem-danh.md)
