@@ -60,6 +60,8 @@ Bảng liệt kê từng dòng kèm nhãn màu:
 
 Nếu có dòng đỏ, bấm **Nhờ AI đề xuất cho dòng lỗi**. Phần mềm gợi ý giá trị suy ra từ chính dòng đó (tách tên và số điện thoại nằm chung ô, đọc khối lớp từ "6A1"…). Đề xuất hiện nền tím kèm giá trị cũ, **không tự động áp** — anh chị bấm **Nhận đề xuất** từng dòng, hoặc **Nhận tất cả đề xuất**.
 
+**Nếu trung tâm dùng gói có giới hạn số lượng**, ngay tại bảng duyệt sẽ có dải cảnh báo cho biết gói còn bao nhiêu chỗ và đang chọn bao nhiêu dòng. Chọn quá số chỗ còn lại thì nút xác nhận bị khoá cho tới khi bỏ bớt dòng hoặc nâng gói. Áp dụng cho học sinh và nhân viên (chỉ tính người có email vì mới sinh tài khoản đăng nhập); khách quan tâm không tính vào hạn mức.
+
 Cuối cùng bấm **Xác nhận nhập N dòng**.
 
 ### Bước 4 — Kết quả
@@ -75,6 +77,9 @@ Muốn tắt hẳn: **Cài đặt → Tính năng AI → Chuẩn hoá dữ liệ
 
 **AI có tự sửa dữ liệu của tôi không?**
 Không. Ở bước ghép cột, AI chỉ nói "lấy cột nào cho thông tin nào" — chính phần mềm mới là bên đọc dữ liệu, nên không có chuyện tên hay số điện thoại bị sửa khác đi. Ở bước gợi ý sửa lỗi, mọi đề xuất đều phải anh chị bấm nhận mới có hiệu lực, và AI chỉ được đụng vào ô đang trống hoặc đang sai — ô đã đúng thì giữ nguyên.
+
+**Có cột trong file mà phần mềm không lấy?**
+Phần mềm chỉ lấy những thông tin nó quản lý. Cột riêng của trung tâm (mã nội bộ, ghi chú xếp lớp…) sẽ không được nhập. Nếu quan trọng, ở bước 2 anh chị chọn cột đó làm **Ghi chú** — mỗi thông tin nhận một cột.
 
 **Nhập nhầm thì sao?**
 Chưa bấm **Xác nhận** ở bước 3 thì chưa có gì được lưu. Sau khi đã lưu, xoá từng hồ sơ ở danh sách tương ứng.
