@@ -8,6 +8,7 @@
   - [Đổi mật khẩu](bat-dau/doi-mat-khau.md)
   - [Vai trò người dùng](bat-dau/vai-tro-nguoi-dung.md)
   - [Menu trái — cách dùng](bat-dau/menu-trai.md)
+  - [Nhập dữ liệu hàng loạt từ Excel](bat-dau/nhap-du-lieu-hang-loat.md)
 
 - **2. Tuyển sinh & Lead**
   - [Danh sách Lead (khách quan tâm)](tuyen-sinh/danh-sach-lead.md)

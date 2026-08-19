@@ -48,27 +48,15 @@ Lead mới sẽ xuất hiện ngay đầu danh sách với trạng thái **"Mớ
 
 ## Cách 2 — Nhập hàng loạt từ Excel
 
-Phù hợp khi trung tâm vừa nhận file kết quả quảng cáo (hàng chục, hàng trăm Lead).
+Phù hợp khi trung tâm vừa nhận file kết quả quảng cáo (hàng chục, hàng trăm Lead). Tại trang **Danh sách Lead**, bấm nút **"Nhập từ Excel"** kế bên nút "+ Thêm Lead". Mỗi lần tối đa **500 dòng**.
 
-### Bước 1 — Bấm "Nhập từ Excel"
+**Không cần sửa file cho khớp mẫu.** File quảng cáo xuất ra đặt tên cột kiểu gì cũng được — phần mềm tự ghép về đúng thông tin của hệ thống, rồi đưa bảng cho anh chị xem lại và sửa trước khi lưu. Anh chị cũng có thể **dán thẳng** bảng copy từ Excel hoặc Google Sheet thay vì tải file lên.
 
-Tại trang **Danh sách Lead**, bấm vào nút **"Nhập từ Excel"** kế bên nút "+ Thêm Lead".
+Bốn bước và cách xử lý các ca đặc biệt: xem [Nhập dữ liệu hàng loạt từ Excel](../bat-dau/nhap-du-lieu-hang-loat.md).
 
-### Bước 2 — Tải file mẫu
+**Bắt buộc phải có:** Họ tên và Số điện thoại. Các cột email, khối lớp quan tâm, nguồn, tên và SĐT phụ huynh, ghi chú là tuỳ chọn.
 
-Bấm **"Tải file mẫu"** để tải về file Excel chuẩn. Mở file, điền dữ liệu theo các cột có sẵn (không đổi tên cột, không xoá hàng tiêu đề).
-
-### Bước 3 — Tải file đã điền lên
-
-Bấm **"Chọn file"**, chọn file Excel đã điền. Phần mềm sẽ:
-
-- Kiểm tra dữ liệu (số điện thoại có đúng định dạng không, có trùng Lead cũ không…)
-- Hiển thị bản xem trước
-- Cho anh chị xác nhận trước khi lưu
-
-### Bước 4 — Xác nhận
-
-Nếu mọi thứ ổn, bấm **"Nhập"**. Các Lead trong file sẽ được thêm vào hệ thống đồng loạt.
+Ở bảng duyệt, Lead trùng số điện thoại với lead hoặc học sinh đang có sẽ được đánh dấu 🟡 và bỏ tích sẵn; dòng thiếu thông tin đánh dấu 🔴 kèm lý do và sửa được ngay trên bảng.
 
 ## Lưu ý
 

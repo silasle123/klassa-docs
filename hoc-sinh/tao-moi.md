@@ -58,32 +58,21 @@ Nút lưu ở cuối trang có nhãn **"Thêm học sinh"**. Khi lưu, phần m�
 
 ## Cách 2 — Nhập hàng loạt từ Excel
 
-Phù hợp khi nhập danh sách lớn (chuyển từ phần mềm cũ, đầu năm học mới).
-
-### Bước 1 — Mở hộp thoại Nhập Excel
-
-Trang **Học sinh** → bấm nút **"Nhập Excel"** (cạnh nút Thêm học sinh).
+Phù hợp khi nhập danh sách lớn (chuyển từ phần mềm cũ, đầu năm học mới). Trang **Học sinh** → bấm nút **"Nhập Excel"** (cạnh nút Thêm học sinh). Mỗi lần tối đa **500 dòng**.
 
 ![Nhập Excel — bước chọn file](../assets/screenshots/hoc-sinh-import-excel-buoc1.png)
 
-Bấm **"Tải file mẫu"** để lấy file Excel chuẩn. Mỗi lần nhập tối đa **500 dòng**.
+**File không cần đúng khuôn mẫu.** Phần mềm tự đọc file, tự ghép cột của anh chị về đúng thông tin của hệ thống — kể cả khi tên cột đặt tự do, họ và tên tách hai cột, hay một ô ghi chung cả tên lẫn số điện thoại phụ huynh. Anh chị xem lại việc ghép ở bước 2, sửa từng ô ở bước 3 rồi mới xác nhận.
 
-**Cột bắt buộc trong file:** Họ tên, Khối (hợp lệ "Lớp 1"…"Lớp 12" hoặc "Tiền tiểu học"), **Tên phụ huynh**, **SĐT phụ huynh** (10 số, bắt đầu bằng 0). Các cột SĐT học sinh, ngày sinh, trường, email phụ huynh, ghi chú là tuỳ chọn.
+Bốn bước và cách xử lý các ca đặc biệt: xem [Nhập dữ liệu hàng loạt từ Excel](../bat-dau/nhap-du-lieu-hang-loat.md).
 
-### Bước 2 — Xem trước + chọn dòng
+**Bắt buộc phải có:** Họ tên, Khối (hiểu được "Lớp 6", "Khối 6", "6A1", "Tiền tiểu học"), **Tên phụ huynh**, **SĐT phụ huynh**. Các cột SĐT học sinh, ngày sinh, trường, email phụ huynh, ghi chú là tuỳ chọn.
 
-Phần mềm phân loại từng dòng bằng nhãn màu:
-- 🟢 **Hợp lệ** — tự tích chọn để nhập
-- 🟡 **Trùng** — bỏ tích sẵn (đã có trong hệ thống)
-- 🔴 **Lỗi** — không nhập được, kèm lý do
+Ở bảng duyệt, mỗi dòng có nhãn màu — 🟢 hợp lệ (tích sẵn), 🟡 trùng (bỏ tích sẵn), 🔴 lỗi kèm lý do — và anh chị **sửa thẳng vào ô** để chữa dòng lỗi, hoặc bấm **Nhờ AI đề xuất cho dòng lỗi** rồi duyệt từng đề xuất.
 
 ![Nhập Excel — xem trước phân loại](../assets/screenshots/hoc-sinh-import-excel-buoc2-preview.png)
 
-Anh chị có thể bỏ chọn từng dòng. Bấm **"Nhập N dòng đã chọn"**.
-
-### Bước 3 — Kết quả
-
-Hiển thị số tạo thành công / bỏ qua + lý do từng dòng lỗi. Tài khoản phụ huynh từ import cũng dùng mật khẩu mặc định `12345678`.
+Cuối cùng phần mềm báo số tạo thành công / bỏ qua kèm lý do từng dòng. Tài khoản phụ huynh từ nhập Excel cũng dùng mật khẩu mặc định `12345678`.
 
 ## Lưu ý
 
