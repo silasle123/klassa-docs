@@ -1,51 +1,76 @@
-# Cơ sở tri thức (Knowledge base)
+---
+title: "AI Knowledge: nạp tài liệu cho AI"
+description: "Thêm, sửa, xoá tài liệu chính sách và hướng dẫn để AI trả lời đúng quy định riêng của trung tâm."
+roles: [Quản trị viên]
+plugin: "AI — Gợi ý & Trợ lý Vận hành"
+order: 30
+---
 
-## Khái niệm
+# AI Knowledge: nạp tài liệu cho AI
 
-Upload tài liệu nội bộ vào **Knowledge** để AI tham khảo khi trả lời:
+Trang này là nơi Quản trị viên nạp quy định, quy trình, sổ tay và câu hỏi thường gặp của trung tâm. Khi nhân viên hỏi về chính sách ở [AI Assistant](chat.md), AI sẽ tìm trong các tài liệu này để trả lời theo quy định của bạn, thay vì trả lời chung chung.
 
-- Sổ tay nhân viên
-- Quy trình tuyển sinh
-- Kịch bản tư vấn
-- Tài liệu giảng dạy
-- Câu hỏi thường gặp của phụ huynh
+Chỉ Quản trị viên mở được trang. Tính năng cần gói mở rộng **AI — Gợi ý & Trợ lý Vận hành**.
 
-AI sẽ trả lời "dựa trên tài liệu trung tâm" thay vì kiến thức chung chung.
+## Thêm tài liệu
 
-## Truy cập
+::: steps
+1. Vào **AI Hub → AI Knowledge**. Trang có tiêu đề **Quản lý Knowledge Base cho AI**.
+2. Bấm **Thêm tài liệu**, hộp **Thêm tài liệu training mới** hiện ra.
+3. Điền **Tiêu đề** (bắt buộc).
+4. Chọn **Loại tài liệu** (bắt buộc): Câu hỏi thường gặp, Chính sách, Quy trình, Hướng dẫn hoặc Sổ tay nhân viên. Mặc định là Câu hỏi thường gặp.
+5. Chọn **Danh mục** (bắt buộc): Chính sách nhân sự, Lương & Phúc lợi, Nghỉ phép, Chấm công, Phúc lợi, Đánh giá hiệu suất, Đào tạo hoặc Chung. Mặc định là Chung.
+6. Gõ hoặc dán văn bản vào ô **Nội dung**, hoặc chọn file ở mục **Tải lên file PDF (tùy chọn)**. Phải có ít nhất một trong hai.
+7. Bấm **Thêm tài liệu** (nếu có file PDF thì nút đổi thành **Tải lên PDF và thêm tài liệu**).
+:::
 
-Menu trái → **AI Hub → Knowledge** (hoặc **/ai-hub/knowledge**).
+![Hộp Thêm tài liệu training mới](../assets/screenshots/ai-knowledge-them-tai-lieu.webp)
 
-![Knowledge base](../assets/screenshots/ai-knowledge.png)
+Khi chọn file PDF, hệ thống tự lấy văn bản từ file. Nếu bạn vừa gõ nội dung vừa chọn PDF, phần bạn gõ được đặt ở đầu. Nếu ô **Tiêu đề** còn trống, hệ thống lấy tên file làm tiêu đề.
 
-## Upload tài liệu
+Sau khi thêm, tài liệu được xử lý ngay để AI tìm được. Nếu cột **Chunks** của tài liệu hiện 0, bấm **Tạo Embeddings** ở cuối dòng để xử lý lại (đây là bước tạo chỉ mục cho AI tìm kiếm).
 
-- Hỗ trợ định dạng: PDF, Word, Excel, TXT, Markdown
-- Tối đa 50MB / file
-- Upload nhiều file cùng lúc
-- AI tự index trong vài phút
+::: warning Lưu ý
+Chỉ nhận file PDF có chữ. Nếu là ảnh scan, file mã hoá hoặc file hỏng, hệ thống báo "Không thể đọc file PDF". Khi đó hãy dán nội dung vào ô **Nội dung** rồi thêm lại.
+:::
 
-## Quản lý
+## Kiểm tra AI trả lời thế nào
 
-- Phân thư mục (vd "Quy trình", "Marketing", "Đào tạo GV")
-- Gán nhãn (tag) để lọc
-- Cập nhật / xoá file
+::: steps
+1. Bấm **Test AI**, hộp **Test AI Assistant** hiện ra.
+2. Gõ câu hỏi vào ô **Câu hỏi**, ví dụ "Chính sách nghỉ phép năm là gì?".
+3. Bấm nút gửi và đọc phần **Câu trả lời** cùng **Nguồn tham khảo**.
+:::
 
-## Phạm vi sử dụng
+Nếu nguồn tham khảo không đúng tài liệu bạn mong đợi, hãy sửa lại tiêu đề hoặc nội dung tài liệu cho rõ ý hơn.
 
-- **AI Chat** dùng Knowledge khi user hỏi
-- **Trợ lý HR** dùng khi soạn văn bản nội bộ
-- **AI Insights** tham khảo khi sinh báo cáo
+## Sửa và xoá tài liệu
 
-## Lưu ý
+Danh sách **Danh sách tài liệu** có cột **Tiêu đề**, **Loại**, **Danh mục**, **Chunks**, **Trạng thái** và **Thao tác**. Gõ vào ô **Tìm kiếm tài liệu...** để lọc.
 
-- **Dữ liệu được gửi cho nhà cung cấp AI** khi sinh embedding → đảm bảo nhà cung cấp có cam kết bảo mật.
-- **Cập nhật thường xuyên** — tài liệu cũ làm AI trả lời sai.
+![Trang Quản lý Knowledge Base cho AI với bốn ô thống kê và Danh sách tài liệu](../assets/screenshots/ai-knowledge-danh-sach.webp)
+
+- **Sửa**: bấm biểu tượng cây bút ở cuối dòng, sửa trong hộp **Sửa tài liệu** rồi bấm **Lưu thay đổi**. Hộp này sửa được tiêu đề, loại, danh mục và nội dung.
+- **Xoá**: bấm biểu tượng thùng rác và xác nhận "Bạn có chắc muốn xóa tài liệu này?".
+
+::: danger Không thể hoàn tác
+Tài liệu đã xoá không khôi phục được. Hãy lưu bản gốc ở nơi khác trước khi xoá.
+:::
+
+## Khi đổi nhà cung cấp AI
+
+Nếu đổi nhà cung cấp AI ở phần cấu hình, trên đầu trang có thể hiện khung cảnh báo "tài liệu chưa có embeddings cho provider hiện tại". Bấm **Tạo lại tất cả** để AI tìm lại được toàn bộ tài liệu. Chưa bấm thì AI không thấy những tài liệu đó khi trả lời.
 
 ## Câu hỏi thường gặp
 
-**Có giới hạn dung lượng không?**
-Free: 100MB. Plus: 1GB. Enterprise: không giới hạn.
+::: details Có nạp được file Word hay Excel không?
+Không. Trang chỉ nhận file PDF có chữ hoặc nội dung gõ trực tiếp. Với file Word, mở file, chép nội dung rồi dán vào ô **Nội dung**.
+:::
 
-**Tôi có thể chia sẻ knowledge với trung tâm khác không?**
-Knowledge là dữ liệu nội bộ, không chia sẻ ra ngoài.
+::: details Bốn ô thống kê ở đầu trang nghĩa là gì?
+**Tổng số tài liệu**, **Đang active** (tài liệu đang dùng), **FAQ** (số tài liệu loại Câu hỏi thường gặp) và **Chính sách** (số tài liệu loại Chính sách).
+:::
+
+::: details Nội dung tài liệu có bị gửi ra ngoài không?
+Có. Để AI tìm được, nội dung được gửi tới nhà cung cấp AI bạn đã chọn khi xử lý. Đừng nạp tài liệu chứa thông tin mà bạn không muốn chia sẻ với nhà cung cấp đó.
+:::

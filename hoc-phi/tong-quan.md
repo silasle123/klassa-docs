@@ -1,56 +1,53 @@
+---
+title: "Tổng quan tài chính"
+description: "Xem nhanh doanh thu, dòng tiền và công nợ quá hạn của trung tâm trong một khoảng ngày."
+roles: [Quản trị viên, Quản lý chi nhánh, Kế toán]
+order: 10
+---
+
 # Tổng quan tài chính
 
-## Khi nào dùng
+Trang này cho bạn bức tranh nhanh về tiền của trung tâm: đã thu bao nhiêu, nợ quá hạn bao nhiêu, dòng tiền các tháng gần đây ra sao. Nên mở đầu mỗi ngày làm việc để biết có gì cần xử lý.
 
-Bắt đầu mỗi ngày làm việc của Kế toán / Quản lý — nhìn nhanh tình hình thu - chi - công nợ.
+## Mở trang và chọn khoảng ngày
 
-## Truy cập
+::: steps
+1. Vào **Tài chính → Tổng quan tài chính**. Tiêu đề trang hiện là **CFO Dashboard**.
+2. Chọn **Từ ngày** và **Đến ngày**. Mặc định là từ đầu tháng này đến hôm nay.
+3. Bấm **Làm mới** nếu muốn tải lại số mới nhất.
+:::
 
-Menu trái → **Học phí & Hoá đơn → Tổng quan** (hoặc **/finance/overview**).
+Khoảng ngày chỉ áp cho bốn thẻ số ở trên và tab **Cơ cấu chi phí**. Biểu đồ dòng tiền luôn hiện 12 tháng gần nhất cộng 3 tháng dự báo.
 
-![Trang tổng quan tài chính](../assets/screenshots/tai-chinh-tong-quan.png)
+## Bốn thẻ số
 
-## Các khối số liệu
+| Thẻ | Ý nghĩa |
+|---|---|
+| **Doanh thu** | Tổng tiền đã ghi nhận thu trong khoảng ngày. Dòng nhỏ bên dưới cho biết số học sinh đang học và số tiền trung bình mỗi em. |
+| **Chi phí** | Tổng các khoản chi đã có trong hệ thống trong khoảng ngày. |
+| **Lợi nhuận** | Doanh thu trừ chi phí, kèm biên lợi nhuận theo phần trăm. |
+| **Công nợ quá hạn** | Tổng tiền của các hoá đơn đang ở trạng thái Quá hạn, kèm số hoá đơn. Số hiện màu đỏ khi lớn hơn 0. |
 
-### 1. Doanh thu
+::: warning Lưu ý về Chi phí và Lợi nhuận
+Phần mềm hiện chưa có màn hình để nhập khoản chi, nên thẻ **Chi phí** và **Lợi nhuận** chỉ phản ánh dữ liệu chi đã có sẵn. Nếu trung tâm theo dõi chi phí ở nơi khác, đừng dùng hai thẻ này để chốt lãi lỗ.
+:::
 
-- **Doanh thu tháng** (hiện tại)
-- **So với tháng trước** — tăng / giảm bao nhiêu %
-- **Mục tiêu tháng** — nếu trung tâm có đặt KPI
+## Ba tab bên dưới
 
-### 2. Công nợ
+- **Dòng tiền**: đường thu nhập và đường chi phí của 12 tháng gần nhất. Ba tháng cuối là dự báo, tính theo trung bình 3 tháng gần nhất.
+- **Cơ cấu chi phí**: tỷ trọng chi phí theo từng hạng mục trong khoảng ngày đã chọn.
+- **Chi tiết**: đường tắt tới **Báo cáo doanh thu**, **Kế toán chi tiết**, **Tổng quan công nợ** và **Học phí**.
 
-- **Tổng nợ phải thu** — học phí học sinh chưa đóng
-- **Nợ quá hạn** — quá ngày đến hạn nhưng chưa thu
-- **Số học sinh nợ**
-- Bấm để mở [Báo cáo công nợ](../bao-cao/cong-no.md)
-
-### 3. Chi phí
-
-- **Tổng chi tháng** — lương + điện nước + thuê + khác
-- **Lương chiếm bao nhiêu %** doanh thu
-- **Lợi nhuận tạm tính** = Doanh thu - Chi phí
-
-### 4. Hoá đơn
-
-- **Hoá đơn đã tạo trong tháng**
-- **Hoá đơn đã gửi** vs **Đã thanh toán**
-- **Hoá đơn chờ duyệt** — cần Kế toán xem
-
-## Biểu đồ
-
-- **Doanh thu 12 tháng gần nhất** — xu hướng theo mùa
-- **Phân loại doanh thu** — theo khoá học / cơ sở / loại học sinh
-
-## Lưu ý
-
-- **Số liệu cập nhật theo thời gian thực** — vừa nhận thanh toán đã thấy trong tổng quan.
-- **Chỉ Kế toán + Quản lý** xem được trang này. Lễ tân không thấy doanh thu.
+::: tip Mẹo
+Thấy **Công nợ quá hạn** tăng, vào **Tài chính → Học phí** hoặc phần công nợ ở [Công nợ](../ke-toan/cong-no.md) để biết em nào còn nợ.
+:::
 
 ## Câu hỏi thường gặp
 
-**Doanh thu có bị trừ hoàn tiền không?**
-KLASSA dùng cơ chế **tín chỉ khấu trừ** (bù vào kỳ sau) thay vì hoàn tiền mặt — nên doanh thu phản ánh tiền thu thực tế. Xem [Báo cáo tín chỉ](../bao-cao/tin-chi.md).
+::: details Quản lý chi nhánh có thấy số của cả hệ thống không?
+Không. Tài khoản gắn với một cơ sở chỉ thấy số của cơ sở đó. Chỉ Quản trị viên xem được toàn bộ.
+:::
 
-**Trang Tổng quan tài chính (CFO Dashboard) hiển thị gì?**
-Doanh thu theo ngày, chi phí theo danh mục (biểu đồ tròn), và dòng tiền 12 tháng kèm **dự báo 3 tháng tới**.
+::: details Vì sao doanh thu ở đây khác báo cáo doanh thu?
+Trang này cộng các lần thu tiền thực tế trong khoảng ngày bạn chọn. Báo cáo doanh thu có thể nhóm theo tháng, môn hoặc chi nhánh nên cách chia số khác nhau. Xem thêm [Báo cáo doanh thu](../ke-toan/bao-cao-doanh-thu.md).
+:::

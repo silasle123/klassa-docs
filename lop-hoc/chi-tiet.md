@@ -1,81 +1,77 @@
-# Chi tiết lớp — học sinh, giáo viên, lịch
+---
+title: "Chi tiết lớp học"
+description: "Xem một lớp, việc cần xử lý, học sinh, buổi học, nhận xét, lịch và giáo viên của lớp."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán]
+order: 30
+---
 
-## Khi nào dùng
+# Chi tiết lớp học
 
-- Xem ai đang trong lớp
-- Sửa lịch dạy
-- Đổi giáo viên / phòng cho một buổi
-- Theo dõi tỷ lệ chuyên cần của lớp
+Trang chi tiết gom mọi thứ về một lớp: tình hình hôm nay, việc cần xử lý, danh sách học sinh, các buổi đã học và nhận xét. Từ đây bạn cũng đi tiếp tới điểm danh, thêm học sinh và sửa lớp.
 
-## Cách mở
+## Mở một lớp
 
-Từ **Danh sách lớp** → bấm vào lớp.
+::: steps
+1. Vào **Lớp học**.
+2. Bấm vào thẻ lớp hoặc nút **Chi tiết**.
+3. Muốn quay lại, bấm **Danh sách lớp học** ở góc trên.
+:::
 
-![Chi tiết lớp](../assets/screenshots/lop-hoc-chi-tiet.png)
+Dải đầu trang ghi tên lớp, trạng thái, cấp độ (nhãn **Lớp linh hoạt** nếu là [lớp linh hoạt](lop-linh-hoat.md)), cùng các số **Học sinh**, **Tổng buổi học**, **Đã hoàn thành** (mọi buổi đã học) và **Buổi/tuần**. Khung **Đi học 8 buổi gần nhất** cho thấy tỉ lệ có mặt từng buổi.
 
-## Bố cục
+![Trang chi tiết lớp với dải đầu, thẻ Việc của lớp và các tab Học sinh, Buổi học, Nhận xét](../assets/screenshots/lop-hoc-chi-tiet.webp)
 
-### Phần đầu — Tổng quan lớp
+Các nút trên dải đầu trang, tuỳ quyền của bạn:
 
-- Tên lớp + Khoá + Cơ sở + Phòng
-- Giáo viên + Trợ giảng
-- Số học sinh đang ghi danh / Sức chứa
-- Tỷ lệ chuyên cần trung bình
-- Số buổi đã học / Tổng buổi của khoá
+- **Điểm danh buổi hôm nay**: hiện khi hôm nay lớp có buổi. Bấm để sang trang [điểm danh](../diem-danh/cham-hang-ngay.md).
+- **Chỉnh sửa**: sang trang [sửa lớp](chinh-sua.md). Chỉ vai có quyền sửa lớp (Quản trị viên, Quản lý chi nhánh, Quản lý).
+- **Thêm học sinh**: mở hộp thêm học sinh, xem bên dưới.
+- **Thời khoá biểu**: mở [thời khóa biểu](lich-day.md) chỉ của lớp này.
+- Nút ba chấm **Thao tác khác**: **Danh sách học sinh**, và với Quản trị viên, Quản lý chi nhánh có thêm **Tạm dừng lớp học** hoặc **Mở lại lớp học**, **Xóa lớp học**.
 
-### Tab "Học sinh"
+## Việc của lớp
 
-Danh sách học sinh trong lớp:
-- Bấm vào tên để mở [chi tiết học sinh](../hoc-sinh/chi-tiet.md)
-- Bấm **"+ Thêm học sinh"** để ghi danh
-- Bấm dấu **❌** để gỡ học sinh khỏi lớp
+Thẻ **Việc của lớp** báo những gì cần xử lý ngay:
 
-### Tab "Lịch dạy"
+- **Vắng 2 buổi liền**: nêu tên các em. Bấm **Xem em** (hoặc **Xem N em**) để bảng học sinh chỉ còn các em đó.
+- **Lệch điểm danh chưa xử lý**: giáo viên và lễ tân điểm danh khác nhau cho cùng một em. Bấm **Xử lý** để sang trang đối chiếu. Chỉ Quản trị viên, Quản lý chi nhánh và Quản lý xử lý được, xem [Đối chiếu điểm danh](../diem-danh/doi-chieu.md).
+- **Nhận xét dở dang buổi dd/mm**: buổi đã nhận xét một phần, còn em đi học chưa có nhận xét. Người có quyền nhận xét (giáo viên, trợ giảng, quản lý, hoặc người được xếp trợ giảng ở lớp) bấm nút để viết tiếp ngay.
 
-Bảng tất cả buổi học của lớp:
-- Ngày, giờ, phòng
-- Giáo viên dạy
-- Trạng thái: Sắp tới / Đang diễn ra / Đã kết thúc / Đã huỷ
-- Tỷ lệ điểm danh nếu đã chấm
+Khi không có gì, thẻ ghi **Không có việc gấp**.
 
-Bấm vào buổi để xem chi tiết / chấm điểm danh.
+## Ba tab của lớp
 
-### Tab "Điểm danh"
+- **Học sinh**: danh sách em đang học, gồm ngày **Nhập học**, tỉ lệ **Đi học**, và tuỳ quyền bạn có thêm cột **Phụ huynh**, **Nhận xét TB**, **Học phí T** của tháng hiện tại (nhãn **Chưa có phiếu** nếu chưa có phiếu). Bấm tên em để mở hồ sơ. Nút **Xem chi tiết** mở trang danh sách học sinh đầy đủ của lớp. Vai có quyền xoá học sinh thấy thêm **Xóa học sinh**.
+- **Buổi học**: các buổi của lớp, gồm cả buổi đã huỷ. Buổi được tạo khi giáo viên hoặc lễ tân điểm danh.
+- **Nhận xét**: nhận xét học sinh theo buổi. Tab này chỉ hiện với quản lý, và với giáo viên, trợ giảng, lễ tân kiêm trợ giảng đang được phân công đúng lớp đó.
 
-Bảng tổng hợp điểm danh theo buổi:
-- Hàng = học sinh
-- Cột = buổi học
-- Ô = trạng thái (Có mặt / Vắng / Đi muộn / Học bù)
+Bên cạnh có ba thẻ nhỏ: **Lịch học** (các buổi mỗi tuần), **Giáo viên** (nhãn **Giáo viên chính** và **Trợ giảng**) và **Thông tin lớp** (môn, khối, cơ sở, phòng, sĩ số dạng học sinh đang học trên sức chứa, ngày khai giảng và bế giảng).
 
-Phục vụ in báo cáo gửi phụ huynh cuối tháng.
+## Thêm học sinh vào lớp
 
-### Tab "Bài đánh giá"
+::: steps
+1. Bấm **Thêm học sinh**. Trang danh sách học sinh mở và hộp **Thêm học sinh vào lớp** hiện ra.
+2. Tìm và chọn một hoặc nhiều em. Có thể bật tuỳ chọn hiện học sinh **tất cả các khối** khi lớp ghép khối.
+3. Chọn **Gói học phí** (bắt buộc).
+4. Bấm nút **Thêm N học sinh**.
+:::
 
-Các bài kiểm tra của lớp:
-- Tên bài, ngày làm
-- Điểm trung bình
-- Bấm để xem điểm từng em
+Lễ tân, Quản lý, Quản lý chi nhánh và Quản trị viên ghi danh thẳng. Giáo viên và trợ giảng bấm thêm thì hệ thống tạo một yêu cầu ghi danh chờ duyệt. Kế toán không có nút này. Chi tiết ghi danh xem [Ghi danh](../hoc-sinh/ghi-danh.md).
 
-### Tab "Tài liệu lớp"
+::: warning Lưu ý
+**Xóa học sinh** khỏi lớp cần xác nhận ở hộp **Xác nhận xóa học sinh**. Đọc kỹ danh sách trước khi bấm.
+:::
 
-File giáo trình, bài tập về nhà, ảnh lớp...
+## Nhóm Zalo của lớp
 
-## Thao tác nhanh
-
-- **✏️ Sửa lớp** — đổi tên, giáo viên, lịch
-- **📋 Sao chép lớp** — tạo lớp mới giống lớp hiện tại
-- **⏸ Tạm dừng** — không chạy lịch dạy nữa nhưng giữ học sinh
-- **🛑 Kết thúc lớp** — đóng lớp, học sinh chuyển sang "Hoàn thành"
-
-## Lưu ý
-
-- **Đổi giáo viên giữa khoá**: vào tab Lịch dạy → chọn các buổi từ ngày X trở đi → đổi giáo viên hàng loạt.
-- **Huỷ 1 buổi** (giáo viên ốm, lễ): chọn buổi → bấm "Huỷ" → chọn lý do → phần mềm tự lên lịch dạy bù.
+Các vai dùng được Zalo (không gồm giáo viên và trợ giảng) thấy thanh nhóm Zalo ở đầu trang. Ở đó bạn gán nhóm Zalo có sẵn cho lớp bằng **ID nhóm Zalo**, hoặc gỡ nhóm. Gỡ nhóm không xoá nhóm trên Zalo. Lớp chưa có nhóm thì chưa gửi được nhận xét và thông báo vào nhóm.
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn gửi tin Zalo cho phụ huynh cả lớp, ở đâu?**
-Tab Học sinh → tick chọn tất cả → bấm "Gửi tin Zalo" → chọn mẫu hoặc tự soạn.
+::: details Sao tôi không thấy tab Nhận xét?
+Tab này chỉ dành cho quản lý và người đang được phân công ở lớp. Lễ tân thường chỉ thấy tab này ở lớp mà mình được xếp trợ giảng.
+:::
 
-**Lớp đang chạy, có thể đổi sang phòng khác không?**
-Có. Sửa lớp → đổi phòng → phần mềm hỏi áp dụng từ buổi nào trở đi.
+::: details Lớp linh hoạt có xem được học sinh không?
+Có, nhưng đó là lớp chung cả môn, đọc thêm ở [Lớp linh hoạt](lop-linh-hoat.md). Lễ tân kiêm trợ giảng không được mở dữ liệu nhận xét của lớp linh hoạt.
+:::

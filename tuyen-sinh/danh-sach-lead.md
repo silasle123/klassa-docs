@@ -1,91 +1,102 @@
-# Danh sách Lead (khách quan tâm)
+---
+title: "Danh sách lead"
+description: "Tìm, lọc và đọc danh sách khách quan tâm: nhóm lead, bộ lọc, các cột và thao tác chọn nhiều lead."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+plugin: "CRM Tuyển sinh + AI"
+order: 20
+---
 
-## "Lead" là gì?
+# Danh sách lead
 
-**Lead** là cách gọi tắt cho **khách quan tâm chưa đăng ký** — bất kỳ ai liên hệ với trung tâm để hỏi về khoá học nhưng chưa nộp học phí, chưa trở thành học sinh chính thức.
+**Lead** là khách quan tâm chưa đăng ký: người đã hỏi về lớp nhưng chưa trở thành học sinh. Danh sách lead nằm giữa trang **Tuyển sinh**, giúp bạn tìm đúng lead cần gọi hoặc cần chốt.
 
-Lead có thể đến từ nhiều nguồn:
+## Chọn nhóm, phạm vi và cách xem
 
-- Phụ huynh gọi điện hỏi
-- Phụ huynh nhắn tin Zalo / Facebook
-- Khách vào trang web trung tâm điền form đăng ký tư vấn
-- Học sinh giới thiệu bạn
-- Nhân viên gặp khách ở sự kiện ngoài trung tâm
+Hàng nút trên cùng của danh sách chia lead thành các nhóm. Trang mở sẵn ở nhóm **Tất cả**.
 
-Quản lý tốt danh sách Lead = biến nhiều khách quan tâm thành học sinh thật = tăng doanh thu.
+| Nhóm | Gồm những lead |
+| --- | --- |
+| **Đang mở** | Mọi lead còn đang chăm sóc: Mới, Đã liên hệ, Tiềm năng, Đã hẹn học thử, Hoàn thành học thử. |
+| **Chờ chốt** | Đã học thử xong, đang chờ phụ huynh quyết định. |
+| **Hẹn học thử** | Đã có lịch học thử, chưa học xong. |
+| **Chưa học thử** | Mới, Đã liên hệ, Tiềm năng: chưa đặt được buổi học thử nào. |
+| **Đã chốt** | Đã chuyển thành học sinh hoặc Đã chốt (môn bổ sung). |
+| **Không chốt** | Phụ huynh không đăng ký, đã ghi lý do. |
+| **Tất cả** | Mọi lead. |
 
-## Khi nào dùng
+Bên phải có hai nhóm nút chuyển nhanh:
 
-- Lễ tân tiếp nhận khách mới → ghi vào danh sách Lead
-- Tư vấn viên gọi điện hẹn lịch tư vấn
-- Quản lý theo dõi tình hình tuyển sinh trong tháng
-- Báo cáo cho chủ trung tâm tỷ lệ chuyển đổi Lead → Học sinh
+- **Của tôi** và **Cả cơ sở** (dành cho Lễ tân): xem lead mình phụ trách hoặc lead của mọi người. Bộ lọc **Phụ trách** chỉ hiện khi bạn chọn **Cả cơ sở** (Lễ tân) hoặc với vai quản lý, giúp xem theo từng người.
+- **Bảng**, **Theo giai đoạn**, **Hoạt động**: ba cách xem. Xem [Trạng thái lead và bảng theo giai đoạn](pheu-tuyen-sinh.md) và [Ghi chăm sóc và hẹn gọi lại](hoat-dong-tu-van.md).
 
-## Các bước truy cập
+## Tìm và lọc
 
-### Bước 1 — Vào menu Tuyển sinh
+::: steps
+1. Gõ vào ô **Tìm tên hoặc số điện thoại**. Ô tìm theo tên học sinh, tên phụ huynh, email hoặc số điện thoại (gõ vài số cuối cũng được).
+2. Chọn các bộ lọc: **Trạng thái**, **Gọi lại**, **Học thử**, **Khối**, **Môn**, **Nguồn**, **Phụ trách**, **Cơ sở** (chỉ Quản trị viên khi hệ thống có nhiều cơ sở), và khoảng ngày tạo (**Hôm nay**, **7 ngày qua**, **Tháng này**, **Tháng trước** hoặc tự chọn trên lịch).
+3. Muốn về danh sách đầy đủ, bấm **Xoá lọc**.
+:::
 
-Ở thanh menu bên trái, bấm **Tuyển sinh → Danh sách Lead**.
+Bộ lọc **Gọi lại** có các lựa chọn: **Cần gọi hôm nay (gồm quá hẹn)**, **Quá hẹn**, **Hẹn hôm nay**, **Hẹn ngày sau**, **Chưa hẹn**. Bộ lọc **Học thử** có: **Học thử hôm nay**, **Sắp học thử**, **Quá giờ, chưa điểm danh**, **Học thử 7 ngày qua**, **Vắng học thử 7 ngày qua**, **Đã học thử**.
 
-![Menu Tuyển sinh](../assets/screenshots/leads-menu.png)
+Ở cách xem **Bảng**, nút **Sắp xếp** có ba kiểu: **Ngày tạo mới nhất** (mặc định), **Ngày tạo cũ nhất** và **Việc gấp trước** (đưa lên đầu lead quá hẹn gọi, buổi học thử chưa điểm danh, chờ chốt lâu, lead mới chưa liên hệ). Kiểu này không có ở nhóm **Đã chốt** và **Không chốt**.
 
-### Bước 2 — Quan sát màn hình
+## Đọc các cột trong bảng
 
-Màn hình danh sách Lead chia làm 3 phần chính:
+![Danh sách lead ở cách xem Bảng với các nhóm, bộ lọc và các ô B1 B2 B3](../assets/screenshots/tuyen-sinh-danh-sach-bang.webp)
 
-![Trang danh sách Lead](../assets/screenshots/leads-trang-chinh.png)
+| Cột | Ý nghĩa |
+| --- | --- |
+| Học sinh, phụ huynh | Tên học sinh, khối, môn quan tâm, số điện thoại, tên phụ huynh. |
+| Trạng thái | Nhãn màu (bấm để đổi) và một dòng nhỏ cho biết lead đang chờ gì. |
+| Học thử | Các ô **B1**, **B2**, **B3** là buổi học thử 1, 2, 3. Học thử nhiều môn thì mỗi môn một hàng. |
+| Gọi lại | Giờ hẹn gọi lại. Chữ đỏ **Quá hẹn** là đã trễ hẹn. |
+| Nguồn | Lead đến từ đâu. Chưa có thì hiện **+ Ghi nguồn**, bấm để chọn. |
+| Ngày tạo | Ngày giờ nhập lead vào hệ thống. |
+| Nút cuối dòng | Gọi điện, nhắn Zalo, **Chốt** (với lead đã học thử xong) hoặc nút mở thêm lựa chọn. |
 
-#### A. Khối số liệu tổng quan (phía trên)
+Ở các ô học thử, ký hiệu có nghĩa như sau:
 
-- **Tổng Lead** — tổng số khách quan tâm tính từ đầu trung tâm
-- **Lead mới tháng này** — số khách quan tâm vừa được thêm trong tháng hiện tại
-- **Tỷ lệ chuyển đổi** — bao nhiêu phần trăm Lead biến thành học sinh thật
-- **Lead cần gọi lại** — số Lead chưa được tư vấn viên liên hệ quá 2 ngày
+| Ô | Nghĩa là | Bấm vào thì |
+| --- | --- | --- |
+| **+ B1** | Chưa đặt buổi này | Mở hộp đặt lịch học thử |
+| **◷ B1** | Đã hẹn, chưa đến giờ | Chọn **Ghi có mặt / vắng** hoặc **Đổi lịch** |
+| **! B1** | Đã qua giờ mà chưa ghi có mặt hoặc vắng | Như trên, ghi ngay |
+| **✓ B1** | Học sinh có mặt | Không cần làm gì |
+| **✗ B2** | Học sinh vắng | Hẹn buổi khác |
+| **B3** mờ | Chưa đặt được, phải xong buổi trước | Không bấm được |
 
-#### B. Bộ lọc và tìm kiếm
+Rê chuột lên một ô sẽ hiện chữ giải thích.
 
-- **Ô tìm kiếm** — gõ tên, số điện thoại, email để tìm nhanh
-- **Lọc theo giai đoạn** — chỉ hiện các Lead đang ở một bước cụ thể (mới, đã gọi, đã hẹn, đã đến trung tâm…)
-- **Lọc theo nguồn** — chỉ hiện Lead đến từ Zalo, Facebook, hoặc khách giới thiệu
-- **Lọc theo tư vấn viên** — chỉ hiện Lead của một nhân viên cụ thể (hữu ích khi chia ca trực)
+## Chọn nhiều lead một lúc
 
-#### C. Bảng danh sách Lead
+::: steps
+1. Tích ô vuông đầu các dòng. Ô ở tiêu đề bảng chọn cả trang.
+2. Thanh phía trên hiện số lead **đã chọn** cùng các thao tác.
+3. Chọn thao tác: **Đổi trạng thái**, **Phân công**, **Đặt lịch học thử**, **Xuất Excel**, **Xóa**. Bấm **Bỏ chọn** để thôi.
 
-Mỗi dòng là một khách quan tâm với các cột:
+   ![Thanh thao tác hiện số lead đã chọn cùng Đổi trạng thái, Phân công, Đặt lịch học thử, Xuất Excel, Xóa](../assets/screenshots/tuyen-sinh-chon-nhieu.webp)
+:::
 
-- **Tên + SĐT** — thông tin liên lạc
-- **Quan tâm môn / khoá** — ví dụ "Toán lớp 9", "Tiếng Anh giao tiếp"
-- **Nguồn** — Lead đến từ đâu
-- **Giai đoạn** — đang ở bước nào trong quá trình tư vấn
-- **Tư vấn viên** — ai phụ trách Lead này
-- **Liên hệ gần nhất** — bao nhiêu ngày trước
+- **Đổi trạng thái** hàng loạt bị khoá nếu trong nhóm đã chọn có lead **Đã chuyển đổi**. Chọn **Không chốt** thì phải chọn một lý do chung.
+- **Phân công** và **Đặt lịch học thử** dành cho Quản trị viên, Quản lý chi nhánh, Quản lý.
+- **Xuất Excel** dành cho Quản trị viên và Quản lý chi nhánh.
+- **Xóa** dành cho vai có quyền xoá lead (Quản trị viên, Quản lý chi nhánh, Quản lý).
 
-Bấm vào dòng Lead bất kỳ để vào trang chi tiết.
+::: danger Không thể hoàn tác
+Xoá lead là xoá hẳn hồ sơ lead cùng lịch sử chăm sóc. Chỉ xoá lead nhập trùng hoặc nhập nhầm.
+:::
 
-## Hai tab trên trang Lead
+## Nhập danh sách từ Excel
 
-Phần trên màn hình có hai tab:
-
-- **Lead** (mặc định) — bảng danh sách như mô tả ở trên
-- **Hoạt động** — nhật ký các cuộc gọi, tin nhắn, ghi chú của tư vấn viên gắn với Lead
-
-![Hai tab trên trang Lead](../assets/screenshots/leads-hai-tab.png)
-
-Tab Hoạt động giúp quản lý nắm nhanh "hôm nay nhân viên tư vấn đã gọi bao nhiêu cuộc, kết quả thế nào" mà không phải bấm vào từng Lead xem riêng.
-
-## Lưu ý
-
-- **Lễ tân và Tư vấn viên** thấy danh sách Lead. **Giáo viên, Kế toán, Phụ huynh** không thấy (xem [Vai trò người dùng](../bat-dau/vai-tro-nguoi-dung.md)).
-- **Số liệu cập nhật ngay** — vừa thêm Lead mới, khối tổng quan đã tăng số.
-- **Không xoá Lead vội** — kể cả khách không quan tâm nữa, giữ lại để biết nguồn nào hiệu quả thấp.
+Có danh sách từ sự kiện hoặc tờ rơi: bấm **Excel** ở dải trên cùng, chọn **Nhập lead từ Excel**. Cách nhập từng bước xem [Nhập dữ liệu hàng loạt từ Excel](../tai-khoan/nhap-du-lieu-hang-loat.md).
 
 ## Câu hỏi thường gặp
 
-**Tôi không thấy menu "Tuyển sinh" trong sidebar, là sao?**
-Tài khoản của anh chị chưa được cấp quyền xem Lead. Liên hệ Chủ trung tâm hoặc Quản lý để được cấp vai trò Lễ tân / Tư vấn viên trở lên.
+::: details Dòng nhỏ "Học thử 27/09, 15 ngày chưa chốt" nghĩa là gì?
+Buổi học thử có mặt gần nhất là 27/09, đến nay 15 ngày mà phụ huynh chưa quyết. Màu xanh là dưới 8 ngày, cam là 8 đến 14 ngày, đỏ là từ 15 ngày. Hãy gọi chốt hoặc hẹn gọi lại.
+:::
 
-**Lead hiển thị quá nhiều, tôi muốn xem riêng Lead của mình thôi?**
-Dùng bộ lọc "Tư vấn viên" → chọn tên mình. Phần mềm sẽ chỉ hiển thị Lead đang được giao cho anh chị.
-
-**Tại sao có Lead không có số điện thoại?**
-Có thể khách điền form trên web mà chỉ để lại email, hoặc nhắn tin Zalo nên không có SĐT. Phần mềm vẫn nhận, anh chị có thể gọi qua Zalo / gửi email để xin SĐT sau.
+::: details Lead "Đã chuyển đổi" không đổi trạng thái được?
+Đúng như vậy: lead đã thành học sinh thì khoá trạng thái. Bạn vẫn ghi chăm sóc và đặt học thử môn khác được. Cần sửa thì báo quản lý.
+:::

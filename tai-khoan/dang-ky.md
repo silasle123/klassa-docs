@@ -1,55 +1,56 @@
+---
+title: "Đăng ký tài khoản"
+description: "Cách tự đăng ký tài khoản mới và chờ Quản trị viên duyệt trước khi đăng nhập được."
+roles: [Quản trị viên, Lễ tân, Giáo viên, Trợ giảng, Nhân sự, Phụ huynh]
+order: 20
+---
+
 # Đăng ký tài khoản
 
-## Khi nào dùng
+Dùng khi bạn chưa có tài khoản và trung tâm muốn bạn tự đăng ký. Tài khoản mới chưa dùng được ngay: Quản trị viên phải duyệt trước.
 
-Nhân viên mới (hoặc phụ huynh) **tự đăng ký tài khoản** từ trang công khai, sau đó chờ Chủ trung tâm / Quản lý **duyệt** mới đăng nhập được.
+## Tự đăng ký
 
-> Đây là cách tài khoản **tự đăng ký**. Ngoài ra Chủ trung tâm có thể **tạo thẳng tài khoản** cho nhân viên (kích hoạt ngay, không cần duyệt) — xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+::: steps
+1. Ở trang **Đăng nhập**, bấm **Đăng ký ngay**.
+2. Điền **Họ và tên** (ít nhất 2 ký tự) và **Email**.
+3. Điền **Số điện thoại** nếu muốn. Ô này không bắt buộc.
+4. Chọn **Vai trò** trong danh sách thả xuống. Mặc định là **Phụ huynh**. Các lựa chọn khác: **Giáo viên**, **Trợ giảng**, **Lễ tân**, **Nhân sự**.
+5. Đặt **Mật khẩu**: tối thiểu 8 ký tự, gồm cả chữ và số. Nhập lại vào **Xác nhận mật khẩu**.
+6. Nếu có ô xác nhận "Tôi không phải máy", hoàn thành ô đó.
+7. Bấm **Đăng ký**.
+:::
 
-## Cách đăng ký
+![Form Đăng ký với ô Vai trò dạng danh sách thả xuống](../assets/screenshots/dang-ky-moi.webp)
 
-### Bước 1 — Mở trang đăng ký
+Gửi xong, màn hình báo **Đăng ký thành công!**: tài khoản đã tạo và đang chờ Quản trị viên phê duyệt. Bấm **Về trang đăng nhập** để quay lại.
 
-Tại trang [đăng nhập](dang-nhap.md), bấm dòng **"Chưa có tài khoản? Đăng ký ngay"** → mở trang `/auth/signup`.
+::: tip Mẹo
+Ô "Tôi không phải máy" chỉ xuất hiện khi trung tâm bật chức năng kiểm tra người thật.
+:::
 
-![Trang đăng ký tài khoản](../assets/screenshots/auth-signup.png)
+## Sau khi đăng ký
 
-### Bước 2 — Điền thông tin
+1. Quản trị viên vào duyệt tài khoản, xem [Duyệt đăng ký người dùng](../cai-dat/duyet-dang-ky-nguoi-dung.md).
+2. Khi được duyệt, bạn đăng nhập bằng email và mật khẩu vừa tạo. Phần mềm không gửi thư báo duyệt, nên hãy hỏi lại trung tâm nếu chờ lâu.
+3. Trong lúc chờ duyệt, đăng nhập sẽ báo "Tài khoản đang chờ phê duyệt từ quản trị viên".
 
-- **Họ và tên** \*
-- **Email** \* (dùng để đăng nhập, không trùng email đã có)
-- **Số điện thoại** (tuỳ chọn)
-- **Vai trò** \* — chọn đúng vị trí:
-  - Phụ huynh
-  - Giáo viên
-  - Trợ giảng
-  - Tư vấn tuyển sinh (lễ tân)
-  - Nhân viên văn phòng
-- **Mật khẩu** \* (tối thiểu 8 ký tự, có cả chữ và số)
-- **Xác nhận mật khẩu** \*
+## Những điều cần biết
 
-Bấm **"Đăng ký"**.
-
-### Bước 3 — Chờ duyệt
-
-Sau khi đăng ký:
-- Tài khoản ở trạng thái **"Chờ duyệt"**, **chưa đăng nhập được**.
-- Chủ trung tâm / Quản lý nhận thông báo có tài khoản mới chờ duyệt.
-- Khi được duyệt, anh chị nhận thông báo và đăng nhập bình thường.
-
-## Lưu ý
-
-- **Chọn đúng vai trò** khi đăng ký — duyệt xong khó đổi (phải nhờ admin).
-- **Tài khoản nhân viên** (giáo viên, lễ tân, kế toán…): khi được duyệt, hệ thống **tự tạo hồ sơ nhân sự** để dùng [Cổng nhân viên](../cong-nhan-vien/gioi-thieu.md).
-- Nếu đăng ký nhầm / không được duyệt sau lâu → liên hệ trực tiếp Chủ trung tâm.
+- Danh sách vai trong form không có Quản trị viên, Quản lý chi nhánh, Quản lý hay Kế toán. Các vai này do Quản trị viên tạo, xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+- Học sinh không tự đăng ký ở đây. Trung tâm tạo tài khoản học sinh cho các em.
+- Phụ huynh thường được trung tâm tạo tài khoản khi lập hồ sơ học sinh, xem [Phụ huynh](../hoc-sinh/phu-huynh.md). Chỉ tự đăng ký khi trung tâm hướng dẫn.
 
 ## Câu hỏi thường gặp
 
-**Đăng ký xong sao không đăng nhập được?**
-Tài khoản tự đăng ký phải chờ Chủ trung tâm / Quản lý duyệt. Liên hệ trung tâm để được duyệt nhanh.
+::: details Tôi điền sai email thì sao?
+Email không đổi được trong Hồ sơ cá nhân. Hãy nhờ Quản trị viên sửa hoặc tạo lại tài khoản.
+:::
 
-**Tôi là chủ trung tâm, muốn tạo tài khoản cho nhân viên mà không cần họ tự đăng ký?**
-Vào [Quản lý người dùng](../cai-dat/nguoi-dung.md) → "Tạo người dùng" — tài khoản kích hoạt ngay.
+::: details Thấy báo lỗi dưới một ô?
+Phần mềm báo lỗi ngay dưới ô đó, ví dụ "Email không hợp lệ", "Mật khẩu phải có ít nhất 1 chữ số" hoặc "Mật khẩu xác nhận không khớp". Sửa ô đó rồi bấm **Đăng ký** lại.
+:::
 
-**Phụ huynh có cần tự đăng ký không?**
-Thường KHÔNG. Khi lễ tân [tạo hồ sơ học sinh](../hoc-sinh/tao-moi.md), tài khoản phụ huynh được tạo tự động (mật khẩu mặc định `12345678`). Tự đăng ký chỉ dùng khi phụ huynh muốn tự tạo trước.
+::: details Đăng ký bằng email đã có thì sao?
+Phần mềm báo "Email này đã có tài khoản" và không tạo tài khoản mới. Hãy đăng nhập bằng tài khoản đã có, hoặc liên hệ Quản trị viên.
+:::

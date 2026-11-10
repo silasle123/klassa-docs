@@ -1,68 +1,22 @@
-# Hosting tài liệu KLASSA
+# Đăng tài liệu lên docs.klassa.vn
 
-> **Đang dùng**: GitHub Pages + Docsify (free 100%).
->
-> 🌐 **URL live**: https://silasle123.github.io/klassa-docs/
+- **Công cụ dựng:** VitePress (thư mục `.vitepress/`).
+- **Nơi đăng:** GitHub Pages của kho `silasle123/klassa-docs`, tên miền `docs.klassa.vn` (tệp `public/CNAME`).
+- **Tự động:** mỗi lần đẩy lên `main`, GitHub Actions (`.github/workflows/deploy.yml`) chạy `npm run docs:build` rồi đăng thư mục `.vitepress/dist`. Mất khoảng 1–2 phút.
 
-## Cách hoạt động
+## Cài đặt một lần (đã làm thì bỏ qua)
 
-- `index.html` chứa Docsify (JS lib) → load `.md` trực tiếp từ repo, không cần build
-- `_sidebar.md` định nghĩa menu trái
-- `_coverpage.md` trang bìa
-- `.nojekyll` ngăn GitHub xử lý Jekyll
+GitHub → kho `klassa-docs` → **Settings → Pages → Build and deployment → Source** chọn **GitHub Actions**.
+(Trước đây trang dùng Docsify, Source là "Deploy from a branch". Chưa đổi thì bản mới sẽ không lên.)
 
-## Cập nhật nội dung
+Tên miền: vẫn để `docs.klassa.vn`, tick **Enforce HTTPS**. DNS không đổi.
 
-```bash
-cd D:/klassa-docs
-# Sửa file .md
-git add . && git commit -m "Mô tả" && git push
-```
+## Link cũ
 
-→ Pages tự rebuild trong ~30 giây.
+Trang cũ dùng dạng `docs.klassa.vn/#/thu-muc/bai`. Trang mới tự chuyển các link đó sang đường dẫn mới
+(đoạn mã trong `.vitepress/config.mts`, bảng đổi tên ở `.vitepress/redirects.mjs`).
 
-## Cập nhật ảnh
+## Catalogue
 
-```bash
-cd D:/klassa-docs
-npm run capture
-git add . && git commit -m "Cập nhật ảnh" && git push
-```
-
-## Custom domain (tuỳ chọn) — trỏ `huongdan.klassa.vn`
-
-### Bước 1 — DNS ở Cloudflare
-
-```
-Type:  CNAME
-Name:  huongdan
-Value: silasle123.github.io
-Proxy: DNS only (đám mây xám)
-```
-
-### Bước 2 — File CNAME ở root repo
-
-```bash
-echo "huongdan.klassa.vn" > CNAME
-git add CNAME && git commit -m "Custom domain" && git push
-```
-
-### Bước 3 — Enable HTTPS
-
-GitHub → Settings → Pages → tick "Enforce HTTPS" (sau khi DNS lan ~5 phút).
-
-## Đổi theme
-
-Sửa `index.html` line:
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-```
-
-Đổi `vue.css` → `buble.css` / `dark.css` / `pure.css`.
-
-## Phương án thay thế
-
-- **GitBook** — đẹp hơn nhưng free plan 2026 hạn chế GitHub sync
-- **Mintlify** — cần thêm `mint.json`, custom domain free
-- **Docusaurus** self-host trên VPS Coolify
+`catalog/catalog.html` và `catalog/KLASSA-Catalogue.pdf` được chép nguyên vào bản dựng
+(`scripts/postbuild.mjs`) nên đường dẫn `docs.klassa.vn/catalog/...` vẫn mở được.

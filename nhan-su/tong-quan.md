@@ -1,57 +1,77 @@
-# Tổng quan HR
+---
+title: "Tổng quan nhân sự"
+description: "Trang đầu của khu Quản lý HR: số liệu nhân viên, việc cần xử lý và lối vào mọi chức năng nhân sự."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 10
+---
 
-## Khi nào dùng
+# Tổng quan nhân sự
 
-Mỗi sáng nhân sự / Quản lý mở trang này để nắm tình hình toàn bộ phòng nhân sự:
+Đây là trang bạn mở đầu tiên mỗi sáng để biết hôm nay nhân sự có việc gì cần xử lý. Từ đây bạn nhảy được tới mọi chức năng nhân sự mà không phải tìm trong menu.
 
-- Bao nhiêu nhân viên đang làm
-- Hợp đồng nào sắp hết hạn
-- Đơn phép chưa duyệt
-- Lương tháng này đã chốt chưa
+Khu này cần gói mở rộng **Nhân sự (HRIS)**. Chỉ Quản trị viên và Quản lý chi nhánh vào được. Các vai khác dùng [Cổng nhân viên](../cong-nhan-vien/gioi-thieu.md) cho việc của riêng mình.
 
-## Truy cập
+## Mở trang tổng quan
 
-Menu trái → **Nhân sự → Tổng quan** (hoặc **/hr/dashboard**).
+::: steps
+1. Vào **Quản lý HR → Dashboard HR**. Tiêu đề trang là **Quản lý Nhân sự**.
+2. Xem bốn ô số liệu ở đầu trang.
+3. Nếu có ô vàng **Cần xử lý**, bấm vào từng mục để mở đúng trang xử lý.
+4. Kéo xuống để chọn chức năng trong bốn nhóm.
+:::
 
-![Trang tổng quan HR](../assets/screenshots/hr-tong-quan.png)
+![Trang Quản lý Nhân sự với bốn ô số liệu, dải Cần xử lý và các nhóm chức năng](../assets/screenshots/hr-dashboard.webp)
 
-## Khối số liệu
+## Bốn ô số liệu
 
-- **Tổng nhân viên** đang làm việc (theo trạng thái Active)
-- **Hợp đồng sắp hết hạn** (trong 30 ngày)
-- **Đơn phép chờ duyệt**
-- **Quỹ lương dự kiến tháng** — tổng lương sẽ chi tháng này
+| Ô | Cho biết |
+|---|---|
+| **Tổng nhân viên** | Tổng số hồ sơ, kèm số người đang làm việc |
+| **Chấm công hôm nay** | Số người đã chấm công trong ngày, trên tổng số đang làm việc |
+| **Đang nghỉ phép** | Số người đang trong kỳ nghỉ phép |
+| **HĐ sắp hết hạn** | Số hợp đồng hết hạn trong 30 ngày tới |
 
-## Biểu đồ
+## Dải "Cần xử lý"
 
-- Số nhân viên theo phòng ban
-- Tỷ lệ nghỉ việc 12 tháng gần nhất
-- Chi phí lương theo tháng (so với doanh thu)
+Dải này chỉ hiện những mục đang có việc thật. Mỗi mục là một nút bấm được:
 
-## Cảnh báo
+- Đơn nghỉ phép chờ duyệt.
+- Đơn tăng ca chờ duyệt.
+- Yêu cầu đổi hồ sơ chờ duyệt, xem [Yêu cầu chỉnh hồ sơ](yeu-cau-chinh-ho-so.md).
+- Nhân viên hết thử việc trong 7 ngày.
+- Hợp đồng hết hạn trong 30 ngày, xem [Hợp đồng lao động](hop-dong.md).
 
-Trang sẽ hiện cảnh báo nếu phát hiện:
+Không có việc nào thì dải này không hiện.
 
-- Giáo viên có tỷ lệ vắng cao (nguy cơ nghỉ việc)
-- Hợp đồng quá hạn chưa gia hạn
-- Đơn phép chồng lịch dạy
-- Bất thường chấm công (đi muộn > 3 lần / tuần)
+## Bốn nhóm chức năng
 
-## Liên kết nhanh
+Mỗi thẻ là một lối tắt, có chấm đỏ báo số việc đang chờ ở những thẻ có việc duyệt.
 
-Từ trang tổng quan, bấm để mở:
+- **Vận hành hằng ngày**: **Chấm công**, **Nghỉ phép**, **Duyệt tăng ca**, **Phân ca tuần**, **Giao việc**, **Đội của tôi**.
+- **Lương & phúc lợi**: **Quản lý lương**, **Giờ dạy**, **Mẫu phiếu lương**, **Báo cáo HR**.
+- **Nhân sự & phát triển**: **Nhân viên**, **Tuyển dụng**, **Hợp đồng lao động**, **Onboarding**, **Đánh giá hiệu suất**, **Yêu cầu hồ sơ**, **Sơ đồ tổ chức**.
+- **Công cụ & AI**: **Cấu hình HR**, **Lịch nghỉ lễ**, **Kiểm tra lương AI**, **Gợi ý phân ca AI**, **Rủi ro nghỉ việc**, **Dạy thay**.
+
+Hai nút ở đầu trang giúp đi nhanh: **Thêm nhân viên** mở trang **Nhân viên**, **Báo cáo** mở **Báo cáo HR**.
+
+::: tip Mẹo
+Thẻ **Nhân viên** có chấm đỏ khi có người sắp hết thử việc. Bấm vào để xem danh sách và quyết định có ký hợp đồng chính thức hay không.
+:::
+
+## Các bài liên quan
 
 - [Danh sách nhân viên](danh-sach-nhan-vien.md)
-- [Bảng lương](bang-luong.md)
-- [Chấm công](cham-cong.md)
-- [Ngày phép](ngay-phep.md)
-
-## Lưu ý
-
-- **Chỉ HR + Quản lý** thấy module này.
-- **Số liệu cập nhật theo thời gian thực** — không cần làm mới trang thủ công.
+- [Tuyển dụng](tuyen-dung.md)
+- [Hợp đồng lao động](hop-dong.md)
+- [Cấu hình nhân sự](cau-hinh-hr.md)
 
 ## Câu hỏi thường gặp
 
-**Tôi không phải HR nhưng muốn xem nhân viên của tôi, làm sao?**
-Quản lý chi nhánh xem nhân viên thuộc chi nhánh mình. Giáo viên xem hồ sơ cá nhân trong [Cổng Nhân viên](../cong-nhan-vien/gioi-thieu.md).
+::: details Quản lý (vai Quản lý) có vào được trang này không?
+Không. Vai Quản lý chỉ vào được vài mục lẻ trong khu này: **Dạy thay**, **Giao việc**, **Lịch ca lễ tân** và **Quản lý Truyền thông** (cần gói mở rộng). Quản trị viên và Quản lý chi nhánh mới mở được trang tổng quan.
+:::
+
+::: details Nhân viên hết thử việc được tính theo ngày nào?
+Trang cảnh báo những người có ngày hết thử việc trong 7 ngày tới. Ngày này lấy từ hồ sơ nhân viên, xem [Danh sách nhân viên](danh-sach-nhan-vien.md).
+:::

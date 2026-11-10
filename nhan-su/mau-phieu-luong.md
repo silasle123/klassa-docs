@@ -1,56 +1,54 @@
+---
+title: "Mẫu phiếu lương"
+description: "Khai thông tin công ty in trên phiếu lương, hợp đồng lao động và email, rồi xem thử phiếu mẫu."
+roles: [Quản trị viên]
+plugin: "Lương giáo viên"
+order: 40
+group: "Lương, chấm công & ca"
+---
+
 # Mẫu phiếu lương
 
-## Khi nào dùng
+Thông tin công ty như tên pháp nhân, địa chỉ, mã số thuế được in ở đầu mỗi phiếu lương PDF và cả trên hợp đồng lao động. Bạn chỉ cần khai một lần ở trang này, mọi phiếu và hợp đồng sau đó dùng chung.
 
-Tuỳ chỉnh **thông tin in trên phiếu lương PDF** mà nhân viên nhận (tên công ty, địa chỉ, mã số thuế, ghi chú chân phiếu) — dùng chung cho cả phiếu lương lẫn hợp đồng.
+Vào **Quản lý HR → Mẫu phiếu lương**. Quản trị viên sửa và lưu được. Quản lý chi nhánh chỉ xem, các ô sẽ bị khoá.
 
-## Truy cập
+## Khai thông tin in trên phiếu
 
-Menu trái → **Nhân sự → Mẫu phiếu lương** (`/hr/payslip-template`). Tiêu đề trang: **"Mẫu phiếu lương & hợp đồng"**. Cần quyền nhân sự (xem); sửa cần quyền cập nhật.
+::: steps
+1. Vào **Quản lý HR → Mẫu phiếu lương**. Thẻ **Thông tin in trên phiếu** hiện ở bên trái.
+2. Điền **Tên thương hiệu**: tên hiển thị trong hệ thống (màn hình đăng nhập, email). Đổi ô này là đổi tên trên toàn hệ thống.
+3. Điền **Tên pháp nhân (in trên hợp đồng & phiếu lương)**: tên đầy đủ theo giấy phép kinh doanh, cũng là tên Bên A trên hợp đồng lao động. Để trống thì hệ thống tạm dùng tên thương hiệu.
+4. Điền **Địa chỉ pháp nhân**, **Mã số thuế (MST)** và **Email liên hệ**.
+5. Ghi **Ghi chú chân phiếu (tuỳ chọn)**, ví dụ lời nhắn liên hệ phòng Nhân sự khi có thắc mắc về lương.
+6. Ở khối **Thông tin cho hợp đồng lao động**, điền **Người đại diện ký HĐ**, **Chức vụ người đại diện** và **Điện thoại công ty (tuỳ chọn)**.
+7. Bấm **Lưu mẫu phiếu**.
+:::
 
-![Trang Mẫu phiếu lương & hợp đồng](../assets/screenshots/payslip-template-page.png)
+![Trang Mẫu phiếu lương và hợp đồng với thẻ Thông tin in trên phiếu và thẻ Logo](../assets/screenshots/mau-phieu-luong-trang.webp)
 
-## Các trường tuỳ chỉnh
+Tất cả ô đều không bắt buộc, nhưng ô nào trống thì phiếu và hợp đồng sẽ thiếu phần thông tin đó.
 
-### Thông tin in trên phiếu (card chính)
-- **Tên công ty**
-- **Địa chỉ pháp nhân**
-- **Mã số thuế (MST)**
-- **Email liên hệ**
-- **Ghi chú chân phiếu** — hiển thị ở cuối mỗi phiếu lương PDF
+## Xem thử phiếu mẫu
 
-### Thông tin cho hợp đồng lao động (Bên A)
-Dùng khi xuất file hợp đồng, KHÔNG hiện trên phiếu lương:
-- Người đại diện ký hợp đồng
-- Chức vụ người đại diện
-- Điện thoại công ty
+Bấm **Xem thử phiếu mẫu** ở góc trên trang. Một phiếu PDF mẫu mở ra trong tab mới để bạn kiểm tra bố cục và thông tin vừa lưu. Hãy lưu trước rồi mới xem thử, vì phiếu mẫu lấy theo thông tin đã lưu.
 
-### Logo
-Card Logo chỉ **hiển thị** logo hiện tại (lấy từ Cài đặt thương hiệu). Muốn đổi logo → bấm link **"Đổi logo tại Cài đặt thương hiệu"** (`/admin/branding`). **Không upload logo trực tiếp ở trang này.**
+## Logo
 
-## Xem thử + Lưu
+Thẻ **Logo** bên phải hiện logo đang dùng. Logo lấy từ phần cài đặt thương hiệu và dùng chung toàn hệ thống. Muốn đổi, bấm liên kết **Đổi logo tại Cài đặt thương hiệu**.
 
-- **"Xem thử phiếu mẫu"** (góc trên phải) → mở một phiếu lương PDF mẫu (số liệu giả) với thông tin thương hiệu hiện tại, để kiểm tra layout trước khi áp dụng.
-- **"Lưu mẫu phiếu"** → lưu cấu hình.
-
-> Cấu hình này **dùng chung** với hoá đơn và email (lưu trong cài đặt thương hiệu) — sửa ở đây cũng đổi thông tin in trên hoá đơn.
-
-## Phiếu lương thật trông như thế nào
-
-Sau khi cấu hình, phiếu lương xuất ra PDF như sau (mẫu thật từ hệ thống):
-
-![Phiếu lương PDF mẫu](../assets/screenshots/phieu-luong-mau-pdf.png)
-
-Bố cục: tiêu đề **PHIẾU LƯƠNG** + tháng + mã phiếu → bảng thông tin nhân viên → 4 ô tóm tắt công → bảng **Các khoản thu nhập** (có chi tiết lương dạy từng lớp) → bảng **Các khoản khấu trừ** → hộp **Lương thực nhận** kèm số tiền bằng chữ → chữ ký 2 bên → ghi chú chân phiếu.
-
-## Mẫu email gửi phiếu lương (khác)
-
-Mẫu **email** đính kèm khi gửi phiếu lương cho nhân viên **KHÔNG** cấu hình ở trang này. Vào **Tích hợp → Mẫu email & thông báo → "Email gửi phiếu lương"** để soạn mẫu email (tiêu đề + nội dung, có các biến như tên NV, kỳ lương, lương thực nhận). Chưa có mẫu này thì hệ thống chặn gửi phiếu qua email.
+::: tip Mẹo
+Điền đúng tên pháp nhân và mã số thuế ngay từ đầu. Hợp đồng lao động ký tay in ra cũng lấy đúng các thông tin này, nên sai ở đây là sai cả hợp đồng. Xem thêm [Hợp đồng lao động](hop-dong.md).
+:::
 
 ## Câu hỏi thường gặp
 
-**Tên file phiếu lương khi tải về là gì?**
-`Họ tên - Phiếu lương - MM.YYYY.pdf` (có sẵn tên nhân viên để không nhầm khi gửi).
+::: details Đổi mẫu có làm đổi phiếu đã gửi không?
+Không. Phiếu đã gửi cho nhân viên giữ nguyên bản cũ. Thông tin mới chỉ áp dụng cho phiếu bạn xuất hoặc gửi sau đó.
+:::
 
-**Đổi logo mà phiếu chưa cập nhật?**
-Logo lấy từ Cài đặt thương hiệu (`/admin/branding`). Đổi ở đó rồi xem thử lại phiếu mẫu.
+::: details Vì sao tên hệ thống của tôi đổi theo khi sửa Tên thương hiệu?
+Ô này là tên thương hiệu dùng chung cho cả hệ thống. Nếu chỉ muốn đổi tên in trên phiếu và hợp đồng, hãy sửa ô **Tên pháp nhân**.
+:::
+
+Về cách tính và gửi phiếu, xem [Quản lý lương](bang-luong.md).

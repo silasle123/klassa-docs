@@ -1,64 +1,62 @@
-# Trợ lý HR (AI Assistant)
+---
+title: "Trợ lý nhân sự (HR AI Assistant)"
+description: "Hỏi đáp bằng câu chữ về chính sách nhân sự của trung tâm và nhận câu trả lời kèm nguồn tham khảo."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "AI — Gợi ý & Trợ lý Vận hành"
+order: 170
+group: "Hồ sơ & tổ chức"
+---
 
-## Khái niệm
+# Trợ lý nhân sự (HR AI Assistant)
 
-**Trợ lý HR** là chatbot AI giúp HR / Quản lý làm các tác vụ thường ngày bằng giao diện hội thoại:
+Trợ lý trả lời câu hỏi về chính sách và quy trình nhân sự bằng ngôn ngữ thường ngày, ví dụ chính sách nghỉ phép, ngày trả lương, quy trình nghỉ việc. Câu trả lời dựa trên tài liệu chính sách trung tâm đã nạp và có ghi nguồn để bạn kiểm tra.
 
-- "Cho tôi danh sách nhân viên có thâm niên >5 năm"
-- "Tính lương tháng này cho lễ tân Mai"
-- "Gửi email chúc mừng sinh nhật cho NV sinh trong tháng"
-- "Soạn đơn cảnh cáo cho NV X về việc đi muộn"
+Cần gói mở rộng **AI — Gợi ý & Trợ lý Vận hành**. Trợ lý chỉ trả lời, không tự làm thay: nó không tạo đơn, không gửi email, không sửa dữ liệu.
 
-## Truy cập
+## Đặt câu hỏi
 
-Menu trái → **Nhân sự → Trợ lý** (hoặc **/hr/assistant**).
+::: steps
+1. Vào **Quản lý HR → HR AI Assistant**. Tiêu đề trang là **Trợ lý nhân sự**.
+2. Gõ câu hỏi vào ô **Nhập câu hỏi của bạn...** rồi bấm nút gửi. Hoặc bấm một câu trong khung **Câu hỏi thường gặp** bên cạnh.
+3. Đợi dòng "Đang suy nghĩ..." biến mất rồi đọc câu trả lời.
+4. Xem phần **Nguồn tham khảo** và **Độ tin cậy** (Cao, Trung bình, Thấp) dưới câu trả lời.
+:::
 
-## Cách dùng
+![Trang Trợ lý nhân sự với khung chat và câu hỏi thường gặp](../assets/screenshots/hr-tro-ly.webp)
 
-Gõ câu hỏi/yêu cầu vào ô chat → trợ lý phản hồi:
+Các câu gợi ý có sẵn:
 
-- Trả lời câu hỏi tra cứu dữ liệu
-- Sinh báo cáo PDF / Excel
-- Soạn email / văn bản
-- Thực hiện hành động (gửi email, tạo đơn) — cần xác nhận trước khi chạy
+- Chính sách nghỉ phép năm là gì?
+- Tôi có bao nhiêu ngày phép còn lại?
+- Lương được trả vào ngày nào?
+- Quy trình nghỉ việc như thế nào?
+- Cách tính lương giáo viên?
+- Chính sách làm thêm giờ ra sao?
 
-## Ví dụ tác vụ
+Trợ lý cũng đọc được một phần dữ liệu nhân viên (như số ngày phép) để trả lời, trong phạm vi quyền của người đang đăng nhập.
 
-### Tra cứu
+## Nội dung chính sách lấy ở đâu
 
-- "Liệt kê 5 GV có chuyên cần tốt nhất quý 1"
-- "Ai sắp hết hạn hợp đồng trong tháng tới?"
+Trợ lý tra trong nhóm tài liệu chính sách nhân sự của **Kho tri thức** thuộc AI Hub. Muốn trợ lý trả lời đúng quy định của trung tâm bạn, hãy thêm hoặc sửa tài liệu ở đó. Xem [Kho tri thức](../ai-hub/knowledge.md). Nội dung bạn sửa có hiệu lực ngay cho các câu hỏi sau.
 
-### Soạn văn bản
+::: tip Mẹo
+Hỏi cụ thể, một ý một câu. Câu như "Nhân viên bán thời gian nghỉ ốm có được trả lương không?" cho kết quả tốt hơn câu "Chế độ nghỉ thế nào?".
+:::
 
-- "Soạn đơn yêu cầu giải trình về việc đi muộn cho NV Anh"
-- "Soạn email mời ứng viên phỏng vấn vòng 2"
-- "Viết bài đăng tuyển GV Toán cấp 2"
-
-### Phân tích
-
-- "Tỷ lệ nghỉ việc 6 tháng qua như thế nào so với năm trước?"
-- "Phân tích lương GV vs nhân viên hỗ trợ — có chênh lệch bất hợp lý không?"
-
-### Hành động
-
-- "Gửi tin Zalo nhắc tất cả NV nộp đơn phép tháng 5 trước ngày 25/04"
-- "Tạo hợp đồng thử việc cho NV mới Lê Văn B"
-
-## Quyền
-
-- Trợ lý làm được những gì user đang đăng nhập có quyền làm — không vượt quyền.
-- Mọi hành động được ghi log để truy vết.
-
-## Lưu ý
-
-- **Trả phí** theo lượt hỏi (token). Trung tâm có thể đặt budget hàng tháng.
-- **Kiểm tra kết quả** trước khi áp dụng — AI vẫn có thể sai số liệu.
+::: warning Lưu ý
+Hãy luôn xem **Độ tin cậy** và **Nguồn tham khảo**. Câu trả lời độ tin cậy thấp hoặc không có nguồn nghĩa là kho tri thức chưa có tài liệu phù hợp. Khi đó hãy đối chiếu quy chế thật hoặc hỏi người phụ trách nhân sự.
+:::
 
 ## Câu hỏi thường gặp
 
-**AI có nhớ cuộc trò chuyện trước không?**
-Có, trong 1 phiên (vài giờ). Sau đó session mới sẽ không nhớ — đảm bảo bảo mật.
+::: details Lịch sử trò chuyện có được lưu không?
+Không. Đóng hoặc tải lại trang thì cuộc trò chuyện mất, bạn bắt đầu lại từ lời chào.
+:::
 
-**Tôi có thể đào tạo AI theo phong cách trung tâm không?**
-Có. Trong Cài đặt → AI → "Personality" — upload tài liệu, mẫu văn bản nội bộ để AI bắt chước phong cách.
+::: details Nhân viên có dùng được trợ lý này không?
+Không. Trang này chỉ dành cho Quản trị viên và Quản lý chi nhánh.
+:::
+
+::: details Muốn trợ lý tính lương hay soạn văn bản thì sao?
+Trợ lý này chỉ hỏi đáp chính sách. Tính lương làm ở [Quản lý lương](bang-luong.md).
+:::

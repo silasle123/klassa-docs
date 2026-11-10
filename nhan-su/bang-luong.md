@@ -1,117 +1,126 @@
-# Bảng lương — tính lương hàng tháng
+---
+title: "Quản lý lương"
+description: "Tạo kỳ lương tháng, tính phiếu cho từng người, duyệt, đánh dấu đã chuyển khoản và gửi phiếu lương."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS) và Lương giáo viên"
+order: 10
+group: "Lương, chấm công & ca"
+---
 
-## Khi nào dùng
+# Quản lý lương
 
-Cuối mỗi tháng, HR / Kế toán / Quản lý chạy **một kỳ lương** trọn vòng đời: tạo kỳ → sinh phiếu cho từng nhân sự → kiểm tra → duyệt → chi trả → gửi phiếu cho nhân viên.
+Trang này giúp bạn chốt lương mỗi tháng: tạo một **kỳ lương**, để hệ thống tính phiếu cho từng nhân sự, rà soát và sửa nếu cần, duyệt, ghi nhận đã chuyển khoản rồi gửi phiếu cho nhân viên. Trang cần cả hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**: gói Lương giáo viên để chạy kỳ lương, gói Nhân sự (HRIS) cho cấu hình lương và danh sách nhân viên.
 
-## Truy cập
+Vào **Quản lý HR → Quản lý lương**. Trang có 5 tab: **Tính lương** (bài này), **Đơn giá dạy (GV/TG)** và **Cấu hình lương NV** (xem [Cấu hình lương](cau-hinh-luong.md)), **Tạm ứng** (xem [Tạm ứng lương](tam-ung-luong.md)) và **Lịch sử gửi phiếu**.
 
-Menu trái → **Nhân sự → Quản lý lương** (`/hr/payroll`). Cần bật **plugin Lương** + tài khoản có quyền nhân sự.
+## Lương được tính từ đâu
 
-![Trang Quản lý lương — 5 tab](../assets/screenshots/hr-bang-luong.png)
+Hệ thống không lấy lương từ điểm danh học sinh. Mỗi nhóm được tính theo căn cứ riêng:
 
-Trang có **5 tab**:
+| Nhóm | Căn cứ tính |
+|------|-------------|
+| Giáo viên | Các buổi mà giáo viên được giao dạy, trong khoảng thời gian được giao lớp, cộng buổi dạy thay theo đơn đã duyệt. Buổi học chỉ có khi giáo viên điểm danh, nên buổi chưa điểm danh chưa được tính. |
+| Trợ giảng | Các buổi nằm trong khoảng thời gian trợ giảng được giao lớp. Nếu Quản trị viên bật yêu cầu check-in, trợ giảng bán thời gian phải bấm **Có mặt** từng buổi (xem [Ca trợ giảng](ca-tro-giang.md)). |
+| Nhân viên toàn thời gian | Lương cơ bản chia theo số ngày công thực tế (ngày chấm công cộng ngày nghỉ phép có lương) trên số ngày công chuẩn của tháng. |
+| Nhân viên bán thời gian | Số giờ làm nhân với đơn giá giờ. |
+| Lễ tân theo ca | Giờ chấm công rơi vào khung giờ ca nào thì nhân với đơn giá của khung đó (xem [Lịch ca lễ tân](lich-ca-le-tan.md)). |
 
-| Tab | Dùng để |
-|-----|---------|
-| **Tính lương** | Tạo / duyệt / chi trả kỳ lương, xem bảng phiếu, gửi phiếu (tab chính của bài này) |
-| **Bảng lương GV** | Cấu hình bảng giá lương giáo viên theo sĩ số (rate band) + chế độ tính lương dạy |
-| **Lương nhân viên** | Cấu hình lương theo chức vụ × loại hợp đồng (lương cơ bản, lương giờ…) |
-| **Tạm ứng** | Duyệt [tạm ứng lương](tam-ung-luong.md), tự trừ vào kỳ |
-| **Lịch sử gửi phiếu** | Tra ai đã được gửi phiếu, nháp/chính thức, thành công/lỗi |
+Với giáo viên, số học sinh có mặt trong buổi chỉ dùng để chọn bậc đơn giá khi trung tâm chọn cách tính **Theo sĩ số học sinh**. Hai cách tính còn lại (cố định mỗi buổi, cố định theo giờ) không phụ thuộc sĩ số.
 
-## Vòng đời một kỳ lương
+## Tạo kỳ lương và tính lương
 
-**Kỳ lương** đi qua 4 trạng thái: **Nháp → Chờ duyệt → Đã duyệt → Đã chi trả**.
-**Phiếu lương** từng người: Chưa tính → Nháp → Chờ duyệt → Đã duyệt → Đã gửi → Đã chi trả.
+Tháng chưa có kỳ thì góc trên trang hiện hai nút. Tháng đã có kỳ thì hai nút này ẩn đi.
 
-## Bước 1 — Tạo kỳ lương
+::: steps
+1. Vào **Quản lý HR → Quản lý lương**, tab **Tính lương**.
+2. Chọn **Tháng** và **Năm** ở thẻ **Kỳ lương**.
+3. Bấm **Tính lương mới** để tạo kỳ và tính cho tất cả nhân sự một lượt. Hộp **Tính lương cho tháng mới** hiện ra.
+4. Chọn **Tháng**, **Năm** (bắt buộc) và ô **Trừ BHXH / BHYT / BHTN + thuế TNCN**: chỉ nhân viên toàn thời gian, tất cả nhân viên, hoặc không tự trừ.
+5. Bấm **Tính lương**. Thanh tiến độ hiện ở góc dưới màn hình.
+:::
 
-Ở tab **Tính lương**, góc phải có 3 nút:
+Nếu muốn tính từng người, bấm **Tạo kỳ trống** rồi vào mục **Chưa tính lương** bên dưới, bấm **Tính lương** ở dòng của người đó. Tính xong, người đó chuyển lên bảng **Phiếu lương đã tính**.
 
-- **"Tính lương mới"** — tạo kỳ và **sinh phiếu cho TẤT CẢ nhân sự** cùng lúc. Hộp thoại yêu cầu chọn **Tháng**, **Năm** và **chế độ trừ bảo hiểm/thuế** (xem dưới). Bấm **"Tính lương"** → có **thanh tiến độ** ở góc dưới phải hiển thị "đã xong / tổng số người".
-- **"Tạo kỳ trống"** — tạo kỳ rỗng, chưa sinh phiếu ai (để tính lẻ từng người).
-- **"Lương tháng 13"** — tạo kỳ thưởng Tết riêng (nhập Năm, Hệ số thưởng, tuỳ chọn chia theo số tháng làm).
+::: warning Kiểm tra danh sách nhân sự trước khi tính
+Mọi hồ sơ nhân viên đang ở trạng thái làm việc đều vào kỳ lương. Trung tâm mới có sẵn vài hồ sơ nhân sự mẫu (mã bắt đầu bằng KLS) chưa khai lương, các hồ sơ này sẽ ra phiếu 0 đồng. Hãy xem lại danh sách ở [Danh sách nhân viên](danh-sach-nhan-vien.md) và xử lý hồ sơ mẫu trước khi bấm tính.
+:::
 
-### 3 chế độ trừ BHXH / BHYT / BHTN + thuế TNCN
+Với lương tháng 13 hoặc thưởng Tết, bấm **Lương tháng 13**, chọn năm và hệ số thưởng rồi bấm **Tạo kỳ thưởng**. Kỳ này tạo sẵn phiếu và không dùng nút tính lại.
 
-| Chế độ | Ý nghĩa |
-|--------|---------|
-| **Chỉ NV Full-time** (mặc định) | Đúng luật — chỉ trừ bảo hiểm cho nhân sự toàn thời gian |
-| **Mọi nhân viên** | Trừ bảo hiểm cho cả part-time |
-| **Không tự trừ** | Bảng lương gộp, không trừ bảo hiểm/thuế tự động |
+## Vòng đời của một kỳ lương
 
-> **Lưu ý:** đổi chế độ ở kỳ đang xem **chỉ lưu lại, KHÔNG tự tính lại** (tránh treo máy khi nhiều nhân sự). Phải bấm **"Tính lại"** để áp dụng. Khoá khi kỳ đã duyệt/đã chi trả.
+Kỳ lương đi qua các trạng thái **Nháp**, **Chờ duyệt**, **Đã duyệt**, **Đã chi trả**.
 
-## Bước 2 — Xem & chỉnh phiếu
+| Trạng thái | Việc bạn làm được |
+|------------|-------------------|
+| **Nháp** | **Trình duyệt** (khi đã có phiếu), **Tính lại cả kỳ**, sửa phiếu, xoá bảng lương. |
+| **Chờ duyệt** | **Phê duyệt**, **Tính lại cả kỳ**, sửa phiếu. |
+| **Đã duyệt** | **Xác nhận chi trả**, hoặc **Mở lại để sửa** để đưa kỳ về **Chờ duyệt**. Gửi được bản chính thức. |
+| **Đã chi trả** | Chỉ xem. Không xoá, không sửa được. |
 
-Bảng phiếu lương có các cột: Mã NV · Họ tên · Chức vụ · **Lương cơ bản · Lương giảng dạy · Phụ cấp · Thưởng · Khấu trừ · Thực nhận** · Thao tác.
+Sau khi tính cho cả kỳ, nếu mọi người đều tính được thì kỳ tự sang **Chờ duyệt**. Nếu còn người lỗi thì kỳ ở lại **Nháp**: bấm **Trình duyệt** để đẩy sang bước tiếp.
 
-Mỗi dòng: **Xem chi tiết** (icon mắt) · **Chỉnh sửa** (sửa tay từng khoản, khoá khi đã chi trả) · menu **⋯** (Xuất PDF / Xuất Excel / Gửi bản nháp / Gửi bản chính thức).
+::: warning Tính lại sẽ ghi đè phần sửa tay
+**Tính lại cả kỳ** (hoặc **Tính lương cả kỳ** khi còn người chưa tính) tính lại toàn bộ phiếu từ dữ liệu mới nhất. Các dòng bạn đã sửa tay sẽ mất. Khoản **Thưởng** và ghi chú được giữ lại. Phiếu đã đánh dấu chuyển khoản không bị tính lại. Nếu chỉ cần tính lại một người, mở menu **⋯** ở dòng đó và chọn **Tính lại riêng người này**.
+:::
 
-**Danh sách nhân sự kỳ này** (phía dưới) hiển thị cả người **chưa có phiếu** (nhãn "Chưa tính" màu xám) — bấm **"Tính lương"** trên dòng đó để sinh phiếu lẻ cho riêng người này.
+Đổi ô **Trừ BHXH / BHYT / BHTN + thuế TNCN** của kỳ chỉ lưu lựa chọn. Bạn phải bấm **Tính lại** thì bảng lương mới áp dụng.
 
-## Bước 3 — Duyệt → Chi trả
+## Sửa một phiếu lương
 
-- Kỳ ở **Chờ duyệt** → bấm **"Phê duyệt"** → thành **Đã duyệt**.
-- Kỳ **Đã duyệt** → bấm **"Xác nhận chi trả"** → thành **Đã chi trả**. Lúc này các khoản [tạm ứng](tam-ung-luong.md) đã duyệt của kỳ tự động trừ vào phiếu.
+::: steps
+1. Ở bảng **Phiếu lương đã tính**, bấm biểu tượng bút ở dòng nhân viên. Hộp **Chỉnh sửa phiếu lương** hiện ra.
+2. Sửa từng dòng ở mục **I. Các khoản thu nhập** và **II. Các khoản khấu trừ** (nhập số dương). Bấm **Thêm dòng** hoặc **Thêm khấu trừ** để thêm khoản mới.
+3. Xem tổng thu nhập, tổng khấu trừ và thực nhận tự cộng lại. Ghi lý do ở ô **Ghi chú** nếu muốn.
+4. Bấm **Lưu thay đổi**.
+:::
 
-## Bước 4 — Xuất & gửi phiếu hàng loạt
+Phiếu PDF và email hiển thị đúng các dòng bạn đã lưu. Không sửa được khi kỳ đã **Đã chi trả** hoặc phiếu đã đánh dấu chuyển khoản.
 
-- **Export CSV** — tải file Excel tổng hợp cả kỳ (`payroll_<tháng>_<năm>.xlsx`, có dòng tổng cộng). *Lưu ý: nút tên "Export CSV" nhưng tải về file Excel.*
-- **Bộ lọc** (Vai trò / Chức vụ / Loại HĐ / Trạng thái phiếu) → tích chọn phiếu → 2 nút:
-  - **"Tải .zip"** — nén tất cả PDF phiếu đã chọn thành 1 file zip.
-  - **"Gửi email"** — gửi phiếu lương qua email **lần lượt từng người, cách nhau 5–10 giây** (chống spam). **Phải giữ trang mở** đến khi xong; có thanh tiến độ ✓ thành công / ✕ lỗi.
+## Đánh dấu đã chuyển khoản từng người
 
-![Chọn nhiều phiếu để tải/gửi hàng loạt](../assets/screenshots/bulk-send-dialog.png)
+Dùng khi bạn chuyển lương cho từng người rồi muốn ghi lại, hoặc trả lương làm nhiều đợt.
 
-> Trước khi gửi email, phải đã cấu hình **mẫu email phiếu lương** (ở Tích hợp → Mẫu email & thông báo → "Email gửi phiếu lương"), nếu chưa thì hệ thống chặn gửi.
+::: steps
+1. Ở bảng **Phiếu lương đã tính**, tích chọn các phiếu cần ghi nhận.
+2. Bấm **Đã chuyển khoản (N)**. Hộp **Đánh dấu đã chuyển khoản** hiện ra.
+3. Chọn **Trả đủ** hoặc **Trả một phần**. Trả một phần chỉ làm được cho từng người: mở menu **⋯** của người đó, chọn **Đánh dấu đã chuyển khoản**, nhập số tiền chuyển lần này.
+4. Chọn **Ngày chuyển khoản** (không bắt buộc): **Hôm nay**, **Hôm qua** hoặc ngày khác.
+5. Bấm **Xác nhận đã chuyển khoản**.
+:::
 
-## Bước 5 — Theo dõi lịch sử gửi
+Phiếu đã đánh dấu bị khoá: không sửa, không xoá, không bị tính lại. Muốn sửa thì chọn phiếu rồi bấm **Bỏ đánh dấu đã trả (N)**. Phiếu mới trả một phần hiện nhãn **Trả 1 phần** kèm số còn phải trả. Để trả nốt, mở menu **⋯** và chọn **Chuyển tiếp phần còn lại**.
 
-Tab **"Lịch sử gửi phiếu"** → lọc theo Tháng/Năm → bảng: Nhân viên · Loại (Chính thức/Nháp) · Email nhận · Kết quả · Người gửi · Thời gian.
+Khi bấm **Xác nhận chi trả** cho cả kỳ, mọi phiếu chưa trả được ghi là đã trả, phần còn lại của phiếu trả một phần được ghi trả nốt, và các khoản tạm ứng đã duyệt của kỳ chuyển sang **Đã trừ lương**.
 
-![Lịch sử gửi phiếu lương](../assets/screenshots/payslip-send-history.png)
+## Lọc và xem phiếu
 
-## Bảng lương mẫu (ví dụ tháng 6/2026)
+Thanh **Bộ lọc** áp dụng cho cả bảng **Phiếu lương đã tính** lẫn mục **Chưa tính lương**: vai trò, chức vụ, loại hợp đồng và trạng thái phiếu. Mục **Chưa chi trả (N)** trong ô trạng thái gom những phiếu chưa trả đủ, gồm cả người mới trả một phần, để bạn không bỏ sót ai. Bấm **Xoá lọc** để bỏ lọc.
 
-Ví dụ một kỳ lương 4 nhân sự với các cách tính khác nhau (thực nhận = thu nhập − khấu trừ − tạm ứng):
+## Gửi và tải phiếu
 
-| Nhân sự | Chức vụ | Lương cơ bản | Lương buổi dạy | Phụ cấp | Thưởng | Bảo hiểm (10.5%) | Thuế TNCN | Tạm ứng | **Thực nhận** |
-|---------|---------|-------------:|---------------:|--------:|-------:|-----------------:|----------:|--------:|-------------:|
-| Nguyễn Văn An | Giáo viên (theo buổi, FT) | 6.000.000 | 9.200.000 | 1.080.000 | 500.000 | 682.500 | 44.250 | 2.000.000 | **14.053.250** |
-| Trần Thị Bình | Giáo viên (cố định/buổi, PT) | 0 | 8.400.000 | 0 | 0 | 0 | 0 | 0 | **8.400.000** |
-| Lê Thị Cúc | Lễ tân (lương cố định, FT) | 8.000.000 | 0 | 500.000 | 300.000 | 840.000 | 0 | 0 | **7.960.000** |
-| Phạm Thị Diệp | Kế toán (lương cố định, FT) | 9.000.000 | 0 | 500.000 | 0 | 945.000 | 95.000 | 1.000.000 | **7.460.000** |
+- Với từng người, mở menu **⋯**: **Xuất PDF**, **Xuất Excel**, **Gửi bản nháp** hoặc **Gửi bản chính thức**. Bản nháp gửi được ở mọi trạng thái. Bản chính thức chỉ gửi được khi kỳ đã **Đã duyệt** hoặc **Đã chi trả**.
+- Với nhiều người, tích chọn rồi bấm **Tải .zip (N)** hoặc **Gửi email (N)**. Email gửi lần lượt, cách vài giây mỗi phiếu, nên hãy giữ trang mở đến khi xong.
+- Gửi email cần mẫu **Email gửi phiếu lương** đã lưu trong **Tích hợp → Mẫu email**.
+- Tab **Lịch sử gửi phiếu** cho biết đã gửi cho ai, loại gì, thành công hay lỗi, theo từng tháng.
+- Bấm **Export CSV** ở thẻ **Kỳ lương** để tải cả bảng lương về máy.
 
-> Bảo hiểm = BHXH 8% + BHYT 1.5% + BHTN 1% (chỉ trừ cho nhân sự full-time). Giáo viên part-time theo thoả thuận có thể không trừ bảo hiểm. Số liệu chỉ minh hoạ.
-
-## Phiếu lương sau khi xuất trông như thế nào
-
-Mỗi nhân viên nhận một **phiếu lương PDF** chuẩn. Dưới đây là phiếu lương mẫu hệ thống tự sinh:
-
-![Phiếu lương PDF mẫu](../assets/screenshots/phieu-luong-mau-pdf.png)
-
-Phiếu gồm: tiêu đề **PHIẾU LƯƠNG** + tháng + mã phiếu → bảng thông tin nhân viên (chức vụ, phòng ban, tài khoản nhận lương) → 4 ô tóm tắt công (ngày công, làm thêm giờ, buổi dạy, giờ dạy) → **I. Các khoản thu nhập** (lương cơ bản, lương giảng dạy có chi tiết từng lớp, phụ cấp, thưởng) → **II. Các khoản khấu trừ** (BHXH/BHYT/BHTN/thuế/tạm ứng) → **III. Lương thực nhận** (kèm số tiền bằng chữ) → chữ ký 2 bên → chân phiếu.
-
-Tên file PDF có sẵn tên nhân viên: `Họ tên - Phiếu lương - MM.YYYY.pdf`. Tuỳ chỉnh thông tin in trên phiếu tại [Mẫu phiếu lương](mau-phieu-luong.md).
-
-## Lưu ý quan trọng
-
-- Nút **"Export CSV"** tải file **Excel** (.xlsx), không phải CSV.
-- Đổi **chế độ khấu trừ** phải bấm **"Tính lại"** mới áp dụng.
-- Đổi **bộ lọc** sẽ tự bỏ tích các phiếu đang chọn — chọn lại trước khi tải/gửi.
-- **Gửi email hàng loạt**: giữ trang mở đến khi xong (gửi tuần tự, cách 5–10 giây/phiếu).
-- **"Gửi bản chính thức"** chỉ bật khi kỳ đã duyệt / đã chi trả.
-- **Xoá bảng lương** (kỳ chưa chi trả) yêu cầu nhập **mật khẩu tài khoản** để xác nhận.
+Thông tin công ty in trên phiếu chỉnh ở [Mẫu phiếu lương](mau-phieu-luong.md).
 
 ## Câu hỏi thường gặp
 
-**Vì sao lương hiển thị 0?**
-Nhân sự chưa được cấu hình lương. Vào tab **Lương nhân viên** (lương cố định theo chức vụ) và **Bảng lương GV** (đơn giá buổi dạy theo sĩ số) để thiết lập, rồi bấm **"Tính lại"**.
+::: details Vì sao một người không có phiếu mà nằm ở mục Chưa tính lương?
+Người đó thuộc kỳ nhưng chưa được tính. Bấm **Tính lương** ở dòng của họ, hoặc **Tính lương cả kỳ**.
+:::
 
-**Sửa nhầm phiếu sau khi đã chốt?**
-Kỳ đã chi trả không sửa được. Làm điều chỉnh (thưởng/trừ) ở kỳ sau.
+::: details Có xoá được kỳ lương không?
+Xoá được khi kỳ chưa **Đã chi trả**. Bấm **Xoá bảng lương** và nhập mật khẩu tài khoản của bạn để xác nhận.
+:::
 
-**Gửi email báo lỗi "chưa cấu hình mẫu"?**
-Vào **Tích hợp → Mẫu email & thông báo → Email gửi phiếu lương** để tạo mẫu trước khi gửi.
+::: details Giáo viên dạy online có bị tính khác không?
+Hệ thống chưa tự giảm lương theo hình thức học. Nếu trung tâm trả khác cho buổi online, hãy sửa dòng tương ứng trên phiếu.
+:::
+
+::: details Kế toán có tự vào trang này được không?
+Không. Trang **Quản lý lương** chỉ mở cho Quản trị viên và Quản lý chi nhánh. Kế toán không thấy menu **Quản lý HR**, Quản lý chỉ thấy vài mục khác trong menu đó. Nhân viên tự xem phiếu của mình ở [Phiếu lương](../cong-nhan-vien/phieu-luong.md).
+:::

@@ -1,79 +1,95 @@
+---
+title: "Hợp đồng lao động"
+description: "Tạo, in, gia hạn và lưu bản ký của hợp đồng lao động cho nhân viên."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 80
+group: "Hồ sơ & tổ chức"
+---
+
 # Hợp đồng lao động
 
-## Khi nào dùng
+Trang này giúp bạn lập hợp đồng cho nhân viên, xuất file để in hoặc sửa, rồi lưu bản đã ký. Hệ thống cũng nhắc khi hợp đồng sắp hết hạn để bạn kịp gia hạn.
 
-- Tạo hợp đồng cho nhân viên mới (thử việc + chính thức)
-- Gia hạn hợp đồng sắp hết hạn
-- Cập nhật điều khoản (đổi lương, đổi vị trí)
-- Theo dõi nghĩa vụ hết hạn (BHXH, đóng góp)
-
-## Truy cập
-
-Menu trái → **Nhân sự → Hợp đồng** (hoặc **/hr/contracts**).
-
-![Trang hợp đồng](../assets/screenshots/hr-hop-dong.png)
-
-## Các loại hợp đồng
-
-| Loại | Thời hạn | Dùng cho |
-|------|----------|----------|
-| **Thử việc** | 1-2 tháng | Nhân viên mới giai đoạn đầu |
-| **Có thời hạn** | 12-36 tháng | Hợp đồng tiêu chuẩn |
-| **Không xác định thời hạn** | Không hạn | Nhân viên gắn bó lâu dài |
-| **Cộng tác viên** | Theo dự án | GV cộng tác, freelancer |
-| **Thời vụ** | <12 tháng | Hè, trại tập huấn |
+Bạn dùng được ở hai nơi, cùng một hộp nhập: trang **Hợp đồng lao động** (mọi nhân viên) và thẻ **Hợp đồng** trong hồ sơ từng người.
 
 ## Tạo hợp đồng
 
-### Bước 1 — Chọn nhân viên
+::: steps
+1. Vào **Quản lý HR → Hợp đồng lao động**, bấm **Tạo hợp đồng**. Hộp **Tạo hợp đồng lao động mới** hiện ra.
+2. Chọn **Nhân viên**. Chức danh, phòng ban, CCCD và loại hình làm việc được điền sẵn từ hồ sơ.
+3. Chọn **Loại hợp đồng**: **Thử việc**, **Có thời hạn**, **Không thời hạn**, **Cộng tác viên** hoặc **Thời vụ**.
+4. Chọn **Ngày bắt đầu**, tuỳ ý chọn **Ngày kết thúc**.
+5. Kiểm tra **Chức danh** và **Phòng ban**, rồi nhập **Mức lương cứng (VNĐ) / đơn vị** (giờ, ca hoặc tháng).
+6. Bấm **Tạo hợp đồng**.
+:::
 
-Vào hồ sơ nhân viên → tab Hợp đồng → **"+ Tạo hợp đồng"**.
+![Hộp Tạo hợp đồng lao động mới](../assets/screenshots/hr-hop-dong-tao.webp)
 
-### Bước 2 — Điền thông tin
+Ô bắt buộc: **Nhân viên**, **Loại hợp đồng**, **Ngày bắt đầu**, **Chức danh**, **Phòng ban**. Nếu điền CCCD thì phải đủ 9 số (CMND cũ) hoặc 12 số.
 
-- **Loại hợp đồng**
-- **Số hợp đồng** (tự sinh, có thể đổi)
-- **Vị trí**
-- **Phòng ban + cơ sở**
-- **Ngày bắt đầu / kết thúc**
-- **Lương cơ bản**
-- **Phúc lợi** (BHXH, thưởng tết, du lịch...)
-- **Điều khoản đặc biệt** (cấm cạnh tranh, bảo mật, v.v.)
+::: tip Mẹo
+Trợ giảng và Lễ tân dùng loại **Cộng tác viên**. Hộp có nhắc ngay dưới ô **Loại hợp đồng**. Hợp đồng mới luôn bắt đầu ở **Thử việc**, bạn cần đổi sang loại đúng.
+:::
 
-### Bước 3 — Sinh PDF + ký
+### Các ô nên xem lại trước khi in
 
-Bấm **"Sinh PDF"** → tải về để in + ký tay. Hoặc dùng **chữ ký số / chữ ký điện tử** nếu trung tâm có.
+- **Số hợp đồng**: để trống thì hệ thống tự sinh (dạng HD202607-0001).
+- **Đơn vị lương**: tự gợi ý theo chức danh (văn phòng theo tháng, trợ giảng theo ca, giáo viên và lễ tân theo giờ). Bạn đổi được.
+- **Địa điểm làm việc**: dùng ô **Chọn nhanh theo chi nhánh** hoặc gõ tay. Để trống thì lấy địa chỉ công ty.
+- **Nhiệm vụ công việc**: tự ra mẫu theo chữ trong ô **Chức danh** (giáo viên, trợ giảng, lễ tân, văn phòng). Sửa tự do, bấm **Khôi phục mẫu** để quay lại bản chuẩn.
+- **Môn giảng dạy (in vào Điều 2)**: chỉ hiện với hợp đồng giáo viên.
+- **Hình thức trả lương** (Chuyển khoản hoặc Tiền mặt), **Ngày trả lương**, **Giờ làm/ngày**, **Báo trước khi chấm dứt (ngày)**.
+- **Phụ lục hợp đồng**: tick **In kèm phụ lục kiêm nhiệm vị trí khác** để nhập chức danh, bộ phận, thời hạn, thù lao và nhiệm vụ kiêm nhiệm.
+- **Thời giờ nghỉ ngơi**, **Chế độ bảo hiểm**, **Phúc lợi khác**, **Ngày ký**, **Ghi chú**.
 
-Upload bản đã ký vào hệ thống → hợp đồng chuyển trạng thái **"Đã ký"**.
+Thông tin Bên A (tên công ty, mã số thuế, người đại diện ký) lấy từ trang **Mẫu phiếu lương**. Hãy điền đủ ở đó trước khi in hợp đồng.
 
-## Cảnh báo hết hạn
+## In, sửa file và lưu bản đã ký
 
-Phần mềm tự gửi cảnh báo cho HR khi hợp đồng sắp hết hạn:
+Mỗi dòng hợp đồng có các nút biểu tượng (rê chuột để thấy tên). Ở trang **Hợp đồng lao động** chỉ có **Tải PDF (bản nháp)**, **Tải Word để sửa**, **Sửa** và **Xem hồ sơ nhân viên**. Nút **Tải lên bản đã ký**, **Gia hạn** và **Xoá** chỉ có ở thẻ **Hợp đồng** trong hồ sơ nhân viên.
 
-- 60 ngày trước — cảnh báo lần 1
-- 30 ngày trước — cảnh báo lần 2
-- 7 ngày trước — gấp
+| Nút | Làm gì |
+|---|---|
+| **Tải PDF (bản nháp)** | Tải file PDF để in |
+| **Tải Word để sửa** | Tải file Word nếu cần chỉnh nội dung |
+| **Tải lên bản đã ký** | Lưu bản ký (PDF, JPG, PNG, DOC, DOCX, tối đa 10MB) |
+| **Sửa** | Mở lại hộp nhập để đổi thông tin |
+| **Xem hồ sơ nhân viên** | Mở hồ sơ người đó |
 
-→ Để HR kịp gia hạn hoặc thông báo kết thúc.
+Trong hồ sơ nhân viên, bấm **Xem chi tiết** để thấy đủ thông tin hợp đồng và mục **Bản chính thức đã ký**.
 
 ## Gia hạn
 
-Trên hợp đồng cũ → bấm **"Gia hạn"** → tạo hợp đồng mới giữ nguyên thông tin, chỉ đổi ngày + có thể đổi lương.
+Chỉ hợp đồng **Đang hiệu lực** mới có nút **Gia hạn** (trong thẻ **Hợp đồng** của hồ sơ nhân viên).
 
-## Chấm dứt hợp đồng
+::: steps
+1. Mở hồ sơ nhân viên, thẻ **Hợp đồng**, bấm **Gia hạn** ở hợp đồng cần nối.
+2. Điền **Số hợp đồng mới**, **Ngày bắt đầu**, **Ngày kết thúc** và **Mức lương mới (VND)** nếu có đổi.
+3. Bấm **Gia hạn**.
+:::
 
-- **Đến hạn không gia hạn** — tự chuyển trạng thái "Đã kết thúc"
-- **Chấm dứt trước hạn** — bấm "Chấm dứt" → điền lý do (đơn phương từ NV / đơn phương từ trung tâm / thoả thuận / vi phạm)
+Hệ thống tạo hợp đồng mới sao chép từ hợp đồng cũ, tăng số lần gia hạn lên 1 và chuyển hợp đồng cũ sang **Đã gia hạn**.
 
-## Lưu ý
+## Theo dõi và tìm hợp đồng
 
-- **Hợp đồng đã ký không sửa được** — chỉ chấm dứt + ký mới.
-- **Mỗi nhân viên có thể có nhiều hợp đồng theo thời gian** — phần mềm lưu lịch sử đầy đủ.
+- Ô tìm theo tên nhân viên, mã nhân viên hoặc mã hợp đồng. Lọc được theo **Trạng thái** (**Đang hiệu lực**, **Nháp**, **Hết hạn**, **Đã chấm dứt**, **Đã gia hạn**) và theo loại hợp đồng.
+- Hợp đồng đang hiệu lực mà hết hạn trong 30 ngày tới thì trang hiện khung cảnh báo "hợp đồng sắp hết hạn". Số này cũng hiện ở [Tổng quan nhân sự](tong-quan.md).
+- Bấm **Xuất CSV** để tải danh sách đang lọc.
+- Bảng có các cột **Mã HĐ**, **Nhân viên**, **Chức vụ**, **Loại HĐ**, **Ngày bắt đầu**, **Ngày kết thúc**, **Gia hạn**, **Trạng thái**.
+
+![Trang Hợp đồng lao động với bảng và bộ lọc](../assets/screenshots/hr-hop-dong-danh-sach.webp)
+
+::: danger Không thể hoàn tác
+Nút **Xoá** (thùng rác, trong hồ sơ nhân viên) xoá hẳn hợp đồng sau khi bạn xác nhận. Hãy tải file về trước nếu còn cần.
+:::
 
 ## Câu hỏi thường gặp
 
-**Mẫu hợp đồng tuỳ chỉnh được không?**
-Có. Cài đặt → Mẫu hợp đồng → tải lên file Word có placeholder {ho_ten}, {luong}, {ngay_bat_dau}... phần mềm tự điền khi sinh PDF.
+::: details Hợp đồng mới tạo có trạng thái gì?
+**Đang hiệu lực**. Tải lên bản đã ký không đổi trạng thái.
+:::
 
-**Lưu trữ hợp đồng đã ký dạng giấy + scan, KLASSA có quản lý không?**
-Có. Upload PDF scan vào tab Tài liệu của hợp đồng. Bản giấy gốc lưu ở văn phòng.
+::: details Nhân viên chưa có trong danh sách chọn?
+Danh sách chỉ gồm nhân viên đang làm việc. Thêm hồ sơ ở [Danh sách nhân viên](danh-sach-nhan-vien.md) rồi tạo hợp đồng.
+:::

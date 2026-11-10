@@ -1,0 +1,593 @@
+/* =====================================================================
+   KLASSA Docs — bộ giao diện
+   Thương hiệu: navy #1E3A8A (chính) + vàng #F59E0B (chỉ dùng cho "gói mở rộng"
+   và khối Lưu ý). Chữ: Be Vietnam Pro (tiêu đề) + Inter (nội dung), tự lưu,
+   không gọi Google Fonts.
+   Bo góc: khối/thẻ 12px · nút/ô 8px · nhãn tròn 999px.
+   ===================================================================== */
+
+:root {
+  --k-navy-950: #0b1533;
+  --k-navy-900: #0f1d45;
+  --k-navy-800: #172b66;
+  --k-navy-700: #1e3a8a;
+  --k-navy-600: #2747a6;
+  --k-navy-500: #3558c4;
+  --k-navy-200: #c9d6f6;
+  --k-navy-100: #e3eafb;
+  --k-navy-50: #f2f5fd;
+  --k-gold-600: #b45309;
+  --k-gold-500: #f59e0b;
+  --k-gold-100: #fdf1d6;
+
+  --k-font-heading: 'Be Vietnam Pro', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --vp-font-family-base: 'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --vp-font-family-mono: ui-monospace, 'Cascadia Code', 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --k-radius-card: 12px;
+  --k-radius-control: 8px;
+  --k-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --k-shadow-sm: 0 1px 2px rgba(15, 29, 69, 0.05);
+  --k-shadow-md: 0 1px 2px rgba(15, 29, 69, 0.05), 0 10px 30px -14px rgba(15, 29, 69, 0.22);
+  --k-shadow-lg: 0 2px 4px rgba(15, 29, 69, 0.05), 0 28px 60px -24px rgba(15, 29, 69, 0.32);
+}
+
+/* ---------- Bảng màu nền sáng ---------- */
+:root {
+  --vp-c-bg: #fdfdfe;
+  --vp-c-bg-alt: #f5f7fb;
+  --vp-c-bg-elv: #fefeff;
+  --vp-c-bg-soft: #f1f4f9;
+
+  --vp-c-text-1: #121a2e;
+  --vp-c-text-2: #47516a;
+  --vp-c-text-3: #646d82;
+
+  --vp-c-divider: #e4e8f0;
+  --vp-c-border: #d6dce8;
+  --vp-c-gutter: #e9edf4;
+
+  --vp-c-brand-1: #1e3a8a;
+  --vp-c-brand-2: #2747a6;
+  --vp-c-brand-3: #1e3a8a;
+  --vp-c-brand-soft: rgba(30, 58, 138, 0.08);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: #92400e;
+  --vp-c-warning-2: #b45309;
+  --vp-c-warning-3: #d97706;
+  --vp-c-warning-soft: rgba(245, 158, 11, 0.13);
+
+  --vp-c-danger-1: #b42318;
+  --vp-c-danger-2: #c4321f;
+  --vp-c-danger-3: #d92d20;
+  --vp-c-danger-soft: rgba(217, 45, 32, 0.08);
+
+  --k-chip-bg: #eef2f8;
+  --k-chip-fg: #3a4560;
+  --k-plugin-bg: #fdf3dc;
+  --k-plugin-fg: #8a4b06;
+  --k-plugin-border: #f4dba6;
+  --k-step-bg: var(--k-navy-700);
+  --k-step-fg: #fdfdfe;
+  --k-zoom-bg: rgba(253, 253, 254, 0.96);
+  --k-hero-glow: rgba(30, 58, 138, 0.07);
+  --k-tile-navy: #1e3a8a;
+  --k-tile-navy-fg: #f2f5fd;
+}
+
+/* ---------- Bảng màu nền tối ---------- */
+.dark {
+  --vp-c-bg: #0b1220;
+  --vp-c-bg-alt: #0e1629;
+  --vp-c-bg-elv: #121c32;
+  --vp-c-bg-soft: #131d33;
+
+  --vp-c-text-1: #e8ecf4;
+  --vp-c-text-2: #aab3c6;
+  --vp-c-text-3: #8690a5;
+
+  --vp-c-divider: #1d2840;
+  --vp-c-border: #2a3756;
+  --vp-c-gutter: #070c17;
+
+  --vp-c-brand-1: #9ab5ff;
+  --vp-c-brand-2: #b6caff;
+  --vp-c-brand-3: #3558c4;
+  --vp-c-brand-soft: rgba(154, 181, 255, 0.12);
+
+  --vp-c-warning-1: #fbd38d;
+  --vp-c-warning-2: #f6b24a;
+  --vp-c-warning-3: #f59e0b;
+  --vp-c-warning-soft: rgba(245, 158, 11, 0.12);
+
+  --vp-c-danger-1: #fda29b;
+  --vp-c-danger-2: #f97066;
+  --vp-c-danger-3: #f04438;
+  --vp-c-danger-soft: rgba(240, 68, 56, 0.12);
+
+  --k-chip-bg: #18233b;
+  --k-chip-fg: #c3cbdb;
+  --k-plugin-bg: rgba(245, 158, 11, 0.12);
+  --k-plugin-fg: #fbd38d;
+  --k-plugin-border: rgba(245, 158, 11, 0.28);
+  --k-step-bg: #3558c4;
+  --k-step-fg: #f2f5fd;
+  --k-zoom-bg: rgba(11, 18, 32, 0.96);
+  --k-hero-glow: rgba(154, 181, 255, 0.08);
+  --k-tile-navy: #172b66;
+  --k-tile-navy-fg: #e8ecf4;
+  --k-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --k-shadow-md: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 32px -16px rgba(0, 0, 0, 0.6);
+  --k-shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.35), 0 30px 64px -28px rgba(0, 0, 0, 0.75);
+}
+
+/* ---------- Khung chung ---------- */
+:root {
+  --vp-nav-height: 64px;
+  --vp-layout-max-width: 1480px;
+  --vp-sidebar-width: 288px;
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+::selection {
+  background: var(--k-navy-100);
+  color: var(--k-navy-900);
+}
+.dark ::selection {
+  background: #24396f;
+  color: #f2f5fd;
+}
+
+body {
+  font-feature-settings: 'cv11', 'ss01';
+  text-rendering: optimizeLegibility;
+}
+
+.VPNavBarTitle .title {
+  font-family: var(--k-font-heading);
+  font-weight: 700;
+  font-size: 15.5px;
+  letter-spacing: -0.01em;
+}
+.VPNavBarTitle .logo {
+  height: 28px;
+  width: 28px;
+  border-radius: 7px;
+}
+
+/* ---------- Mục lục trái ---------- */
+.VPSidebar {
+  padding-top: 8px;
+}
+.VPSidebarItem.level-0 > .item > .text,
+.VPSidebarItem.level-0 > .item > a > .text {
+  font-family: var(--k-font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+}
+.VPSidebarItem.level-0 {
+  padding-bottom: 6px;
+}
+.VPSidebarItem.level-1 .text,
+.VPSidebarItem.level-2 .text {
+  font-size: 14px;
+  line-height: 1.45;
+  padding: 5px 0;
+}
+.VPSidebarItem.is-link.is-active > .item .text {
+  font-weight: 600;
+}
+
+/* ---------- Bài đọc ---------- */
+.vp-doc {
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--vp-c-text-1);
+}
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.75;
+}
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4 {
+  font-family: var(--k-font-heading);
+  color: var(--vp-c-text-1);
+  text-wrap: balance;
+}
+.vp-doc h1 {
+  font-size: clamp(1.75rem, 1.4rem + 1.3vw, 2.25rem);
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.vp-doc h2 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: -0.012em;
+  margin: 52px 0 14px;
+  padding-top: 28px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+.vp-doc h3 {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 34px 0 6px;
+}
+.vp-doc h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 24px 0 4px;
+}
+.vp-doc h1 + p,
+.vp-doc .k-meta + p {
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: var(--vp-c-text-2);
+}
+.vp-doc strong {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--vp-c-brand-1) 35%, transparent);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s var(--k-ease), color 0.2s var(--k-ease);
+}
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+  text-decoration-color: currentColor;
+}
+.vp-doc :not(pre) > code {
+  font-size: 0.86em;
+  border-radius: 6px;
+  padding: 2px 6px;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+}
+.vp-doc kbd {
+  display: inline-block;
+  min-width: 22px;
+  padding: 1px 6px;
+  border: 1px solid var(--vp-c-border);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  font: 600 12.5px/1.6 var(--vp-font-family-base);
+  text-align: center;
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+}
+.vp-doc ul,
+.vp-doc ol {
+  padding-left: 1.3rem;
+}
+.vp-doc li + li {
+  margin-top: 6px;
+}
+.vp-doc li::marker {
+  color: var(--vp-c-text-3);
+}
+
+/* Ảnh chụp màn hình */
+.vp-doc img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0 24px;
+  border-radius: var(--k-radius-card);
+  border: 1px solid var(--vp-c-divider);
+  box-shadow: var(--k-shadow-md);
+  cursor: zoom-in;
+  background: var(--vp-c-bg-soft);
+}
+.medium-zoom-overlay {
+  z-index: 60;
+}
+.medium-zoom-image--opened {
+  z-index: 61;
+  cursor: zoom-out;
+  border-radius: 8px;
+}
+
+/* Bảng */
+.vp-doc table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--k-radius-card);
+  margin: 22px 0;
+  font-size: 15px;
+}
+.vp-doc tr {
+  border: 0;
+  background: transparent;
+}
+.vp-doc tr:nth-child(2n) {
+  background: transparent;
+}
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 10px 16px;
+  line-height: 1.6;
+  vertical-align: top;
+}
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-family: var(--k-font-heading);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+  text-align: left;
+}
+.vp-doc tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* ---------- Khối Mẹo / Lưu ý / Quan trọng / Câu hỏi ---------- */
+:root {
+  --vp-custom-block-font-size: 15px;
+  --vp-custom-block-code-font-size: 13.5px;
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-info-border: transparent;
+  --vp-custom-block-info-bg: var(--vp-c-bg-soft);
+  --vp-custom-block-warning-border: transparent;
+  --vp-custom-block-warning-text: var(--vp-c-text-1);
+  --vp-custom-block-warning-bg: var(--vp-c-warning-soft);
+  --vp-custom-block-danger-border: transparent;
+  --vp-custom-block-danger-text: var(--vp-c-text-1);
+  --vp-custom-block-danger-bg: var(--vp-c-danger-soft);
+  --vp-custom-block-details-border: var(--vp-c-divider);
+  --vp-custom-block-details-bg: var(--vp-c-bg);
+}
+.vp-doc .custom-block {
+  border-radius: var(--k-radius-card);
+  padding: 14px 18px 14px 20px;
+  margin: 20px 0;
+  line-height: 1.7;
+  position: relative;
+}
+.vp-doc .custom-block:not(.details)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--k-block-accent, var(--vp-c-brand-1));
+}
+.vp-doc .custom-block.tip {
+  --k-block-accent: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block.warning {
+  --k-block-accent: var(--vp-c-warning-3);
+}
+.vp-doc .custom-block.danger {
+  --k-block-accent: var(--vp-c-danger-3);
+}
+.vp-doc .custom-block.info {
+  --k-block-accent: var(--vp-c-text-3);
+}
+.vp-doc .custom-block p.custom-block-title {
+  font-family: var(--k-font-heading);
+  font-weight: 600;
+  font-size: 14.5px;
+  margin-bottom: 2px;
+}
+.vp-doc .custom-block.tip .custom-block-title {
+  color: var(--vp-c-brand-1);
+}
+.vp-doc .custom-block.warning .custom-block-title {
+  color: var(--vp-c-warning-1);
+}
+.vp-doc .custom-block.danger .custom-block-title {
+  color: var(--vp-c-danger-1);
+}
+.vp-doc .custom-block a {
+  color: inherit;
+}
+
+/* Câu hỏi thường gặp: khối đóng mở */
+.vp-doc .custom-block.details {
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  padding: 0;
+  margin: 10px 0;
+  transition: border-color 0.2s var(--k-ease), box-shadow 0.2s var(--k-ease);
+}
+.vp-doc .custom-block.details:hover {
+  border-color: var(--vp-c-border);
+}
+.vp-doc .custom-block.details[open] {
+  box-shadow: var(--k-shadow-sm);
+}
+.vp-doc .custom-block.details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 48px 14px 18px;
+  margin: 0;
+  font-family: var(--k-font-heading);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--vp-c-text-1);
+  position: relative;
+}
+.vp-doc .custom-block.details summary::-webkit-details-marker {
+  display: none;
+}
+.vp-doc .custom-block.details summary::after {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -6px;
+  border-right: 2px solid var(--vp-c-text-3);
+  border-bottom: 2px solid var(--vp-c-text-3);
+  transform: rotate(45deg);
+  transition: transform 0.25s var(--k-ease);
+}
+.vp-doc .custom-block.details[open] summary::after {
+  transform: rotate(225deg);
+  margin-top: -2px;
+}
+.vp-doc .custom-block.details > :not(summary) {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+.vp-doc .custom-block.details > :last-child {
+  margin-bottom: 16px;
+}
+.vp-doc .custom-block.details summary + * {
+  margin-top: 0;
+}
+
+/* ---------- ::: steps — các bước làm ---------- */
+.vp-doc .steps {
+  margin: 22px 0 30px;
+}
+.vp-doc .steps > ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  counter-reset: step;
+}
+.vp-doc .steps > ol > li {
+  position: relative;
+  counter-increment: step;
+  padding: 2px 0 22px 48px;
+  margin: 0;
+}
+.vp-doc .steps > ol > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--k-step-bg);
+  color: var(--k-step-fg);
+  font: 600 14px/30px var(--k-font-heading);
+  text-align: center;
+  box-shadow: 0 0 0 4px var(--vp-c-bg);
+}
+.vp-doc .steps > ol > li::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 36px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--vp-c-divider);
+}
+.vp-doc .steps > ol > li:last-child {
+  padding-bottom: 2px;
+}
+.vp-doc .steps > ol > li:last-child::after {
+  display: none;
+}
+.vp-doc .steps > ol > li > p:first-child {
+  margin-top: 0;
+}
+.vp-doc .steps > ol > li img {
+  margin: 14px 0 6px;
+}
+
+/* ---------- Khối "Dành cho" dưới tiêu đề ---------- */
+.k-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 14px 0 22px;
+}
+.k-meta__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13.5px;
+  color: var(--vp-c-text-3);
+  margin-right: 2px;
+}
+.k-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 11px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--k-chip-bg);
+  color: var(--k-chip-fg);
+}
+.k-chip--plugin {
+  background: var(--k-plugin-bg);
+  color: var(--k-plugin-fg);
+  box-shadow: inset 0 0 0 1px var(--k-plugin-border);
+}
+.k-crumb {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--vp-c-brand-1);
+  letter-spacing: 0.005em;
+}
+
+/* ---------- Ô tìm kiếm ---------- */
+.VPNavBarSearch .DocSearch-Button,
+.VPNavBarSearchButton {
+  border-radius: var(--k-radius-control);
+}
+
+/* ---------- Chân bài ---------- */
+.VPDocFooter .pager-link {
+  border-radius: var(--k-radius-card);
+  transition: border-color 0.2s var(--k-ease), transform 0.2s var(--k-ease);
+}
+.VPDocFooter .pager-link:hover {
+  transform: translateY(-1px);
+}
+.VPDocFooter .pager-link .title {
+  font-family: var(--k-font-heading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

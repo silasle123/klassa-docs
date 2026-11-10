@@ -1,61 +1,62 @@
-# Kiểm tra lương trước khi chi trả
+---
+title: "Kiểm tra Lương AI"
+description: "Soát bất thường trong một kỳ lương trước khi duyệt, như sai đơn giá, thiếu dữ liệu, trùng khoản hoặc số tiền lệch xa mọi khi."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "AI — Gợi ý & Trợ lý Vận hành"
+order: 50
+group: "Lương, chấm công & ca"
+---
 
-## Khái niệm
+# Kiểm tra Lương AI
 
-Trước khi chốt [bảng lương](bang-luong.md), KLASSA có công cụ **Payroll Checker** tự động kiểm tra các bất thường — tránh sai số lớn ảnh hưởng nhân viên hoặc trung tâm.
+Trước khi duyệt kỳ lương, bạn có thể nhờ hệ thống rà qua toàn bộ phiếu để tìm chỗ đáng ngờ. Trang này không tự sửa phiếu. Nó chỉ liệt kê vấn đề và gợi ý, bạn tự quyết định sửa hay bỏ qua.
 
-## Truy cập
+Vào **Quản lý HR → Kiểm tra Lương AI**. Trang cần hai gói mở rộng: **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**. Thiếu một trong hai, trang báo gói chưa kích hoạt.
 
-Menu trái → **Nhân sự → Kiểm tra lương** (hoặc **/hr/payroll-checker**).
+Hệ thống kiểm theo các quy tắc cố định, không đọc ý định của bạn, nên một cảnh báo chỉ có nghĩa là "nên xem lại", không có nghĩa là phiếu chắc chắn sai.
 
-![Trang kiểm tra lương](../assets/screenshots/hr-kiem-tra-luong.png)
+## Chạy kiểm tra một kỳ lương
 
-## Các kiểm tra tự động
+::: steps
+1. Vào **Quản lý HR → Kiểm tra Lương AI**.
+2. Ở ô **Kỳ lương**, chọn kỳ cần kiểm tra. Kỳ phải đã có phiếu lương.
+3. Bấm **Kiểm tra**. Hệ thống báo số vấn đề phát hiện.
+4. Xem danh sách trong mục **Danh sách Flags**. Dùng ô **Mức độ** và **Trạng thái** ở **Bộ lọc** để thu hẹp.
+:::
 
-### 1. Lương âm
+Bốn ô số ở đầu trang cho biết **Tổng cảnh báo**, và số cảnh báo còn chờ ở mức cao, trung bình, thấp.
 
-Lương sau khi trừ các khoản < 0 → có thể sai cấu hình hoặc trừ quá nhiều.
+## Hệ thống soát những gì
 
-### 2. Lương đột biến
+| Loại vấn đề | Khi nào báo |
+|-------------|-------------|
+| **Sai lệch đơn giá** | Đơn giá áp cho một buổi dạy khác với đơn giá kỳ vọng theo bảng sĩ số. |
+| **Thiếu dữ liệu chấm công** | Buổi học trong phiếu không còn tồn tại, chưa hoàn thành điểm danh, hoặc không có dữ liệu điểm danh. |
+| **Số lượng bất thường** | Tổng lương lệch hơn 50% so với trung bình 3 tháng trước (mức cao khi lệch hơn 100%), hoặc lương thực nhận bị âm. |
+| **Trùng lặp khoản mục** | Một phiếu có nhiều dòng giống nhau ngoài các dòng buổi dạy. |
+| Lương cơ bản | Nhân viên toàn thời gian không có lương cơ bản, hoặc có nhiều hơn một dòng lương cơ bản. Hai loại này hiện bằng mã tiếng Anh ở cột **Loại vấn đề**, hãy đọc cột **Mô tả**. |
 
-Lương tháng này gấp / nửa tháng trước → có thể tính sai buổi dạy.
+## Xử lý một cảnh báo
 
-### 3. Nhân viên thiếu chấm công
+::: steps
+1. Bấm vào dòng cảnh báo để mở hộp **Chi tiết vấn đề**.
+2. Đọc **Mô tả**, **Giải thích AI** và **Gợi ý sửa**.
+3. Sửa phiếu lương ở trang **Quản lý lương** nếu cần (xem [Quản lý lương](bang-luong.md)).
+4. Quay lại, chọn **Trạng thái mới**: **Đã giải quyết** hoặc **Bỏ qua**, rồi bấm **Cập nhật**.
+:::
 
-Nhân viên cố định không check-in đủ ngày → kiểm tra chấm công.
+Cảnh báo ở trạng thái **Chờ xử lý** cho đến khi bạn đổi. Việc đổi trạng thái chỉ để bạn theo dõi, không làm thay đổi phiếu lương.
 
-### 4. Buổi dạy chưa chấm điểm danh
-
-Có buổi đã diễn ra nhưng giáo viên chưa chấm → lương buổi đó chưa tính.
-
-### 5. Cấu hình lương thiếu
-
-Nhân viên mới chưa cấu hình lương → cảnh báo HR.
-
-### 6. Tổng lương bất thường
-
-Quỹ lương tháng này tăng / giảm >20% so với tháng trước → cảnh báo Quản lý.
-
-## Cách xử lý cảnh báo
-
-Mỗi cảnh báo có:
-
-- **Loại bất thường**
-- **Nhân viên / mục bị ảnh hưởng**
-- **Đề xuất hành động**:
-  - Sửa cấu hình lương
-  - Chấm điểm danh thiếu
-  - Bổ sung công thiếu
-  - Bỏ qua (nếu thực sự đúng)
-
-Bấm **"Xử lý"** → đi thẳng đến trang cần sửa.
-
-## Lưu ý
-
-- **Nên kiểm tra trước khi chốt** — sau khi chốt khó sửa.
-- **Không bỏ qua tất cả cảnh báo** — đọc kỹ từng cái.
+::: tip Mẹo
+Chạy kiểm tra khi kỳ đang **Chờ duyệt**, trước khi bấm **Phê duyệt**. Mỗi lần bấm **Kiểm tra**, hệ thống ghi thêm cảnh báo mới chứ không xoá cảnh báo cũ. Vì vậy hãy sửa hết phiếu rồi mới kiểm tra, và dùng ô **Trạng thái** để chỉ xem các dòng **Chờ xử lý**.
+:::
 
 ## Câu hỏi thường gặp
 
-**Nhân viên hỏi tại sao lương giảm bất thường, đi đâu xem?**
-Trang Kiểm tra lương ghi lại lịch sử cảnh báo + hành động đã xử lý. Có thể dùng để giải trình cho nhân viên.
+::: details Cảnh báo "Thiếu dữ liệu chấm công" có phải giáo viên bị trừ lương không?
+Không. Cảnh báo này chỉ nói buổi học trong phiếu chưa đủ dữ liệu để đối chiếu. Hãy kiểm tra buổi đó ở [Giờ dạy](buoi-day.md).
+:::
+
+::: details Vì sao tháng đầu tiên không có cảnh báo "Số lượng bất thường"?
+Hệ thống so với trung bình 3 tháng trước. Chưa có lịch sử thì không so được.
+:::

@@ -1,117 +1,85 @@
+---
+title: "Vai trò người dùng"
+description: "Mười vai trong KLASSA, mỗi vai làm được gì và vào phần mềm ở đâu."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự, Phụ huynh, Học sinh]
+order: 60
+---
+
 # Vai trò người dùng
 
-## Khi nào đọc bài này
+KLASSA chia người dùng thành 10 vai. Mỗi vai chỉ thấy những chức năng hợp với công việc của mình, để dữ liệu nhạy cảm như học phí và lương không đến tay người không cần. Biết mình thuộc vai nào giúp bạn hiểu vì sao có mục thấy, có mục không.
 
-Phần mềm KLASSA chia người dùng thành **9 vai trò khác nhau**. Mỗi vai trò chỉ thấy những chức năng phù hợp với công việc của mình, không phải mọi nhân viên đều thấy toàn bộ phần mềm.
+## Bảng tóm tắt
 
-Đọc bài này để:
+| Vai | Việc chính | Trang đầu tiên khi đăng nhập |
+|---|---|---|
+| Quản trị viên | Toàn quyền: cài đặt, tài khoản, mọi dữ liệu | Trang chủ quản trị |
+| Quản lý chi nhánh | Điều hành cơ sở: học sinh, lớp, tuyển sinh, học phí, tài chính, nhân sự và lương | Trang chủ quản trị |
+| Quản lý | Điều hành học vụ và tuyển sinh, không có học phí và tài chính | Trang chủ quản trị |
+| Lễ tân | Tuyển sinh, tạo hồ sơ học sinh, điểm danh đối chiếu | Trang chủ lễ tân |
+| Giáo viên | Dạy, điểm danh, nhận xét, đề kiểm tra, bài tập | Trang chủ giáo viên |
+| Trợ giảng | Hỗ trợ buổi học, báo có mặt ca trợ giảng | Trang chủ trợ giảng |
+| Kế toán | Học phí, hoá đơn, thanh toán, báo cáo thu | Trang chủ kế toán |
+| Nhân sự | Dùng Cổng nhân viên: công, phiếu lương, nghỉ phép của chính mình | Cổng nhân viên |
+| Phụ huynh | Xem việc học và học phí của con | Cổng phụ huynh |
+| Học sinh | Học online | Khu học của học sinh |
 
-- Hiểu mình có quyền làm gì, không làm gì
-- Biết cách tạo tài khoản cho nhân viên mới (chỉ Chủ trung tâm / Quản lý mới làm được)
-- Tránh nhầm lẫn khi giao việc giữa các vị trí
+Chi tiết từng trang chủ xem [Trang chủ theo vai](trang-chu.md).
 
-## Danh sách 9 vai trò
+## Từng vai làm được gì
 
-### 1. Chủ trung tâm (ADMIN)
+### Quản trị viên
 
-**Quyền cao nhất**. Xem và sửa được mọi thứ, kể cả cài đặt phần mềm, tạo tài khoản cho người khác, xoá dữ liệu nhạy cảm.
+Xem và sửa mọi thứ. Một số việc chỉ Quản trị viên làm được: bật giao diện mới (xem [Menu và giao diện](menu-va-giao-dien.md)), bật tắt **Tính năng AI**, truy vấn dữ liệu bằng AI, xem **Góp ý nhân viên**. Thường chỉ 1-2 người giữ vai này.
 
-Thường chỉ có **1-2 người** trong trung tâm giữ vai trò này — chủ trung tâm + người đồng sáng lập.
+### Quản lý chi nhánh
 
-### 2. Quản lý (MANAGER)
+Có mọi quyền của Quản lý, thêm quyền về học phí, tài chính, hồ sơ nhân sự và lương. Được vào **Quản lý HR**. Thấy phần "Tình hình hôm nay" về nhân viên trên trang chủ như Quản trị viên.
 
-Quản lý toàn trung tâm (nhiều cơ sở). Có gần đủ quyền như Chủ trung tâm, nhưng **không thể**:
-- Sửa cài đặt thanh toán / gói cước phần mềm
-- Xoá tài khoản Chủ trung tâm
+### Quản lý
 
-### 3. Quản lý chi nhánh (BRANCH_MANAGER)
+Quản lý học sinh, lớp, tuyển sinh, điểm danh, đề kiểm tra, bài tập, báo cáo, kho. Xem được danh sách nhân viên và giáo viên. Trong menu **Quản lý HR** chỉ thấy vài mục như **Dạy thay**, **Giao việc** và **Lịch ca lễ tân**, không vào được **Quản lý lương**. Không có quyền học phí và tài chính, không vào được trang chủ phần tiền thu.
 
-Quản lý **một cơ sở cụ thể**. Chỉ thấy dữ liệu của cơ sở mình phụ trách, không thấy cơ sở khác.
+### Lễ tân
 
-Phù hợp với trung tâm có 2 cơ sở trở lên, mỗi cơ sở giao cho một người quản lý.
+Phụ trách tuyển sinh đầu vào: nhận **Lead**, đăng ký học thử, tạo hồ sơ học sinh, chuyển lead thành học sinh. Xem lớp và phụ huynh, tham gia điểm danh đối chiếu. Không có quyền học phí và không thấy lương người khác. Lễ tân có thể kiêm trợ giảng ở lớp được phân công, khi đó thấy thêm mục **Ca trợ giảng**.
 
-### 4. Lễ tân / Tư vấn (CONSULTANT)
+### Giáo viên
 
-Phụ trách **tuyển sinh đầu vào**:
-- Tiếp nhận Lead (khách quan tâm)
-- Gọi điện tư vấn
-- Chuyển Lead thành học sinh chính thức
-- Nhận học phí ban đầu
+Xem lớp mình dạy, điểm danh, viết nhận xét buổi học, tạo đề và nhập điểm, giao bài tập về nhà. Xem hồ sơ học sinh nhưng không sửa. Có mục **Nhận xét lớp tôi** và **Phiếu tháng lớp tôi**. Xem phiếu lương của chính mình trong **Cổng nhân viên**.
 
-Không thấy lương giáo viên, không thấy báo cáo doanh thu toàn trung tâm.
+### Trợ giảng
 
-### 5. Giáo viên (TEACHER)
+Có quyền học vụ như giáo viên: lớp, điểm danh, đề, bài tập, xem học sinh. Có thêm **Ca trợ giảng** để báo có mặt. Xem phiếu lương của chính mình.
 
-Phụ trách **dạy học**:
-- Xem lịch dạy của mình
-- Chấm điểm danh học sinh trong buổi
-- Xem lương cá nhân (lương của bản thân, không thấy của giáo viên khác)
-- Trao đổi với phụ huynh qua chat
+### Kế toán
 
-Không thấy danh sách Lead, không tạo được hoá đơn.
+Tạo và theo dõi học phí, hoá đơn, thanh toán, báo cáo tài chính. Xem học sinh, phụ huynh, lớp, ghi danh, điểm danh nhưng không sửa. Không vào được **Quản lý HR**, không quản lý lương của nhân viên khác. Xem phiếu lương của chính mình trong **Cổng nhân viên**.
 
-### 6. Trợ giảng (TEACHING_ASSISTANT)
+### Nhân sự
 
-Hỗ trợ giáo viên trong buổi học. Có quyền:
-- Xem lịch dạy chung với giáo viên chính
-- Chấm điểm danh thay khi giáo viên bận
-- Báo cáo tình hình học sinh
+Là nhân viên văn phòng dùng Cổng nhân viên: **Chấm công của tôi**, **Phiếu lương**, **Đăng ký ca**, **Nghỉ phép**, **Phúc lợi**, **Hồ sơ cá nhân**. Không có quyền quản lý nhân sự toàn trung tâm.
 
-Quyền thấp hơn giáo viên — không thấy lương, không sửa được điểm.
+### Phụ huynh
 
-### 7. Kế toán (ACCOUNTANT)
+Xem điểm danh, điểm số, hoá đơn, lịch học của con. Đăng nhập bằng email. Xem [Cổng phụ huynh](../cong-phu-huynh/gioi-thieu.md).
 
-Phụ trách **tiền bạc**:
-- Tạo và gửi hoá đơn học phí
-- Theo dõi học sinh đóng / chưa đóng
-- Xuất báo cáo doanh thu
-- Tính và xuất bảng lương giáo viên
+### Học sinh
 
-Không quản lý điểm danh hay nội dung học.
+Học và làm bài online trong khu học riêng. Đăng nhập bằng số điện thoại, xem [Đăng nhập](dang-nhap.md).
 
-### 8. Nhân sự (HR_STAFF)
+## Cách có tài khoản và đổi vai
 
-Phụ trách **nhân viên trung tâm**:
-- Quản lý hồ sơ giáo viên, nhân viên
-- Theo dõi hợp đồng lao động
-- Quản lý ngày phép, chấm công nhân viên
-- Tính lương giáo viên (phối hợp với Kế toán)
+- Quản trị viên tạo tài khoản và chọn vai cho từng người, xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+- Người tự đăng ký chỉ chọn được Phụ huynh, Giáo viên, Trợ giảng, Lễ tân hoặc Nhân sự, và phải chờ duyệt, xem [Đăng ký tài khoản](dang-ky.md).
+- Muốn đổi quyền chi tiết, xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
 
-### 9. Phụ huynh (PARENT)
-
-Tài khoản dành cho **phụ huynh học sinh** (không phải nhân viên trung tâm). Chỉ xem được:
-- Điểm danh con mình
-- Hoá đơn của con
-- Báo cáo học tập của con
-- Chat với giáo viên / lễ tân
-
-Hoàn toàn không thấy thông tin của học sinh khác.
-
-## Bảng tóm tắt — Ai làm được gì?
-
-| Chức năng | Chủ trung tâm | Quản lý | Lễ tân | Giáo viên | Kế toán | Nhân sự | Phụ huynh |
-|-----------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| Xem báo cáo tổng | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Tạo tài khoản mới | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Quản lý Lead | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Chấm điểm danh | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| Tạo hoá đơn | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| Tính lương | ✅ | ✅ | ❌ | ❌ | ✅ | ✅ | ❌ |
-| Xem điểm danh con | ✅ | ✅ | ❌ | ✅ (lớp mình) | ❌ | ❌ | ✅ (con mình) |
-
-## Lưu ý
-
-- **Một người có thể giữ nhiều vai trò không?** Có. Ví dụ chủ trung tâm nhỏ có thể vừa là Chủ trung tâm vừa là Kế toán. Khi đó tài khoản sẽ có quyền cao nhất trong các vai trò được gán.
-- **Đổi vai trò cho một nhân viên** chỉ Chủ trung tâm và Quản lý làm được. Xem hướng dẫn trong mục **Cài đặt → Quản lý người dùng**.
-- **Nhân viên nghỉ việc** thì không nên xoá tài khoản (vì sẽ mất lịch sử thao tác), mà nên **vô hiệu hoá** — tài khoản vẫn còn nhưng không đăng nhập được nữa.
+::: warning Lưu ý
+Cùng một mục menu có thể cần thêm gói mở rộng của trung tâm. Có vai đúng nhưng vẫn không thấy mục thì hỏi Quản trị viên xem gói đã bật chưa.
+:::
 
 ## Câu hỏi thường gặp
 
-**Trợ giảng có thể chấm điểm danh được không?**
-Có, nhưng chỉ trong các lớp mà trợ giảng được gán phụ trách. Không thể chấm điểm danh cho lớp người khác.
-
-**Phụ huynh có 2 con cùng học, làm sao tài khoản phụ huynh thấy cả 2?**
-Khi tạo hồ sơ học sinh, tư vấn viên gắn cùng một tài khoản phụ huynh cho cả 2 con. Sau đó tài khoản phụ huynh sẽ thấy danh sách 2 con và chọn xem từng bạn.
-
-**Tôi muốn tạo vai trò mới (ví dụ "Giáo vụ"), được không?**
-Hiện tại phần mềm cố định 9 vai trò trên. Nếu trung tâm có nhu cầu vai trò riêng, vui lòng liên hệ KLASSA để bàn về tính năng "Vai trò tuỳ chỉnh" (đang phát triển).
+::: details Tôi vừa kiêm giáo viên vừa làm lễ tân thì sao?
+Mỗi tài khoản có một vai chính. Việc kiêm trợ giảng theo phân công lớp thì mục **Ca trợ giảng** tự hiện. Các trường hợp khác, nhờ Quản trị viên xem lại vai.
+:::

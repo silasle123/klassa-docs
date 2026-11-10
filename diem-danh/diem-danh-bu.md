@@ -1,73 +1,76 @@
-# Điểm danh bù — học sinh học bù
+---
+title: "Học bù và học sinh ngoài lớp"
+description: "Điểm danh buổi học bù, buổi bổ trợ, học online và thêm học sinh lớp khác vào một buổi."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng]
+order: 20
+---
 
-## Khái niệm
+# Học bù và học sinh ngoài lớp
 
-Học sinh nghỉ buổi, sau đó học bù vào buổi khác (cùng khoá hoặc khoá tương đương) → cần ghi nhận để:
+Có hai tình huống ngoài buổi học thường: lớp mở thêm một buổi khác loại (học bù, bổ trợ, học online), hoặc một học sinh của lớp khác sang học nhờ buổi này. Bài này hướng dẫn ghi nhận cả hai để điểm danh và học phí không bị lệch.
 
-- Học sinh không bị mất buổi (số buổi đã học đủ)
-- Giáo viên dạy bù được tính công
-- Phụ huynh thấy con đã học đủ
+## Điểm danh một buổi học bù, bổ trợ hoặc online
 
-## Khi nào dùng
+Buổi này không có trong thời khoá biểu nên bạn tạo bằng nút **Điểm danh mới**.
 
-- Học sinh báo nghỉ ốm + xin học bù
-- Học sinh đi du lịch + xin học bù tuần sau
-- Buổi bị trung tâm huỷ + tổ chức lại
+::: steps
+1. Vào **Điểm danh → Điểm danh cơ bản**, bấm **Điểm danh mới**.
+2. Chọn **Lớp học**, **Ngày**, **Giờ bắt đầu**, **Giờ kết thúc**.
+3. Ở ô **Loại phiên học**, chọn loại phù hợp (bảng bên dưới).
+4. Nếu chọn **Học bù**, ô **Buổi học gốc (bị vắng)** hiện ra và là bắt buộc. Chọn buổi mà học sinh đã vắng để nối buổi bù với buổi gốc. Danh sách gồm các buổi của lớp trong 60 ngày gần đây.
+5. Chấm từng học sinh rồi bấm **Lưu điểm danh**.
+:::
 
-## Cách 1 — Học bù trong cùng lớp (đổi sang buổi khác cùng lớp)
+![Hộp Điểm danh mới với ô Loại phiên học](../assets/screenshots/diem-danh-hoc-bu.webp)
 
-Đơn giản, vì học sinh đã có trong lớp.
+| Loại phiên học | Cách tính theo lời giải thích ngay trong hộp |
+|---|---|
+| Lớp thường | Học phí 100%, lương 100% |
+| Học bù | Học phí 100%, lương 100% (tính như buổi chính) |
+| Bổ trợ/Tăng cường | Học phí 100%, lương 100% |
+| Bổ trợ miễn phí | Học phí 0% (miễn phí), lương 100% |
+| Học online | Học phí 50%, lương 50% |
 
-1. Buổi vắng — đánh dấu trạng thái **"Vắng"** + ghi chú "Xin học bù ngày X"
-2. Đến buổi học bù — vào trang điểm danh → chấm học sinh trạng thái **"Học bù" (MAKEUP)**
+Bấm biểu tượng chữ **i** cạnh **Loại phiên học** để xem lại bảng này. Trong danh sách buổi, loại khác thường được gắn nhãn, ví dụ **Học bù** hoặc **Học online**.
 
-## Cách 2 — Học bù sang lớp khác (cùng khoá hoặc khoá tương đương)
+::: warning Lưu ý
+Nếu lớp chưa có buổi nào trong 60 ngày qua, ô **Buổi học gốc (bị vắng)** báo **Lớp chưa có buổi nào trong 60 ngày qua** và bạn không lưu được buổi học bù.
+:::
 
-Phức tạp hơn — học sinh không có trong danh sách lớp đó.
+## Thêm học sinh lớp khác vào buổi (học hỗ trợ)
 
-### Bước 1 — Đăng ký học bù trước
+Dùng khi một học sinh cùng khối nhưng thuộc lớp khác sang học nhờ buổi này, kể cả học bù. Em được ghi là **Học hỗ trợ** và hiện riêng trong báo cáo, không lẫn với học sinh chính thức của lớp.
 
-Vào chi tiết học sinh → tab Điểm danh → bấm **"+ Đăng ký học bù"** → chọn:
+::: steps
+1. Trong hộp **Điểm danh mới**, chọn lớp rồi kéo xuống khung **Thêm học sinh ngoài**.
+2. Bấm **Thêm học sinh ngoài**. Gõ tên hoặc mã em vào ô **Tìm học sinh cùng khối...**. Danh sách chỉ gồm học sinh cùng khối, ngoài lớp này.
+3. Bấm **Thêm** cạnh em cần thêm. Hộp **Xác nhận thêm học sinh ngoài** hiện ra.
+4. Chọn **Hình thức học phí**: **Tính theo lớp chính** hoặc **Miễn phí buổi này**.
+5. Bấm **Xác nhận thêm**, rồi chấm trạng thái cho em như các bạn khác.
+:::
 
-- **Buổi gốc (vắng)** — buổi học sinh không học
-- **Buổi bù** — buổi của lớp khác sẽ đến học
+Em vừa thêm có nhãn **Học hỗ trợ** kèm tên lớp gốc. Thêm nhầm thì bấm dấu **x** cạnh tên (**Xóa học sinh ngoài**) trước khi lưu.
 
-Phần mềm gắn học sinh vào danh sách buổi bù.
+Nếu chọn **Tính theo lớp chính**, phụ thu của buổi này được cộng vào hoá đơn lớp chính của em ở kỳ tới. Nếu chọn **Miễn phí buổi này** thì không phát sinh khoản nào.
 
-### Bước 2 — Đến buổi bù
+::: tip Mẹo
+Chỉ thêm được học sinh cùng khối. Em khác khối cần được ghi danh thật vào lớp, xem [Ghi danh](../hoc-sinh/ghi-danh.md).
+:::
 
-Giáo viên buổi bù sẽ thấy học sinh xuất hiện trong danh sách với nhãn **"Học bù"** (màu cam).
+::: warning Không thêm học sinh ngoài bằng cách khác
+Hệ thống từ chối lưu điểm danh cho em không thuộc lớp mà không được thêm đúng cách ở trên. Bạn sẽ thấy báo **Học sinh không thuộc lớp này nên chưa lưu được điểm danh**.
+:::
 
-Chấm điểm danh như bình thường — trạng thái mặc định là **"Học bù"** (MAKEUP).
+## Buổi linh hoạt
 
-## Cách 3 — Tự động ghi nhận học bù khi sửa
-
-Khi sửa điểm danh từ "Vắng" → "Có mặt" cho buổi đã qua, phần mềm hỏi:
-
-- "Học sinh thực sự có mặt?" (chỉnh sai → chọn cái này)
-- "Hay là học sinh học bù sang buổi khác?" (chọn cái này nếu đúng)
-
-Chọn cái 2 → phần mềm yêu cầu chọn buổi bù → gắn nhãn MAKEUP.
-
-## Ảnh hưởng
-
-| Tiêu chí | Cách tính |
-|----------|-----------|
-| Số buổi đã học của HS | +1 (tính như buổi thường) |
-| Học phí | Không tính phí lần 2 |
-| Lương giáo viên dạy bù | Có thể tính (tuỳ cấu hình lương) |
-| Báo cáo chuyên cần | Hiện cả 2: vắng buổi gốc + bù buổi khác |
-
-## Lưu ý
-
-- **Quy định số buổi bù tối đa**: phần mềm có thể giới hạn 2-3 buổi bù / khoá (chống lạm dụng). Đặt trong **Cài đặt → Điểm danh**.
-- **Lớp bù phải cùng trình độ**: phần mềm chỉ gợi ý lớp cùng khoá học hoặc khoá tương đương.
-- **Báo trước khi học bù**: khuyến nghị phụ huynh báo trước để giáo viên chuẩn bị bài + chỗ ngồi.
+Lớp học linh hoạt dùng nút **Tạo buổi linh hoạt** ở đầu trang **Điểm danh** thay vì điểm danh cả lớp. Trung tâm có thể tắt quyền này cho Giáo viên và Trợ giảng: khi đó nút biến mất với hai vai này và chỉ Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Kế toán tạo được. Công tắc nằm ở **Cài đặt → Cấu hình**, tab **Điểm danh**, mục **Cho phép Giáo viên & Trợ giảng tạo buổi linh hoạt**.
 
 ## Câu hỏi thường gặp
 
-**Học sinh học bù 2 buổi cùng ngày, được không?**
-Được nếu lịch không trùng. Phần mềm chỉ cảnh báo nếu trùng giờ.
+::: details Học sinh vắng buổi chính, học bù ở lớp khác thì làm sao?
+Điểm danh buổi bù ở lớp nơi em học bù và thêm em bằng **Thêm học sinh ngoài**. Chọn hình thức học phí đúng với thoả thuận với phụ huynh.
+:::
 
-**Lớp đầy, học sinh học bù có vượt sức chứa, sao?**
-Phần mềm hiện cảnh báo nhưng vẫn cho phép — vì là buổi tạm thời, không phải ghi danh dài hạn.
+::: details Thêm nhầm học sinh ngoài sau khi đã lưu thì sao?
+Nhờ Quản trị viên, Quản lý chi nhánh hoặc Quản lý xoá buổi nhập nhầm, xem [Xem lại, sửa và xoá điểm danh](sua-loi.md).
+:::

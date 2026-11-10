@@ -1,46 +1,48 @@
+---
+title: "Danh sách giáo viên"
+description: "Tra cứu giáo viên của trung tâm, số lớp đang phụ trách và đi nhanh tới lịch dạy."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Kế toán]
+order: 80
+---
+
 # Danh sách giáo viên
 
-## Khi nào dùng
+Trang này giúp bạn biết trung tâm có bao nhiêu giáo viên, ai đang dạy lớp nào và ai đã nghỉ. Trang chỉ liệt kê tài khoản mang vai **Giáo viên**. Trợ giảng và các vai khác xem ở [Danh sách nhân viên](../nhan-su/danh-sach-nhan-vien.md).
 
-- Tra cứu nhanh giáo viên trong trung tâm
-- Xếp lịch dạy
-- Phân tích năng suất giảng dạy
+## Xem và tìm giáo viên
 
-## Truy cập
+::: steps
+1. Vào **Giáo viên** ở menu bên trái.
+2. Bốn ô số ở đầu trang: **Tổng giáo viên**, **Đang làm việc**, **KN trung bình** (số năm kinh nghiệm) và **Tổng lớp phụ trách**.
+3. Gõ vào ô **Tìm kiếm giáo viên theo tên, email, số điện thoại...** để tìm.
+4. Ở ô **Trạng thái** chọn **Tất cả**, **Đang hoạt động** hoặc **Không hoạt động**. Trang mặc định hiện **Tất cả**, gồm cả giáo viên đã nghỉ.
+:::
 
-Menu trái → **Giáo viên**.
+![Trang Quản lý Giáo viên với bốn ô số và thẻ giáo viên](../assets/screenshots/giao-vien-danh-sach.webp)
 
-![Danh sách giáo viên](../assets/screenshots/giao-vien-danh-sach.png)
+Mỗi giáo viên có một thẻ ghi họ tên, email, số điện thoại (chỉ hiện khi hồ sơ đã có số), cơ sở, mã nhân viên, trạng thái (**Đang hoạt động** hoặc **Không hoạt động**) và số năm kinh nghiệm. Bốn ô số nhỏ trong thẻ là **Lớp học**, **Chuyên môn** (số môn), **Năm KN** và **Trạng thái**. Thẻ còn có khối **Thông tin nhân sự** (**Mã NV**, **Chức vụ**, **Phòng ban**, **Loại hợp đồng**, hiện khi giáo viên đã có hồ sơ nhân sự), danh sách chuyên môn, **Lớp đang dạy** (hiện tối đa 5 lớp, còn lại ghi "+N lớp khác") và ngày **Gia nhập**.
 
-## Khác Nhân viên thế nào?
+Hai nút cuối thẻ:
 
-Trang **Giáo viên** chỉ hiển thị nhân viên có vai trò **TEACHER** hoặc **TEACHING_ASSISTANT** — tập trung vào việc giảng dạy.
+- **Lịch dạy**: mở [thời khóa biểu](../lop-hoc/lich-day.md) đã lọc sẵn theo giáo viên đó.
+- **Chi tiết**: mở [hồ sơ giáo viên](chi-tiet.md).
 
-Trang **Nhân viên** (HR) hiển thị toàn bộ nhân viên — tập trung vào nhân sự, hợp đồng, lương.
+Nút **Làm mới** tải lại danh sách. Nút **Thêm giáo viên mới** xem ở [Thêm giáo viên](them-moi.md).
 
-## Bộ lọc
+## Ai xem được gì
 
-- **Môn dạy** — Toán, Tiếng Anh, Văn…
-- **Khối lớp** — Tiểu học, THCS, THPT
-- **Cơ sở**
-- **Loại hợp đồng** — Chính thức / Cộng tác
-- **Trạng thái** — Đang dạy / Tạm nghỉ / Đã nghỉ
-
-## Bảng danh sách
-
-- Ảnh + Tên + Mã GV
-- Môn dạy chính
-- Số lớp đang dạy
-- Tỷ lệ chuyên cần lớp (chỉ số chất lượng)
-- Lương tháng trước
-- Đánh giá phụ huynh (số sao TB)
-
-## Lưu ý
-
-- **Đánh giá phụ huynh** lấy từ [Phản hồi](../phan-hoi/tiep-nhan.md) — phụ huynh chấm sao GV cuối mỗi tháng.
-- **Tỷ lệ chuyên cần** = TB của các lớp GV dạy — chỉ số gián tiếp chất lượng giảng dạy.
+Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân và Kế toán mở được trang này. Giáo viên và trợ giảng không xem được danh sách đồng nghiệp. Lương, số tài khoản, mã số thuế, giấy tờ cá nhân chỉ hiện cho Quản trị viên và Quản lý chi nhánh, các vai còn lại không thấy.
 
 ## Câu hỏi thường gặp
 
-**Tôi không thấy trợ giảng trong danh sách, ở đâu?**
-Bộ lọc → "Vai trò" → tick "Trợ giảng". Mặc định chỉ hiện Giáo viên chính.
+::: details Sao trợ giảng không có trong danh sách?
+Trang này chỉ liệt kê vai **Giáo viên**. Trợ giảng và lễ tân kiêm trợ giảng được xếp vào lớp ở [Chỉnh sửa lớp học](../lop-hoc/chinh-sua.md).
+:::
+
+::: details Giáo viên đã nghỉ có còn hiện không?
+Trang mặc định hiện **Tất cả**, nên bạn vẫn thấy người đã nghỉ, thẻ ghi **Không hoạt động**. Các ô chọn giáo viên ở những trang khác chỉ liệt kê người còn làm việc.
+:::
+
+::: details Giáo viên nghỉ việc rồi, lớp của họ có tự chuyển người khác không?
+Không. Phân công lớp không tự đóng khi nghỉ việc. Hãy vào [chi tiết giáo viên](chi-tiet.md), xem các lớp còn ghi tên họ rồi đổi giáo viên ở từng lớp.
+:::

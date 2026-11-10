@@ -1,60 +1,56 @@
-# Chi tiết giáo viên — lớp, lương, lịch
+---
+title: "Hồ sơ giáo viên"
+description: "Xem chuyên môn, các lớp đang phụ trách và lịch dạy trong tuần của một giáo viên, sửa hồ sơ khi cần."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Kế toán]
+order: 90
+---
 
-## Cách mở
+# Hồ sơ giáo viên
 
-Từ **Danh sách giáo viên** → bấm vào tên GV.
+Trang này tóm tắt một giáo viên: ai, dạy môn gì, đang phụ trách lớp nào, mỗi tuần dạy vào lúc nào.
 
-## Bố cục
+## Mở hồ sơ
 
-### Phần đầu
+::: steps
+1. Vào **Giáo viên**.
+2. Bấm **Chi tiết** ở thẻ của giáo viên cần xem. Trang **Chi tiết giáo viên** mở ra.
+:::
 
-- Ảnh + Tên + Mã GV
-- Môn dạy chính + Trình độ chuyên môn
-- Cơ sở làm việc
-- 4 chỉ số: số lớp đang dạy, số HS phụ trách, tỷ lệ chuyên cần TB, đánh giá phụ huynh
+Đầu trang có thẻ thông tin chung (tên, email, cơ sở, ngày **Gia nhập**, trạng thái **Đang hoạt động** hoặc **Không hoạt động**) và bốn số: **Tổng lớp**, **Lớp đang dạy**, **Tổng học sinh**, **Kinh nghiệm**. Phần **Thông tin chuyên môn** ghi **Trình độ học vấn**, **Chuyên môn**, **Chứng chỉ**. Mục nào chưa nhập thì không hiện, và giáo viên chưa có hồ sơ chuyên môn thì cả phần này không hiện. Muốn bổ sung, bấm **Chỉnh sửa** (xem bên dưới).
 
-### Tab "Lớp đang dạy"
+![Trang Chi tiết giáo viên với bốn số Tổng lớp, Lớp đang dạy, Tổng học sinh, Kinh nghiệm và hai tab Lớp học, Lịch dạy](../assets/screenshots/giao-vien-chi-tiet.webp)
 
-Danh sách các lớp + thông tin:
-- Tên lớp, khoá học
-- Lịch dạy
-- Số HS
-- Tỷ lệ chuyên cần lớp này
+Hai tab bên dưới:
 
-### Tab "Lịch dạy"
+- **Lớp học**: mục **Lớp học đang phụ trách**. Mỗi lớp ghi vai của giáo viên (**Giáo viên chính** hoặc **Trợ giảng**) và có nút **Chi tiết lớp**, **Danh sách học sinh**.
+- **Lịch dạy**: mục **Lịch dạy trong tuần**, gom các buổi của mọi lớp theo từng thứ.
 
-Lịch tuần / tháng của GV — xem nhanh ngày nào dạy giờ nào.
+Nếu giáo viên chưa được phân lớp nào, trang ghi "Chưa có giáo viên được phân công lớp học nào".
 
-### Tab "Lương"
+## Sửa hồ sơ
 
-- Lương các tháng gần nhất
-- Cấu hình lương (đơn giá / buổi)
-- Bút toán chi tiết tháng hiện tại
+::: steps
+1. Ở đầu trang, bấm **Chỉnh sửa**. Hộp **Chỉnh sửa thông tin giảng viên** mở ra.
+2. Sửa **Họ và tên** và **Email** (bắt buộc), **Số điện thoại**, **Cơ sở**, **Chuyên môn**, **Kinh nghiệm (năm)**, **Loại hợp đồng** (**Toàn thời gian**, **Bán thời gian** hoặc **Hợp đồng**), **Lương (VNĐ)**, **Trình độ học vấn**, **Chứng chỉ**.
+3. Bấm **Cập nhật**. Hệ thống báo "Cập nhật giảng viên thành công".
+:::
 
-### Tab "Đánh giá"
+Chỉ Quản trị viên và Quản lý chi nhánh lưu được thay đổi. Với các vai khác, nút **Chỉnh sửa** vẫn hiện nhưng hệ thống từ chối lưu.
 
-- Phụ huynh chấm sao + nhận xét
-- Đánh giá nội bộ từ Quản lý
-- Lịch sử thay đổi đánh giá theo quý
+## Khi giáo viên nghỉ việc
 
-### Tab "Hồ sơ"
+Việc cho nghỉ việc làm ở hồ sơ nhân sự, xem [Danh sách nhân viên](../nhan-su/danh-sach-nhan-vien.md). Khi nghỉ việc, tài khoản bị khoá đăng nhập.
 
-- Thông tin cá nhân (liên hệ HR để xem nếu chưa có quyền)
-- Bằng cấp / chứng chỉ
-- Tài liệu giảng dạy đã đóng góp
-
-## Thao tác nhanh
-
-- **💬 Nhắn Zalo**
-- **📅 Xem lịch dạy chi tiết**
-- **💰 Xem phiếu lương**
-- **📝 Ghi chú nội bộ** — Quản lý ghi nhận điều cần lưu ý về GV (không hiển thị cho GV)
-
-## Lưu ý
-
-- Quản lý + HR xem được toàn bộ tab. Giáo viên xem hồ sơ của bản thân qua **Cổng Nhân viên**.
+::: warning Lưu ý
+Phân công lớp không tự đóng khi giáo viên nghỉ việc. Vào tab **Lớp học** của hồ sơ này, mở từng lớp bằng **Chi tiết lớp**, rồi chọn giáo viên mới ở trang [Chỉnh sửa lớp học](../lop-hoc/chinh-sua.md). Nhớ điền **Ngày nhận lớp** để lương hai giáo viên chia đúng ngày.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn xem nhanh GV này đã dạy bao nhiêu buổi trong tháng, ở đâu?**
-Tab Lương → hiển thị số buổi đã dạy + đơn giá → tự tính tổng.
+::: details Muốn xem giáo viên dạy gì tuần này, có lịch đầy đủ hơn không?
+Có. Quay lại **Giáo viên** và bấm **Lịch dạy**, bạn sẽ thấy [thời khóa biểu](../lop-hoc/lich-day.md) thật của tuần, gồm cả buổi dạy thay và buổi bù.
+:::
+
+::: details Sao tôi không thấy lương giáo viên?
+Lương và giấy tờ cá nhân chỉ dành cho Quản trị viên và Quản lý chi nhánh.
+:::

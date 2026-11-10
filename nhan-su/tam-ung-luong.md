@@ -1,65 +1,66 @@
+---
+title: "Tạm ứng lương"
+description: "Tạo phiếu tạm ứng cho nhân viên, duyệt và để hệ thống tự trừ vào kỳ lương đã chọn."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS) và Lương giáo viên"
+order: 30
+group: "Lương, chấm công & ca"
+---
+
 # Tạm ứng lương
 
-## Khi nào dùng
+Khi nhân viên ứng trước một khoản lương, bạn ghi lại bằng một phiếu tạm ứng. Sau khi phiếu được duyệt, khoản này tự trừ vào phiếu lương của kỳ bạn chọn, nên không phải nhớ trừ tay.
 
-Nhân viên cần tiền gấp trước kỳ lương (việc gia đình, ốm đau, mua sắm khẩn cấp) → đề nghị tạm ứng → trừ thẳng vào kỳ lương tới.
+Vào **Quản lý HR → Quản lý lương**, tab **Tạm ứng**. Tab cần cả hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**.
 
-Lợi ích cho trung tâm:
-- Hỗ trợ NV trong khó khăn — giữ chân nhân tài
-- Có quy trình rõ ràng — không thiên vị, không lobby riêng
-- Tự động trừ vào lương — không quên + không sai lệch sổ sách
+![Tab Tạm ứng với nút Tạo tạm ứng và bảng phiếu](../assets/screenshots/tam-ung-luong-danh-sach.webp)
 
-## Truy cập
+## Tạo phiếu tạm ứng
 
-NV: **Cổng Nhân viên → Tạm ứng lương**
-HR: **Nhân sự → Bảng lương → tab Tạm ứng** (hoặc **/hr/payroll** → tab "Tạm ứng")
+::: steps
+1. Ở tab **Tạm ứng**, bấm **Tạo tạm ứng**. Hộp **Tạo phiếu tạm ứng** hiện ra.
+2. Chọn **Nhân viên** (bắt buộc).
+3. Nhập **Số tiền (VND)** lớn hơn 0 (bắt buộc).
+4. Chọn **Kỳ lương sẽ trừ** theo tháng (bắt buộc).
+5. Ghi **Lý do** nếu muốn.
+6. Bấm **Tạo phiếu**. Phiếu hiện trong danh sách với trạng thái **Chờ duyệt**.
+:::
 
-![Tạm ứng lương](../assets/screenshots/hr-tam-ung-luong.png)
+Ở màn này, phiếu do người quản trị nhập hộ nhân viên.
 
-## Quy trình
+## Duyệt hoặc từ chối
 
-### 1. NV đề nghị
+Ở dòng của phiếu **Chờ duyệt** có ba nút: duyệt, từ chối và xoá. Bấm duyệt hoặc từ chối, hệ thống hỏi lại số tiền, tên nhân viên và kỳ trừ, bạn xác nhận để hoàn tất.
 
-- Số tiền tạm ứng
-- Lý do (tự do hoặc chọn từ danh sách: Việc gia đình / Ốm đau / Mua sắm…)
-- Trả lại 1 kỳ hoặc chia làm 2-3 kỳ
-- Bấm gửi
+| Trạng thái | Ý nghĩa |
+|------------|---------|
+| **Chờ duyệt** | Mới tạo. Còn xoá được. |
+| **Đã duyệt** | Sẽ trừ vào kỳ lương đã chọn. Số liệu bị khoá. |
+| **Từ chối** | Không trừ. |
+| **Đã trừ lương** | Phiếu lương của nhân viên đã được ghi là đã chuyển khoản, khoản đã trừ thật. |
 
-### 2. Quản lý / HR duyệt
+Ở đầu bảng có số tổng **Đã duyệt, chờ trừ lương**. Dùng ô trạng thái để lọc theo từng nhóm.
 
-- Xem lịch sử tạm ứng của NV (có thường xuyên không?)
-- Kiểm tra số dư có thể tạm ứng (mặc định không quá 50% lương cơ bản)
-- ✅ Duyệt → tạo phiếu chi
-- ❌ Từ chối + ghi lý do
+::: warning Không tự duyệt phiếu của mình
+Quản lý chi nhánh không duyệt được phiếu tạm ứng của chính mình, cũng không sửa được số tiền hoặc kỳ trừ của phiếu đó. Hãy nhờ người khác duyệt. Quản trị viên không bị giới hạn này.
+:::
 
-### 3. Kế toán chi
+## Khoản tạm ứng xuất hiện trên phiếu lương thế nào
 
-- Phiếu chi tự sinh trong **Tài chính → Thu chi**
-- Chi qua tiền mặt / chuyển khoản
-- Ghi nhận thanh toán
+Khi bạn tính hoặc tính lại kỳ lương, mỗi phiếu tạm ứng **Đã duyệt** của kỳ đó thành một dòng khấu trừ **Khấu trừ: Tạm ứng lương** (kèm lý do) trên phiếu lương của nhân viên. Phiếu PDF và email hiện đúng dòng này.
 
-### 4. Tự trừ vào kỳ lương
+Khi phiếu lương của nhân viên được đánh dấu đã chuyển khoản, hoặc khi bạn bấm **Xác nhận chi trả** cho cả kỳ, các phiếu tạm ứng đã duyệt tương ứng chuyển sang **Đã trừ lương**. Nếu bạn bỏ đánh dấu chuyển khoản của một phiếu lương, khoản tạm ứng đó trở về **Đã duyệt**.
 
-- Đến kỳ lương kế tiếp, hệ thống tự thêm khoản "Trừ tạm ứng" vào phiếu lương
-- Nếu trả 2-3 kỳ, chia đều
-- NV thấy rõ trên phiếu lương: lương gross, trừ tạm ứng X đ, net về tài khoản
-
-## Quy định
-
-Cấu hình trong **[Cấu hình HR](cau-hinh-hr.md)**:
-- **Tỷ lệ tối đa** — bao nhiêu % lương cơ bản (mặc định 50%)
-- **Số lần / năm** — tối đa bao nhiêu lần / NV (mặc định 3)
-- **Khoảng cách giữa các lần** — tối thiểu 2 tháng
-
-## Lưu ý
-
-- **Cẩn thận khi duyệt** — NV có thể tạm ứng để nghỉ việc rồi không trả → mất tiền
-- **Hợp đồng cộng tác** thường không có tạm ứng — chỉ NV chính thức
+::: tip Mẹo
+Duyệt tạm ứng trước khi tính lương của tháng cần trừ. Nếu duyệt sau, hãy bấm **Tính lại riêng người này** ở phiếu của nhân viên đó để dòng khấu trừ xuất hiện. Xem [Quản lý lương](bang-luong.md).
+:::
 
 ## Câu hỏi thường gặp
 
-**NV nghỉ việc khi còn nợ tạm ứng, xử lý sao?**
-Khi chốt lương cuối, trừ hết phần tạm ứng còn lại vào lương cuối + thưởng. Nếu lương cuối không đủ, trừ tiền cọc nghỉ việc (nếu có) hoặc ra văn bản đòi nợ.
+::: details Phiếu đã duyệt nhập sai số tiền thì sao?
+Phiếu đã duyệt không sửa và không xoá được, để còn đối soát. Bạn có thể sửa trực tiếp dòng khấu trừ trên phiếu lương của kỳ đó, hoặc tạo phiếu bù nếu cần.
+:::
 
-**Tạm ứng có tính lãi không?**
-Mặc định không. Đây là phúc lợi NV. Một số trung tâm tính lãi tượng trưng (1-2%/năm) để tránh lạm dụng — cấu hình trong Cài đặt HR.
+::: details Tạm ứng trừ vào tháng sau được không?
+Được. Ô **Kỳ lương sẽ trừ** cho chọn bất kỳ tháng nào, khoản sẽ trừ vào kỳ lương của tháng đó.
+:::

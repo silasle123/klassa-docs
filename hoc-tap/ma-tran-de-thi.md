@@ -1,75 +1,80 @@
+---
+title: "Ma trận đề thi"
+description: "Lập ma trận (chương, mức độ, loại câu, số câu) để hệ thống tự ráp đề từ ngân hàng câu hỏi."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Giáo viên, Trợ giảng]
+order: 40
+---
+
 # Ma trận đề thi
 
-## Khái niệm
+Ma trận là bản thiết kế của một đề: đề có bao nhiêu câu ở mỗi chương, mỗi mức độ, mỗi loại câu, mỗi câu bao nhiêu điểm. Có ma trận rồi, bạn chỉ cần bấm **Tạo từ ma trận** là hệ thống tự chọn câu từ [Ngân hàng câu hỏi](ngan-hang-cau-hoi.md) để ráp đề, và các đề cùng ma trận luôn có cấu trúc giống nhau.
 
-**Ma trận đề** là quy tắc cấu trúc đề thi — quy định mỗi đề có bao nhiêu câu, ở chủ đề nào, độ khó ra sao. Phần mềm dùng ma trận để **tự sinh đề** từ Ngân hàng câu hỏi.
+## Xem danh sách ma trận
 
-Ví dụ ma trận:
-- 5 câu Đại số (Dễ)
-- 3 câu Hình học (TB)
-- 2 câu Số học (Khó)
-- → Tổng 10 câu
+Vào **Đề kiểm tra → Ma trận đề thi**.
 
-## Khi nào dùng
+![Trang Ma trận đề thi với khung Bộ lọc và danh sách ma trận](../assets/screenshots/ma-tran-chi-tiet.webp)
 
-- Cần ra đề kiểm tra nhanh từ kho câu sẵn có
-- Muốn mỗi học sinh có đề khác nhau (chống nhìn bài)
-- Đảm bảo đề cân bằng giữa các chủ đề
+Khung **Bộ lọc** có **Môn**, **Khối**, **Loại đề**. Mỗi ma trận hiện tên, môn, khối, loại đề, số ô, số câu, số điểm và số đề đã tạo từ ma trận đó. Ma trận có nhãn **Chuẩn** là ma trận mẫu của hệ thống.
 
-## Tạo ma trận
+Loại đề gồm: **Kiểm tra 15p**, **Định kỳ 45p**, **Giữa kỳ**, **Cuối kỳ**.
 
-### Bước 1 — Vào trang Ma trận đề
+## Tạo ma trận mới
 
-Menu trái → **Ma trận đề thi**.
+Chỉ Quản trị viên, Quản lý chi nhánh và Quản lý có nút tạo ma trận.
 
-![Trang ma trận đề](../assets/screenshots/ma-tran-de.png)
+::: steps
+1. Vào **Đề kiểm tra → Ma trận đề thi**, bấm **Tạo ma trận mới**. Hộp **Tạo ma trận mới** hiện ra.
+2. Nhập **Tên ma trận** (bắt buộc, ít nhất 3 ký tự, ví dụ: Toán 9 - Định kỳ giữa kỳ 1).
+3. Chọn **Môn** (bắt buộc), **Lớp**, **Loại đề**, và nhập **Tổng điểm** (từ 1 trở lên).
+4. Bấm **Tạo**. Trang ma trận mở ra, bước tiếp theo là thêm các ô.
+:::
 
-### Bước 2 — Bấm "+ Tạo ma trận"
+## Thêm ô vào ma trận
 
-### Bước 3 — Điền
+Mỗi ô là một dòng yêu cầu, ví dụ "Chương 2, mức M2, trắc nghiệm, 4 câu, 0.25 điểm mỗi câu".
 
-- **Tên ma trận** — ví dụ "Kiểm tra giữa kỳ Toán 9"
-- **Môn** — Toán
-- **Tổng số câu**
-- **Thời gian làm bài**
+::: steps
+1. Mở ma trận, bấm **Thêm cell**. Hộp **Thêm cell vào ma trận** hiện ra.
+2. Chọn **Chương** (bắt buộc). Chương có dấu ⚡ là chương khác khối của ma trận, vẫn được phép chọn, ví dụ đề ôn thi tốt nghiệp gộp lớp 10, 11, 12.
+3. Chọn **Đơn vị KT** nếu muốn chọn hẹp hơn.
+4. Chọn **Mức độ** (M1, M2, M3, M4) và **Loại** (**Trắc nghiệm**, **Đúng/Sai**, **Trả lời ngắn**, **Tự luận**).
+5. Nhập **Số câu** (từ 1) và **Điểm/câu**.
+6. Bấm **Thêm**.
+:::
 
-### Bước 4 — Định nghĩa từng dòng ma trận
+Bảng **Cells** liệt kê từng ô với các cột **Chương**, **Đơn vị KT**, **Mức độ**, **Loại**, **Số câu**, **Điểm/câu**, **Tổng**. Đầu trang hiện tổng số câu và tổng điểm của các ô. Nếu tổng điểm các ô lệch quá 0.5 so với **Tổng điểm** của ma trận, hệ thống hiện cảnh báo màu vàng. Hãy chỉnh cho khớp.
 
-Mỗi dòng = 1 nhóm câu hỏi:
+Chỉ Quản trị viên, Quản lý chi nhánh và Quản lý thêm, khoá và xoá được ô.
 
-| Chủ đề | Độ khó | Số câu | Điểm/câu |
-|--------|--------|--------|----------|
-| Đại số | Dễ | 5 | 1 |
-| Hình học | TB | 3 | 1.5 |
-| Số học | Khó | 2 | 2.5 |
+Muốn bỏ một ô, bấm biểu tượng thùng rác ở cuối dòng và xác nhận **Xoá cell?**.
 
-### Bước 5 — Lưu
+## Khoá câu hỏi cho một ô
 
-## Sinh đề từ ma trận
+Mặc định hệ thống chọn ngẫu nhiên. Nếu có câu bắt buộc phải xuất hiện, bạn khoá câu đó cho ô.
 
-Sau khi có ma trận, tạo bài đánh giá:
+::: steps
+1. Ở dòng ô cần khoá, bấm biểu tượng ổ khoá. Hộp **Khoá câu hỏi cụ thể cho cell** hiện ra.
+2. Tìm và chọn câu trong danh sách câu phù hợp với ô. Bạn chọn nhiều nhất bằng **Số câu** của ô.
+3. Bấm **Lưu**. Muốn bỏ khoá thì bấm **Bỏ tất cả khoá** rồi **Lưu**.
+:::
 
-1. **Bài đánh giá → +Tạo bài đánh giá → Dùng ma trận**
-2. Chọn ma trận đã tạo
-3. Phần mềm tự rút câu hỏi từ Ngân hàng theo ma trận:
-   - Nếu thiếu câu trong Ngân hàng → cảnh báo "Còn thiếu 2 câu Hình TB"
-   - Đủ → bấm **"Sinh đề"** → tạo bộ đề ngẫu nhiên
+Chọn ít hơn số câu của ô thì phần còn lại vẫn được chọn ngẫu nhiên. Ô có câu khoá hiện nhãn "... khoá" cạnh số câu.
 
-### Sinh nhiều đề khác nhau
+## Tạo đề từ ma trận
 
-Bật **"Mỗi học sinh một đề khác nhau"** — phần mềm sinh N đề (N = sĩ số lớp), mỗi đề rút câu khác nhau nhưng theo cùng cấu trúc.
+Xem **Cách 3: Tạo từ ma trận** trong bài [Đề kiểm tra](bai-danh-gia.md). Bạn phải bấm **Preview pool** trước, hệ thống cho biết ngân hàng có đủ câu cho từng ô không rồi nút **Tạo đề** mới bấm được.
 
-→ Chống nhìn bài nhưng vẫn đảm bảo công bằng.
-
-## Lưu ý
-
-- **Ngân hàng đủ câu**: ma trận đòi 5 câu Đại số Dễ → Ngân hàng phải có ít nhất 5 câu Đại số Dễ. Khuyến nghị nhiều hơn để có chỗ rút ngẫu nhiên.
-- **Tránh trùng câu**: nếu sinh nhiều đề + Ngân hàng ít, có thể bị trùng. Phần mềm cố gắng tránh nhưng không đảm bảo 100%.
+::: tip Mẹo
+Ngân hàng cần đủ câu cho từng tổ hợp chương, mức độ, loại câu mà ma trận yêu cầu. Thiếu ô nào thì thêm câu vào ngân hàng ở đúng chương và mức độ đó.
+:::
 
 ## Câu hỏi thường gặp
 
-**Một ma trận dùng được cho nhiều bài kiểm tra không?**
-Có. Tạo 1 ma trận "Kiểm tra 15 phút Đại số" → dùng nhiều lần, mỗi lần sinh đề khác.
+::: details Giáo viên có tạo được ma trận không?
+Nút **Tạo ma trận mới** chỉ hiện với Quản trị viên, Quản lý chi nhánh và Quản lý. Giáo viên và Trợ giảng xem ma trận và dùng nó để tạo đề.
+:::
 
-**Tôi không muốn dùng ma trận, tự chọn câu được không?**
-Được. Khi tạo bài đánh giá, bỏ qua bước chọn ma trận → tự chọn câu thủ công từ Ngân hàng.
+::: details Vì sao bấm Tạo đề báo thiếu câu?
+Ma trận đòi nhiều câu hơn số câu trong ngân hàng, hoặc các câu đã bị loại vì lớp vừa làm trong những đề gần nhất. Bạn thêm câu vào ngân hàng, hoặc chọn **Không loại trừ** ở ô **Tránh trùng với đề gần nhất**, hoặc tích **Vẫn tạo đề khi thiếu câu**.
+:::

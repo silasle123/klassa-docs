@@ -1,80 +1,60 @@
-# Tạo Lead mới
+---
+title: "Tạo lead mới"
+description: "Ghi nhận một khách quan tâm vào hệ thống, kèm cách xử lý khi số điện thoại bị trùng."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+plugin: "CRM Tuyển sinh + AI"
+order: 30
+---
 
-## Khi nào dùng
+# Tạo lead mới
 
-- Phụ huynh vừa gọi điện đến trung tâm hỏi thông tin → ghi vào hệ thống ngay
-- Khách nhắn Zalo → lễ tân tạo Lead để theo dõi
-- Khách đến trung tâm xem trực tiếp → ghi nhận luôn để không quên gọi lại
-- Tự nhập danh sách Lead từ file Excel (ví dụ kết quả chạy quảng cáo)
+Khi phụ huynh gọi, nhắn Zalo hoặc đến hỏi trực tiếp, hãy ghi ngay vào hệ thống để không ai quên gọi lại. Thông tin nhập lúc này sẽ được giữ nguyên khi [chuyển lead thành học sinh](chuyen-lead-thanh-hoc-sinh.md).
 
-**Quy tắc vàng**: bất kỳ ai chạm đến trung tâm dù chỉ một lần đều nên có một Lead trong hệ thống. Lead không tốn chi phí, mất khách mới tốn.
+## Tạo một lead
 
-## Cách 1 — Tạo thủ công (1 khách)
+::: steps
+1. Vào **Tuyển sinh**, bấm **Tạo lead mới** ở dải trên cùng. Hộp **Tạo Lead mới** hiện ra.
+2. Ở phần **Thông tin học sinh**, điền **Họ và tên** và **Số điện thoại** (hai ô bắt buộc). Có thể điền thêm **Email**, **Ngày sinh**, **Địa chỉ**.
+3. Ở phần **Thông tin phụ huynh**, điền tên, số điện thoại, email phụ huynh và chọn **Mối quan hệ** (Cha/Mẹ, Người giám hộ, Ông/Bà, Họ hàng, Khác).
+4. Ở phần **Thông tin học tập**, điền **Trường hiện tại**, chọn **Khối lớp**, **Trình độ học lực** (Xuất sắc, Giỏi, Trung bình, Yếu), **Cơ sở** và **Môn học quan tâm**. Chọn nhiều môn được, bấm dấu x trên nhãn môn để bỏ.
+5. Ở phần **Nguồn lead & Kênh tiếp cận**, chọn **Nguồn lead** và **Kênh tiếp cận**.
+6. Ghi vào **Ghi chú** những gì phụ huynh nói, rồi bấm **Tạo Lead**.
+:::
 
-### Bước 1 — Mở form thêm mới
+![Hộp Tạo Lead mới với phần Thông tin học sinh và Thông tin phụ huynh](../assets/screenshots/tuyen-sinh-tao-lead.webp)
 
-Tại trang **Danh sách Lead**, bấm nút **"+ Thêm Lead"** ở góc trên bên phải.
+Nguồn lead có sẵn: Zalo, Facebook, Phụ huynh/Học sinh giới thiệu, Tư vấn trực tiếp, Website, Google Ads, Sự kiện, Khác. Kênh tiếp cận có sẵn: Trực tiếp, Chạy Ads, Giới thiệu, Mạng xã hội, Telesales, Sự kiện.
 
-![Nút thêm Lead](../assets/screenshots/leads-nut-them-moi.png)
+Lead mới có trạng thái **Mới**. Lễ tân tạo lead thì lead tự giao cho chính người đó. Khi Quản trị viên, Quản lý chi nhánh hoặc Quản lý tạo, hệ thống giao cho một Lễ tân đang hoạt động cùng cơ sở (nếu có).
 
-### Bước 2 — Điền thông tin
+::: tip Mẹo
+Luôn chọn **Nguồn lead**. Nhờ đó trung tâm biết kênh nào mang về nhiều học sinh. Thấy lead nào hiện **+ Ghi nguồn** thì hỏi phụ huynh "anh chị biết trung tâm qua đâu" rồi ghi lại.
+:::
 
-Một cửa sổ hiện ra với các trường:
+## Khi có người giới thiệu
 
-![Form thêm Lead mới](../assets/screenshots/leads-form-them-moi.png)
+Nhập số điện thoại của người giới thiệu vào ô **SĐT người giới thiệu**. Ô hiện **Hợp lệ** nếu tìm thấy học sinh hoặc phụ huynh có số đó. Người giới thiệu được cộng 10 điểm thưởng khi học sinh ghi danh thành công. Ô này không bắt buộc.
 
-#### Thông tin bắt buộc (có dấu *)
+## Khi hiện cảnh báo trùng số điện thoại
 
-- **Họ tên khách / phụ huynh** — ví dụ "Nguyễn Văn A"
-- **Số điện thoại** — bắt đầu bằng 0, ví dụ "0987654321"
+Trước khi tạo, hãy tìm thử số điện thoại ở ô tìm của danh sách. Phụ huynh đã từng hỏi thì ghi tiếp vào lead cũ, đừng tạo thêm.
 
-#### Thông tin nên điền (không bắt buộc nhưng có ích)
+Nếu số điện thoại trùng với lead hoặc phụ huynh đã có, hộp hiện khung vàng **Cảnh báo: Trùng số điện thoại với lead/phụ huynh đã có**, liệt kê các lead trùng kèm trạng thái và ngày tạo. Bạn chọn:
 
-- **Email** — để gửi tài liệu hoặc thông tin khoá học
-- **Tên học sinh** — nếu khác tên người đăng ký (phụ huynh đăng ký cho con)
-- **Lớp / Khối lớp** — ví dụ "Lớp 9", "Lớp 12"
-- **Môn quan tâm** — Toán, Tiếng Anh, Văn… chọn từ danh sách có sẵn
-- **Khoá học cụ thể** — nếu khách hỏi một khoá xác định
-- **Nguồn Lead** — Facebook Ads, Zalo, Khách giới thiệu, Tự đến…
-- **Ghi chú** — bất kỳ thông tin nào khác đáng nhớ ("Khách cần xem trực tiếp trước", "Hẹn gọi lại sau 19h")
+- **Hủy**: quay lại, dùng lead cũ.
+- **Xác nhận tạo lead**: vẫn tạo, dùng khi đó là anh chị em cùng gia đình.
 
-### Bước 3 — Gán tư vấn viên (tuỳ chọn)
+## Các cách khác để có lead
 
-Nếu trung tâm chia ca trực, chọn **tư vấn viên** phụ trách Lead này. Nếu không chọn, Lead sẽ được gán mặc định cho người đang đăng nhập (chính là anh chị).
-
-### Bước 4 — Bấm "Lưu"
-
-Lead mới sẽ xuất hiện ngay đầu danh sách với trạng thái **"Mới"**. Phần mềm tự thông báo cho tư vấn viên được giao.
-
-## Cách 2 — Nhập hàng loạt từ Excel
-
-Phù hợp khi trung tâm vừa nhận file kết quả quảng cáo (hàng chục, hàng trăm Lead). Tại trang **Danh sách Lead**, bấm nút **"Nhập từ Excel"** kế bên nút "+ Thêm Lead". Mỗi lần tối đa **500 dòng**.
-
-**Không cần sửa file cho khớp mẫu.** File quảng cáo xuất ra đặt tên cột kiểu gì cũng được — phần mềm tự ghép về đúng thông tin của hệ thống, rồi đưa bảng cho anh chị xem lại và sửa trước khi lưu. Anh chị cũng có thể **dán thẳng** bảng copy từ Excel hoặc Google Sheet thay vì tải file lên.
-
-Bốn bước và cách xử lý các ca đặc biệt: xem [Nhập dữ liệu hàng loạt từ Excel](../bat-dau/nhap-du-lieu-hang-loat.md).
-
-**Bắt buộc phải có:** Họ tên và Số điện thoại. Các cột email, khối lớp quan tâm, nguồn, tên và SĐT phụ huynh, ghi chú là tuỳ chọn.
-
-Ở bảng duyệt, Lead trùng số điện thoại với lead hoặc học sinh đang có sẽ được đánh dấu 🟡 và bỏ tích sẵn; dòng thiếu thông tin đánh dấu 🔴 kèm lý do và sửa được ngay trên bảng.
-
-## Lưu ý
-
-- **Số điện thoại trùng**: phần mềm cảnh báo nếu SĐT đã có trong hệ thống. Có thể là khách quay lại lần 2 — kiểm tra xem nên tạo Lead mới hay cập nhật Lead cũ.
-- **Đừng để trống "Nguồn Lead"**: sau này anh chị cần biết kênh quảng cáo nào hiệu quả nhất để phân bổ ngân sách.
-- **Tên môn không có trong danh sách?** Quản trị viên có thể thêm môn mới trong **Cài đặt → Môn học**.
-- **Nhập lại Lead cũ**: nếu khách đã tư vấn nhưng không đăng ký, sau vài tháng quay lại — đừng tạo Lead mới, mở Lead cũ rồi đổi trạng thái về "Mới" để theo dõi lại.
+- Nhập cả danh sách: bấm **Excel**, chọn **Nhập lead từ Excel**. Xem [Danh sách lead](danh-sach-lead.md).
+- Phụ huynh tự điền form trên web: xem [Form đăng ký học thử trên web](yeu-cau-dang-ky.md).
 
 ## Câu hỏi thường gặp
 
-**Tôi vừa tạo Lead nhưng không thấy trong danh sách, sao vậy?**
-Kiểm tra bộ lọc — có thể danh sách đang lọc theo "Giai đoạn" hoặc "Tư vấn viên" nên Lead mới bị ẩn. Xoá tất cả bộ lọc, Lead sẽ hiện ra.
+::: details Tôi chỉ có tên và số điện thoại, có tạo được không?
+Được. Chỉ **Họ và tên** và **Số điện thoại** là bắt buộc. Các ô còn lại bổ sung sau bằng nút **Sửa** trong [hồ sơ lead](chi-tiet-lead.md).
+:::
 
-**Tạo nhầm Lead, xoá đi được không?**
-Được, nhưng chỉ Quản lý trở lên mới xoá được. Tư vấn viên có thể đánh dấu Lead là **"Không hợp lệ"** thay vì xoá — vẫn ghi nhận để báo cáo.
-
-**Tôi đã lưu Lead nhưng vẫn muốn sửa thông tin, làm sao?**
-Bấm vào Lead trong danh sách → mở trang chi tiết → bấm nút **"Sửa"** ở góc trên bên phải.
-
-**Có cách nào để khách tự điền form Lead trên web không?**
-Có. Trung tâm có thể tạo form đăng ký riêng và nhúng vào website. Xem hướng dẫn trong mục **Cài đặt → Form thu Lead**.
+::: details Tạo xong thì lead nằm ở đâu?
+Ở danh sách **Tuyển sinh**, trạng thái **Mới**. Lễ tân thấy ngay trong **Của tôi**.
+:::

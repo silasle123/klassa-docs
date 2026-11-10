@@ -1,56 +1,58 @@
+---
+title: "Xử lý sự cố thường gặp"
+description: "Tra theo triệu chứng: không đăng nhập được, thiếu menu, phụ huynh không thấy phiếu, Zalo im lặng, điểm danh bị khoá, và cách báo cho KLASSA khi không tự xử lý được."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự]
+order: 50
+---
+
 # Xử lý sự cố thường gặp
 
-## Trang web không tải / tải chậm
+Bài này giúp bạn tự gỡ những sự cố hay gặp trước khi nhờ người khác. Mỗi mục cho biết triệu chứng, nguyên nhân thường gặp và nơi xử lý.
 
-1. Làm mới trang (F5)
-2. Xoá cache trình duyệt (Ctrl + Shift + Del)
-3. Thử trình duyệt khác (Chrome → Edge / Cốc Cốc)
-4. Thử mạng khác (Wi-Fi → 4G điện thoại)
+## Không đăng nhập được
 
-Vẫn không được → liên hệ hỗ trợ.
+Đọc câu thông báo hiện ngay trên form đăng nhập, rồi tra bảng trong bài [Đăng nhập](../tai-khoan/dang-nhap.md). Vài trường hợp phổ biến:
 
-## Đăng nhập báo "Email hoặc mật khẩu không đúng"
+- **Tài khoản tạm khóa 30 phút**: bạn nhập sai mật khẩu 5 lần. Chờ hết giờ hoặc nhờ Quản trị viên bấm **Mở khóa tài khoản** ở **Quản lý Users**.
+- **Tài khoản đang chờ phê duyệt từ quản trị viên**: bạn mới tự đăng ký. Nhờ Quản trị viên duyệt, xem [Duyệt đăng ký người dùng](../cai-dat/duyet-dang-ky-nguoi-dung.md).
+- **Quên mật khẩu**: Quản trị viên đặt lại ở **Quản lý Users**, xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
 
-- Kiểm tra Caps Lock
-- Thử "Quên mật khẩu"
-- Liên hệ Quản trị viên reset
+## Không thấy một mục trong menu
 
-## Sai múi giờ / sai ngày
+1. Kiểm tra vai của bạn. Mỗi vai chỉ thấy các mục dành cho mình, xem [Vai trò người dùng](../tai-khoan/vai-tro-nguoi-dung.md).
+2. Nếu mục thuộc gói mở rộng (Zalo, học online, tuyển sinh có AI...), kiểm tra gói đã bật chưa ở **Plugin Marketplace**, xem [Giới thiệu Plugin Marketplace](../plugin/gioi-thieu.md).
+3. Vẫn không thấy, nhờ Quản trị viên xem lại vai và chi nhánh của tài khoản.
 
-Kiểm tra **Cài đặt → Hệ thống → Múi giờ** = `Asia/Ho_Chi_Minh GMT+7`.
+## Phụ huynh không thấy phiếu học phí
 
-## Hoá đơn không gửi được qua Zalo
+Vào **Tài chính → Kế toán → Cấu hình tài chính**, thẻ **Phiếu hiện cho phụ huynh**. Nếu công tắc **Phụ huynh chỉ thấy phiếu đã gửi** đang bật, phiếu cột **Đã gửi** còn ghi "Chưa gửi" thì phụ huynh chưa thấy. Gửi phiếu hoặc báo qua app để phiếu hiện ra. Xem [Phụ huynh xem hoá đơn và nhận báo](../hoc-phi/bao-phu-huynh.md).
 
-1. Kiểm tra Zalo OA còn kết nối: **Tích hợp → Zalo OA → trạng thái 🟢**
-2. Hết quota tháng → đợi tháng sau hoặc nâng gói
-3. Phụ huynh chưa quan tâm OA → SĐT phụ huynh không nhận được tin
+Nếu phụ huynh chưa có tài khoản, phụ huynh cũng không xem được. Xem [Phụ huynh](../hoc-sinh/phu-huynh.md).
 
-## Tin Zalo / Email vào spam
+## Zalo không gửi hoặc không nhận được tin
 
-- Email: cấu hình SPF/DKIM/DMARC trên domain
-- Zalo: dùng template OA đã duyệt, tránh từ khoá nhạy cảm (vay, đầu tư...)
+- Nick Zalo có thể đã **Hết phiên**, **Cần quét QR**, **Bị khoá** hoặc **Tạm dừng**. Bấm **Quét QR** trên thẻ nick (nick còn hoạt động thì nút là **Đăng nhập lại**). Xem [Zalo của tôi](../tin-nhan/zalo-cua-toi.md) và [Kết nối Zalo cá nhân](../tich-hop/zalo-ca-nhan.md).
+- Có thể ai đó đã mở Zalo Web bằng cùng số điện thoại, làm nick bị đăng xuất. Quét lại là được.
+- Gói mở rộng Zalo chưa bật thì không có mục Zalo trong menu.
 
-## Báo cáo doanh thu sai số
+## Không sửa được điểm danh
 
-1. Kiểm tra có hoá đơn nháp tính nhầm không
-2. Kiểm tra phiếu thu đã ghi đầy đủ chưa
-3. Kiểm tra hoàn tiền đã trừ đúng chưa
+Trung tâm có thể đã bật khoá điểm danh. Buổi quá hạn sẽ báo bị khoá, chỉ Quản trị viên và Quản lý chi nhánh sửa được. Xem [Khoá điểm danh](../diem-danh/khoa-diem-danh.md) và [Xem lại, sửa và xoá điểm danh](../diem-danh/sua-loi.md).
 
-## Lớp đã tạo nhưng học sinh không thấy lịch
+## Dữ liệu bị đổi mà không rõ ai làm
 
-- Học sinh chưa được ghi danh vào lớp
-- Hoặc ghi danh nhưng trạng thái không phải ACTIVE
-
-## Không xuất được Excel / PDF
-
-- Pop-up bị chặn → cho phép pop-up cho domain KLASSA
-- Trình duyệt thiếu Plugin PDF → cài Adobe Reader hoặc dùng trình duyệt mặc định
-
-## Mất dữ liệu sau khi sửa
-
-- Audit log lưu giá trị cũ — Quản lý có thể xem để khôi phục thủ công
-- Liên hệ hỗ trợ KLASSA để restore từ backup nếu nghiêm trọng
+Quản trị viên mở **Quản trị hệ thống → Nhật ký hệ thống** để xem ai đổi, lúc nào, từ giá trị nào sang giá trị nào. Xem [Nhật ký hệ thống](../cai-dat/audit-log.md).
 
 ## Lỗi không có trong danh sách
 
-[Liên hệ hỗ trợ](lien-he.md) kèm ảnh chụp màn hình lỗi.
+Gửi cho đội ngũ KLASSA ngay trong phần mềm ở mục **Hỗ trợ**, chọn **Báo lỗi & Hỗ trợ** và đính kèm ảnh chụp màn hình. Xem [Gửi yêu cầu hỗ trợ tới KLASSA](../phan-hoi/gui-ho-tro.md). Cách khác là [liên hệ qua email](lien-he.md).
+
+::: tip Mẹo
+Một báo lỗi tốt có đủ: bạn đang ở trang nào, bấm gì, kết quả mong đợi, kết quả thực tế và ảnh chụp màn hình. Đội ngũ xử lý nhanh hơn nhiều khi có đủ các ý này.
+:::
+
+## Câu hỏi thường gặp
+
+::: details Tôi nên báo lỗi qua trang Hỗ trợ hay gửi email?
+Ưu tiên trang **Hỗ trợ**, vì bạn theo dõi được trạng thái và trao đổi tiếp ngay trên yêu cầu. Dùng email khi bạn không đăng nhập được vào phần mềm.
+:::

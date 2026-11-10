@@ -1,51 +1,47 @@
+---
+title: "Yêu cầu chỉnh hồ sơ"
+description: "Duyệt hoặc từ chối khi nhân viên tự đề nghị đổi thông tin nhạy cảm trong hồ sơ."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 60
+group: "Hồ sơ & tổ chức"
+---
+
 # Yêu cầu chỉnh hồ sơ
 
-## Khi nào dùng
+Một số thông tin như số tài khoản, CCCD hay mã số thuế ảnh hưởng tới lương và hợp đồng, nên nhân viên không tự sửa thẳng. Họ gửi đề nghị, bạn kiểm tra rồi duyệt. Khi bạn duyệt, giá trị mới tự áp vào hồ sơ.
 
-Nhân viên muốn sửa thông tin cá nhân (đổi tên do thay đổi giấy tờ, đổi địa chỉ, cập nhật số điện thoại, bằng cấp mới…) — gửi yêu cầu lên HR duyệt, không tự sửa được trực tiếp.
+## Nhân viên gửi đề nghị thế nào
 
-Cơ chế này đảm bảo:
-- Thông tin pháp lý (tên, CMND) chỉ HR mới cập nhật được
-- Có truy vết ai đã duyệt thay đổi nào
-- Có nơi nhân viên đính kèm giấy tờ chứng minh
+Nhân viên vào **Hồ sơ cá nhân** trong Cổng nhân viên, tìm khung **Yêu cầu cập nhật thông tin**, chọn **Thông tin cần đổi**, nhập **Giá trị mới**, tuỳ ý ghi **Lý do (không bắt buộc)** rồi bấm **Gửi yêu cầu**. Có 8 loại thông tin đổi được: **Họ tên**, **Số điện thoại**, **Địa chỉ**, **CCCD**, **Mã số thuế**, **Số TK ngân hàng**, **Ngân hàng**, **Ngày sinh**.
 
-## Truy cập
+## Duyệt yêu cầu
 
-Menu trái → **Nhân sự → Yêu cầu chỉnh hồ sơ** (hoặc **/hr/profile-requests**).
+::: steps
+1. Vào **Quản lý HR → Yêu cầu hồ sơ**. Trang tên **Yêu cầu cập nhật hồ sơ** mở ở thẻ **Chờ duyệt**.
+2. Đọc từng dòng: **Nhân viên**, **Thông tin** đề nghị đổi, **Giá trị cũ**, **Giá trị mới**, **Lý do**, **Ngày gửi**.
+3. Bấm dấu tick xanh để duyệt. Hệ thống báo "Đã duyệt và cập nhật hồ sơ" và sửa luôn hồ sơ nhân viên.
+4. Hoặc bấm dấu X đỏ để từ chối. Hộp hỏi **Lý do từ chối (gửi cho nhân viên)**. Nhập lý do rồi xác nhận. Bấm huỷ hộp này thì chưa từ chối gì.
+:::
 
-![Yêu cầu chỉnh hồ sơ](../assets/screenshots/hr-yeu-cau-chinh-ho-so.png)
+Hai thẻ **Đã duyệt** và **Từ chối** chỉ để xem lại lịch sử, không còn nút xử lý.
 
-## Nhân viên gửi yêu cầu
+Nhân viên nhận thông báo kết quả, kèm lý do nếu bạn từ chối.
 
-Trong **Cổng Nhân viên → Hồ sơ** → bấm **"Yêu cầu chỉnh"**:
-- Chọn trường muốn đổi (Họ tên / Địa chỉ / SĐT / Bằng cấp / Khác)
-- Giá trị mới
-- Lý do
-- Đính kèm giấy tờ (ảnh CMND/CCCD mới, bằng cấp...)
-- Gửi
+::: warning Lưu ý
+Mỗi yêu cầu chỉ xử lý được một lần. Nếu giá trị mới trùng với người khác (ví dụ CCCD đã có ở một hồ sơ khác), hệ thống không áp và báo trùng. Hãy từ chối và nhờ nhân viên kiểm tra lại.
+:::
 
-## HR xử lý
-
-Trang **Yêu cầu chỉnh hồ sơ** hiển thị danh sách:
-- Người gửi + Ngày gửi
-- Trường muốn đổi (cũ → mới)
-- File đính kèm
-- Trạng thái: Chờ duyệt / Đã duyệt / Từ chối
-
-Bấm vào yêu cầu để xem chi tiết → bấm:
-- **✅ Duyệt** — cập nhật hồ sơ ngay
-- **❌ Từ chối** — ghi lý do, gửi thông báo NV
-- **📝 Yêu cầu bổ sung** — NV gửi thêm giấy tờ
-
-## Lưu ý
-
-- **Mọi thay đổi đều ghi audit log** — không xoá được
-- **Một số trường siêu nhạy cảm** (CMND, ngày sinh) yêu cầu **2 cấp duyệt** (HR + Quản lý) trong cấu hình mặc định
+::: tip Mẹo
+Số yêu cầu đang chờ hiện ở dải **Cần xử lý** trên [Tổng quan nhân sự](tong-quan.md), nên bạn không cần vào trang này mỗi ngày.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi đang gấp, NV cập nhật được luôn không qua HR?**
-Một số trường không nhạy cảm (avatar, SĐT cá nhân) NV tự sửa trực tiếp. Các trường nhạy cảm bắt buộc qua duyệt.
+::: details Muốn tự sửa hồ sơ cho nhân viên có được không?
+Được. Bạn sửa trực tiếp ở [Danh sách nhân viên](danh-sach-nhan-vien.md). Luồng đề nghị chỉ dành cho khi nhân viên tự muốn đổi.
+:::
 
-**HR không duyệt mất bao lâu?**
-Mặc định cảnh báo HR sau 24h không xử lý. Cấu hình SLA trong **Cài đặt HR**.
+::: details Nhân viên đổi email hoặc chức vụ thì sao?
+Hai mục này không có trong danh sách đề nghị. Người quản lý sửa trong hồ sơ.
+:::

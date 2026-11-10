@@ -1,78 +1,77 @@
-# Lịch dạy toàn trung tâm
+---
+title: "Thời khóa biểu"
+description: "Xem lịch dạy thật theo tuần, ngày hoặc danh sách, kèm nghỉ lễ, dạy thay, buổi bù và buổi chưa điểm danh."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng]
+order: 60
+---
 
-## Khi nào dùng
+# Thời khóa biểu
 
-- Quản lý xem hôm nay / tuần này có bao nhiêu buổi
-- Lễ tân kiểm tra phòng trống lúc nào
-- Giáo viên xem lịch dạy của mình
-- Phát hiện trùng giờ giữa các lớp
+Trang cho bạn thấy các buổi học của tuần đang xem: buổi nào hôm nay, buổi nào đã điểm danh, buổi nào bị bỏ sót, lớp nào chưa có giáo viên hay phòng, và chỗ nào bị trùng giờ. Lịch này là lịch thật của tuần đó, không chỉ là khung giờ cố định. Giáo viên và trợ giảng chỉ thấy các buổi của lớp mình được phân công. Trang chỉ để xem, không kéo thả hay sửa buổi ở đây.
 
-## Truy cập
+## Xem lịch tuần
 
-Menu trái → **Lớp học → Lịch dạy** (hoặc trực tiếp **/dashboard/schedule**).
+::: steps
+1. Vào **Lịch học → Thời khóa biểu**.
+2. Dải đầu trang ghi tuần đang xem. Bấm mũi tên để sang tuần trước hoặc tuần sau. Khi đang ở tuần khác, nút về hôm nay hiện ra.
+3. Chọn kiểu xem: **Tuần**, **Ngày** hoặc **Danh sách**. Tuần luôn tính từ Thứ Hai đến Chủ nhật.
+4. Bấm vào một buổi để mở hộp danh sách học sinh đang học của lớp đó.
+:::
 
-![Trang lịch dạy](../assets/screenshots/lich-day-trang-chinh.png)
+Các chỉ số ở dải đầu: **Hôm nay** (số buổi) và **Đang học** khi bạn xem tuần hiện tại, **Chưa điểm danh** và **Cả tuần**. Hai nút ở dải đầu: **Điểm danh** (sang trang [điểm danh](../diem-danh/cham-hang-ngay.md)) và **Lịch học thử** (cho vai được xem lịch học thử).
 
-## Các chế độ xem
+![Thời khoá biểu kiểu Tuần với các buổi học và nhãn Chưa điểm danh](../assets/screenshots/thoi-khoa-bieu-tuan.webp)
 
-### 1. Theo tuần (mặc định)
+## Đọc một buổi trên lịch
 
-Bảng 7 cột (T2 → CN), mỗi ô là 1 buổi học. Nhìn ra lịch tổng thể trong tuần.
+Mỗi thẻ ghi giờ, môn, giáo viên, trợ giảng, phòng, số học sinh và các nhãn:
 
-### 2. Theo ngày
+- **Đang học**: buổi hôm nay đang diễn ra.
+- **Đã điểm danh**: buổi đã được điểm danh.
+- **Chưa điểm danh**: buổi đã qua giờ mà chưa có điểm danh.
+- **Đã huỷ**: buổi bị huỷ.
+- **Nghỉ: tên ngày nghỉ**: lớp nghỉ vì ngày lễ đã khai báo ở [Ngày nghỉ lễ](../cai-dat/ngay-nghi-le.md).
+- **Dạy thay**: buổi có giáo viên dạy thay, thẻ hiện tên người dạy thật. Xem [Dạy thay](../nhan-su/dan-day-thay.md).
+- **Buổi bù**, **Bổ trợ**, **Hỗ trợ miễn phí**, **Học online**, **Buổi thêm**: buổi ngoài lịch thường.
+- **Lớp linh hoạt**: buổi của [lớp linh hoạt](lop-linh-hoat.md). Lớp linh hoạt không có khung tuần, chỉ hiện các buổi đã được mở.
 
-Hiển thị các buổi của ngày được chọn theo giờ. Phù hợp xem chi tiết 1 ngày bận.
+Buổi đã huỷ hoặc nghỉ lễ hiển thị mờ và không tính vào các số đếm.
 
-### 3. Theo tháng
+## Lọc và tìm
 
-Lịch tháng kiểu Google Calendar — chỉ tóm tắt số lớp / ngày.
+Dùng **Lọc nhanh** với các tab **Cả tuần**, **Chưa điểm danh**, **Chưa có GV**, **Chưa có phòng**. Thêm các nút lọc **Giáo viên** (giáo viên hoặc trợ giảng), **Môn**, **Phòng**, **Khối**, và **Chi nhánh** (chỉ Quản trị viên). Có ô tìm theo tên.
 
-### 4. Theo phòng
+Hai cách mở sẵn một bộ lọc:
 
-Cột = phòng, hàng = giờ. Xem nhanh phòng nào trống lúc nào.
+- Ở danh sách hoặc chi tiết lớp bấm **Thời khoá biểu**: chỉ hiện lớp đó, kèm nút **Xem mọi lớp** để bỏ lọc.
+- Ở trang [Giáo viên](../giao-vien/danh-sach.md) bấm **Lịch dạy**: lọc sẵn theo giáo viên đó.
 
-### 5. Theo giáo viên
+## Thẻ Cần xử lý
 
-Cột = giáo viên, hàng = giờ. Phát hiện giáo viên bị xếp quá tải.
+Phía dưới lịch có thẻ **Cần xử lý** cho tuần đang xem, gồm:
 
-## Bộ lọc
+- **Lớp chưa có giáo viên**: bấm **Xem lớp** để lọc.
+- **Buổi đã qua chưa điểm danh**: nêu buổi sớm nhất, bấm **Xem** hoặc **Điểm danh** để xử lý.
+- **Giáo viên trùng giờ**: một giáo viên có hai lớp chồng giờ.
+- **Phòng trùng giờ**: một phòng có hai lớp chồng giờ.
+- **Lớp chưa gán phòng**: gán phòng ở trang [Chỉnh sửa lớp học](chinh-sua.md).
 
-- **Cơ sở** — nếu nhiều chi nhánh
-- **Khoá học**
-- **Lớp**
-- **Giáo viên**
-- **Phòng**
+Nếu không có việc nào, thẻ ghi **Không có việc cần xử lý** kèm số buổi đã soát.
 
-## Thông tin trên 1 ô buổi học
-
-- Tên lớp
-- Khoá học (màu phân biệt)
-- Giáo viên
-- Phòng
-- Trạng thái điểm danh:
-  - ⚪ Chưa chấm
-  - 🟡 Đang chấm
-  - 🟢 Đã chấm
-  - ❌ Buổi bị huỷ
-
-Bấm vào ô → mở chi tiết buổi học hoặc đi thẳng vào màn hình điểm danh.
-
-## Thao tác
-
-- **Kéo & thả** một buổi sang ô khác → đổi giờ / ngày (Quản lý mới được phép)
-- **Bấm chuột phải** vào buổi → menu nhanh: Sửa / Huỷ / Sao chép / Báo nhắc phụ huynh
-
-## Lưu ý
-
-- **Phát hiện trùng**: phần mềm bôi đỏ các buổi trùng giờ (cùng phòng hoặc cùng giáo viên).
-- **In lịch dạy** ra giấy: bấm "In" ở góc phải — có sẵn mẫu A4 đẹp.
+::: tip Mẹo
+Đầu mỗi tuần, mở tab **Chưa có GV** và **Chưa có phòng** để lấp chỗ trống trước khi lớp bắt đầu.
+:::
 
 ## Câu hỏi thường gặp
 
-**Lịch dạy có tự gửi cho giáo viên / phụ huynh không?**
-Nếu trung tâm bật trong **Cài đặt → Thông báo**, hệ thống tự gửi:
-- Email/Zalo cho giáo viên đầu tuần
-- Zalo cho phụ huynh nhắc buổi học trước 1-2 giờ
+::: details Lớp tôi nghỉ lễ nhưng vẫn hiện trên lịch?
+Buổi nghỉ lễ vẫn hiện nhưng mờ, kèm nhãn **Nghỉ: tên ngày nghỉ**. Ngày nghỉ có thể chỉ áp cho một cơ sở, một khối hoặc một số lớp, nên lớp ngoài phạm vi vẫn học bình thường.
+:::
 
-**Tôi muốn in lịch dạy treo bảng văn phòng, làm sao?**
-Chế độ xem **"Theo tuần"** → bấm **"In"** → chọn khổ A3 ngang.
+::: details Sao tôi không đổi giờ buổi học được ở đây?
+Đổi giờ cố định bằng [Chỉnh sửa lớp học](chinh-sua.md).
+:::
+
+::: details Sao lớp linh hoạt không có buổi nào?
+Lớp linh hoạt chỉ hiện các buổi đã được mở khi có người tạo buổi linh hoạt ở trang điểm danh.
+:::

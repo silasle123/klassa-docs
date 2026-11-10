@@ -1,66 +1,74 @@
+---
+title: "Dạy thay"
+description: "Tạo yêu cầu đổi người dạy cho một buổi ở trang Điểm danh, duyệt yêu cầu ở Nhân sự và hiểu lương buổi đó chuyển cho ai."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+order: 110
+group: "Lương, chấm công & ca"
+---
+
 # Dạy thay
 
-## Khái niệm
+Khi giáo viên hay trợ giảng không dạy được một buổi, bạn tạo một yêu cầu dạy thay để đổi người đứng lớp. Khi yêu cầu được duyệt, buổi đó chuyển sang người dạy thay và lương buổi tính cho người đó.
 
-Khi một buổi học cần **đổi người dạy** (giáo viên chính bận, ốm, đi công tác…), quản lý tạo một **yêu cầu dạy thay** cho buổi đó — chọn giáo viên / trợ giảng thay (hoặc để "không có"), rồi Quản lý duyệt. Khi duyệt, buổi tự đổi người dạy và **lương buổi tính cho người dạy thay**.
+Quy trình gồm hai nơi: tạo yêu cầu ở trang **Điểm danh**, duyệt ở **Quản lý HR → Dạy thay**.
 
-> Quy trình gồm **2 nơi**: tạo yêu cầu ở trang **Điểm danh**, duyệt ở **Nhân sự → Dạy thay**.
+## Tạo yêu cầu dạy thay
 
-## Bước 1 — Tạo yêu cầu dạy thay (ở trang Điểm danh)
+Quản trị viên, Quản lý chi nhánh, Quản lý và Lễ tân tạo được yêu cầu. Giáo viên và trợ giảng không thấy nút này trên web, nhưng tự xin dạy thay cho chính mình trên app điện thoại.
 
-Vào **Điểm danh** (`/attendance`) → tìm buổi cần đổi người → mở menu **⋯** trên buổi → bấm **"Dạy thay"** → mở hộp thoại:
+::: steps
+1. Vào **Điểm danh**, tìm buổi cần đổi người.
+2. Mở menu **⋯** ở dòng buổi, chọn **Dạy thay**. Hộp **Dạy thay** hiện ra, cho biết lớp, ngày và giáo viên, trợ giảng hiện tại.
+3. Nếu lớp có nhiều trợ giảng, chọn **TG cần thay** (bắt buộc) để biết trợ giảng nào nghỉ.
+4. Ở ô **GV dạy thay**, chọn **Giữ nguyên GV**, **Không có GV** hoặc một giáo viên cụ thể.
+5. Ở ô **TG dạy thay**, chọn **Giữ nguyên TG**, **Không có TG** hoặc một người cụ thể. Danh sách gồm trợ giảng, rồi giáo viên và lễ tân kiêm trợ giảng.
+6. Điền **Lý do dạy thay** (bắt buộc).
+7. Bấm **Gửi yêu cầu**.
+:::
 
-> **Ai tạo được:** mọi vai trò **trừ Giáo viên và Trợ giảng** — tức **Lễ tân, Kế toán, Quản lý, Quản lý chi nhánh, Chủ trung tâm** đều tạo được. Giáo viên/Trợ giảng không thấy nút này.
+Cần chọn ít nhất một thay đổi ở ô giáo viên hoặc ô trợ giảng. Yêu cầu vào trạng thái **Chờ duyệt**, người dạy thay không phải bấm đồng ý.
 
-- **GV dạy thay** — chọn:
-  - *Giữ nguyên GV* (không đổi giáo viên)
-  - *Không có GV* (buổi diễn ra không có giáo viên chính)
-  - hoặc chọn **một giáo viên** trong danh sách để thay
-- **TG dạy thay** — tương tự: *Giữ nguyên TG* / *Không có TG* / chọn một trợ giảng
-- **Lý do dạy thay** \* — bắt buộc
+::: tip Mẹo
+Ô **GV dạy thay** chỉ liệt kê giáo viên. Nếu trợ giảng đứng lớp thay giáo viên, chọn **Không có GV** ở ô giáo viên và chọn trợ giảng ở ô **TG dạy thay**.
+:::
 
-Bấm tạo → yêu cầu chuyển sang trạng thái **"Chờ duyệt"**.
+## Duyệt hoặc từ chối
 
-> Người tạo **tự chọn** ai dạy thay ngay trong hộp thoại — hệ thống KHÔNG tự gợi ý và KHÔNG cần người dạy thay bấm đồng ý.
+Quản trị viên, Quản lý chi nhánh và Quản lý duyệt được. Vào **Quản lý HR → Dạy thay**. Số **Chờ duyệt** nổi ở đầu trang, ô lọc ở góc phải cho chọn **Tất cả**, **Chờ duyệt**, **Đã duyệt** hoặc **Từ chối**.
 
-## Bước 2 — Duyệt yêu cầu (ở Nhân sự → Dạy thay)
+Mỗi yêu cầu cho biết lớp, ngày, **GV gốc** hoặc **TG gốc** và người thay (hoặc **Không có GV**, **Không có TG**), lý do và người yêu cầu.
 
-Vào **Nhân sự → Dạy thay** (`/hr/substitute-requests`). Chỉ **Chủ trung tâm / Quản lý / Quản lý chi nhánh** vào được.
+::: steps
+1. Ở yêu cầu **Chờ duyệt**, bấm **Duyệt** để chấp nhận, hoặc **Từ chối**.
+2. Nếu từ chối, hộp **Từ chối yêu cầu dạy thay** hiện ra. Điền **Lý do từ chối** (bắt buộc) rồi bấm **Từ chối**.
+:::
 
-![Danh sách yêu cầu dạy thay](../assets/screenshots/hr-day-thay.png)
+Yêu cầu đã duyệt hoặc từ chối không xử lý lại được. Cần đổi tiếp thì tạo yêu cầu mới cho buổi đó.
 
-Mỗi yêu cầu hiển thị: trạng thái, tên lớp + ngày, **GV gốc → GV thay** (hoặc "Không có GV"), lý do, người yêu cầu. Lọc theo trạng thái ở góc phải (Tất cả / Chờ duyệt / Đã duyệt / Từ chối); số **"N chờ duyệt"** nổi ở đầu trang.
+## Sau khi duyệt
 
-Với yêu cầu **"Chờ duyệt"** có 2 nút:
-- **"Duyệt"** — chấp nhận đổi người dạy
-- **"Từ chối"** — mở hộp thoại **bắt buộc nhập lý do từ chối**
+Khi bạn bấm **Duyệt**:
 
-## Bước 3 — Sau khi duyệt
+- Người dạy của buổi đổi sang giáo viên hoặc trợ giảng thay. Chọn **Không có GV** hoặc **Không có TG** thì buổi để trống vai đó.
+- Lương buổi tính cho người dạy thay, và người gốc không còn được tính buổi này. Chọn **Giữ nguyên GV** hoặc **Giữ nguyên TG** thì người đó vẫn được tính như cũ.
+- Trên trang **Điểm danh**, buổi hiện nhãn **Dạy thay** kèm tên người thay.
 
-Khi bấm "Duyệt", hệ thống tự động:
-- Đổi trạng thái yêu cầu thành **"Đã duyệt"**
-- **Ghi đè người dạy của buổi**: gán giáo viên / trợ giảng thay (hoặc để trống nếu chọn "Không có GV/TG")
-- **Lương buổi** tính cho **người dạy thay** (không tính cho GV gốc); nếu "Không có GV" thì buổi đó không phát sinh lương giáo viên
+Khi giáo viên nghỉ và trợ giảng đứng lớp một mình, trung tâm có thể trả trợ giảng một mức cố định cho ca đó. Mức này khai ở **Quản lý lương**, tab **Đơn giá dạy (GV/TG)**, xem [Cấu hình lương](cau-hinh-luong.md). Giáo viên đứng lớp thay vẫn tính theo đơn giá của chính họ.
 
-Nếu **Từ chối**: buổi giữ nguyên người dạy cũ, ghi lại lý do từ chối.
-
-## Trường hợp không có ai dạy thay
-
-Chọn **"Không có GV"** (và/hoặc "Không có TG") khi tạo yêu cầu → buổi vẫn được ghi nhận nhưng không gán giáo viên. Dùng khi buổi bị dồn/huỷ hoặc trợ giảng đứng lớp một mình.
-
-## Lưu ý
-
-- **Tạo yêu cầu ở trang Điểm danh, duyệt ở trang Dạy thay** — hai nơi khác nhau.
-- **Tạo yêu cầu:** mọi vai trò trừ Giáo viên / Trợ giảng (gồm cả Lễ tân, Kế toán). **Duyệt:** chỉ Chủ trung tâm / Quản lý / Quản lý chi nhánh.
-- **Từ chối phải nêu lý do** — lưu lại để truy vết.
+::: warning Trang Giờ dạy vẫn gán buổi theo lớp
+Trang [Giờ dạy](buoi-day.md) và cột giáo viên ở bảng điểm danh vẫn hiện giáo viên được giao lớp. Phiếu lương mới là nơi tính đúng người dạy thay.
+:::
 
 ## Câu hỏi thường gặp
 
-**Giáo viên có tự xin dạy thay được không?**
-Không. Yêu cầu dạy thay do quản lý tạo từ trang Điểm danh. Nếu giáo viên bận, báo quản lý để tạo yêu cầu.
+::: details Giáo viên có tự xin dạy thay được không?
+Có, trên app điện thoại, và chỉ cho chính mình. Giáo viên không chỉ định người khác thay thế trong yêu cầu của mình. Yêu cầu vẫn cần quản lý duyệt.
+:::
 
-**Đã duyệt rồi muốn đổi lại?**
-Yêu cầu đã duyệt/từ chối không xử lý lại được. Nếu cần đổi tiếp, tạo một yêu cầu dạy thay mới cho buổi đó.
+::: details Có tạo được yêu cầu cho buổi chưa diễn ra không?
+Được. Bạn có thể tạo yêu cầu cho buổi sắp tới theo thời khoá biểu. Yêu cầu có hiệu lực khi được duyệt.
+:::
 
-**Lương của giáo viên gốc và giáo viên thay tính thế nào?**
-Sau khi duyệt, buổi thuộc về người dạy thay → lương buổi tính cho người thay. Xem cách tính ở [Bảng lương](bang-luong.md).
+::: details Duyệt rồi mà lương vẫn chưa đổi?
+Phiếu lương đã tính trước đó không tự đổi. Ở kỳ còn **Nháp** hoặc **Chờ duyệt**, bấm tính lại (xem [Quản lý lương](bang-luong.md)). Chú ý tính lại cả kỳ sẽ ghi đè phần sửa tay.
+:::

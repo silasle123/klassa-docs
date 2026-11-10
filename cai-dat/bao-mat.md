@@ -1,55 +1,65 @@
-# Bảo mật — 2FA, IP, khoá tài khoản
+---
+title: "Bảo mật & Compliance"
+description: "Xem phiên đăng nhập đang mở, đăng xuất một người khỏi mọi thiết bị, xem lịch sử đăng nhập và biết cài đặt nào đang có tác dụng."
+roles: [Quản trị viên]
+order: 70
+---
 
-## Khi nào dùng
+# Bảo mật & Compliance
 
-Tăng cường bảo mật tài khoản — bắt buộc khi trung tâm xử lý dữ liệu nhạy cảm (thông tin học sinh, hoá đơn, lương).
+Trang này giúp Quản trị viên theo dõi ai đang đăng nhập, ai đăng nhập sai, và đăng xuất một người khi cần (ví dụ nhân viên làm mất điện thoại).
 
-## Truy cập
+::: warning Đọc trước khi dùng
+Trên trang có dải màu vàng nói rõ: chính sách mật khẩu, xác thực 2 lớp, thời hạn phiên và danh sách IP được phép **hiện chỉ để xem, hệ thống chưa áp dụng**. Các thẻ này được gắn nhãn **Chưa áp dụng** và các ô bị khoá. Đừng coi đó là lớp bảo vệ đang chạy.
+:::
 
-Menu trái → **Cài đặt → Bảo mật** (hoặc **/admin/security**).
+Những gì đang có tác dụng thật:
 
-## Các tính năng
+- Khoá khi đăng nhập sai: sai mật khẩu 5 lần thì tài khoản bị khoá 30 phút. Mức này cố định, chưa chỉnh được.
+- Nút **Đăng xuất mọi thiết bị**: có tác dụng cả web và app.
+- **Phiên đăng nhập** và **Lịch sử đăng nhập**: dữ liệu thật để bạn theo dõi.
 
-### 1. Xác thực 2 yếu tố (2FA)
+## Xem số liệu tổng quan
 
-Yêu cầu nhập mã từ ứng dụng (Google Authenticator, Authy) sau khi nhập đúng mật khẩu.
+Vào **Quản trị hệ thống → Bảo mật & Compliance**. Trang mở ra có tiêu đề **Bảo mật & tuân thủ**. Đầu trang có bốn ô: **Phiên web đang mở**, **Đăng nhập thành công**, **Đăng nhập thất bại**, **IP được phép (chưa áp dụng)**. Bấm **Làm mới** để tải lại.
 
-- **Bật cho admin**: bắt buộc Chủ trung tâm + Quản lý
-- **Bật cho tất cả**: bắt buộc mọi NV
+![Trang Bảo mật & tuân thủ với dải cảnh báo vàng, bốn ô số liệu và các thẻ Mật khẩu, Xác thực 2 lớp, Phiên đăng nhập](../assets/screenshots/bao-mat-phien-dang-nhap.webp)
 
-### 2. Giới hạn IP
+## Đăng xuất một người khỏi mọi thiết bị
 
-Chỉ cho phép đăng nhập từ IP cố định (vd IP văn phòng).
+::: steps
+1. Vào **Quản trị hệ thống → Bảo mật & Compliance**, mở thẻ **Phiên đăng nhập**.
+2. Trong bảng **Phiên web đang mở**, tìm dòng của người cần đăng xuất (có cột Email, Địa chỉ IP, Trình duyệt / thiết bị, Hoạt động gần nhất, Đăng nhập lúc).
+3. Bấm **Đăng xuất mọi thiết bị** ở cuối dòng.
+4. Hộp **Đăng xuất mọi thiết bị?** hiện ra. Bấm **Đăng xuất mọi thiết bị** để xác nhận, hoặc **Huỷ**.
+:::
 
-- Whitelist IP
-- Cảnh báo nếu đăng nhập từ IP lạ
+Người đó bị đăng xuất khỏi mọi máy, cả web và app, trong khoảng 1 phút. Dòng của chính bạn không có nút này.
 
-### 3. Phiên đăng nhập
+::: warning Lưu ý
+Đăng xuất không khoá tài khoản. Người đó vẫn đăng nhập lại được bằng mật khẩu hiện tại. Muốn chặn hẳn, hãy chọn **Vô hiệu hóa** tài khoản hoặc đặt lại mật khẩu ở [Người dùng](nguoi-dung.md).
+:::
 
-- Tự đăng xuất sau X phút không hoạt động
-- Cho phép tối đa N thiết bị cùng đăng nhập 1 tài khoản
+Bảng có phân trang với các nút **Đầu**, **Trước**, **Sau**, **Cuối**.
 
-### 4. Khoá tài khoản
+## Xem lịch sử đăng nhập
 
-- Sai mật khẩu N lần → khoá X phút
-- Tài khoản không hoạt động > 90 ngày → tự khoá
+Mở thẻ **Lịch sử đăng nhập**. Bảng **Lịch sử gần đây (50 lần cuối)** có các cột Email, Địa chỉ IP, Thời gian, Trạng thái (thành công hoặc thất bại) và Lý do. Các ô **Số lần thử tối đa**, **Thời gian khóa (phút)** và **Xoá bộ đếm sai sau (phút)** đang bị khoá, chưa áp dụng.
 
-### 5. Mật khẩu
+## Các thẻ chỉ để xem
 
-- Độ mạnh tối thiểu
-- Yêu cầu đổi mật khẩu định kỳ (vd mỗi 6 tháng)
-- Cấm dùng lại N mật khẩu gần nhất
+- **Mật khẩu**: **Độ dài tối thiểu**, yêu cầu chữ hoa, chữ thường, số, ký tự đặc biệt, **Mật khẩu hết hạn sau (ngày)**.
+- **Xác thực 2 lớp**: **Bật 2FA**, **Bắt buộc 2FA**, **Phương thức hỗ trợ**.
+- **IP được phép**: **Bật danh sách IP được phép** và danh sách IP.
 
-### 6. Single Sign-On (SSO)
-
-Kết nối với Google Workspace / Microsoft 365 — NV đăng nhập bằng tài khoản công ty.
-
-## Lưu ý
-
-- **Bật 2FA cho admin tối thiểu** — tránh tài khoản admin bị chiếm.
-- **Cảnh báo IP lạ**: nếu Chủ trung tâm đi công tác, sẽ thấy cảnh báo — không nhầm hacker.
+Mục **Cài đặt → Cấu hình → Bảo mật** cũng có vài ô tương tự (thời gian phiên, hết hạn mật khẩu, số lần đăng nhập tối đa). Những ô đó chỉ được lưu lại, không điều khiển việc đăng nhập.
 
 ## Câu hỏi thường gặp
 
-**Bật 2FA xong, NV mất điện thoại?**
-Liên hệ admin → admin reset 2FA cho NV → NV cài lại trên điện thoại mới.
+::: details Tài khoản bị khoá do nhập sai mật khẩu thì sao?
+Chờ 30 phút thì tài khoản tự mở lại. Nếu cần vào ngay, Quản trị viên đặt lại mật khẩu cho người đó ở [Người dùng](nguoi-dung.md).
+:::
+
+::: details Tôi muốn bắt buộc đổi mật khẩu định kỳ?
+Hiện chưa làm được. Ô hết hạn mật khẩu chưa có tác dụng.
+:::

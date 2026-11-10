@@ -1,96 +1,102 @@
+---
+title: "Nhập dữ liệu hàng loạt từ Excel"
+description: "Đưa danh sách học sinh, lead hoặc nhân viên từ file Excel vào KLASSA trong một lần, có bước xem lại trước khi lưu."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+order: 80
+---
+
 # Nhập dữ liệu hàng loạt từ Excel
 
-Dùng khi anh chị có sẵn một danh sách dài — chuyển từ phần mềm cũ, sổ Excel của trung tâm, danh sách trường gửi sang — và muốn đưa hết vào KLASSA trong một lần.
+Dùng khi bạn có sẵn một danh sách dài, ví dụ chuyển từ phần mềm cũ, sổ Excel của trung tâm hay danh sách trường gửi sang, và muốn đưa hết vào KLASSA trong một lần. Bạn không cần sửa file cho giống file mẫu: phần mềm tự đoán cột nào là gì rồi cho bạn xem lại trước khi lưu.
 
-Áp dụng cho ba nơi:
+## Nhập ở đâu
 
-| Nơi nhập | Vào đâu | Mỗi lần tối đa |
-|---|---|---|
-| Học sinh | **Học sinh** → nút **Nhập Excel** | 500 dòng |
-| Khách quan tâm (Lead) | **Tuyển sinh** → nút **Nhập Excel** | 500 dòng |
-| Nhân viên | **Nhân sự → Nhân viên** → nút **Nhập Excel** | 200 dòng |
+| Loại dữ liệu | Cách mở hộp nhập | Tối đa mỗi lần | Ai được nhập |
+|---|---|---|---|
+| Học sinh | **Học sinh**, bấm **Nhập Excel** | 500 dòng | Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân |
+| Lead (khách quan tâm) | **Tuyển sinh**, bấm **Excel**, chọn **Nhập lead từ Excel** | 500 dòng | Như học sinh, và trung tâm phải có gói mở rộng **CRM Tuyển sinh + AI** |
+| Nhân viên | **Nhân sự → Quản lý HR → Nhân viên**, bấm **Import** | 200 dòng | Quản trị viên, Quản lý chi nhánh |
 
-## Điểm mới: không cần sửa file cho khớp mẫu
+Hộp thoại mang tên **Nhập học sinh từ Excel**, **Nhập khách hàng tiềm năng từ Excel** hoặc **Nhập nhân viên từ Excel**. Hộp có 4 bước.
 
-Trước đây file của anh chị phải đặt tên cột đúng như file mẫu thì phần mềm mới đọc được. Nay **không cần nữa**: phần mềm tự đọc file, tự đoán cột nào là họ tên, cột nào là số điện thoại phụ huynh… rồi đưa ra bảng để anh chị xem lại.
+## Bước 1: Đưa dữ liệu vào
 
-Những kiểu file trước đây phải ngồi cắt dán, giờ phần mềm tự xử lý:
+::: steps
+1. Chọn một trong hai cách: **Chọn file** hoặc **Dán bảng**.
+2. Với **Chọn file**: dùng file .xlsx, .xls hoặc .csv, tối đa 10MB. Học sinh và lead có nút **Tải file mẫu** nếu bạn muốn dùng khuôn chuẩn. Nhân viên chưa có file mẫu.
+3. Với **Dán bảng**: bôi đen vùng dữ liệu trong Excel hoặc Google Sheet, bấm Ctrl+C rồi dán vào ô. Dòng đầu nên là tên cột. Tiện cho danh sách ngắn.
+4. Bấm **Tiếp tục**.
+:::
 
-- Tên cột đặt tự do: "Học viên", "Liên hệ mẹ", "Full name", "SĐT PH"…
-- Họ và tên tách làm hai cột riêng
-- Một ô ghi chung cả tên lẫn số điện thoại: `Nguyễn Văn Bố - 0987654321`
-- File có dòng tên bảng, tên trung tâm ở phía trên trước dòng tiêu đề
-- File nhiều trang tính (sheet)
-- Số điện thoại bị Excel nuốt mất số 0 đầu
-- Khối lớp ghi kèm tên lớp: "6A1", "Khối 9"
+Những kiểu file khó vẫn đọc được: tên cột đặt tự do, họ và tên tách hai cột, một ô ghi chung tên lẫn số điện thoại, dòng tên bảng ở phía trên tiêu đề, nhiều trang tính, số điện thoại bị mất số 0 đầu, khối lớp ghi kèm tên lớp như "6A1".
 
-## Bốn bước
+## Bước 2: Xem lại việc ghép cột
 
-### Bước 1 — Đưa dữ liệu vào
+Phần mềm hiện bảng **Thông tin hệ thống**, **Lấy từ cột**, **Ví dụ dòng đầu** để bạn đối chiếu.
 
-Hộp thoại có hai cách:
+![Hộp Nhập học sinh từ Excel, bước 2 với bảng Thông tin hệ thống và Lấy từ cột](../assets/screenshots/nhap-excel-buoc-2.webp)
 
-- **Chọn file** — file `.xlsx`, `.xls` hoặc `.csv`, tối đa 10MB. Vẫn có sẵn **Tải file mẫu** nếu anh chị muốn dùng khuôn chuẩn.
-- **Dán bảng** — bôi đen vùng dữ liệu trong Excel hoặc Google Sheet, bấm `Ctrl+C` rồi dán vào ô. Tiện cho danh sách ngắn, khỏi phải lưu file.
+- Ghép sai thì bấm vào ô chọn cột và chọn lại. Chưa ghép thì chọn "chưa ghép".
+- Ô ghép phức tạp hiện dạng chữ, ví dụ "Ghép: Họ + Tên". Muốn bỏ thì bấm **Bỏ** rồi chọn cột khác.
+- File nhiều trang tính thì chọn đúng trang ở ô **Trang tính**.
+- Phần mềm nhận nhầm dòng tiêu đề thì sửa số ở ô **Dòng chứa tên cột**.
+- Trường bắt buộc mà chưa ghép thì phần mềm báo "Còn thiếu cột bắt buộc" và chưa cho đi tiếp.
 
-Bấm **Tiếp tục**.
+**Lưu mẫu để lần sau khỏi làm lại:** gõ tên mẫu vào ô bên dưới (ví dụ "Mẫu trường Nguyễn Trãi"), bấm **Lưu mẫu này**. Lần sau gặp file cùng dạng, phần mềm tự ghép sẵn.
 
-### Bước 2 — Xem lại việc ghép cột
+Xong bấm **Xem bảng duyệt**. Bấm **Quay lại** để về bước 1.
 
-Phần mềm hiện bảng **"Thông tin hệ thống → Lấy từ cột"** kèm một ví dụ lấy từ dòng đầu tiên, để anh chị đối chiếu ngay xem có đúng không.
+## Bước 3: Duyệt và sửa trước khi lưu
 
-- Chỗ nào ghép sai → bấm vào ô chọn cột và chỉnh lại.
-- Ô ghép phức tạp (ghép hai cột, cắt một ô làm đôi) hiện dạng chữ mô tả, ví dụ *"Ghép: Họ + Tên"*. Muốn bỏ thì bấm **Bỏ** rồi chọn cột khác.
-- File nhiều trang tính → chọn đúng trang ở ô **Trang tính**.
-- Phần mềm nhận nhầm dòng tiêu đề → sửa số ở ô **Dòng chứa tên cột**.
-- Trường có dấu <span style="color:red">*</span> là bắt buộc, chưa ghép thì chưa qua được bước sau.
+Bảng liệt kê từng dòng kèm nhãn trạng thái:
 
-**Lưu mẫu để lần sau khỏi làm lại:** đặt tên vào ô bên dưới (ví dụ *"Mẫu trường Nguyễn Trãi"*) rồi bấm **Lưu mẫu này**. Lần sau nhận file cùng kiểu, phần mềm nhận ra ngay và ghép sẵn, không phải chờ.
+- **Hợp lệ**: được tích chọn sẵn.
+- **Cần lưu ý**: vẫn nhập được, có điều nên biết. Dòng này cũng được tích sẵn.
+- **Trùng**: đã có trong phần mềm, không tích sẵn.
+- **Lỗi**: thiếu hoặc sai thông tin bắt buộc, chưa nhập được.
 
-### Bước 3 — Duyệt và sửa trước khi lưu
+Bạn sửa thẳng vào từng ô trên bảng, ví dụ gõ lại tên hoặc thêm số điện thoại còn thiếu. Nhãn trạng thái tự cập nhật.
 
-Bảng liệt kê từng dòng kèm nhãn màu:
+Có dòng **Lỗi** thì bấm **Nhờ AI đề xuất cho dòng lỗi**. Phần mềm gợi ý giá trị suy ra từ chính dòng đó, hiện trên nền tím kèm giá trị cũ. AI không tự áp: bạn bấm **Nhận đề xuất** ở từng dòng hoặc **Nhận tất cả đề xuất**.
 
-- 🟢 **Hợp lệ** — được tích chọn sẵn
-- 🔵 **Cần lưu ý** — vẫn nhập được, nhưng có điều nên biết (ví dụ dòng nhân viên chưa ghi loại hình làm việc thì sẽ lưu là *Toàn thời gian*)
-- 🟡 **Trùng** — đã có trong phần mềm, bỏ tích sẵn
-- 🔴 **Lỗi** — thiếu hoặc sai thông tin bắt buộc, chưa nhập được
+Cuối cùng bấm **Xác nhận nhập N dòng** (N là số dòng đang chọn). Cần chỉnh lại cột thì bấm **Sửa ánh xạ cột**.
 
-Ở bước này anh chị **sửa thẳng vào từng ô ngay trên bảng** — gõ lại tên, thêm số điện thoại còn thiếu. Sửa xong, nhãn màu tự cập nhật.
+::: warning Lưu ý
+Nếu gói của trung tâm giới hạn số lượng, bảng duyệt có dải cảnh báo cho biết gói còn bao nhiêu chỗ. Chọn nhiều hơn số chỗ còn lại thì nút xác nhận bị khoá cho tới khi bạn bỏ bớt dòng hoặc nâng gói. Áp dụng cho học sinh và nhân viên. Lead không tính vào hạn mức.
+:::
 
-Nếu có dòng đỏ, bấm **Nhờ AI đề xuất cho dòng lỗi**. Phần mềm gợi ý giá trị suy ra từ chính dòng đó (tách tên và số điện thoại nằm chung ô, đọc khối lớp từ "6A1"…). Đề xuất hiện nền tím kèm giá trị cũ, **không tự động áp** — anh chị bấm **Nhận đề xuất** từng dòng, hoặc **Nhận tất cả đề xuất**.
+## Bước 4: Kết quả
 
-**Nếu trung tâm dùng gói có giới hạn số lượng**, ngay tại bảng duyệt sẽ có dải cảnh báo cho biết gói còn bao nhiêu chỗ và đang chọn bao nhiêu dòng. Chọn quá số chỗ còn lại thì nút xác nhận bị khoá cho tới khi bỏ bớt dòng hoặc nâng gói. Áp dụng cho học sinh và nhân viên (chỉ tính người có email vì mới sinh tài khoản đăng nhập); khách quan tâm không tính vào hạn mức.
+Phần mềm hiện số **dòng đã tạo**, số **dòng bỏ qua** và **Lý do** của từng dòng bị bỏ. Bấm **Nhập tiếp file khác** để làm tiếp, hoặc **Đóng**.
 
-Cuối cùng bấm **Xác nhận nhập N dòng**.
-
-### Bước 4 — Kết quả
-
-Hiện số dòng đã tạo, số dòng bỏ qua và lý do từng dòng.
-
-## Những điều nên biết
-
-**Dữ liệu của tôi có bị gửi đi đâu không?**
-Để đoán được cột nào là gì, phần mềm gửi **tên các cột và vài dòng đầu tiên** tới dịch vụ trí tuệ nhân tạo mà trung tâm đang cấu hình trong **Cài đặt → Tính năng AI**. Riêng bước gợi ý sửa lỗi thì gửi các dòng đang lỗi. Phần còn lại của file được xử lý ngay tại phần mềm.
-
-Muốn tắt hẳn: **Cài đặt → Tính năng AI → Chuẩn hoá dữ liệu khi nhập hàng loạt** → gạt tắt. Việc nhập Excel vẫn chạy bình thường, chỉ là phần mềm nhận diện cột theo tên thông dụng như trước và anh chị tự chỉnh ở bước 2.
-
-**AI có tự sửa dữ liệu của tôi không?**
-Không. Ở bước ghép cột, AI chỉ nói "lấy cột nào cho thông tin nào" — chính phần mềm mới là bên đọc dữ liệu, nên không có chuyện tên hay số điện thoại bị sửa khác đi. Ở bước gợi ý sửa lỗi, mọi đề xuất đều phải anh chị bấm nhận mới có hiệu lực, và AI chỉ được đụng vào ô đang trống hoặc đang sai — ô đã đúng thì giữ nguyên.
-
-**Có cột trong file mà phần mềm không lấy?**
-Phần mềm chỉ lấy những thông tin nó quản lý. Cột riêng của trung tâm (mã nội bộ, ghi chú xếp lớp…) sẽ không được nhập. Nếu quan trọng, ở bước 2 anh chị chọn cột đó làm **Ghi chú** — mỗi thông tin nhận một cột.
-
-**Nhập nhầm thì sao?**
-Chưa bấm **Xác nhận** ở bước 3 thì chưa có gì được lưu. Sau khi đã lưu, xoá từng hồ sơ ở danh sách tương ứng.
-
-**Ai được nhập?**
-Học sinh và Lead: tài khoản có quyền tạo học sinh / tạo lead (Chủ trung tâm, Quản lý, Lễ tân). Nhân viên: Chủ trung tâm, Quản lý chi nhánh, Kế toán.
+::: danger Không thể hoàn tác
+Chưa bấm **Xác nhận nhập** thì chưa có gì được lưu. Sau khi đã lưu, bạn phải xoá từng hồ sơ ở danh sách tương ứng.
+:::
 
 ## Riêng từng loại dữ liệu
 
-**Học sinh** — bắt buộc: Họ tên, Khối lớp, Họ tên phụ huynh, SĐT phụ huynh. Tài khoản phụ huynh tạo từ đây dùng mật khẩu mặc định `12345678`. Xem thêm [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md).
+**Học sinh.** Bắt buộc: **Họ tên học sinh**, **Khối lớp**, **Họ tên phụ huynh**, **SĐT phụ huynh**. Không bắt buộc: SĐT học sinh, Ngày sinh, Trường đang học. Tài khoản phụ huynh tạo từ đây dùng mật khẩu mặc định của phần mềm, hỏi Quản trị viên. Xem thêm [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md).
 
-**Khách quan tâm (Lead)** — bắt buộc: Họ tên, SĐT. Trùng số điện thoại với lead hoặc học sinh đang có thì báo trùng. Xem thêm [Tạo Lead mới](../tuyen-sinh/tao-lead-moi.md).
+**Lead.** Bắt buộc: **Họ tên**, **SĐT liên hệ**. Các cột khác như Email, Khối lớp quan tâm, Nguồn, phụ huynh, Ghi chú đều không bắt buộc. Trùng số điện thoại với lead hoặc học sinh đang có thì báo **Trùng**.
 
-**Nhân viên** — bắt buộc: Họ tên, Chức vụ. Chức vụ phải khớp tên đã khai trong **Nhân sự → Cấu hình**; chưa có thì tạo chức vụ trước. Loại hình làm việc ghi tiếng Việt được: *Toàn thời gian, Bán thời gian, Thời vụ, Thực tập, Thử việc* — bỏ trống sẽ lưu là **Toàn thời gian**, nên kiểm tra kỹ ở bước 3. Lương ghi kiểu `8.000.000` hay `8tr` đều đọc được. Có email thì phần mềm tạo luôn tài khoản đăng nhập với mật khẩu `12345678` và bắt đổi ở lần đăng nhập đầu.
+**Nhân viên.** Bắt buộc: **Họ tên nhân viên**, **Chức vụ**. Chức vụ phải khớp tên đã khai trong **Nhân sự → Quản lý HR → Cấu hình HR**, chưa có thì tạo chức vụ trước. **Loại hình** ghi tiếng Việt được (Toàn thời gian, Bán thời gian, Thời vụ, Thực tập, Thử việc). Để trống thì lưu là Toàn thời gian, nên kiểm tra kỹ ở bước 3. Có **Email** thì phần mềm tạo luôn tài khoản đăng nhập với vai Giáo viên và mật khẩu tạm (Quản trị viên đổi vai sau nếu cần) và bắt đổi ở lần đăng nhập đầu, xem [Đổi mật khẩu](doi-mat-khau.md).
+
+## Dữ liệu của bạn có bị gửi đi đâu không
+
+Để đoán cột, phần mềm gửi **tên các cột và vài dòng đầu** tới dịch vụ AI mà trung tâm đã cấu hình. Bước gợi ý sửa lỗi thì gửi các dòng đang lỗi. Phần còn lại của file xử lý ngay trong phần mềm.
+
+Muốn tắt: Quản trị viên vào **Cài đặt → Tổng quan**, tab **AI & Tự động**, mục **Tính năng AI**, tắt **Chuẩn hoá dữ liệu khi nhập hàng loạt**. Việc nhập Excel vẫn chạy, chỉ là phần mềm nhận cột theo tên thông dụng và bạn tự chỉnh ở bước 2.
+
+## Câu hỏi thường gặp
+
+::: details AI có tự sửa dữ liệu của tôi không?
+Không. Ở bước ghép cột, AI chỉ chọn "lấy cột nào cho thông tin nào", còn dữ liệu do phần mềm đọc nên tên và số điện thoại không bị đổi. Ở bước gợi ý sửa lỗi, mọi đề xuất đều cần bạn bấm nhận.
+:::
+
+::: details Cột riêng của trung tâm (mã nội bộ, ghi chú xếp lớp) có được nhập không?
+Phần mềm chỉ lấy những thông tin nó quản lý. Nếu cột đó quan trọng, ở bước 2 hãy chọn nó cho trường **Ghi chú**. Mỗi thông tin chỉ nhận một cột.
+:::
+
+::: details Hộp báo "Còn thiếu cột bắt buộc"?
+Quay lại bước 2, ghép cột cho các trường bắt buộc liệt kê trong thông báo.
+:::

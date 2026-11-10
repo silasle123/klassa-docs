@@ -1,69 +1,58 @@
-# Tạo lớp mới
+---
+title: "Tạo lớp học mới"
+description: "Khai báo một lớp mới gồm môn, khối, giáo viên, phòng và lịch học hằng tuần."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý]
+order: 20
+---
 
-## Khi nào dùng
+# Tạo lớp học mới
 
-- Mở khoá học mới
-- Tách lớp cũ vì đầy hoặc chia trình độ
-- Tạo lớp đặc biệt (ôn thi, học hè, học bù)
+Bạn tạo lớp trước, sau đó mới [ghi danh học sinh](../hoc-sinh/ghi-danh.md) và điểm danh. Lớp cần có tên, mã, môn, khối và ít nhất một buổi học mỗi tuần.
 
-## Các bước
+## Tạo một lớp
 
-### Bước 1 — Mở form tạo lớp
+::: steps
+1. Vào **Lớp học**, bấm **Tạo lớp mới**. Trang **Tạo lớp học mới** mở ra.
+2. Ở phần **Thông tin cơ bản**, điền **Tên lớp học** (ví dụ Toán lớp 9A1) và **Mã lớp học** (ví dụ TOAN-9-01). Hai ô này bắt buộc, mã lớp không được trùng lớp đã có.
+3. Chọn **Môn học** và **Khối lớp** (bắt buộc).
+4. Chọn **Giáo viên** nếu đã biết người dạy. Để **Chưa phân công** thì thêm sau cũng được. Danh sách này chỉ có người mang vai Giáo viên.
+5. Nhập **Số học sinh tối đa** (từ 1 đến 50, mặc định 15) và chọn **Phòng học** nếu có.
+6. Ở phần **Lịch học**, chọn **Số buổi học/tuần** (1 đến 5). Với mỗi buổi, chọn **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**.
+7. Bấm **Tạo lớp học**. Khi thành công, hệ thống báo "Tạo lớp học thành công!" và quay về danh sách lớp.
+:::
 
-Trang **Lớp học** → bấm **"+ Tạo lớp mới"**.
+![Trang Tạo lớp học mới với phần Thông tin cơ bản](../assets/screenshots/lop-hoc-tao-moi.webp)
 
-![Form tạo lớp mới](../assets/screenshots/lop-hoc-tao-moi.png)
+::: warning Lưu ý
+- Lớp mới luôn ở trạng thái **Đang hoạt động** và có cấp độ **Cơ bản**. Muốn đổi cấp độ hoặc trạng thái, dùng [Chỉnh sửa lớp học](chinh-sua.md).
+- Các ô **Mô tả**, **Học phí (VNĐ)** và **Trạng thái** trên form tạo lớp hiện chưa được lưu. Học phí không gắn theo lớp mà theo gói học phí khi ghi danh, xem [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md).
+- Trợ giảng không chọn được ở form này. Thêm trợ giảng ở [Chỉnh sửa lớp học](chinh-sua.md).
+:::
 
-### Bước 2 — Điền thông tin
+## Lớp thuộc cơ sở nào
 
-**Bắt buộc:**
-- **Tên lớp** — ví dụ "Toán 9A — Sáng T7"
-- **Khoá học** — chọn từ danh sách (Toán 9, Toán nâng cao…)
-- **Cơ sở** — nếu có nhiều chi nhánh
-- **Phòng học**
-- **Giáo viên chính**
+Lớp được tạo trong cơ sở của tài khoản bạn. Quản trị viên không có cơ sở riêng nên lớp rơi vào cơ sở đang hoạt động đầu tiên. Nếu cần lớp ở cơ sở khác, nhờ người quản lý cơ sở đó tạo. Cách tạo cơ sở xem [Cơ sở](../cai-dat/co-so.md).
 
-**Khuyến nghị:**
-- **Trợ giảng** — nếu lớp có
-- **Sức chứa tối đa** (mặc định 25)
-- **Học phí mặc định** (lấy từ khoá học, có thể đổi)
-- **Mô tả ngắn** — ghi chú đặc biệt về lớp
+## Phòng bị trùng giờ
 
-### Bước 3 — Lịch học cố định
+Khi bạn chọn phòng, hệ thống kiểm tra các lớp khác dùng phòng đó cùng khung giờ. Nếu trùng, một hộp xác nhận liệt kê lớp, thứ và giờ đang trùng, hỏi bạn có vẫn gán phòng không. Bấm đồng ý để tiếp tục hoặc huỷ để chọn phòng khác. Cảnh báo này không chặn việc tạo lớp.
 
-Chọn ngày trong tuần + giờ:
-
-- VD: "Thứ 7 — 8:00 đến 10:00"
-- Có thể chọn **nhiều ngày trong tuần** cho lớp học nhiều buổi
-
-### Bước 4 — Ngày khai giảng + kết thúc
-
-- **Ngày khai giảng** — bắt đầu chạy lịch dạy
-- **Ngày kết thúc** — chọn nếu khoá có thời hạn cố định (3 tháng, 6 tháng) hoặc để trống nếu lớp dài hạn
-
-### Bước 5 — Bấm "Tạo"
-
-Phần mềm sẽ:
-
-- Tạo lớp
-- Sinh **lịch dạy tự động** từ ngày khai giảng đến ngày kết thúc theo lịch cố định
-- Gán giáo viên + trợ giảng vào tất cả các buổi
-
-## Mẹo
-
-- **Sao chép lớp cũ**: từ trang chi tiết lớp đang chạy → bấm "Sao chép" → đổi tên + ngày, các thông tin khác tự copy.
-- **Nhiều lớp cùng khoá**: nếu mở 3 lớp Toán 9 (sáng T7, chiều T7, tối CN), tạo 3 lớp riêng — không gộp 1 lớp.
-
-## Lưu ý
-
-- **Phòng học trùng giờ**: phần mềm cảnh báo nếu phòng đã có lớp khác cùng giờ.
-- **Giáo viên trùng giờ**: tương tự, cảnh báo nếu giáo viên đã dạy lớp khác cùng giờ.
-- **Lịch nghỉ lễ**: phần mềm tự bỏ qua ngày nghỉ lễ khi sinh lịch dạy (xem [Cài đặt ngày nghỉ lễ](../cai-dat/ngay-nghi-le.md)).
+Danh mục phòng nằm ở **Cài đặt**, thẻ **Phòng học**, nút **Thêm phòng học** (nhập **Tên phòng**, **Sức chứa (số chỗ)**, **Chi nhánh**). Chỉ phòng đang kích hoạt mới hiện trong ô chọn.
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn lớp tổ chức không theo lịch cố định (mỗi tuần đổi giờ), có được không?**
-Tạo lớp với "Không lịch cố định", rồi vào chi tiết lớp → tab Lịch dạy → bấm "+ Thêm buổi" thủ công cho từng buổi.
+::: details Báo "Vui lòng điền đầy đủ thông tin bắt buộc"?
+Một trong bốn ô **Tên lớp học**, **Mã lớp học**, **Môn học**, **Khối lớp** còn trống.
+:::
 
-**Sau khi tạo, tôi sửa lịch học có ảnh hưởng đến lịch đã sinh sẵn không?**
-Có. Phần mềm sẽ hỏi: cập nhật lịch của các buổi **chưa diễn ra** hay **giữ nguyên**? Mặc định là cập nhật để tránh trùng.
+::: details Báo "Vui lòng thiết lập ít nhất 1 lịch học"?
+Mỗi buổi phải có đủ **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**. Buổi thiếu một trong ba ô bị bỏ qua, nếu không còn buổi nào hợp lệ thì không tạo được lớp.
+:::
+
+::: details Danh sách môn học trống?
+Môn học do người quản lý tạo ở **Cài đặt**, thẻ **Môn học**.
+:::
+
+::: details Cần lớp học tự do, không theo lịch cố định?
+Dùng [lớp linh hoạt](lop-linh-hoat.md), hệ thống tự lập lớp theo môn.
+:::

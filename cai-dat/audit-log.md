@@ -1,51 +1,55 @@
-# Nhật ký truy cập (Audit log)
+---
+title: "Nhật ký hệ thống"
+description: "Xem ai đã làm gì, lúc nào trên hệ thống; lọc, xem chi tiết thay đổi và xuất ra CSV."
+roles: [Quản trị viên]
+order: 80
+---
 
-## Khái niệm
+# Nhật ký hệ thống
 
-KLASSA ghi lại **mọi hành động** trong hệ thống — phục vụ truy vết khi có sự cố hoặc nghi vấn.
+Nhật ký ghi lại các thao tác của người dùng trên hệ thống. Dùng khi bạn cần biết ai đã sửa một dữ liệu, lúc nào và sửa từ giá trị nào sang giá trị nào. Chỉ **Quản trị viên** xem được.
 
-## Truy cập
+## Tìm một thao tác
 
-Menu trái → **Cài đặt → Audit log** (hoặc **/admin/audit-logs**). Chỉ Chủ trung tâm xem được.
+::: steps
+1. Vào **Quản trị hệ thống → Nhật ký hệ thống**, mở thẻ **Nhật ký**.
+2. Trong khung **Bộ lọc**, nhập **Hành động** (ví dụ create, update) hoặc **Đối tượng** (ví dụ student, invoice).
+3. Chọn **Từ ngày**, **Đến ngày** nếu cần.
+4. Chọn **Trạng thái**: **Tất cả**, **Thành công** hoặc **Thất bại**.
+5. Bấm **Tìm kiếm**.
+:::
 
-![Audit log](../assets/screenshots/cai-dat-audit-log.png)
+![Trang Nhật ký hệ thống với khung Bộ lọc và Danh sách nhật ký](../assets/screenshots/nhat-ky-he-thong.webp)
 
-## Loại sự kiện được ghi
+Mỗi dòng trong **Danh sách nhật ký** cho biết hành động và đối tượng (đã dịch sang tiếng Việt), mã rút gọn của bản ghi, tên và email người làm, địa chỉ IP, thời gian. Dòng thất bại có kèm thông báo lỗi màu đỏ. Phía trên danh sách có bốn số: **Tổng nhật ký**, **Thành công**, **Thất bại**, **Tỉ lệ thành công**.
 
-- **Đăng nhập / Đăng xuất**
-- **Tạo / Sửa / Xoá** (mọi dữ liệu)
-- **Đổi vai trò / Khoá tài khoản**
-- **Truy cập dữ liệu nhạy cảm** (xem lương, xem hồ sơ HS)
-- **Xuất file** (Excel, PDF)
-- **Cấu hình hệ thống thay đổi**
+## Xem chi tiết một thay đổi
 
-## Thông tin lưu
+Bấm biểu tượng con mắt (**Xem chi tiết**) ở cuối dòng. Hộp **Chi tiết nhật ký** hiện thời gian, người dùng, hành động, đối tượng, địa chỉ IP, trình duyệt hoặc thiết bị. Khi thao tác có sửa dữ liệu, hộp còn cho xem **Dữ liệu trước thay đổi**, **Dữ liệu sau thay đổi** và **Khác biệt chi tiết**.
 
-- Thời gian (chính xác đến giây)
-- User thực hiện
-- Hành động
-- Đối tượng bị ảnh hưởng
-- IP đăng nhập
-- User Agent (trình duyệt + OS)
-- Giá trị trước - sau (cho sửa)
+## Xem thống kê
 
-## Bộ lọc
+Mở thẻ **Thống kê**, chọn **7 ngày**, **30 ngày** hoặc **90 ngày**. Bạn thấy:
 
-- Theo user
-- Theo loại sự kiện
-- Theo thời gian
-- Tìm kiếm tự do
+- **Tổng thay đổi**, **Hành động nhạy cảm**, **Người dùng hoạt động**, **Loại đối tượng**.
+- **Theo hành động** và **Theo loại đối tượng** (top 10).
+- **Người dùng hoạt động nhiều nhất** (top 10).
+- **Hoạt động 7 ngày gần đây** theo từng ngày.
 
-## Xuất file
+## Xuất nhật ký ra CSV
 
-Có thể xuất Excel cho cơ quan điều tra / cấp trên / luật sư nếu có tranh chấp.
+Bấm **Xuất CSV** ở góc trên bên phải. Tệp tải về có tên dạng nhat-ky-he-thong-....csv và báo **Đã xuất nhật ký ra CSV** khi xong.
 
-## Lưu ý
-
-- **Không xoá được** audit log — đảm bảo tính trung thực.
-- **Lưu trữ lâu dài** — KLASSA giữ tối thiểu 2 năm. Plugin nâng cao có thể giữ 5-10 năm.
+::: tip Mẹo
+Khi nghi ngờ có người đổi nhầm dữ liệu, lọc theo **Đối tượng** và khoảng ngày, rồi mở **Xem chi tiết** để so dữ liệu trước và sau.
+:::
 
 ## Câu hỏi thường gặp
 
-**Có thể xem ai đã xoá hoá đơn X cách đây 2 tháng không?**
-Có. Lọc theo loại "Xoá hoá đơn" + tên hoá đơn → tìm được.
+::: details Tôi không thấy một thao tác mà tôi nhớ đã làm?
+Nới rộng khoảng **Từ ngày**, **Đến ngày** và để **Trạng thái** là **Tất cả**. Không phải thao tác nào cũng được ghi vào nhật ký.
+:::
+
+::: details Có xoá được nhật ký không?
+Trang này chỉ để xem, lọc và xuất, không có nút xoá.
+:::

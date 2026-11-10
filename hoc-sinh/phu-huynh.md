@@ -1,65 +1,69 @@
-# Quản lý phụ huynh
+---
+title: "Danh sách phụ huynh"
+description: "Tra cứu phụ huynh, liên lạc nhanh qua gọi, nhắn tin, Zalo, email và phát hiện hồ sơ trùng hoặc thiếu Zalo."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Kế toán]
+order: 60
+---
 
-## Khái niệm
+# Danh sách phụ huynh
 
-**Phụ huynh** là một loại người dùng đặc biệt trong KLASSA:
+Trang này giúp bạn tìm phụ huynh, liên lạc ngay với họ và dọn các hồ sơ có vấn đề (thiếu Zalo, trùng số điện thoại, email gõ sai). Phụ huynh không tạo ở đây: hồ sơ phụ huynh được tạo khi bạn [thêm học sinh](tao-moi.md), và một phụ huynh có thể có nhiều con.
 
-- Có **hồ sơ** lưu trong hệ thống (như học sinh)
-- Có **tài khoản đăng nhập** vào Cổng Phụ huynh
-- Có thể **liên kết với nhiều học sinh** (1 phụ huynh quản lý 2-3 con cùng học)
+![Trang Phụ huynh với thẻ Việc cần làm](../assets/screenshots/phu-huynh-danh-sach-moi.webp)
 
-## Khi nào dùng
+## Mở danh sách và tìm phụ huynh
 
-- Tra cứu thông tin phụ huynh để gọi điện
-- Cập nhật SĐT phụ huynh khi đổi số
-- Gắn nhiều con vào cùng một phụ huynh
-- Đặt lại mật khẩu cho phụ huynh quên tài khoản
+::: steps
+1. Vào **Học viên → Phụ huynh**.
+2. Gõ vào ô **Tìm phụ huynh**: tên, số điện thoại, email phụ huynh hoặc tên con.
+3. Bấm một thẻ nhóm để lọc: **Tất cả**, **Có con đang học**, **Không còn con đang học**, **Chưa tìm thấy Zalo**.
+4. Lọc thêm bằng **Số con** (**Chưa có con**, **1 con**, **2 con**, **3 con trở lên**), **Lớp của con** hoặc **Cơ sở** (cơ sở chỉ hiện với Quản trị viên khi có nhiều cơ sở).
+5. Bấm **Bỏ lọc** để xem lại toàn bộ.
+:::
 
-## Truy cập
+Danh sách xếp theo ngày tạo, mới nhất trước. Nút **Bảng** và **Thẻ** ở **Kiểu xem** đổi cách hiển thị.
 
-Menu trái → **Phụ huynh** (hoặc từ trang chi tiết học sinh → tab Phụ huynh → Xem hồ sơ).
+## Đọc từng dòng
 
-![Trang phụ huynh](../assets/screenshots/phu-huynh-danh-sach.png)
+Mỗi dòng có: tên phụ huynh và quan hệ với em, nhãn **Dùng app** nếu phụ huynh đã đăng nhập app trong 30 ngày qua, số điện thoại và email, các con (bấm tên con để xem nhanh học sinh), tình trạng Zalo, cơ sở và ngày tạo.
 
-## Thông tin trên hồ sơ phụ huynh
+Email có nhãn tự tạo nghĩa là hệ thống tạo theo số điện thoại để phụ huynh đăng nhập, không gửi thư được. Muốn gửi email, hãy nhập email thật vào hồ sơ.
 
-- Họ tên, SĐT, email
-- Mối quan hệ với học sinh (bố / mẹ / ông / bà / khác)
-- Nghề nghiệp (tuỳ chọn)
-- Địa chỉ
-- Danh sách con đang học trong trung tâm
+## Liên lạc nhanh
 
-## Tài khoản đăng nhập
+Cột **Liên lạc** có các biểu tượng: nhắn tin, mở Zalo, gọi điện, gửi email và xem nhanh. Bấm biểu tượng nhắn tin, gọi hoặc email để mở ứng dụng tương ứng trên thiết bị của bạn. Bấm biểu tượng xem nhanh để mở khung thông tin phụ huynh gồm liên hệ, nghề nghiệp, nơi làm việc, địa chỉ và các con.
 
-Mỗi phụ huynh có 1 tài khoản dùng để vào **Cổng Phụ huynh** xem điểm danh, hoá đơn của con.
+## Thẻ Việc cần làm
 
-- **Email đăng nhập** = email trên hồ sơ. Nếu không có email, dùng SĐT.
-- **Mật khẩu khởi tạo** mặc định là `12345678` — phụ huynh nên đổi sau lần đầu.
-- **Đặt lại mật khẩu**: bấm nút "🔑 Đặt lại mật khẩu" trên trang chi tiết phụ huynh → mật khẩu về `12345678` để phụ huynh đăng nhập lại.
+| Việc | Ý nghĩa và cách xử lý |
+| --- | --- |
+| **Chưa tìm thấy Zalo phụ huynh** | Phụ huynh có con đang học, có số điện thoại nhưng không tìm thấy Zalo, nên không nhận được phiếu học phí và nhắc lịch qua Zalo. Bấm **Lọc ... phụ huynh** rồi xin số Zalo thật. |
+| **Một số điện thoại nằm ở nhiều hồ sơ** | Thường là trùng hồ sơ. Bấm **Xem ... số** để lọc. |
+| **Học sinh đang học chưa có phụ huynh** | Bấm tên em để mở trang sửa và thêm phụ huynh. |
+| **Email gõ sai đuôi** | Ví dụ gõ sai tên miền email. Phụ huynh đăng nhập app bằng email này nên gõ sai thì không vào được. Bấm **Xem ... hồ sơ** để lọc. |
 
-## Thao tác
+## Sửa thông tin phụ huynh
 
-### Gắn thêm con vào phụ huynh
+Trang này chỉ để xem và liên lạc, không sửa trực tiếp. Muốn sửa số điện thoại, email, họ tên, hoặc gộp hay tách phụ huynh của anh chị em, bạn sửa ở hồ sơ học sinh.
 
-Trang chi tiết phụ huynh → tab "Học sinh" → bấm **"+ Thêm học sinh"** → chọn học sinh có sẵn hoặc tạo mới.
+::: steps
+1. Bấm biểu tượng xem nhanh ở dòng phụ huynh.
+2. Cuối khung bấm **Mở trang sửa của** tên con.
+3. Sửa phần **Thông tin phụ huynh** rồi bấm **Cập nhật học sinh**. Xem [Hồ sơ học sinh](chi-tiet.md).
+:::
 
-### Tách phụ huynh khỏi học sinh
+Nút này chỉ hiện nếu vai của bạn sửa được hồ sơ học sinh.
 
-Tab "Học sinh" → bấm dấu **❌** cạnh tên học sinh muốn tách.
-
-### Xoá phụ huynh
-
-Chỉ Quản lý trở lên xoá được. Phải tách hết học sinh trước khi xoá.
-
-## Lưu ý
-
-- **Không tạo trùng phụ huynh**: nếu gia đình có 2 con, dùng 1 hồ sơ phụ huynh cho cả 2 — không tạo 2 hồ sơ riêng.
-- **Phụ huynh có thể tự cập nhật thông tin** từ Cổng Phụ huynh — đỡ việc cho lễ tân.
+::: warning Lưu ý
+Số điện thoại là tên đăng nhập của phụ huynh. Khi đổi số, hãy báo phụ huynh biết để họ đăng nhập bằng số mới.
+:::
 
 ## Câu hỏi thường gặp
 
-**Bố và mẹ đều muốn xem thông tin con, làm sao?**
-Tạo 2 hồ sơ phụ huynh (1 bố + 1 mẹ), cả 2 đều gắn vào học sinh. Mỗi người đăng nhập tài khoản riêng.
+::: details Phụ huynh quên mật khẩu thì làm sao?
+Trang này không có chức năng đặt lại mật khẩu. Xem hướng dẫn ở phần [Cổng phụ huynh](../cong-phu-huynh/gioi-thieu.md) hoặc nhờ Quản trị viên hỗ trợ ở [Người dùng](../cai-dat/nguoi-dung.md).
+:::
 
-**Phụ huynh không có email, vẫn cấp tài khoản được không?**
-Được. Dùng SĐT làm tên đăng nhập, mật khẩu mặc định `12345678`.
+::: details Một phụ huynh có hai con học thì có hai hồ sơ không?
+Không. Hai em dùng chung một phụ huynh khi cùng số điện thoại hoặc email. Con của phụ huynh hiện ở cột các con.
+:::

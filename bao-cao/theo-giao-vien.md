@@ -1,56 +1,41 @@
-# Báo cáo theo giáo viên
+---
+title: "Báo cáo giáo viên"
+description: "So sánh hiệu suất giáo viên theo tỷ lệ điểm danh, số lớp, số học sinh, số buổi và giờ dạy."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý]
+order: 70
+---
 
-## Khi nào dùng
+# Báo cáo giáo viên
 
-- Đánh giá hiệu quả giảng dạy của từng GV
-- So sánh giữa các GV cùng môn
-- Quyết định tăng lương / thưởng cuối quý
+Báo cáo giúp bạn xem giáo viên nào đang dạy bao nhiêu lớp, bao nhiêu học sinh và lớp của thầy cô đi học đều đến đâu. Dùng khi đánh giá phân công hoặc họp tổng kết giáo viên.
 
-## Truy cập
+Báo cáo không có trong menu. Bấm thẻ **Giáo viên** ở trang [Tổng quan](tong-quan.md) để mở.
 
-Menu **Báo cáo → Theo giáo viên** (hoặc **/reports/teachers**).
+## Xem báo cáo
 
-![Báo cáo theo giáo viên](../assets/screenshots/bao-cao-theo-giao-vien.png)
+::: steps
+1. Vào **Báo cáo → Tổng quan**, bấm thẻ **Giáo viên**.
+2. Ở khung **Bộ lọc**, chọn các điều kiện cần thiết: **Từ ngày**, **Đến ngày**, **Môn học**, **Cơ sở**, **Khối lớp**, **Giáo viên**. Mặc định các ô chọn là **Tất cả**.
+3. Nhập **Tối thiểu số phiên** nếu chỉ muốn thấy giáo viên đã dạy từ một số buổi trở lên.
+4. Bấm **Tạo báo cáo**. Nút bên cạnh có biểu tượng tải xuống để xuất Excel.
+:::
 
-## Các chỉ số đo
+## Đọc kết quả
 
-### Năng suất
+Năm thẻ đầu: **Tổng số giáo viên**, **Tỷ lệ điểm danh TB**, **Tổng số học sinh**, **Tổng phiên dạy**, **Tổng giờ dạy**.
 
-- Số lớp đang dạy
-- Tổng số buổi đã dạy / tháng
-- Tổng số HS phụ trách
+Biểu đồ **Biểu đồ tỷ lệ điểm danh theo giáo viên** cho thấy giáo viên nào có lớp đi học đều hơn.
 
-### Chất lượng
+Bảng **Chi tiết giáo viên** có các cột **Tên**, **Môn**, **Tỷ lệ điểm danh**, **Số lớp**, **Học sinh**, **Kinh nghiệm**, **Phiên dạy**, **Giờ dạy**, **Sĩ số TB**, **Lớp hoạt động**.
 
-- Tỷ lệ chuyên cần TB lớp dạy
-- Điểm trung bình HS lớp dạy
-- Đánh giá phụ huynh (sao + nhận xét)
-- Tỷ lệ HS lên lớp / kết thúc khoá
-
-### Doanh thu
-
-- Doanh thu từ lớp GV dạy (giúp đánh giá nếu GV hưởng theo doanh thu)
-- ROI: doanh thu / lương GV
-
-## So sánh
-
-Có thể so sánh:
-- GV vs GV (cùng môn)
-- GV vs trung bình toàn trung tâm
-- GV theo tháng (xem có cải thiện không)
-
-## Cảnh báo
-
-- GV có tỷ lệ chuyên cần lớp dạy thấp → có thể HS không thích cách dạy
-- GV có HS kết quả kém → cần đào tạo lại GV?
-- Đánh giá phụ huynh giảm → có vấn đề?
-
-## Lưu ý
-
-- **Không quy chụp đơn giản** — số liệu kém có thể do HS đầu vào yếu, không phải lỗi GV.
-- **Dùng để đối thoại** chứ không phải để chấm điểm cứng.
+Bấm **Phân tích AI** ở góc trên để AI nhận định về đội ngũ giáo viên. Xem [Báo cáo do AI tổng hợp](ai.md).
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn GV thấy báo cáo của bản thân, được không?**
-Có. Trong Cài đặt → Cho phép GV xem báo cáo cá nhân — GV chỉ thấy số của mình.
+::: details Giáo viên và trợ giảng có xem được không?
+Không. Chỉ Quản trị viên, Quản lý chi nhánh và Quản lý mở được. Giáo viên muốn xem lớp mình dùng [Báo cáo tiến độ](tien-do.md) và [Báo cáo điểm danh](diem-danh.md).
+:::
+
+::: details Một giáo viên không thấy trong bảng?
+Kiểm tra ô **Tối thiểu số phiên** và khoảng ngày. Thầy cô dạy ít buổi hơn mức tối thiểu sẽ bị ẩn.
+:::

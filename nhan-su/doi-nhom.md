@@ -1,62 +1,59 @@
-# Đội nhóm (Team)
+---
+title: "Đội của tôi"
+description: "Trưởng phòng xem thành viên phòng mình, tình hình đi làm hôm nay và duyệt đơn phép, tăng ca."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Giáo viên, Trợ giảng, Lễ tân, Kế toán, Nhân sự]
+plugin: "Nhân sự (HRIS)"
+order: 50
+group: "Hồ sơ & tổ chức"
+---
 
-## Khi nào dùng
+# Đội của tôi
 
-Tổ chức nhân viên thành các **đội nhóm** nhỏ hơn phòng ban — phục vụ:
-- Dự án ngắn hạn (Hè 2026, Khai giảng tháng 9)
-- Đội phụ trách 1 chương trình cụ thể (Đội luyện thi ĐH, Đội tiếng Anh cấp 2)
-- Đội theo cơ sở khi 1 cơ sở có nhiều phòng ban
+Trang này dành cho người được giao làm trưởng phòng. Bạn thấy ngay các thành viên trong phòng, ai đã đi làm hôm nay và những đơn nghỉ phép, tăng ca đang chờ bạn duyệt, mà không cần vào khu Quản lý HR.
 
-## Truy cập
+Mục **Đội của tôi** hiện trong menu với nhiều vai, nhưng nội dung chỉ có khi tài khoản của bạn đã được chọn làm trưởng phòng.
 
-Menu trái → **Nhân sự → Đội nhóm** (hoặc **/hr/team**).
+## Điều kiện để dùng
 
-![Đội nhóm](../assets/screenshots/hr-doi-nhom.png)
+Người dùng khu Quản lý HR vào [Cấu hình nhân sự](cau-hinh-hr.md), mở thẻ **Phòng ban**, chọn bạn ở ô **Trưởng phòng**. Nếu chưa được gán, trang chỉ báo "Bạn chưa được gán làm trưởng phòng của phòng ban nào".
 
-## Khác Phòng ban thế nào?
+## Duyệt đơn của phòng
 
-| Tiêu chí | Phòng ban | Đội nhóm |
-|----------|-----------|----------|
-| Mục đích | Cấu trúc tổ chức **chính thức** | Nhóm dự án **linh hoạt** |
-| Số lượng | Cố định (~5-10) | Tuỳ ý (có thể nhiều, ngắn hạn) |
-| Một người thuộc | **1** phòng ban | **Nhiều** đội |
-| Báo cáo | Trưởng phòng | Trưởng đội (có thể không phải sếp chính thức) |
+::: steps
+1. Vào **Quản lý HR → Đội của tôi** (hoặc mục **Đội của tôi** trong menu của bạn).
+2. Nếu có đơn chờ, hai khung hiện ra: **Đơn nghỉ phép chờ duyệt** và **Đơn tăng ca chờ duyệt**, kèm số đơn.
+3. Đọc dòng đơn: tên nhân viên, loại phép và số ngày, khoảng ngày nghỉ, lý do. Đơn tăng ca có ngày, giờ bắt đầu và kết thúc, số giờ.
+4. Bấm dấu tick xanh để duyệt, hoặc dấu X đỏ để từ chối. Khi từ chối, hệ thống hỏi **Lý do từ chối**; bấm huỷ hộp này thì đơn không bị từ chối.
+:::
 
-## Tạo đội mới
+Loại phép hiển thị là Phép năm, Ốm đau, Không lương, Thai sản và Công tác. Nếu không có đơn nào chờ, hai khung này không hiện.
 
-Bấm **"+ Tạo đội"**:
-- Tên đội
-- Trưởng đội
-- Phạm vi (Cố định / Theo dự án + ngày kết thúc)
-- Mô tả
+## Xem thành viên
 
-### Thêm thành viên
+Khung **Thành viên** liệt kê nhân viên đang làm việc của phòng bạn quản lý, theo thứ tự tên. Mỗi dòng có mã, số điện thoại, chức vụ, phòng ban và cột **Hôm nay**:
 
-- Kéo NV từ danh sách bên trái → thả vào đội
-- Hoặc bấm "+ Thêm" → chọn NV
+| Nhãn | Ý nghĩa |
+|---|---|
+| **Đi làm** | Đã chấm công đúng giờ |
+| **Đi trễ** | Đã chấm công nhưng trễ |
+| **Vắng** | Bị ghi vắng |
+| **Nghỉ phép** | Có phép được duyệt |
+| **Công tác** | Đang đi công tác |
+| **Đã xếp ca** | Có ca nhưng chưa tới giờ chấm |
+| **Chưa chấm** | Chưa chấm công |
 
-### Vai trò trong đội
+Giờ chấm công hiện trong ngoặc sau nhãn. Người còn thử việc có thêm nhãn **Thử việc**.
 
-Có thể gán vai trò:
-- **Trưởng đội** — điều phối, ra quyết định
-- **Thành viên** — tham gia chuyên môn
-- **Cố vấn** — không thuộc đội nhưng hỗ trợ
-
-## Liên kết với module khác
-
-- **Workflow tự động** — gửi thông báo cho cả đội (vd "Cả đội Hè 2026 đến họp 14h thứ 6")
-- **Chat nội bộ** — mỗi đội tự sinh 1 nhóm chat riêng
-- **Báo cáo** — đo hiệu quả từng đội (số HS chuyển đổi, số buổi dạy...)
-
-## Lưu ý
-
-- **Đừng tạo quá nhiều đội** — khó quản lý, NV bị spam thông báo
-- **Đặt ngày kết thúc** cho đội dự án — tự đóng khi xong
+::: tip Mẹo
+Một người có thể làm trưởng phòng của nhiều phòng. Khi đó bạn thấy thành viên và đơn của tất cả các phòng đó trong cùng một trang.
+:::
 
 ## Câu hỏi thường gặp
 
-**Đội đóng rồi có truy cập được lịch sử chat không?**
-Có. Đội archived nhưng lịch sử vẫn lưu, truy cập read-only.
+::: details Đơn đã duyệt ở đây có giống duyệt ở trang Nghỉ phép không?
+Có. Cả hai nơi đều xử lý cùng một đơn. Cách đơn được tạo và số dư phép xem ở [Nghỉ phép](ngay-phep.md).
+:::
 
-**Có thể tự động sinh đội theo tiêu chí (vd toàn bộ GV Toán)?**
-Có. Trong **Cài đặt → Đội tự động** → đặt rule (vai trò TEACHER + môn Toán) → đội tự cập nhật khi có thêm/bớt NV match.
+::: details Người cũ nghỉ việc còn hiện trong đội không?
+Không. Chỉ nhân viên đang làm việc mới hiện.
+:::

@@ -1,122 +1,80 @@
-# Chat nội bộ
+---
+title: "Tin nhắn nội bộ"
+description: "Nhắn riêng và nhắn nhóm với đồng nghiệp ngay trong KLASSA, gửi ảnh, file, tin thoại và tìm lại tin cũ."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự]
+order: 90
+---
 
-## Khi nào dùng
+# Tin nhắn nội bộ
 
-Trao đổi với đồng nghiệp trong trung tâm thay vì dùng Zalo / Messenger riêng. Lợi ích:
+Dùng để trao đổi công việc với đồng nghiệp mà không cần Zalo hay Messenger riêng. Lịch sử lưu trong hệ thống nên tìm lại được sau này, và tin nhắn đến ngay không cần tải lại trang.
 
-- Lịch sử lưu trong hệ thống, tìm lại được sau nhiều tháng
-- Chia sẻ file / ảnh / voice trong context công việc
-- Gắn thẻ học sinh / lớp / hoá đơn vào tin nhắn
-- Tin nhắn realtime, không cần làm mới trang
-- Tách biệt với chat cá nhân — không lẫn lộn việc với gia đình
+## Bắt đầu một cuộc trò chuyện
 
-## Truy cập
+::: steps
+1. Vào **Chat → Tin nhắn**.
+2. Bấm nút **Bắt đầu chat mới** (hoặc nút thêm người ở đầu danh sách), hộp **Bắt đầu cuộc trò chuyện mới** hiện ra.
+3. Chọn đồng nghiệp cần nhắn.
+4. Gõ tin ở ô nhập ở cuối khung chat rồi bấm nút gửi.
+:::
 
-Cổng Nhân viên → tab **"Chat"** (hoặc icon 💬 trên đầu trang).
+Danh sách bên trái có hai tab: **Trực tiếp** (nhắn riêng) và **Nhóm**. Ô **Tìm chat, nhóm, tin nhắn...** giúp tìm nhanh.
 
-![Trang chat nội bộ](../assets/screenshots/cong-nhan-vien-chat.png)
+## Gửi ảnh, file, tin thoại
 
-## 11 tính năng chính
+- Bấm nút **Gửi ảnh** hoặc **Gửi file** để đính kèm (ảnh, PDF, Word, Excel, văn bản, file nén).
+- Giữ nút micro để ghi âm, thả để gửi, kéo sang trái để hủy. Tin thoại dài tối đa 2 phút.
+- Nút **Emoji** để chèn biểu tượng cảm xúc.
 
-### 1. Tin nhắn realtime
+## Làm việc với một tin nhắn
 
-Vừa gõ tin xong, đồng nghiệp thấy ngay — không cần làm mới. Có icon "đang gõ..." khi đối phương đang soạn tin.
+Rê chuột vào tin nhắn để thả cảm xúc nhanh (👍 ❤️ 😂 😮 😢 🙏), bấm **Trả lời**, hoặc mở menu của tin với các mục:
 
-### 2. Chat 1-1 và chat nhóm
+| Mục | Dùng để |
+|---|---|
+| **Sửa tin nhắn** | Sửa tin của bạn, chỉ trong 15 phút đầu sau khi gửi. |
+| **Ghim tin** | Ghim lên đầu nhóm. Chỉ quản trị nhóm ghim được, tối đa 10 tin mỗi nhóm. |
+| **Chuyển tiếp** | Gửi tin sang người hoặc nhóm khác. |
+| **Sao chép** | Sao chép nội dung. |
+| **Xóa** | Xoá tin của bạn. Quản trị nhóm xoá được tin của người khác trong nhóm. |
 
-- **Chat 1-1**: nhắn riêng với 1 đồng nghiệp
-- **Chat nhóm**: nhiều người trong cùng cuộc trò chuyện
+## Tìm trong cuộc trò chuyện
 
-### 3. Tạo nhóm tuỳ chọn
+Bấm biểu tượng tìm kiếm ở đầu khung chat (hoặc nhấn Ctrl+K) để tìm tin trong cuộc trò chuyện hoặc nhóm đang mở.
 
-Bấm "+ Tạo nhóm" → đặt tên + chọn thành viên:
+## Tắt thông báo một cuộc trò chuyện
 
-- **Nhóm theo phòng ban** — "GV Toán", "Lễ tân", "Kế toán"
-- **Nhóm theo lớp** — "Lớp 9A — GV + Trợ giảng"
-- **Nhóm dự án** — "Khai giảng Hè 2026"
+Bấm biểu tượng chuông ở đầu khung chat để **Tắt thông báo** hoặc **Bật thông báo** cho riêng cuộc trò chuyện đó.
 
-### 4. Sửa tin đã gửi
+## Tạo và quản lý nhóm
 
-Bấm vào tin của mình → **"Sửa"** → đổi nội dung. Tin được đánh dấu **"(đã sửa)"** để đồng nghiệp biết.
+::: steps
+1. Ở đầu danh sách chat, bấm nút tạo nhóm. Hộp **Tạo nhóm chat** hiện ra.
+2. Nhập **Tên nhóm** (bắt buộc) và **Mô tả** (không bắt buộc).
+3. Tích chọn thành viên (cần ít nhất một người).
+4. Bấm **Tạo nhóm**.
+:::
 
-Giới hạn: chỉ sửa được tin trong **15 phút** sau khi gửi. Sau đó tin cố định.
+Trong nhóm, gõ `@` để nhắc đến một thành viên. Bấm biểu tượng ba chấm ở đầu khung chat để mở cài đặt nhóm:
 
-### 5. Trả lời tin cụ thể (Reply)
+- Quản trị nhóm đổi **Tên nhóm**, bấm **Thêm thành viên**, và gỡ thành viên (trừ người tạo nhóm).
+- Người không phải người tạo nhóm bấm **Rời nhóm** để rời.
+- Người tạo nhóm bấm **Xóa nhóm** để xoá cả nhóm.
 
-Khi nhóm đông tin, dùng reply để chỉ rõ đang trả lời câu nào. Hiển thị tin gốc ngay trên tin trả lời.
+::: danger Không thể hoàn tác
+**Xóa nhóm** xoá nhóm với mọi thành viên. Hãy chắc chắn trước khi bấm.
+:::
 
-### 6. Reaction emoji
+## Xoá một cuộc trò chuyện riêng
 
-Thay vì gõ "OK", "Cảm ơn", bấm 👍 / ❤️ / 😄 / 🎉 lên tin để phản hồi nhanh.
-
-### 7. Ghim tin quan trọng
-
-Quản lý có thể **ghim** tin quan trọng lên đầu nhóm (vd thông báo lịch nghỉ lễ). Mọi thành viên thấy ngay.
-
-### 8. Chuyển tiếp tin (Forward)
-
-Gửi nguyên 1 tin sang nhóm khác hoặc người khác — kèm tin gốc + người gửi gốc.
-
-### 9. Voice message
-
-Bấm giữ icon microphone → ghi âm → gửi. Đồng nghiệp bấm play nghe. Phù hợp khi đang lái xe, đang lớp không tiện gõ.
-
-### 10. Tìm tin cũ
-
-Bấm icon kính lúp 🔍 → gõ từ khoá → kết quả từ TẤT cả nhóm (kèm context xung quanh tin).
-
-### 11. Mention @tên
-
-Gõ `@` + tên đồng nghiệp → chọn → người được mention nhận **thông báo đặc biệt** (notification ngay cả khi đang tắt notification của nhóm).
-
-## Đính kèm
-
-- **Ảnh** — kéo thả hoặc paste từ clipboard
-- **File** — PDF, Word, Excel, max 25MB/file
-- **Voice** — bấm giữ microphone
-- **Sticker** — bộ sticker emoji có sẵn
-
-## Tag học sinh / lớp / hoá đơn
-
-Khi đang chat về 1 học sinh / lớp cụ thể, gõ:
-- `#HS:Nguyen Van A` → gắn link tới chi tiết học sinh
-- `#L:Toán 9A` → gắn link tới lớp
-- `#HD:12345` → gắn link tới hoá đơn
-
-Đồng nghiệp click vào tag → mở thẳng trang tương ứng.
-
-## Thông báo
-
-- **Trong app**: chuông thông báo (góc trên), số tin chưa đọc trên icon Chat
-- **Email**: nếu user offline > 10 phút và có tin mới
-- **Zalo OA**: nếu user bật trong Cài đặt → mention quan trọng
-
-## Quyền
-
-Mặc định mọi nhân viên đăng nhập KLASSA đều dùng được Chat. Cài đặt → Phân quyền có thể giới hạn:
-- Một số vai trò chỉ chat 1-1, không tạo nhóm
-- Một số vai trò bị giới hạn gửi file > 5MB
-- Phụ huynh có cổng chat riêng (Cổng Phụ huynh), không chung với nhân viên
-
-## Lưu ý
-
-- **Không gửi mật khẩu / OTP / dữ liệu siêu nhạy** qua chat — tin được lưu lâu dài.
-- **Tin đã xoá** vẫn lưu trong Audit log của Quản lý — không "biến mất" hoàn toàn.
-- **Mỗi thiết bị 1 phiên** — đăng nhập máy khác không bị đăng xuất máy cũ.
+Rê chuột vào cuộc trò chuyện trong danh sách, bấm biểu tượng ba chấm rồi **Xoá cuộc trò chuyện**. Chỉ xoá ở phía bạn, đồng nghiệp vẫn giữ nguyên.
 
 ## Câu hỏi thường gặp
 
-**Có thể gọi voice / video qua chat không?**
-Có (plugin **VoiceChat** trả phí). Bấm icon 📞 trong khung chat → đồng nghiệp nhận cuộc gọi.
+::: details Chat nội bộ khác gì Zalo?
+Chat nội bộ chỉ dành cho nhân viên trong trung tâm. Còn nhắn phụ huynh, học sinh dùng Zalo, xem [Zalo của tôi](../tin-nhan/zalo-cua-toi.md).
+:::
 
-**Tôi xoá nhầm tin, lấy lại được không?**
-Tin xoá biến mất với mọi người nhưng vẫn còn trong audit log. Quản lý có thể recover nếu cần thiết.
-
-**Cuộc trò chuyện 100 ngày trước còn không?**
-Còn. KLASSA lưu chat **vô thời hạn** trừ khi Quản lý xoá manual hoặc trung tâm ngừng dịch vụ.
-
-**Nhân viên đã nghỉ việc, lịch sử chat?**
-Vẫn lưu, nhưng tài khoản bị khoá → không vào được. Quản lý có thể xem lịch sử qua Audit log.
-
-**Phụ huynh có chat được với nhân viên không?**
-Có, qua Cổng Phụ huynh. Tin phụ huynh hiện trong khu vực Chat khách riêng, không lẫn chat nội bộ nhân viên.
+::: details Tôi lỡ gửi nhầm, sửa được không?
+Sửa được trong 15 phút đầu. Sau đó chỉ xoá được.
+:::

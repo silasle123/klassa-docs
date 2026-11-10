@@ -1,57 +1,59 @@
-# AI Insights HR — phân tích thông minh
+---
+title: "Phân tích nhân sự (HR AI Insights)"
+description: "Máy đọc dữ liệu nhân sự trong khoảng ngày bạn chọn và nêu những điểm đáng chú ý kèm khuyến nghị."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "AI — Gợi ý & Trợ lý Vận hành"
+order: 160
+group: "Hồ sơ & tổ chức"
+---
 
-## Khái niệm
+# Phân tích nhân sự (HR AI Insights)
 
-Plugin **AI HR Insights** dùng AI phân tích sâu dữ liệu nhân sự để rút ra **kết luận thông minh** mà số liệu thô không thể hiện:
+Trang này đọc dữ liệu chấm công, lương, cơ cấu nhân sự và lớp học của một cơ sở trong khoảng ngày bạn chọn, rồi liệt kê những điểm nên chú ý. Bạn dùng khi cần một cái nhìn nhanh mà không phải tự mở từng báo cáo.
 
-- "Phòng ban nào sắp có nguy cơ thiếu nhân lực?"
-- "Giáo viên nào đang quá tải?"
-- "Mẫu nhân viên nghỉ việc trong 6 tháng đầu có điểm chung gì?"
+Cần gói mở rộng **AI — Gợi ý & Trợ lý Vận hành**. Kết quả do các quy tắc đo ngưỡng tính ra, không phải do nhập câu hỏi.
 
-## Truy cập
+## Chạy phân tích
 
-Menu trái → **Nhân sự → AI Insights** (hoặc **/hr/ai-insights**).
+::: steps
+1. Vào **Quản lý HR → HR AI Insights**. Tiêu đề trang là **Phân tích nhân sự**.
+2. Ở khung **Bộ lọc**, chọn **Cơ sở**. Mặc định là cơ sở đầu tiên trong danh sách.
+3. Chọn **Từ ngày** và **Đến ngày**. Mặc định là một tháng gần nhất.
+4. Bấm **Phân tích**.
+5. Đọc danh sách kết quả. Nút này chỉ bấm được khi đã chọn cơ sở.
+:::
 
-## Các insight mẫu
+Dải số liệu đếm **Tổng ghi nhận**, **Nghiêm trọng**, **Cảnh báo** và **Thông tin**. Mỗi ghi nhận có tiêu đề, mô tả, phần **Số liệu** và **Khuyến nghị** (nếu có), kèm nhãn mức độ.
 
-### 1. Phân tích retention
+## Các điều trang có thể nêu ra
 
-- Nhóm tuổi nào ở lại lâu nhất?
-- Phòng ban nào có turnover cao nhất?
-- Yếu tố nào ảnh hưởng quyết định ở/đi?
+| Ghi nhận | Khi nào xuất hiện |
+|---|---|
+| **Tỷ lệ đi muộn cao** | Trên 10% (Nghiêm trọng khi trên 20%) |
+| **Tỷ lệ vắng mặt cao** | Trên 5% (Nghiêm trọng khi trên 15%) |
+| **Biến động chi phí lương lớn** | Chi phí lương lệch trên 15% so với tháng trước (Nghiêm trọng khi trên 30%) |
+| **Tổng quan chi phí lương** | Luôn có, mức Thông tin |
+| **Cơ cấu nhân sự** | Luôn có, nêu tỷ lệ toàn thời gian và bán thời gian |
+| **Mất cân bằng phòng ban** | Một phòng chiếm trên 50% nhân sự |
+| **Tỷ lệ học sinh đi học thấp** | Dưới 85% (Nghiêm trọng khi dưới 70%) |
+| **Tỷ lệ hủy buổi học cao** | Trên 10% buổi học bị huỷ |
 
-### 2. Tối ưu lương
+Ba mức độ hiển thị là **Nghiêm trọng**, **Cảnh báo** và **Thông tin**.
 
-- Có chênh lệch lương bất hợp lý giữa cùng vị trí không?
-- Lương trung bình của trung tâm so với thị trường?
-- Đề xuất tăng lương cho ai để giữ chân?
+::: tip Mẹo
+Muốn so sánh theo mùa, đổi **Từ ngày** và **Đến ngày** thành các tháng khác rồi bấm **Phân tích** lại. Trang không lưu lại các lần chạy cũ.
+:::
 
-### 3. Năng suất
-
-- Giáo viên nào có hiệu quả cao bất thường (lớp đông, chuyên cần tốt, KPI cao)?
-- Có pattern nào để học theo không?
-
-### 4. Tuyển dụng
-
-- Nguồn ứng viên nào hiệu quả nhất?
-- Đặc điểm nào của ứng viên dẫn đến thành công lâu dài?
-
-## Cách dùng
-
-Trang AI Insights tự sinh báo cáo định kỳ. Có thể:
-
-- **Đặt câu hỏi tự do** — gõ câu hỏi bằng tiếng Việt, AI trả lời dựa trên dữ liệu nội bộ
-- **Yêu cầu sinh báo cáo cho cuộc họp** — VD "Báo cáo nhân sự quý 2 cho cuộc họp HĐQT"
-
-## Lưu ý
-
-- **Plugin trả phí** — tính theo số nhân viên + số insight / tháng.
-- **Cần dữ liệu đủ** — trung tâm <10 NV thì AI khó rút ra insight ý nghĩa.
+::: warning Lưu ý
+Các con số này đo từ dữ liệu đã nhập. Chấm công hoặc điểm danh nhập thiếu sẽ làm tỷ lệ lệch. Hãy dùng như gợi ý để đào sâu, rồi đối chiếu ở [Báo cáo HR](bao-cao-hr.md).
+:::
 
 ## Câu hỏi thường gặp
 
-**Dữ liệu của tôi có được gửi cho bên ngoài không?**
-Có. AI Insights dùng nhà cung cấp AI (OpenAI / Anthropic / Gemini). Dữ liệu được gửi đi nhưng có ràng buộc bảo mật (zero retention).
+::: details Khác gì với Phân tích rủi ro nghỉ việc?
+Trang này nhìn toàn cơ sở. [Phân tích rủi ro nghỉ việc](canh-bao-nghi-viec.md) chấm điểm từng nhân viên.
+:::
 
-**Tôi không muốn AI đụng dữ liệu nhạy cảm, có cấu hình được không?**
-Có. Trong Cài đặt → AI → "Phạm vi dữ liệu" — chọn loại dữ liệu cho phép AI đọc.
+::: details Có hỏi đáp tự do với AI được không?
+Không ở trang này. Để hỏi bằng câu chữ, dùng [HR AI Assistant](tro-ly-hr.md).
+:::

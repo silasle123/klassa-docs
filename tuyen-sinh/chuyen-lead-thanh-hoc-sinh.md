@@ -1,58 +1,73 @@
-# Chuyển Lead thành Học sinh
+---
+title: "Chuyển lead thành học sinh"
+description: "Chốt lead khi phụ huynh đồng ý: chuyển thành học sinh mới, hoặc ghi môn bổ sung cho học sinh đang học."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+plugin: "CRM Tuyển sinh + AI"
+order: 90
+---
 
-## Khi nào dùng
+# Chuyển lead thành học sinh
 
-Khi một Lead (khách quan tâm) quyết định đăng ký học → chuyển Lead đó thành **học sinh chính thức**. Đây là bước cuối của phễu tuyển sinh.
+Khi phụ huynh đồng ý cho con học, bạn "chốt" lead. Có hai cách chốt, tuỳ em là học sinh mới hay đang học ở trung tâm. Chọn đúng cách để không tạo hồ sơ học sinh trùng.
 
-> Cách này khác với [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md): chuyển từ Lead sẽ **giữ nguyên toàn bộ thông tin** đã thu thập trong quá trình tư vấn (môn quan tâm, trường, nguồn, ghi chú…), không phải gõ lại.
+| Trường hợp | Chọn |
+| --- | --- |
+| Học sinh mới đăng ký | **Chuyển thành học sinh** |
+| Học sinh đang học, đăng ký thêm môn | **Đã chốt (môn bổ sung)** |
+| Phụ huynh không đăng ký | Xem [Ghi lý do không chốt](khong-chot-lead.md) |
 
-## Các bước
+So với [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md), chuyển từ lead giữ nguyên thông tin đã thu thập khi tư vấn (môn quan tâm, trường, nguồn, ghi chú), bạn không phải gõ lại.
 
-### Bước 1 — Mở Lead cần chuyển
+## Chuyển lead thành học sinh mới
 
-Từ [Danh sách Lead](danh-sach-lead.md) hoặc [Phễu tuyển sinh](pheu-tuyen-sinh.md), bấm vào Lead → mở trang chi tiết. Hoặc dùng cửa sổ xem nhanh (quick view) ngay trên danh sách.
+::: steps
+1. Mở [hồ sơ lead](chi-tiet-lead.md) và kiểm thông tin đã đủ, đúng chưa (tên, ngày sinh, phụ huynh, số điện thoại). Thiếu thì bấm **Sửa** và điền trước.
+2. Bấm **Chuyển thành học sinh** ở cột nút chốt trong hồ sơ. Hoặc bấm **Chốt** ở cuối dòng lead trong danh sách, rồi chọn **Chuyển thành học sinh…**.
+3. Hộp **Chuyển thành học sinh** hiện ra. Nút xác nhận hiện **Đang kiểm tra trùng…** trong giây lát. Đọc cảnh báo (nếu có), rồi bấm **Xác nhận chuyển đổi**.
 
-### Bước 2 — Bấm "Chuyển thành học sinh"
+   ![Hộp Chuyển thành học sinh với nút Xác nhận chuyển đổi](../assets/screenshots/tuyen-sinh-chuyen-hoc-sinh.webp)
 
-Một hộp thoại xác nhận hiện ra:
+4. Hệ thống tạo hồ sơ học sinh có mã học sinh và tự mở trang **Học sinh**.
+:::
 
-> **Chuyển thành học sinh**
-> Chuyển **\<tên Lead\>** thành học sinh chính thức. Phiếu thu sẽ tạo sau.
+Hệ thống chỉ tạo học sinh. Em chưa vào lớp nào và chưa có phiếu thu. Bước tiếp theo là [ghi danh em vào lớp](../hoc-sinh/ghi-danh.md), sau đó tạo phiếu học phí. Nếu lead có tên và số điện thoại phụ huynh, hệ thống tạo hoặc nối kèm tài khoản [phụ huynh](../hoc-sinh/phu-huynh.md). Lead chuyển sang **Đã chuyển đổi** và khoá trạng thái.
 
-Đây chỉ là **xác nhận một bước** — KHÔNG có form điền thêm, KHÔNG phải chọn lớp, KHÔNG phải nhập học phí. Phần mềm dùng luôn thông tin đã lưu trong Lead.
+### Khi hộp báo "Số điện thoại này trùng học sinh đã có hồ sơ"
 
-### Bước 3 — Bấm "Xác nhận chuyển đổi"
+Khi mở hộp, hệ thống so số điện thoại học sinh và phụ huynh với các hồ sơ học sinh hiện có. Nếu trùng, khung vàng hiện mã, tên, lớp đang học, và chữ "trùng cả tên" nếu tên cũng giống. Chọn theo từng trường hợp:
 
-Phần mềm tự động (trong một giao dịch an toàn):
+- **Chính em này đang học, đăng ký thêm môn** (thường trùng cả tên): bấm **Đổi sang Đã chốt (môn bổ sung)**. Không tạo hồ sơ mới.
+- **Anh chị em** (cùng phụ huynh, khác tên): vẫn bấm **Xác nhận chuyển đổi** như bình thường.
+- **Học sinh cũ đã nghỉ**: kiểm tra có phải chính em đó quay lại không. Phải thì hỏi quản lý trước khi chuyển, để không tạo hồ sơ trùng.
 
-- Sinh **mã học sinh** dạng `HQ-L{khối}-{số thứ tự}`
-- Tạo hồ sơ học sinh, **sao chép toàn bộ** từ Lead: họ tên, SĐT, ngày sinh, địa chỉ, giới tính, trường, khối lớp, trình độ, **nguồn Lead**, môn quan tâm, ghi chú
-- Nếu có thông tin phụ huynh (tên + SĐT) → tạo **hồ sơ phụ huynh + tài khoản đăng nhập** (mật khẩu mặc định `12345678`, đăng nhập được ngay)
-- Đổi trạng thái Lead thành **"Đã chuyển đổi"** (khoá lại, không sửa được nữa)
-- Ghi nhật ký hoạt động trên Lead
+::: warning Lưu ý
+Hệ thống cũng chặn khi đã có học sinh cùng tên, cùng số điện thoại và cùng phụ huynh. Khi đó bạn sẽ thấy thông báo "Học sinh đã tồn tại trong hệ thống" kèm mã học sinh cũ.
+:::
 
-Báo thành công kèm mã HS rồi tự chuyển sang trang Học sinh.
+## Chốt môn bổ sung cho học sinh đang học
 
-## Sau khi chuyển — 2 việc cần làm tiếp
+::: steps
+1. Mở hồ sơ lead, bấm **Đã chốt (môn bổ sung)**. Hoặc bấm **Chốt** ở cuối dòng và chọn cùng tên.
+2. Trạng thái đổi ngay, không hỏi lại.
+3. Vào [ghi danh](../hoc-sinh/ghi-danh.md) để xếp em vào lớp môn mới.
+:::
 
-Phần mềm cố ý **tách** việc chuyển đổi khỏi ghi danh + thu tiền để anh chị linh hoạt:
+Hệ thống không tạo học sinh mới vì em đã có hồ sơ. Nhãn **Đã chốt (môn bổ sung)** chỉ giúp nhận biết, nó không đổi lớp hay ghi danh của em.
 
-1. **Ghi danh vào lớp** — vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md) (hoặc menu Ghi danh) để thêm em vào lớp cụ thể. Chuyển đổi KHÔNG tự xếp lớp.
-2. **Tạo phiếu thu học phí** — vào hồ sơ học sinh / [Tạo và gửi hoá đơn](../hoc-phi/tao-hoa-don.md). Chuyển đổi KHÔNG tự tạo hoá đơn.
+::: danger Đừng bấm nhầm
+Học sinh đang học thì không bấm **Chuyển thành học sinh**. Bấm nhầm sẽ tạo thêm một hồ sơ học sinh trùng. Bấm nhầm thì báo ngay quản lý để xử lý hồ sơ vừa tạo.
+:::
 
-## Lưu ý
+## Kéo thả để chốt
 
-- **Không thể đảo ngược**: sau khi chuyển, Lead bị khoá trạng thái "Đã chuyển đổi". Nếu nhập sai, sửa trong hồ sơ học sinh, không thể "tách" lại thành Lead.
-- **Chống trùng**: nếu đã có học sinh cùng tên + SĐT + phụ huynh, phần mềm chặn và báo mã HS đang tồn tại — tránh tạo trùng.
-- **Nguồn Lead được giữ lại**: học sinh mới mang theo nguồn (Facebook Ads / Zalo / giới thiệu…) → phục vụ báo cáo tỷ lệ chuyển đổi theo nguồn.
+Ở cách xem **Theo giai đoạn**, kéo thẻ lead vào ô **Chốt** thì hộp hỏi học sinh mới hay môn bổ sung. Xem [Trạng thái lead và bảng theo giai đoạn](pheu-tuyen-sinh.md).
 
 ## Câu hỏi thường gặp
 
-**Sao chuyển xong em chưa có trong lớp nào?**
-Đúng thiết kế. Ghi danh vào lớp là bước riêng — vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md).
+::: details Chuyển xong có sửa lại được không?
+Lead **Đã chuyển đổi** bị khoá trạng thái. Cần sửa thì báo quản lý. Thông tin học sinh sửa ở trang **Học sinh**.
+:::
 
-**Phụ huynh của Lead đã có tài khoản (con khác đang học) thì sao?**
-Phần mềm nhận diện theo SĐT/email và gắn học sinh mới vào tài khoản phụ huynh sẵn có — không tạo trùng.
-
-**Lead có 2 con cùng đăng ký, xử lý thế nào?**
-Chuyển Lead thành học sinh thứ nhất, rồi vào [Tạo hồ sơ học sinh mới](../hoc-sinh/tao-moi.md) tạo bé thứ hai với cùng SĐT phụ huynh.
+::: details Nút "Chuyển thành học sinh" không thấy?
+Lead đã **Đã chốt (môn bổ sung)** hoặc **Không chốt** thì không còn các nút chốt. Muốn mở lại, bấm nhãn trạng thái và chọn trạng thái mới. Tài khoản không có quyền tạo học sinh cũng không thấy nút này.
+:::

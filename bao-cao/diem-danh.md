@@ -1,39 +1,59 @@
+---
+title: "Báo cáo điểm danh"
+description: "Tỷ lệ điểm danh theo lớp, giáo viên, môn học hoặc cơ sở trong một khoảng ngày, có biểu đồ và xuất Excel."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Kế toán, Giáo viên, Trợ giảng]
+order: 30
+---
+
 # Báo cáo điểm danh
 
-## Khi nào dùng
+Báo cáo cho biết học sinh đi học đều đến đâu trong một khoảng thời gian, và nhóm nào đang thấp. Giáo viên và trợ giảng dùng để xem lớp mình phụ trách, quản lý dùng để so sánh các lớp, giáo viên, môn hoặc cơ sở.
 
-- Báo cáo chuyên cần tháng cho phụ huynh
-- Quản lý theo dõi lớp có tỷ lệ vắng cao
-- Phân tích pattern (lớp nào ngày nào hay vắng)
+## Xem báo cáo
 
-## Truy cập
+::: steps
+1. Giáo viên và trợ giảng vào menu **Báo cáo điểm danh**. Quản trị viên và Quản lý chi nhánh bấm thẻ **Điểm danh** ở [Tổng quan](tong-quan.md).
+2. Chọn **Từ ngày** và **Đến ngày**. Mặc định là từ ngày 01 của tháng này đến hôm nay.
+3. Chọn **Nhóm theo**: **Lớp**, **Giáo viên**, **Môn học** hoặc **Cơ sở**.
+4. Bấm **Tạo báo cáo**.
+:::
 
-Menu **Báo cáo → Điểm danh** (hoặc **/reports/attendance**). Đầy đủ chi tiết xem [Báo cáo điểm danh trong module Điểm danh](../diem-danh/bao-cao.md).
+Báo cáo chỉ hiện số liệu sau khi bạn bấm **Tạo báo cáo**. Nút có biểu tượng tải xuống bên cạnh dùng để xuất Excel, cùng bộ lọc.
 
-## Khác gì trang Điểm danh ngày?
+::: tip Giáo viên và trợ giảng
+Bạn chỉ thấy các lớp mình đang được phân công, và luôn nhóm theo lớp. Ô **Nhóm theo** không hiện với bạn.
+:::
 
-| Trang | Mục đích |
-|-------|----------|
-| Module Điểm danh | Vận hành — chấm hàng ngày |
-| **Báo cáo Điểm danh** | Phân tích — xem xu hướng, tổng hợp |
+## Đọc kết quả
 
-## Các báo cáo phổ biến
+Ba thẻ ở đầu:
 
-- **Top 10 HS chuyên cần kém** — danh sách cần can thiệp
-- **Top 10 HS chuyên cần xuất sắc** — khen thưởng
-- **Buổi học có nhiều người vắng** — phân tích lý do (trùng lịch học khác? Ngày lễ chưa khai báo?)
-- **So sánh lớp / GV** — chỉ số chất lượng
+| Thẻ | Ý nghĩa |
+| --- | --- |
+| **Tỷ lệ điểm danh TB** | Trung bình tỷ lệ của các nhóm trong bảng (mỗi nhóm một phần như nhau, không tính theo số buổi). |
+| **Số phiên học** | Tổng số buổi học có điểm danh trong khoảng ngày. |
+| **Số bản ghi điểm danh** | Tổng số dòng điểm danh (một học sinh một buổi là một dòng). |
 
-## Xuất file
+Dưới đó là biểu đồ cột **Biểu đồ tỷ lệ điểm danh theo nhóm** và bảng **Chi tiết** với các cột **Tên nhóm**, **Tỷ lệ (%)**, **Có mặt**, **Tổng**, **Phiên**, **Học sinh**. Bảng xếp nhóm có tỷ lệ cao nhất lên trên.
 
-- PDF báo cáo cho phụ huynh (1 HS / 1 file)
-- Excel cho phân tích nội bộ
+### Cách tính tỷ lệ
 
-## Lưu ý
+- Tính là đi học: có mặt, đi trễ, học bù.
+- Nghỉ có phép vẫn tính là vắng.
+- Buổi trung tâm huỷ được bỏ ra khỏi phép tính, không làm giảm tỷ lệ.
 
-- **Báo cáo từng học sinh** có sẵn template đẹp gửi qua Zalo cuối tháng.
+Tỷ lệ bằng số lượt đi học chia cho tổng số lượt điểm danh (đã bỏ buổi huỷ).
+
+## Phân tích AI
+
+Bấm **Phân tích AI** để AI viết nhận định cho khoảng ngày đang chọn. Giáo viên và trợ giảng được dùng cho phạm vi lớp mình. Xem [Báo cáo do AI tổng hợp](ai.md).
 
 ## Câu hỏi thường gặp
 
-**Gửi tự động báo cáo cuối tháng?**
-Trong Cài đặt → Thông báo định kỳ → bật "Báo cáo chuyên cần tháng".
+::: details Vì sao trung bình ở thẻ đầu khác với tỷ lệ tôi tự cộng?
+Thẻ lấy trung bình của các nhóm, mỗi nhóm một phần như nhau. Một lớp nhỏ có tỷ lệ thấp kéo trung bình xuống nhiều như một lớp đông.
+:::
+
+::: details Điểm danh của một buổi chưa có trong báo cáo?
+Báo cáo chỉ tính các buổi đã có dữ liệu điểm danh trong khoảng ngày bạn chọn. Kiểm tra lại khoảng ngày và xem [Điểm danh hằng ngày](../diem-danh/cham-hang-ngay.md).
+:::

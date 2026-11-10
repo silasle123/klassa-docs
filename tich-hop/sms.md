@@ -1,36 +1,56 @@
+---
+title: "Kết nối SMS"
+description: "Nhập tài khoản nhà cung cấp SMS Brandname để hệ thống gửi tin nhắn đến số điện thoại phụ huynh."
+roles: [Quản trị viên]
+order: 50
+---
+
 # Kết nối SMS
 
-## Khi nào dùng
+SMS giúp báo tin cho phụ huynh không dùng Zalo. Hệ thống dùng tài khoản SMS Brandname của trung tâm, nên bạn cần có tài khoản ở một nhà cung cấp trước. Khi chưa cấu hình, mọi nơi gửi SMS sẽ báo chưa cấu hình, không gửi giả.
 
-Gửi tin nhắn SMS qua SĐT — phù hợp:
-- Phụ huynh không dùng Zalo / không đọc email
-- Gửi OTP xác thực
-- Nhắc nợ trong trường hợp khẩn cấp
+Cấu hình nằm ở trang **Tích hợp**, tab **SMS**, chỉ Quản trị viên thấy. Gói **SMS Gateway** đã ngừng bán, nhưng phần cấu hình này vẫn dùng được.
 
-## Các nhà cung cấp
+## Nhập cấu hình SMS
 
-- **eSMS / SMS Brandname Việt Nam** — gửi với tên thương hiệu (vd "KLASSA"), không phải số điện thoại
-- **Twilio** — quốc tế, nhiều tính năng
-- **Stringee**
+::: steps
+1. Vào **AI Hub → Tích hợp**, mở tab **SMS**.
+2. Ở ô **Nhà cung cấp** chọn một trong: **Vietguys**, **eSMS**, **SpeedSMS** hoặc **Tuỳ chỉnh** (ô bắt buộc).
+3. Điền **Brandname**, ví dụ tên trung tâm đã đăng ký với nhà cung cấp.
+4. Nhập **API Key** (bắt buộc). Có thể cần thêm **Secret Key**, tuỳ nhà cung cấp.
+5. Nếu chọn **Tuỳ chỉnh**, điền thêm **API Endpoint** (bắt buộc) theo hướng dẫn của nhà cung cấp.
+6. Bấm **Lưu cấu hình SMS**.
+   ![Form Cấu hình SMS Brandname: Nhà cung cấp, Brandname, API key, Secret key](../assets/screenshots/tich-hop-sms.webp)
+:::
 
-## Cấu hình
+Sau khi lưu, khoá được ẩn và hiện "đã lưu". Muốn đổi, nhập khoá mới rồi lưu lại.
 
-Menu → **Tích hợp → SMS** → chọn nhà cung cấp:
+## Gửi thử
 
-- API Key / Token
-- Brandname (cho eSMS) — cần đăng ký trước với nhà cung cấp
-- Templates đã duyệt
+::: steps
+1. Ở mục **Gửi SMS test**, nhập số điện thoại nhận thử, ví dụ 0912345678.
+2. Bấm **Gửi SMS test**.
+3. Kết quả hiện ngay bên dưới, là phản hồi thật từ nhà cung cấp.
+:::
 
-## Chi phí
+Nút này chỉ bấm được sau khi đã lưu cấu hình.
 
-SMS Brandname Việt Nam: khoảng 600-1000đ / tin. Tin nhiều có giá rẻ hơn theo gói.
+## SMS được dùng ở đâu
 
-## Lưu ý
+- Nhắc học phí cho phụ huynh chưa thanh toán.
+- Thông báo lịch học hoặc lịch học thử khi phụ huynh chưa liên kết Zalo.
+- Tin nhắn tay từ trang chi tiết phụ huynh.
 
-- **Brandname phải đăng ký** trước với nhà cung cấp + Bộ TTTT, mất 1-2 tuần.
-- **Template phải duyệt** trước khi gửi — không gửi tự do.
+::: warning Lưu ý
+Brandname và nội dung tin thường phải đăng ký với nhà cung cấp trước khi gửi được. Mỗi tin SMS tính phí theo bảng giá của nhà cung cấp, không tính qua KLASSA.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi gửi vài tin /tháng, có cần SMS không?**
-Cân nhắc — Zalo / email rẻ hơn nhiều. SMS chỉ nên cho trường hợp đặc biệt (OTP, khẩn cấp).
+::: details Trung tâm có cần dùng SMS không?
+Không bắt buộc. Nếu phụ huynh đã nhận tin qua Zalo thì SMS chỉ là phương án dự phòng. Xem [Zalo](../tin-nhan/zalo.md).
+:::
+
+::: details Báo "chưa cấu hình SMS" khi gửi thì làm sao?
+Vào tab **SMS** theo các bước trên, lưu cấu hình rồi gửi lại.
+:::

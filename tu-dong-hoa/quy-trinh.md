@@ -1,67 +1,92 @@
-# Tự động hoá quy trình (Workflow)
+---
+title: "Quy trình tự động theo sự kiện"
+description: "Kích hoạt, tạm dừng, dừng và theo dõi các quy trình tự chạy khi có lead mới, học sinh ghi danh, hoá đơn mới và nhiều sự kiện khác."
+roles: [Quản trị viên]
+plugin: "Tự động hoá"
+order: 60
+---
 
-## Khái niệm
+# Quy trình tự động theo sự kiện
 
-**Workflow** = chuỗi hành động tự động khi một sự kiện xảy ra.
+Quy trình là chuỗi bước hệ thống tự làm khi có một sự kiện, ví dụ: có lead mới thì gửi email, nhắn SMS rồi giao việc cho lễ tân. Bạn không phải tự tạo từ đầu. Hệ thống có sẵn các mẫu, bạn chỉ cần bật.
 
-Ví dụ:
+Cần gói mở rộng **Tự động hoá**. Danh sách mẫu có ở [Mẫu quy trình có sẵn](mau-co-san.md).
 
-- **Khi học sinh nghỉ buổi 3 lần liên tiếp** → tự gửi Zalo nhắc phụ huynh + tạo task cho lễ tân gọi
-- **Khi học sinh sắp hết hạn học phí (3 ngày)** → tự gửi nhắc + tạo hoá đơn nháp
-- **Khi Lead mới tạo** → tự gán cho tư vấn viên đang trực + Zalo "Xin chào, em là..."
+## Kích hoạt một quy trình
 
-## Truy cập
+::: steps
+1. Vào **AI Hub → Tự động hóa**, mở thẻ **Quy Trình**.
+2. Ở thẻ phụ **Templates**, mỗi ô là một mẫu: tên, số bước, mô tả và dòng **Kích hoạt khi**.
 
-Menu trái → **Tự động hoá** (hoặc **/automation**).
+   ![Thẻ Quy Trình, thẻ phụ Templates với các ô mẫu và nút Kích Hoạt](../assets/screenshots/tu-dong-hoa-templates.webp)
+3. Bấm vào ô để xem **Các Bước Thực Hiện**: loại bước, thời gian chờ, nội dung và người nhận.
+4. Bấm **Kích Hoạt** (hoặc **Kích Hoạt Workflow Này** trong phần chi tiết).
+5. Thông báo "Đã kích hoạt workflow" hiện ra và quy trình xuất hiện ở thẻ phụ **Workflows Đang Chạy**.
+:::
 
-![Trang workflow](../assets/screenshots/automation-trang-chinh.png)
+::: warning Lưu ý
+Mỗi lần bấm **Kích Hoạt** sẽ tạo thêm một quy trình đang chạy. Chỉ bấm một lần cho mỗi mẫu, nếu không phụ huynh có thể nhận tin trùng.
+:::
 
-## Cấu trúc 1 workflow
+Mẫu đã bật có thêm số liệu thật: **Lần chạy**, tỷ lệ **Thành công** và nhãn **Đang chạy** hoặc **Đã dừng**.
 
-3 phần:
+## Loại bước trong một quy trình
 
-### 1. Trigger (kích hoạt)
+Mỗi bước có một loại và thời gian chờ (từ **Ngay lập tức** đến vài ngày kể từ khi sự kiện xảy ra):
 
-Sự kiện gây workflow chạy:
-- HS ghi danh
-- Hoá đơn quá hạn
-- Lead chuyển giai đoạn
-- Đến giờ X trong ngày
-- Mỗi tuần T2 lúc 9h
-- Có người nhắn Zalo
+| Loại | Việc hệ thống làm |
+| --- | --- |
+| EMAIL | Gửi email |
+| SMS | Gửi tin nhắn SMS |
+| ZALO | Gửi tin qua Zalo |
+| BOTH | Gửi cả email và SMS |
+| TASK | Tạo việc giao cho nhân viên |
+| INVOICE | Tạo hoá đơn |
 
-### 2. Điều kiện (filter)
+## Theo dõi và quản lý quy trình đang chạy
 
-Có chạy không tuỳ thuộc điều kiện:
-- Chỉ HS thuộc cơ sở X
-- Chỉ Lead nguồn Facebook
-- Chỉ giáo viên cộng tác
+Thẻ phụ **Workflows Đang Chạy** liệt kê từng quy trình với **Tổng chạy**, **Thành công**, **Thất bại**, **Tỷ lệ** và **Chạy lần cuối**. Nút hiện theo trạng thái:
 
-### 3. Hành động (action)
+![Thẻ phụ Workflows Đang Chạy với các nút Tiếp tục, Dừng hẳn, Chi tiết](../assets/screenshots/tu-dong-hoa-dang-chay.webp)
 
-Việc cần làm:
-- Gửi Zalo / email / SMS
-- Tạo task cho nhân viên
-- Đổi giai đoạn Lead
-- Tạo hoá đơn
-- Gọi webhook bên ngoài
+| Trạng thái | Nút có |
+| --- | --- |
+| Đang chạy | **Tạm dừng** |
+| Tạm dừng | **Tiếp tục**, **Dừng hẳn** |
+| Đã dừng | **Xóa** (hỏi xác nhận) |
+| Mọi trạng thái | **Chi tiết** |
 
-## Tạo workflow mới
+Bấm **Chi tiết** để mở trang riêng của quy trình: danh sách các bước, **Hàng đợi delay** (các bước đang chờ đến giờ gửi) và **Lịch sử thực thi (50 gần nhất)** với trạng thái từng lần chạy: Thành công, Thất bại, Bỏ qua, Đang chờ, Đã chạy, Hủy.
 
-Bấm **"+ Tạo workflow"** → chọn trigger → cấu hình điều kiện → chọn hành động → lưu.
+::: danger Không thể hoàn tác
+Quy trình đã **Xóa** không khôi phục được. Muốn dừng tạm thì dùng **Tạm dừng**, không dùng **Dừng hẳn**.
+:::
 
-Hoặc dùng [mẫu có sẵn](mau-co-san.md) để tiết kiệm thời gian.
+## Cài đặt chung cho quy trình
 
-## Lưu ý
+Bấm **Cài Đặt** ở góc trên của thẻ **Quy Trình** để mở hộp **Cài Đặt Workflow**:
 
-- **Test trước** với 1-2 trường hợp trước khi bật cho toàn trung tâm.
-- **Bật / tắt** workflow bất cứ lúc nào.
-- **Theo dõi**: trang Workflow có lịch sử chạy, ai/cái gì kích hoạt, kết quả.
+- **Tên người gửi mặc định cho step EMAIL**: để trống thì dùng tên thương hiệu của trung tâm.
+- **Role được giao TASK mặc định**: vai nhận các việc do quy trình tạo. Hộp chọn hiện bốn lựa chọn: **Consultant (Tư vấn viên)** (tức Lễ tân), **Admin**, **Branch Manager** và **Teacher**.
+- **Số lần thử lại tối đa mỗi bước (0-10)**.
+- **Bỏ qua step nếu thiếu context**: nếu chọn, bước không gửi được (ví dụ phụ huynh chưa có Zalo) sẽ được bỏ qua thay vì tính là thất bại.
+
+Bấm **Lưu cài đặt** để lưu. Phần đầu hộp còn cho biết số quy trình đang chạy và tạm dừng.
+
+## Thẻ Zalo Channel
+
+Thẻ **Zalo Channel** giải thích rằng các sự kiện của hệ thống có thể gửi qua Zalo cá nhân khi đã cấu hình. Thẻ có ba nút tắt: **Mở cấu hình Zalo**, **Cron jobs** (lịch chạy tự động) và **Inbox Chat Zalo**. Cách kết nối Zalo xem [Zalo cá nhân](../tich-hop/zalo-ca-nhan.md).
 
 ## Câu hỏi thường gặp
 
-**Workflow chạy bao nhiêu lâu sau khi trigger?**
-Mặc định trong 5 giây. Có thể đặt độ trễ (vd gửi tin lúc 19h dù trigger lúc 14h).
+::: details Tôi sửa được nội dung từng bước không?
+Không trên giao diện này. Bạn chỉ xem được các bước và bật hoặc tắt cả quy trình. Nội dung tin theo mẫu có sẵn.
+:::
 
-**Workflow chạy lỗi, làm sao biết?**
-Trang Workflow có tab "Lịch sử" — hiển thị trạng thái mỗi lần chạy. Lỗi có log chi tiết.
+::: details Quản lý có thấy thẻ này không?
+Không. Menu **Tự động hóa** chỉ hiện với Quản trị viên và Quản lý chi nhánh, nhưng mặc định chỉ Quản trị viên mở được trang.
+:::
+
+::: details Bước SMS không gửi được thì sao?
+Kiểm tra trung tâm đã cấu hình SMS chưa ở [Tích hợp SMS](../tich-hop/sms.md) và học sinh hoặc phụ huynh có số điện thoại hay không. Bật tuỳ chọn bỏ qua bước thiếu thông tin nếu không muốn tính là thất bại.
+:::

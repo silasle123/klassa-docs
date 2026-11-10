@@ -1,72 +1,88 @@
-# Quản lý ngày phép
+---
+title: "Nghỉ phép"
+description: "Duyệt đơn xin nghỉ của nhân viên, tạo đơn hộ và quản lý số dư phép của từng người."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 130
+group: "Lương, chấm công & ca"
+---
 
-## Khái niệm
+# Nghỉ phép
 
-KLASSA quản lý 5 loại phép:
+Trang này giúp bạn xử lý đơn xin nghỉ của nhân viên và theo dõi số ngày phép còn lại. Khi đơn được duyệt, số dư phép tự trừ và những ngày nghỉ được ghi vào bảng công, nên ngày nghỉ có lương được tính như ngày công khi tính lương.
 
-1. **Phép năm** — phép có lương theo luật (12 ngày / năm cho NV chính thức)
-2. **Phép ốm** — nghỉ ốm, có giấy bệnh viện
-3. **Phép việc riêng** — không lương
-4. **Phép thai sản** — nghỉ sinh con
-5. **Phép đặc biệt** — cưới, tang…
+Vào **Quản lý HR → Nghỉ phép**. Trang có hai tab: **Đơn xin nghỉ** và **Số dư phép**. Nhân viên tự nộp đơn ở Cổng nhân viên, mục **Nghỉ phép**. Đơn của nhân viên một phòng ban còn được trưởng phòng duyệt ở trang **Đội của tôi**.
 
-## Truy cập
+## Duyệt hoặc từ chối đơn
 
-Menu trái → **Nhân sự → Phép** (hoặc **/hr/leave**).
+::: steps
+1. Vào tab **Đơn xin nghỉ**. Số **Đơn chờ duyệt** hiện ở đầu trang.
+2. Ở dòng đơn **Chờ duyệt**, bấm **Xem & xử lý**. Hộp **Xử lý đơn nghỉ phép** hiện ra với ngày bắt đầu, kết thúc, số ngày, loại nghỉ, người thay thế và lý do.
+3. Ghi **Ghi chú** nếu muốn (không bắt buộc).
+4. Bấm **Duyệt** hoặc **Từ chối**.
+:::
 
-![Trang quản lý phép](../assets/screenshots/hr-phep.png)
+![Trang Quản lý nghỉ phép tab Đơn xin nghỉ với đơn Chờ duyệt](../assets/screenshots/nghi-phep-don.webp)
 
-## Quy trình xin phép
+Bảng đơn có các cột **Nhân viên**, **Loại nghỉ**, **Bắt đầu**, **Kết thúc**, **Số ngày**, **Người thay thế**, **Trạng thái** và **Hành động**. Đơn nghỉ nửa ngày hiện thêm nhãn **(Sáng)** hoặc **(Chiều)**.
 
-### Nhân viên nộp đơn
+::: warning Không tự duyệt đơn của mình
+Chỉ Quản trị viên được tự duyệt đơn của chính mình. Người khác cần nhờ quản lý khác duyệt.
+:::
 
-Trong **Cổng Nhân viên → Phép**:
+### Huỷ một đơn đã duyệt
 
-1. Bấm **"+ Tạo đơn phép"**
-2. Chọn:
-   - Loại phép
-   - Ngày bắt đầu / kết thúc
-   - Lý do
-   - Đính kèm giấy tờ (giấy bệnh viện cho ốm dài)
-3. Bấm **"Gửi duyệt"** → đơn chuyển sang Quản lý trực tiếp.
+Ở dòng đơn **Đã duyệt**, bấm **Huỷ duyệt**. Hệ thống hỏi xác nhận: số ngày phép đã trừ được hoàn lại và các ngày chấm công **Nghỉ phép** tương ứng bị gỡ.
 
-### Quản lý duyệt
+## Tạo đơn hộ nhân viên
 
-Quản lý nhận thông báo → vào **Phép → Đơn chờ duyệt**:
+::: steps
+1. Bấm **Tạo đơn nghỉ** ở góc trên. Hộp **Tạo đơn nghỉ phép** hiện ra.
+2. Chọn **Nhân viên**.
+3. Chọn **Loại nghỉ**: **Phép năm**, **Nghỉ ốm**, **Không lương**, **Thai sản**, **Công tác (không trừ phép)**, **Nghỉ chăm con** hoặc **Hiếu hỉ**.
+4. Chọn **Thời lượng nghỉ**: **Cả ngày**, hoặc nghỉ nửa ngày buổi sáng hoặc buổi chiều (tính 0.5 ngày). Với nghỉ nửa ngày, chỉ chọn một **Ngày nghỉ**. Với cả ngày, chọn **Ngày bắt đầu** và **Ngày kết thúc**.
+5. Chọn **Nhân viên thay thế** nếu có. Người thay thế phải khác người xin nghỉ.
+6. Ghi **Lý do**.
+7. Bấm **Gửi đơn**. Đơn vào trạng thái **Chờ duyệt**.
+:::
 
-- Xem đơn + lịch dạy của nhân viên
-- Bấm **"Duyệt"** hoặc **"Từ chối"** kèm lý do
-- Nếu giáo viên nghỉ → tự gợi ý **dạy thay** (xem [Đơn xin dạy thay](dan-day-thay.md))
+Nếu số dư không đủ cho loại nghỉ đã chọn, đơn bị từ chối ngay khi gửi.
 
-### Tự động xử lý
+## Quản lý số dư phép
 
-- Đơn được duyệt → ngày phép trừ vào số dư phép năm
-- Nhân viên nhận email + Zalo xác nhận
-- Lịch dạy trong những ngày nghỉ được đánh dấu "Chờ dạy thay"
+Vào tab **Số dư phép** để xem **Được hưởng**, **Đã dùng**, **Đang chờ**, **Còn lại** và **Chuyển từ năm trước** của từng người theo loại nghỉ.
 
-## Số dư phép
+### Khởi tạo số dư cho cả năm
 
-Mỗi nhân viên có:
+::: steps
+1. Ở tab **Số dư phép**, bấm **Khởi tạo số dư**. Hộp **Khởi tạo số dư phép** của năm hiện tại hiện ra.
+2. Tích loại phép cần tạo: **Phép năm**, **Nghỉ ốm**, **Thai sản**. Với nghỉ ốm và thai sản, bạn nhập số ngày. Bỏ chọn loại mà trung tâm không theo dõi.
+3. Bấm **Khởi tạo**.
+:::
 
-- **Phép năm còn lại** — theo luật: 12 ngày / năm chính thức + 1 ngày / 5 năm thâm niên
-- **Phép cộng dồn từ năm trước** (nếu trung tâm cho phép)
-- **Đã dùng trong năm**
+**Phép năm** tự tính theo Luật Lao động 2019: 12 ngày cộng 1 ngày mỗi 5 năm thâm niên. Người vào làm giữa năm được tính theo số tháng còn lại. Nhân viên đã có số dư thì giữ nguyên, không bị ghi đè.
 
-Xem ở **Cổng Nhân viên → Phép → Số dư**.
+### Sửa hoặc xoá số dư
 
-## Lịch nghỉ chung
+- Bấm **Sửa** ở một dòng để đổi **Số ngày được hưởng** và **Chuyển từ năm trước**. Bấm **Lưu**.
+- Bấm biểu tượng xoá để mở hộp **Xoá số dư phép**. Chọn **Xoá dòng này** (chỉ người đó) hoặc **Xoá cho tất cả nhân viên** (loại phép đó trong năm).
 
-Trang **Lịch phép toàn trung tâm** hiển thị ai đang nghỉ tuần này / tháng này — để Quản lý lên kế hoạch tránh trống nhân sự.
+Người đã dùng hoặc đang chờ duyệt loại phép đó sẽ không bị xoá. Với họ, hãy bấm **Sửa** và đặt số ngày về 0.
 
-## Lưu ý
+## Xuất danh sách
 
-- **Đơn phép cấp tốc** (xin nghỉ trong ngày): vẫn nộp qua hệ thống, ghi rõ "Khẩn cấp" để Quản lý xử lý nhanh.
-- **Nghỉ không xin phép** → đánh dấu "Vắng không phép" — ảnh hưởng đánh giá cuối kỳ.
+Bấm **Xuất CSV** để tải danh sách đơn nghỉ về máy.
 
 ## Câu hỏi thường gặp
 
-**Giáo viên nghỉ phép, lương buổi đó tính sao?**
-Mặc định: nghỉ phép = không có buổi dạy → không tính lương buổi. Nếu trung tâm muốn trả phép cho giáo viên, cấu hình trong **Cài đặt → Lương → Lương phép cho giáo viên**.
+::: details Nghỉ không lương có bị trừ lương không?
+Loại **Không lương** không nằm trong các loại nghỉ có lương, nên ngày đó không được tính là ngày công khi tính lương cho nhân viên toàn thời gian. Các loại như phép năm, nghỉ ốm, thai sản, hiếu hỉ và công tác được tính như ngày công.
+:::
 
-**Quá hạn nộp đơn phép (nghỉ rồi mới xin), được không?**
-Được, nhưng Quản lý có quyền từ chối. Hệ thống ghi nhận "Đơn phép muộn" — ảnh hưởng đánh giá.
+::: details Nghỉ phép và ca dạy của giáo viên liên quan thế nào?
+Đơn nghỉ không tự đổi người dạy. Nếu giáo viên nghỉ vào ngày có buổi dạy, hãy làm [Dạy thay](dan-day-thay.md) cho buổi đó.
+:::
+
+::: details Nhân viên xem số dư của mình ở đâu?
+Ở Cổng nhân viên, mục **Nghỉ phép**.
+:::

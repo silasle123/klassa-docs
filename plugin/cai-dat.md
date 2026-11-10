@@ -1,48 +1,40 @@
-# Cài đặt plugin mới
+---
+title: "Bật một gói mở rộng"
+description: "Cách đăng ký để KLASSA kích hoạt gói mở rộng cho trung tâm của bạn."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+order: 110
+---
 
-## Các bước
+# Bật một gói mở rộng
 
-### Bước 1 — Mở Plugin Marketplace
+Trung tâm không tự bật gói mở rộng trên màn hình. Bạn gửi yêu cầu cho KLASSA, đội KLASSA liên hệ tư vấn rồi kích hoạt cho trung tâm.
 
-Menu trái → **Plugin** → tab **"Khám phá"**.
+## Gửi yêu cầu mua một gói
 
-### Bước 2 — Tìm plugin
+::: steps
+1. Vào **Cài đặt → Plugin Marketplace**.
+2. Tìm gói muốn dùng, bấm **Liên hệ KLASSA** trên thẻ gói.
+3. Hộp **Liên hệ mua** hiện ra, kèm tên gói. Điền **Họ tên** (bắt buộc, có dấu *), và nếu muốn thì **SĐT**, **Email**, **Ghi chú**.
+4. Bấm **Gửi yêu cầu**.
+5. Thông báo **Đã gửi. KLASSA sẽ liên hệ trong 1 ngày làm việc.** hiện ra.
+:::
 
-Lọc:
-- Theo danh mục (Tài chính / HR / Marketing / AI / ...)
-- Theo giá (miễn phí / trả phí)
-- Theo đánh giá
+Nếu để trống **Họ tên**, hệ thống báo **Vui lòng nhập họ tên** và chưa gửi.
 
-### Bước 3 — Xem chi tiết
+::: tip Mẹo
+Ghi trong **Ghi chú** việc bạn muốn làm (ví dụ gửi nhắc học phí qua Zalo) để KLASSA tư vấn đúng gói. Giá xem trong **Plugin Marketplace** và khi KLASSA tư vấn.
+:::
 
-Bấm vào plugin → trang chi tiết có:
-- Mô tả tính năng
-- Ảnh chụp màn hình
-- Giá
-- Đánh giá từ trung tâm khác
-- Thử 7 ngày
+## Khi gói đã được kích hoạt
 
-### Bước 4 — Cài đặt
-
-Bấm **"Cài đặt"** → xác nhận giá → KLASSA bật plugin cho trung tâm.
-
-### Bước 5 — Cấu hình
-
-Plugin có thể yêu cầu thông tin bổ sung (API key, cấu hình…). Làm theo hướng dẫn.
-
-### Bước 6 — Dùng
-
-Plugin sẽ xuất hiện như mục mới trong menu hoặc bổ sung tính năng vào module có sẵn.
-
-## Quản lý plugin đã cài
-
-Tab **"Đang dùng"** — danh sách plugin đang bật:
-- Trạng thái
-- Giá hàng tháng
-- Tắt / huỷ thuê
-- Cập nhật cấu hình
+Tải lại trang. Thẻ gói đổi sang **Đang bật** và dòng **Plugin đang hoạt động**. Các màn hình của gói mở ra cho những vai được phép dùng chúng.
 
 ## Câu hỏi thường gặp
 
-**Plugin lỗi sau khi cài, làm sao?**
-Tắt plugin → bật lại. Nếu vẫn lỗi → liên hệ hỗ trợ KLASSA, có thể là xung đột với plugin khác.
+::: details Tôi gửi yêu cầu rồi nhưng gói vẫn chưa bật?
+Đội KLASSA cần liên hệ và kích hoạt cho bạn. Nếu quá 1 ngày làm việc chưa thấy liên hệ, gửi lại yêu cầu hoặc nhắn qua trang **Hỗ trợ**.
+:::
+
+::: details Gói đòi hỏi gói khác thì sao?
+Một số gói cần gói nền, ví dụ **AI — Gợi ý & Trợ lý Vận hành** cần **Nền tảng AI**. Nói rõ khi liên hệ để KLASSA bật đủ.
+:::

@@ -1,46 +1,61 @@
-# Hướng dẫn sử dụng KLASSA
+# Tài liệu hướng dẫn KLASSA (docs.klassa.vn)
 
-Phần mềm quản lý trung tâm dạy học toàn diện — **hơn 800 tính năng** trải đều **23 nhóm chức năng**, phục vụ đầy đủ từ chủ trung tâm, quản lý, lễ tân, giáo viên, kế toán đến phụ huynh.
+Kho này chứa toàn bộ bài hướng dẫn sử dụng KLASSA. Trang được dựng bằng **VitePress** và tự đăng lên **docs.klassa.vn** mỗi khi đẩy lên nhánh `main` (xem `HOSTING.md`).
 
-Bộ tài liệu **134 bài hướng dẫn** kèm **79 ảnh thực tế** từ chính giao diện anh chị sẽ thao tác — viết bằng tiếng Việt thuần, không có yếu tố kỹ thuật.
+## Viết hoặc sửa một bài
 
-## Tài liệu này dành cho ai?
+Mỗi bài là một tệp `.md` trong thư mục của nhóm (vd `hoc-phi/tao-hoa-don.md`). Mục lục bên trái **tự dựng** từ thư mục, không cần sửa tệp mục lục nào.
 
-| Vai trò | Nên đọc phần nào |
-|---------|------------------|
-| **Chủ trung tâm / Quản lý** | Toàn bộ phần mềm — quyết định triển khai |
-| **Lễ tân / Tư vấn viên** | Tuyển sinh · Học sinh · Học phí |
-| **Giáo viên / Trợ giảng** | Điểm danh · Lịch dạy · Lương cá nhân |
-| **Kế toán / Nhân sự** | Học phí · Lương · Báo cáo · Nhân sự |
+```md
+---
+title: Tạo hoá đơn học phí
+description: Một câu mô tả, hiện ở kết quả tìm kiếm.
+roles: [Quản trị viên, Kế toán]        # hiện thành nhãn "Dành cho"
+plugin: Hoá đơn điện tử                # chỉ khi tính năng thuộc gói mở rộng
+order: 3                               # thứ tự trong nhóm (nhỏ đứng trước), bỏ trống = xếp theo tên tệp
+group: Lương & chấm công               # (tuỳ chọn) gom vào nhóm con trong mục lục
+sidebarTitle: Tạo hoá đơn              # (tuỳ chọn) tên ngắn hơn cho mục lục
+---
 
-## Bắt đầu nhanh
+# Tạo hoá đơn học phí
 
-Mới sử dụng lần đầu? Đọc theo thứ tự 4 bài này (~10 phút):
+Một–hai câu mở đầu.
 
-1. [Đăng nhập vào phần mềm](bat-dau/dang-nhap.md)
-2. [Bảng tổng quan (Dashboard)](bat-dau/dashboard.md)
-3. [Menu trái — cách dùng](bat-dau/menu-trai.md)
-4. [Vai trò người dùng](bat-dau/vai-tro-nguoi-dung.md)
+::: steps
+1. Vào **Tài chính → Học phí**.
+2. Bấm **Tạo hoá đơn**.
+:::
 
-Hoặc tra cứu nhanh theo nghiệp vụ ở **mục lục bên trái**.
+::: tip Mẹo
+...
+:::
 
-## Cách đọc tài liệu
+::: warning Lưu ý
+...
+:::
 
-Mỗi bài hướng dẫn trình bày theo 4 phần đồng nhất:
+::: details Câu hỏi thường gặp?
+Trả lời.
+:::
+```
 
-- **Khi nào dùng** — tình huống thực tế cần đến chức năng
-- **Các bước thao tác** — chỉ dẫn từng bước kèm ảnh chụp màn hình thực
-- **Lưu ý** — những điểm dễ nhầm hoặc cần chú ý
-- **Câu hỏi thường gặp** — giải đáp các thắc mắc phổ biến
+- Liên kết sang bài khác bằng đường dẫn tương đối tới tệp `.md`: `[Tạo lớp](../lop-hoc/tao-moi.md)`. Bản dựng sẽ **báo lỗi nếu link gãy**.
+- Ảnh để trong `assets/screenshots/`, chèn bằng `![Mô tả](../assets/screenshots/ten-anh.png)`.
+- Nhóm mục lục và thứ tự nhóm khai ở `GROUPS` trong `.vitepress/config.mts`.
+- Đổi tên/xoá bài: thêm dòng vào `.vitepress/redirects.mjs` để link cũ (dạng `#/thu-muc/bai`) vẫn chuyển đúng.
 
-## 23 nhóm chức năng — bao phủ toàn bộ vận hành trung tâm
+## Xem thử trên máy
 
-Tuyển sinh · Học sinh · Lớp học · Điểm danh · Học tập & Đánh giá · Học phí & Hoá đơn · Nhân sự (HR) · Giáo viên · Báo cáo · Tin nhắn · AI Hub · Tự động hoá · Marketing · Cổng phụ huynh · Cổng nhân viên · Ứng dụng di động · Kho vật tư · Phản hồi · Tích hợp · Plugin · Cài đặt hệ thống · Hỏi đáp.
+```bash
+npm install
+npm run docs:dev      # mở http://localhost:5180
+npm run docs:build    # dựng bản thật vào .vitepress/dist (kiểm link gãy)
+```
 
-## Cần hỗ trợ thêm?
+## Chụp lại ảnh màn hình
 
-- **Email**: support@klassa.vn
-- **Hotline**: (đang cập nhật)
-- **Zalo CSKH**: (đang cập nhật)
+`scripts/capture.ts` đăng nhập bản demo và chụp theo danh sách `SHOTS` (xem đầu tệp).
 
-Nếu trong quá trình sử dụng anh chị gặp khó khăn không tìm thấy lời giải trong tài liệu, vui lòng liên hệ qua các kênh trên — đội ngũ KLASSA hỗ trợ trong vòng 24 giờ làm việc.
+```bash
+npx tsx scripts/capture.ts --only=ten-anh-1,ten-anh-2
+```

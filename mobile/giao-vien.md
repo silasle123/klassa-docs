@@ -1,40 +1,51 @@
-# Giáo viên chấm điểm danh bằng điện thoại
+---
+title: "Giáo viên dùng trên điện thoại"
+description: "Giáo viên và trợ giảng chấm công, mở lớp hôm nay và điểm danh nhanh ngay trên trang Mobile."
+roles: [Giáo viên, Trợ giảng]
+order: 170
+---
 
-## Khi nào dùng
+# Giáo viên dùng trên điện thoại
 
-- Giáo viên dạy ngoài văn phòng (tại nhà phụ huynh, lớp online)
-- Đứng trên lớp không tiện mở laptop
-- Cần chấm điểm danh nhanh ngay đầu giờ
+Khi đứng lớp, bạn có thể chấm công và điểm danh nhanh ngay trên điện thoại. Mọi thứ nằm ở tab **Giảng dạy** của [trang Mobile](dashboard.md).
 
-## Truy cập
+## Chấm công vào và ra
 
-URL: **/mobile/teacher** (hoặc đăng nhập tài khoản GV trên điện thoại).
+::: steps
+1. Vào **AI Hub → Mobile**, mở tab **Giảng dạy**.
+2. Bấm **Check-in ngay** khi bắt đầu làm việc.
+3. Khi kết thúc, bấm **Check-out**.
+:::
 
-## Cách dùng
+Hệ thống kiểm tra bạn có đang ở trung tâm không (qua WiFi hoặc vị trí, tuỳ cấu hình cơ sở). Nếu không xác thực được, hộp xin chấm công thủ công hiện ra: ghi lý do, ví dụ đang dạy ở cơ sở khác, rồi bấm **Gửi cho quản lý duyệt**. Bản ghi chờ quản lý duyệt.
 
-### Mở buổi học
+::: warning Trợ giảng
+Trợ giảng bán thời gian chấm công theo ca, không chấm công cả ngày ở đây. Thẻ báo **Bạn chấm công ở Ca trợ giảng** và nút **Mở Ca trợ giảng** dẫn tới trang chấm công theo từng buổi.
+:::
 
-- Trang chủ mobile → bấm vào buổi sắp dạy
-- Hoặc quét **QR code** in trên giấy lớp học
+## Điểm danh nhanh
 
-### Chấm điểm danh
+::: steps
+1. Ở tab **Giảng dạy**, xem khung **Lớp học hôm nay**: tên lớp, mã lớp và phòng.
+2. Bấm **Điểm danh nhanh** ở lớp cần điểm danh (lớp đã điểm danh hiện **Xem điểm danh**).
+3. Mặc định mọi học sinh là có mặt. Với từng em, bấm một trong ba nút: dấu tick (có mặt), đồng hồ (đi muộn), dấu X (vắng).
+4. Muốn đặt cả lớp một lượt, bấm **Tất cả có mặt** hoặc **Tất cả vắng**, rồi sửa riêng các em khác.
+5. Ghi chú buổi học ở ô **Ghi chú riêng cho buổi học (không bắt buộc)**.
+6. Bấm **Lưu điểm danh**. Màn hình báo số em có mặt, vắng, muộn rồi quay về trang Mobile.
+:::
 
-- Danh sách HS hiện ra theo dọc
-- Mặc định tất cả **"Có mặt"**
-- Vuốt **trái** từng HS = đổi sang trạng thái khác (Vắng / Muộn / Học bù)
-- Bấm **"Lưu"**
+Ba ô trên đầu cho thấy tổng **Có mặt**, **Đi muộn**, **Vắng** đang chọn. Bấm **Huỷ** để thoát mà không lưu.
 
-### Ghi chú nhanh
-
-- Bấm vào HS → ghi chú ngắn ("Vắng do ốm", "Đi muộn 15 phút")
-
-## Tính năng khác
-
-- Xem lịch dạy tuần
-- Xem phiếu lương
-- Chat phụ huynh
+::: tip Mẹo
+Điểm danh nhanh chỉ có ba trạng thái. Với trường hợp khác như vắng có phép hay học bù, dùng trang [Điểm danh hằng ngày](../diem-danh/cham-hang-ngay.md) trên máy tính.
+:::
 
 ## Câu hỏi thường gặp
 
-**Mất sóng giữa lúc chấm, có lưu không?**
-Có. Phần mềm lưu offline, khi có mạng tự đồng bộ.
+::: details Mất mạng giữa lúc điểm danh thì sao?
+Bản điểm danh chỉ được lưu khi bấm **Lưu điểm danh** và có mạng. Nếu báo lỗi kết nối, giữ nguyên màn hình và bấm lại khi có mạng.
+:::
+
+::: details Sao tôi không thấy lớp hôm nay?
+Khung **Lớp học hôm nay** chỉ liệt kê lớp có lịch trong ngày của bạn. Kiểm tra lịch lớp và phân công giáo viên.
+:::

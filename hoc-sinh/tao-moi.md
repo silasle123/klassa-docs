@@ -1,92 +1,71 @@
+---
+title: "Tạo hồ sơ học sinh mới"
+description: "Thêm một học sinh vào hệ thống kèm phụ huynh, và cách xử lý khi hệ thống cảnh báo trùng số điện thoại."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân]
+order: 20
+---
+
 # Tạo hồ sơ học sinh mới
 
-## Khi nào dùng
+Dùng khi một em chính thức đăng ký học và chưa có hồ sơ. Khi lưu, hệ thống tự tạo mã học sinh và tạo (hoặc gắn) tài khoản cho phụ huynh, nên bạn không cần làm riêng bước đó.
 
-- Học sinh chính thức đăng ký (đã đóng học phí hoặc cam kết)
-- Nhập danh sách học sinh cũ vào hệ thống khi mới triển khai phần mềm
+::: warning Lưu ý
+Khách quan tâm đang nằm ở trang **Tuyển sinh** thì không tạo ở đây. Hãy dùng nút chuyển thành học sinh trong trang đó, xem [Chuyển lead thành học sinh](../tuyen-sinh/chuyen-lead-thanh-hoc-sinh.md). Muốn thêm nhiều em cùng lúc, xem [Nhập dữ liệu hàng loạt từ Excel](../tai-khoan/nhap-du-lieu-hang-loat.md).
+:::
 
-> **Lưu ý quan trọng:** Học sinh từ Lead (khách quan tâm) thì KHÔNG tạo ở đây — dùng nút **"Chuyển thành học sinh"** trong trang Lead. Xem [Chuyển Lead thành Học sinh](../tuyen-sinh/chuyen-lead-thanh-hoc-sinh.md).
+## Thêm một học sinh
 
-## Cách 1 — Tạo thủ công 1 học sinh
+::: steps
+1. Vào **Học viên → Học sinh**, bấm **Thêm học sinh**. Trang **Thêm học sinh mới** hiện ra.
+2. Phần **Thông tin học sinh**: điền **Họ và tên** và chọn **Khối lớp** (bắt buộc). Các ô **Email**, **Số điện thoại**, **Ngày sinh**, **Trường học**, **Địa chỉ** là tuỳ chọn.
+3. Chọn **Trạng thái** (mặc định **Đang học**; có thể chọn **Tạm nghỉ** hoặc **Đình chỉ**) và **Trình độ học lực** (mặc định **Trung bình**; các mức khác là **Xuất sắc**, **Giỏi**, **Yếu**).
+4. Phần **Thông tin phụ huynh**: điền **Họ và tên** và **Số điện thoại** của phụ huynh (bắt buộc). **Email** là tuỳ chọn. **Mối quan hệ** mặc định **Cha/Mẹ**, có thể chọn **Người giám hộ**, **Ông/Bà**, **Họ hàng** hoặc **Khác**.
+5. Nếu có, nhập **SĐT người giới thiệu** ở phần **Người giới thiệu** (xem bên dưới).
+6. Phần **Thông tin học tập**: tích **Môn học quan tâm** và viết **Ghi chú hồ sơ** nếu cần.
+7. Bấm **Thêm học sinh**. Nếu thiếu ô bắt buộc, hệ thống báo "Vui lòng điền đầy đủ thông tin bắt buộc!".
+:::
 
-### Bước 1 — Mở form
+Sau khi lưu, bạn được đưa về danh sách học sinh. Muốn cho em vào lớp, làm tiếp bước [ghi danh](ghi-danh.md).
 
-Vào **Học sinh** → bấm nút **"Thêm học sinh"** ở góc phải dải tiêu đề (cũng hiện ở giữa màn hình khi danh sách trống). Phần mềm chuyển sang trang **"Thêm học sinh mới"**.
+## Mã học sinh và tài khoản phụ huynh
 
-![Nút Thêm học sinh + Nhập Excel](../assets/screenshots/hoc-sinh-danh-sach-nut-them.png)
+- Mã học sinh tự sinh theo dạng tiền tố, khối, số thứ tự (ví dụ **ABC-L8-013**). Tiền tố do Quản trị viên đặt ở phần cấu hình chung.
+- Số điện thoại phụ huynh là tên đăng nhập của phụ huynh. Nếu số này đã có tài khoản (ví dụ anh chị em), em mới được gắn vào đúng phụ huynh đó. Nếu chưa có, hệ thống tạo tài khoản mới với mật khẩu mặc định **12345678**. Tài khoản phụ huynh mới có thể ở trạng thái chờ duyệt. Nếu phụ huynh đăng nhập báo đang chờ phê duyệt, Quản trị viên duyệt ở **Quản trị hệ thống → Quản lý Đăng ký**.
+- Phụ huynh không bắt buộc phải đổi mật khẩu. Hãy dặn phụ huynh đổi mật khẩu khi đăng nhập lần đầu, xem [Cổng phụ huynh](../cong-phu-huynh/gioi-thieu.md).
 
-Nút này chỉ hiện với tài khoản có quyền tạo học sinh (Chủ trung tâm / Quản lý / Lễ tân).
+- Nếu em có số điện thoại đúng dạng và đang ở trạng thái **Đang học**, hệ thống còn tự cấp tài khoản đăng nhập cho chính em (chờ duyệt). Xem [Tài khoản đăng nhập cho học sinh](tai-khoan-hoc-sinh.md).
 
-### Bước 2 — Điền 3 phần thông tin
+## Cảnh báo trùng học sinh
 
-Form gồm đúng **3 thẻ**. Trường có dấu **\*** là bắt buộc.
+Khi bạn gõ số điện thoại của em hoặc của phụ huynh, hệ thống tự kiểm tra sau khoảng nửa giây. Nếu 9 số cuối trùng với một học sinh đã có hồ sơ (số của em hoặc số của phụ huynh em đó), một khung vàng hiện ra liệt kê các hồ sơ trùng: mã, tên, trạng thái, lớp đang học, số khớp, và ghi thêm "trùng cả tên" nếu tên cũng giống.
 
-![Form thêm học sinh — 3 thẻ](../assets/screenshots/hoc-sinh-form-tao-moi-full.png)
+::: steps
+1. Bấm vào mã học sinh trong khung vàng để mở hồ sơ cũ ở tab mới.
+2. Nếu đúng là chính em này đang học và chỉ đăng ký thêm lớp, đừng tạo hồ sơ mới. Hãy dùng hồ sơ cũ và [ghi danh](ghi-danh.md) thêm lớp.
+3. Nếu là anh chị em hoặc một em khác, cứ điền tiếp và bấm **Thêm học sinh**.
+4. Hệ thống hỏi lại **Vẫn tạo hồ sơ mới?**. Bấm **Quay lại kiểm tra** để xem lại, hoặc **Vẫn tạo hồ sơ mới** để lưu.
+:::
 
-#### Thẻ 1 — Thông tin học sinh
-- **Họ và tên \*** — bắt buộc
-- **Khối lớp \*** — bắt buộc (chọn từ Tiền tiểu học → Lớp 12)
-- Email, Số điện thoại học sinh, Ngày sinh, Trường học, Địa chỉ — **tuỳ chọn**
-- Trạng thái — mặc định "Đang học"
-- Trình độ học lực — mặc định "Trung bình"
+Đây chỉ là cảnh báo, không chặn bạn. Riêng trường hợp trùng y hệt cả tên, số điện thoại em và thông tin phụ huynh thì hệ thống từ chối với thông báo "Học sinh đã tồn tại trong hệ thống" kèm mã hồ sơ đã có để bạn tìm.
 
-> Form **KHÔNG có** ô Giới tính và **KHÔNG có** upload ảnh chân dung.
+::: tip Mẹo
+Một em quay lại học sau thời gian nghỉ đã có hồ sơ cũ. Mở hồ sơ đó và đổi trạng thái thay vì tạo mới, xem [Tạm nghỉ, mở lại và xoá học sinh](nghi-hoc.md).
+:::
 
-#### Thẻ 2 — Thông tin phụ huynh
-- **Họ và tên phụ huynh \*** — bắt buộc
-- **Số điện thoại phụ huynh \*** — bắt buộc
-- Email phụ huynh, Mối quan hệ (mặc định "Cha/Mẹ") — tuỳ chọn
+## Người giới thiệu
 
-![Thẻ phụ huynh — chỉ 1 phụ huynh, 2 trường bắt buộc](../assets/screenshots/hoc-sinh-form-phu-huynh.png)
-
-> Form **chỉ nhập 1 phụ huynh**, không có nút thêm phụ huynh thứ 2 và không có ô gợi ý phụ huynh đã có — anh chị gõ tay. Nếu phụ huynh đã tồn tại (trùng SĐT/email), **phần mềm tự nhận diện và gộp** vào hồ sơ phụ huynh sẵn có.
-
-#### Thẻ 3 — Thông tin học tập
-- Môn học quan tâm (tick chọn), Ghi chú hồ sơ — tuỳ chọn
-
-### Bước 3 — Bấm "Thêm học sinh"
-
-Nút lưu ở cuối trang có nhãn **"Thêm học sinh"**. Khi lưu, phần mềm tự động:
-
-- Sinh **mã học sinh** dạng `HQ-L{khối}-{số thứ tự}` (ví dụ `HQ-L9-001`)
-- Tạo hồ sơ học sinh (trạng thái Đang học)
-- Nếu phụ huynh chưa có → tạo **hồ sơ phụ huynh + tài khoản đăng nhập**
-
-> **Tài khoản phụ huynh tạo mới có mật khẩu mặc định `12345678`** và đăng nhập được ngay (không bắt đổi mật khẩu). Đây là chủ đích để phụ huynh — đối tượng không rành công nghệ — vào app dễ dàng. Nếu phụ huynh không nhập email, phần mềm tự đặt email theo số điện thoại.
-
-> **Học sinh tạo ra CHƯA thuộc lớp nào.** Form tạo học sinh KHÔNG có bước ghi danh vào lớp. Sau khi tạo xong, vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md) để thêm em vào lớp. Hoá đơn học phí cũng tạo riêng sau đó.
-
-## Cách 2 — Nhập hàng loạt từ Excel
-
-Phù hợp khi nhập danh sách lớn (chuyển từ phần mềm cũ, đầu năm học mới). Trang **Học sinh** → bấm nút **"Nhập Excel"** (cạnh nút Thêm học sinh). Mỗi lần tối đa **500 dòng**.
-
-![Nhập Excel — bước chọn file](../assets/screenshots/hoc-sinh-import-excel-buoc1.png)
-
-**File không cần đúng khuôn mẫu.** Phần mềm tự đọc file, tự ghép cột của anh chị về đúng thông tin của hệ thống — kể cả khi tên cột đặt tự do, họ và tên tách hai cột, hay một ô ghi chung cả tên lẫn số điện thoại phụ huynh. Anh chị xem lại việc ghép ở bước 2, sửa từng ô ở bước 3 rồi mới xác nhận.
-
-Bốn bước và cách xử lý các ca đặc biệt: xem [Nhập dữ liệu hàng loạt từ Excel](../bat-dau/nhap-du-lieu-hang-loat.md).
-
-**Bắt buộc phải có:** Họ tên, Khối (hiểu được "Lớp 6", "Khối 6", "6A1", "Tiền tiểu học"), **Tên phụ huynh**, **SĐT phụ huynh**. Các cột SĐT học sinh, ngày sinh, trường, email phụ huynh, ghi chú là tuỳ chọn.
-
-Ở bảng duyệt, mỗi dòng có nhãn màu — 🟢 hợp lệ (tích sẵn), 🟡 trùng (bỏ tích sẵn), 🔴 lỗi kèm lý do — và anh chị **sửa thẳng vào ô** để chữa dòng lỗi, hoặc bấm **Nhờ AI đề xuất cho dòng lỗi** rồi duyệt từng đề xuất.
-
-![Nhập Excel — xem trước phân loại](../assets/screenshots/hoc-sinh-import-excel-buoc2-preview.png)
-
-Cuối cùng phần mềm báo số tạo thành công / bỏ qua kèm lý do từng dòng. Tài khoản phụ huynh từ nhập Excel cũng dùng mật khẩu mặc định `12345678`.
-
-## Lưu ý
-
-- **Bắt buộc tối thiểu 1 phụ huynh** (tên + SĐT) — không thể tạo học sinh không có phụ huynh.
-- **Chống trùng**: phần mềm chặn nếu trùng bộ ba Tên HS + SĐT HS + phụ huynh (báo lỗi kèm mã HS đã tồn tại).
-- **Vượt giới hạn gói**: nếu trung tâm vượt số học sinh cho phép của gói (hoặc gói hết hạn), phần mềm chặn tạo và báo nâng cấp gói.
+Ô **SĐT người giới thiệu** nhận số điện thoại của một học sinh hoặc phụ huynh đã có. Hệ thống báo ngay "Hợp lệ" kèm tên, hoặc "Không tìm thấy HS/PH với SĐT này". Để trống nếu em không do ai giới thiệu.
 
 ## Câu hỏi thường gặp
 
-**Phụ huynh có 2 con cùng học thì sao?**
-Tạo con thứ nhất bình thường. Tạo con thứ hai với **cùng SĐT phụ huynh** → phần mềm tự nhận diện và gắn cả 2 con vào một tài khoản phụ huynh.
+::: details Tôi không thấy nút Thêm học sinh?
+Chỉ Quản trị viên, Quản lý chi nhánh, Quản lý và Lễ tân được thêm học sinh. Giáo viên, trợ giảng và kế toán chỉ xem.
+:::
 
-**Tạo xong sao chưa thấy em trong lớp nào?**
-Đúng. Tạo hồ sơ và ghi danh vào lớp là 2 bước riêng. Vào [Ghi danh học sinh vào lớp](../lop-hoc/ghi-danh.md) để thêm em vào lớp.
+::: details Có bắt buộc nhập số điện thoại của em không?
+Không. Chỉ bắt buộc họ tên, khối lớp, họ tên và số điện thoại phụ huynh. Nhưng muốn em có [tài khoản đăng nhập](tai-khoan-hoc-sinh.md) thì hồ sơ phải có số điện thoại của em.
+:::
 
-**Phụ huynh đăng nhập bằng gì?**
-Bằng email (hoặc số điện thoại) đã nhập + mật khẩu mặc định **`12345678`**. Khuyến khích phụ huynh đổi mật khẩu sau lần đầu.
+::: details Tạo xong có sửa được không?
+Được, xem [Hồ sơ học sinh](chi-tiet.md).
+:::

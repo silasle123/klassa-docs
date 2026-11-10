@@ -1,164 +1,162 @@
-# Kết nối Zalo OA (Official Account)
+---
+title: "Kết nối Zalo OA"
+description: "Cắm Zalo Official Account của trung tâm, đăng ký mẫu ZNS và chọn kênh để hệ thống tự gửi nhắc học phí, biên nhận, nhắc lịch cho phụ huynh."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Zalo (Cá nhân + OA)"
+order: 40
+---
 
-## Hai kênh Zalo trong KLASSA
+# Kết nối Zalo OA
+
+Zalo OA (Official Account) là kênh gửi tin chính thức của Zalo. Sau khi kết nối, KLASSA tự gửi nhắc học phí, biên nhận và nhắc lịch cho phụ huynh theo số điện thoại. Phụ huynh không cần quan tâm OA trước.
+
+OA gửi một chiều và không có màn hình soạn tay. Muốn chat hai chiều, dùng [Zalo cá nhân](zalo-ca-nhan.md).
 
 | | **Zalo OA (chính thức)** | **Zalo cá nhân** |
 |--|--------------------------|-------------------|
-| Bản chất | Gửi **1 chiều** qua API chính thức (ZNS) | Chat **2 chiều** kiểu Messenger |
-| Gửi theo | **Số điện thoại** (phụ huynh không cần kết bạn) | Hội thoại trực tiếp |
-| Mẫu tin | Template ZNS **đã được Zalo duyệt** | Tự do gõ tay |
-| Chi phí | Trả phí ZNS theo Zalo | Miễn phí |
-| Tài liệu | **Bài này** | [Kết nối Zalo cá nhân](zalo-ca-nhan.md) |
+| Bản chất | Gửi một chiều | Chat hai chiều |
+| Gửi theo | Số điện thoại phụ huynh | Hội thoại trực tiếp |
+| Mẫu tin | Mẫu ZNS đã được Zalo duyệt | Gõ tự do |
+| Chi phí | Trả phí ZNS cho Zalo | Miễn phí |
 
-Bài này hướng dẫn **chi tiết từng bước** thiết lập Zalo OA để gửi tin nhắc học phí / biên nhận / nhắc lịch học cho phụ huynh một cách chính thống.
+## Chuẩn bị
 
-## Điều kiện trước khi bắt đầu
+- Gói mở rộng **Zalo (Cá nhân + OA)** đã bật. Xem [Kết nối Zalo cá nhân](zalo-ca-nhan.md) để biết cách yêu cầu bật.
+- Zalo OA của trung tâm đã được xác thực (có dấu tích) tại oa.zalo.me.
+- Một ứng dụng gắn với OA, tạo tại developers.zalo.me, để lấy **OA ID**, **App ID**, **App Secret**.
+- Nếu trung tâm có nhiều cơ sở, mỗi cơ sở dùng một OA riêng.
 
-- Đã bật **plugin "Zalo (Cá nhân + OA)"** (xem [Plugin Marketplace](../plugin/gioi-thieu.md)).
-- Có **Zalo OA** của trung tâm đã **được xác thực** (có dấu tích) tại oa.zalo.me.
-- Có **App** gắn với OA, tạo tại developers.zalo.me (để lấy App ID / App Secret).
-- Mỗi **chi nhánh** dùng 1 OA riêng (nếu trung tâm nhiều cơ sở).
+Vào **Tích hợp**, mở tab **Zalo**, chọn **Zalo OA (chính thức)**.
 
-## Truy cập
+![Tab Zalo](../assets/screenshots/zalo-oa-tab-overview.webp)
 
-Menu trái → **Tích hợp & API** (`/integrations`) → tab **"Zalo"** → sub-tab **"Zalo OA (chính thức)"**.
+::: warning Cảnh báo đỏ về khoá mã hoá
+Nếu đầu trang hiện cảnh báo "Chưa cấu hình khoá mã hoá", hãy báo KLASSA xử lý trước. Chưa xử lý thì không lưu được thông tin bí mật của OA.
+:::
 
-![Tab Zalo — 3 sub-tab](../assets/screenshots/zalo-oa-tab-overview.png)
+## Bước 1: Nhập thông tin OA
 
-> Nếu trên cùng hiện cảnh báo đỏ "Chưa cấu hình khoá mã hoá" → báo KLASSA bật biến môi trường mã hoá trước, nếu không sẽ không lưu được bí mật OA.
+::: steps
+1. Ở thẻ **Cắm Zalo OA**, nhập **OA ID**, **App ID** và **App Secret** (cả ba đều bắt buộc).
+2. Bấm **Lưu cấu hình**. Hệ thống báo đã lưu và nhắc bấm **Kết nối OA** để uỷ quyền.
+:::
 
----
+![Thẻ Cắm Zalo OA](../assets/screenshots/zalo-oa-config-form.webp)
 
-## Bước 1 — Cắm Zalo OA (nhập App ID / App Secret / OA ID)
+Bạn không phải nhập mã truy cập. Hệ thống tự lấy ở bước 3.
 
-Tại card **"Cắm Zalo OA"**, nhập 3 ô (lấy ở developers.zalo.me, app gắn với OA của trung tâm):
+## Bước 2: Khai Callback URL vào ứng dụng OA
 
-- **OA ID** — mã tài khoản Official Account
-- **App ID**
-- **App Secret**
+Ngay dưới nút lưu có ô **Callback URL** (chỉ đọc). Đây là địa chỉ KLASSA tự tạo cho trung tâm bạn.
 
-Bấm **"Lưu cấu hình"**. Hệ thống báo "Đã lưu cấu hình OA. Bấm Kết nối OA để uỷ quyền."
+::: steps
+1. Bấm vào ô để bôi đen rồi sao chép địa chỉ.
+2. Vào ứng dụng OA trên developers.zalo.me, dán đúng địa chỉ này vào mục Callback URL và lưu.
+:::
 
-![Card Cắm Zalo OA + Callback URL](../assets/screenshots/zalo-oa-config-form.png)
+::: warning Bước dễ sót nhất
+Thiếu hoặc sai bước này thì khi bấm **Kết nối OA** sẽ báo lỗi **-14003 Invalid redirect uri**.
+:::
 
-> Toàn bộ lưu mã hoá an toàn trong hệ thống. **Không cần nhập Access Token** — phần mềm tự lấy ở Bước 3.
+## Bước 3: Kết nối OA
 
----
+Sau khi lưu, thẻ **OA đã kết nối** hiện ra, mỗi OA là một dòng với trạng thái **Chưa kết nối** hoặc **Đã kết nối**.
 
-## Bước 2 — Khai Callback URL vào app OA ⚠ (quan trọng)
+::: steps
+1. Bấm **Kết nối OA**. Hệ thống chuyển sang trang cấp quyền của Zalo.
+2. Đăng nhập Zalo bằng đúng tài khoản quản lý OA và đồng ý cấp quyền.
+3. Zalo đưa bạn về KLASSA, hiện thông báo **Đã kết nối Zalo OA**.
+:::
 
-Ngay dưới nút Lưu có ô **"Callback URL"** (chỉ đọc) — đây là địa chỉ KLASSA tự sinh. **Bắt buộc:**
+Kết nối được tự làm mới định kỳ. Khi hết hạn uỷ quyền, bấm **Kết nối lại / làm mới** một lần, không phải nhập lại OA ID hay App ID.
 
-1. Bấm vào ô để bôi đen → **copy** URL đó.
-2. Vào app OA trên **developers.zalo.me** → mục **Callback URL / Redirect URI** → **dán chính xác** URL này vào → lưu.
+## Bước 4: Kiểm tra kết nối
 
-> Nếu thiếu / sai bước này, khi bấm "Kết nối OA" sẽ báo lỗi **`-14003 Invalid redirect uri`**. Đây là lỗi phổ biến nhất khi setup.
+Khi OA đã kết nối, thẻ có thêm nút **Kiểm tra kết nối**. Bấm trước mỗi đợt gửi để chắc OA còn hoạt động. Thành công thì hiện tên OA và số người quan tâm. Lỗi thì hiện thông báo đỏ, lúc đó bấm **Kết nối lại / làm mới**.
 
----
+## Bước 5: Khai Webhook để nhận tin đến và lượt quan tâm
 
-## Bước 3 — Kết nối OA (uỷ quyền)
+Ở thẻ **Webhook (nhận follow / tin đến)**:
 
-Sau khi lưu cấu hình, card **"OA đã kết nối"** hiện ra. Bấm **"Kết nối OA"**:
+::: steps
+1. Sao chép **URL webhook** (ô chỉ đọc), dán vào mục Webhook của ứng dụng OA.
+2. Nhập **OA Secret Key** (lấy ở mục Webhook của ứng dụng OA).
+3. Bấm **Lưu OA Secret Key**.
+:::
 
-- Phần mềm chuyển sang trang cấp quyền của Zalo → đăng nhập Zalo (đúng tài khoản quản lý OA) → đồng ý cấp quyền.
-- Zalo chuyển ngược về KLASSA, hiện thông báo **"Đã kết nối Zalo OA"**, trạng thái đổi thành **"Đã kết nối"**.
+![Thẻ Webhook](../assets/screenshots/zalo-oa-webhook.webp)
 
-**Access Token tự động:** phần mềm tự lấy + **tự làm mới định kỳ** — không cần nhập tay. Khi token sắp hết hạn, hệ thống tự gia hạn; nếu hết hạn uỷ quyền (khoảng 90 ngày) thì bấm **"Kết nối lại / làm mới"** một lần.
+Chưa nhập khoá thì dòng OA nhắc **Chưa có OA Secret Key (webhook)**. Khi đã khai, thẻ **Người quan tâm OA** liệt kê ai vừa bấm quan tâm hoặc nhắn tin, cùng cột **Gửi free 48h**. Muốn đọc và trả lời tin đầy đủ, dùng app Zalo Official Account hoặc oa.zalo.me.
 
----
+## Bước 6: Đăng ký mẫu tin ZNS
 
-## Bước 4 — Kiểm tra kết nối (1 chạm) ✅ mới
+Kết nối xong chưa gửi được tin ngay. Zalo bắt mọi tin tự động phải dùng mẫu đã được duyệt. Thẻ **Mẫu ZNS gợi ý (đúng chuẩn Zalo)** có sẵn hướng dẫn và 4 mẫu chuẩn. Mỗi mẫu chỉ đăng ký một lần.
 
-Khi OA đã kết nối, card hiện thêm nút **"Kiểm tra kết nối"**. Bấm để kiểm tra tức thì:
+![Thẻ Mẫu ZNS](../assets/screenshots/zalo-oa-zns-templates.webp)
 
-- Thành công → hiện **"✅ {Tên OA} · {số} người quan tâm"** (lấy số follower thật về).
-- Lỗi → hiện thông báo đỏ, gợi ý bấm "Kết nối lại / làm mới".
+::: steps
+1. Kiểm tra OA đã có dấu tích xác thực. Chưa có thì xác thực OA trước.
+2. Vào business.zalo.me (đúng tài khoản quản lý OA), tìm mục ZNS và đăng ký dịch vụ.
+3. Nạp tiền vào tài khoản ZNS. Mỗi tin gửi đi trừ một khoản phí nhỏ, hết số dư là không gửi được.
+4. Ở từng mẫu trong KLASSA, bấm **Copy mẫu**. Trong cổng ZNS chọn **Tạo mẫu mới**, chọn loại theo nhãn của mẫu (**Giao dịch** hoặc **CSKH**), dán nội dung và bấm **Gửi duyệt**.
+5. Chờ Zalo duyệt, thường vài giờ đến một ngày làm việc.
+6. Duyệt xong, mỗi mẫu có một mã (dãy số). Dán vào ô **Template ID (sau khi duyệt)** của đúng mẫu và bấm **Lưu ID**. Mẫu hiện nhãn **Đã đăng ký** là xong.
+7. Sang tab **Chọn kênh** để bật kênh gửi (bước 7).
+:::
 
-> Dùng nút này bất cứ lúc nào để chắc chắn OA vẫn hoạt động trước đợt gửi tin.
+::: warning Đừng sửa câu chữ trong mẫu
+Zalo duyệt rất kỹ. Sao chép nguyên mẫu là cách an toàn nhất, sửa chữ dễ bị từ chối.
+:::
 
----
-
-## Bước 5 — Cấu hình Webhook (nhận follow / tin đến)
-
-Tại card **"Webhook"**:
-
-1. Copy **URL webhook** (ô chỉ đọc) → dán vào mục **Webhook** trong app OA.
-2. Nhập **OA Secret Key** (lấy ở mục Webhook của app OA) → bấm **"Lưu OA Secret Key"**.
-
-![Card Webhook](../assets/screenshots/zalo-oa-webhook.png)
-
-> Webhook giúp KLASSA biết khi phụ huynh follow OA / nhắn tin (mở "cửa sổ tư vấn" 48 giờ để gửi tin miễn phí). Nếu chưa nhập Secret Key, card trên sẽ nhắc "Chưa có OA Secret Key".
-
----
-
-## Bước 6 — Đăng ký mẫu tin ZNS (7 bước)
-
-**Quan trọng:** kết nối OA xong **chưa gửi được tin ngay**. Zalo bắt mọi tin tự động (nhắc học phí, biên nhận, nhắc lịch) phải dùng **mẫu đã được Zalo duyệt**. Card **"Mẫu ZNS gợi ý"** có sẵn hướng dẫn + 4 mẫu chuẩn.
-
-![Card Mẫu ZNS + hướng dẫn 7 bước](../assets/screenshots/zalo-oa-zns-templates.png)
-
-Làm theo 7 bước (mỗi mẫu làm 1 lần, sau dùng mãi):
-
-1. **Kiểm tra OA đã xác thực** — OA phải có dấu tích xác thực của Zalo mới đăng ký được ZNS (chưa có thì nộp giấy phép trung tâm để xác thực).
-2. **Đăng ký dịch vụ ZNS** — vào **business.zalo.me** (đăng nhập đúng tài khoản quản lý OA) → tìm mục **ZNS** → đăng ký sử dụng.
-3. **Nạp tiền vào tài khoản ZNS** — mỗi tin gửi đi trừ một khoản phí nhỏ; hết số dư là không gửi được.
-4. **Tạo mẫu tin** — ở từng mẫu bên dưới bấm **"Copy mẫu"** → trong cổng ZNS chọn **Tạo mẫu mới** → chọn đúng loại theo nhãn (nhãn **"Giao dịch"** → loại Giao dịch; nhãn **"CSKH"** → Chăm sóc khách hàng) → **dán** nội dung → bấm **Gửi duyệt**.
-   - ⚠ **Đừng tự sửa câu chữ** trong mẫu — Zalo duyệt rất kỹ, sai chuẩn dễ bị từ chối. Copy nguyên mẫu là an toàn nhất.
-5. **Chờ Zalo duyệt** — thường vài giờ đến 1 ngày làm việc (xem trạng thái trong cổng ZNS).
-6. **Lấy mã mẫu (Template ID) dán về KLASSA** — duyệt xong mỗi mẫu có một **mã (dãy số)**. Copy → quay lại trang này, dán vào ô **"Template ID"** của đúng mẫu → bấm **"Lưu ID"**. Khi thấy badge **"Đã đăng ký"** là xong.
-7. **Bật kênh gửi** — sang tab **"Chọn kênh"** → chọn **Zalo OA** hoặc **Cả hai** (xem Bước 7).
-
-**4 mẫu ZNS có sẵn:**
+4 mẫu có sẵn:
 
 | Mẫu | Loại | Ghi chú |
 |-----|------|---------|
-| Nhắc đóng học phí | Tag 1 · Giao dịch | Gắn sẵn nội dung chuyển khoản = số hoá đơn → **tự khớp lệnh SePay** |
-| Biên nhận đã thu học phí | Tag 1 · Giao dịch | |
-| Nhắc lịch học | Tag 2 · CSKH | |
-| Nhắc vắng / điểm danh | Tag 2 · CSKH | |
+| Nhắc đóng học phí | Giao dịch | Có nhãn **Tự khớp lệnh SePay**: nội dung chuyển khoản là số hoá đơn, phụ huynh chuyển đúng thì hệ thống tự khớp thanh toán |
+| Biên nhận đã thu học phí | Giao dịch | |
+| Nhắc lịch học | CSKH | |
+| Nhắc vắng / điểm danh | CSKH | |
 
-> 💡 Mẫu **"Nhắc học phí"** có tham số nội dung chuyển khoản = số hoá đơn → phụ huynh chuyển đúng nội dung là hệ thống **tự khớp lệnh thanh toán** (giống QR phiếu thu), không phải đối chiếu tay. ZNS gửi thẳng theo số điện thoại — phụ huynh không cần follow OA trước.
+## Bước 7: Chọn kênh gửi
 
----
+Mở tab **Chọn kênh**, thẻ **Kênh Zalo gửi thông báo phụ huynh**:
 
-## Bước 7 — Chọn kênh gửi
+![Chọn kênh](../assets/screenshots/zalo-channel-selector.webp)
 
-Sub-tab **"Chọn kênh"** → chọn kênh trung tâm dùng để gửi thông báo cho phụ huynh:
+- **Zalo cá nhân**: miễn phí, hai chiều, gửi từ nick nhân viên.
+- **Zalo OA chính thức (ZNS)**: đúng luật, trả phí.
+- **Cả hai**: OA trước, Zalo cá nhân dự phòng.
+- **Tắt thông báo Zalo**: không gửi gì qua Zalo.
 
-![Chọn kênh Zalo](../assets/screenshots/zalo-channel-selector.png)
+Chọn OA hoặc Cả hai thì hệ thống tự gửi nhắc học phí, biên nhận, nhắc lịch qua OA theo sự kiện.
 
-- **Zalo cá nhân** (mặc định) — miễn phí, 2 chiều, từ nick nhân viên
-- **Zalo OA chính thức (ZNS)** — đúng luật, trả phí
-- **Cả hai** — OA trước, cá nhân dự phòng
-- **Tắt** — không gửi qua Zalo
+Ngay dưới là thẻ **Bật/tắt từng loại thông báo Zalo**, mặc định bật tất cả. Mỗi loại có một công tắc: **Hoá đơn / học phí mới**, **Nhắc điểm danh thiếu (HS vắng)**, **Đổi lịch học**, **Xếp lớp / thêm học sinh**, **Khách hàng tiềm năng mới**, **Đặt lịch học thử**, **Lời chào khi kết bạn Zalo**. Công tắc này chỉ áp dụng cho kênh Zalo, không ảnh hưởng thông báo qua email hay tin nhắn SMS.
 
-Từ lúc chọn OA / Cả hai, hệ thống **tự gửi** nhắc học phí / biên nhận / nhắc lịch qua OA theo sự kiện.
+## Cách OA gửi tin
 
----
+- Trong 48 giờ kể từ lần phụ huynh tương tác cuối, hệ thống gửi được tin tư vấn tự do, miễn phí.
+- Ngoài 48 giờ, hệ thống dùng ZNS theo số điện thoại (mẫu đã duyệt, trả phí).
 
-## Cách OA gửi tin (sau khi setup xong)
+## Khi gặp lỗi
 
-- OA gửi **tự động 1 chiều** theo sự kiện — **không có màn hình soạn tay tin OA**.
-- Trong **48 giờ** kể từ lần phụ huynh tương tác cuối → gửi tin tư vấn tự do (miễn phí).
-- Ngoài 48 giờ → dùng ZNS theo số điện thoại (template đã duyệt, trả phí).
-
-## Lỗi thường gặp
-
-| Lỗi | Nguyên nhân & cách xử lý |
+| Lỗi | Nguyên nhân và cách xử lý |
 |-----|--------------------------|
-| **-14003 Invalid redirect uri** khi bấm Kết nối | Chưa dán **Callback URL** vào app OA (Bước 2). Copy lại Callback URL trong KLASSA, dán vào developers.zalo.me. |
-| Cảnh báo đỏ "Chưa cấu hình khoá mã hoá" | Hệ thống thiếu khoá mã hoá — báo KLASSA bật biến môi trường, rồi mới lưu được. |
-| Đăng ký ZNS báo OA chưa đủ điều kiện | OA chưa được **xác thực** (chưa có dấu tích) — xác thực OA trước. |
-| Tin ZNS không gửi đi | Hết **số dư ZNS** (nạp thêm), hoặc mẫu chưa duyệt / chưa dán Template ID, hoặc chưa **Chọn kênh** OA. |
-| "Kiểm tra kết nối" báo lỗi | Token hết hạn → bấm **"Kết nối lại / làm mới"**. |
+| **-14003 Invalid redirect uri** khi bấm **Kết nối OA** | Chưa dán **Callback URL** vào ứng dụng OA (bước 2). |
+| Đăng ký ZNS báo OA chưa đủ điều kiện | OA chưa được xác thực. Xác thực OA trước. |
+| Tin ZNS không gửi đi | Hết số dư ZNS, hoặc mẫu chưa duyệt, hoặc chưa dán Template ID, hoặc chưa **Chọn kênh** OA hay Cả hai. |
+| **Kiểm tra kết nối** báo lỗi | Bấm **Kết nối lại / làm mới**. |
+| Tin Zalo cá nhân không gửi, không nhận | Vào **Zalo cá nhân → Tài khoản** kiểm tra trạng thái nick, xem [Kết nối Zalo cá nhân](zalo-ca-nhan.md). |
 
 ## Câu hỏi thường gặp
 
-**Tôi chưa có Zalo OA, dùng tạm cách khác?**
-Dùng [Zalo cá nhân](zalo-ca-nhan.md) (cùng plugin) — quét QR, chat 2 chiều, miễn phí. Phù hợp trung tâm nhỏ.
+::: details Trung tâm chưa có Zalo OA thì làm sao?
+Dùng tạm [Zalo cá nhân](zalo-ca-nhan.md): quét QR, chat hai chiều, miễn phí.
+:::
 
-**Phụ huynh có phải follow OA mới nhận được tin?**
-Không bắt buộc với ZNS — ZNS gửi thẳng theo số điện thoại. Tin tư vấn miễn phí (cs) thì cần phụ huynh đã tương tác trong 48 giờ.
+::: details Phụ huynh có phải quan tâm OA mới nhận được tin?
+Không với ZNS, vì ZNS gửi thẳng theo số điện thoại. Tin tư vấn miễn phí thì cần phụ huynh đã tương tác trong 48 giờ.
+:::
 
-**Hết hạn uỷ quyền (90 ngày)?**
-Vào lại tab Zalo OA → bấm **"Kết nối lại / làm mới"** + cấp quyền lại. Không phải nhập lại OA ID / App ID.
+::: details Hoá đơn gửi qua Zalo ở đâu?
+Xem [Gửi hoá đơn qua Zalo](../hoc-phi/gui-hoa-don-zalo.md).
+:::

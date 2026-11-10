@@ -1,60 +1,66 @@
+---
+title: "Hồ sơ cá nhân"
+description: "Cập nhật tên, số điện thoại, địa chỉ, ảnh đại diện và cài đặt thông báo của chính bạn."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự]
+order: 40
+---
+
 # Hồ sơ cá nhân
 
-## Khi nào dùng
+Trang này để bạn tự sửa thông tin của chính mình và chọn cách nhận thông báo. Hồ sơ nhân sự (hợp đồng, lương) do bộ phận nhân sự quản lý, xem [Hồ sơ trong Cổng nhân viên](../cong-nhan-vien/ho-so.md).
 
-- Cập nhật ảnh đại diện để đồng nghiệp nhận diện trong chat
-- Đổi số điện thoại / email cá nhân
-- Bật / tắt thông báo qua email
-- Xem lịch sử hoạt động của chính mình
+## Mở trang Hồ sơ cá nhân
 
-## Các bước thao tác
+::: steps
+1. Bấm tên hoặc ảnh của bạn ở góc trên bên phải.
+2. Chọn **Hồ sơ cá nhân**. Chọn **Cài đặt** nếu muốn mở thẳng tab **Cài đặt**.
+:::
 
-### Mở trang Hồ sơ
+![Trang Hồ sơ cá nhân với ba tab Thông tin cá nhân, Bảo mật và Cài đặt](../assets/screenshots/ho-so-ca-nhan-tab.webp)
 
-Bấm vào **ảnh đại diện** ở góc trên bên phải màn hình → chọn **"Hồ sơ cá nhân"**.
+Trang có ba tab: **Thông tin cá nhân**, **Bảo mật**, **Cài đặt**.
 
-![Menu hồ sơ cá nhân](../assets/screenshots/ho-so-menu.png)
+## Sửa thông tin cá nhân
 
-### Trang hồ sơ có gì?
+::: steps
+1. Ở tab **Thông tin cá nhân**, bấm **Chỉnh sửa**.
+2. Sửa **Họ và tên** (bắt buộc), **Số điện thoại** hoặc **Địa chỉ**.
+3. Bấm **Lưu thay đổi**. Bấm **Hủy** nếu không muốn lưu.
+:::
 
-![Trang hồ sơ cá nhân](../assets/screenshots/ho-so-trang-chinh.png)
+Ô **Ngày gia nhập** chỉ để xem. Ô **Email** hiện ra nhưng không đổi được: dù bạn gõ gì, phần mềm vẫn giữ email cũ khi lưu. Cần đổi email thì nhờ Quản trị viên.
 
-#### 1. Khối ảnh đại diện
+## Đổi ảnh đại diện
 
-Bấm vào ảnh để tải ảnh mới từ máy tính. Ảnh nên là hình vuông, dung lượng dưới 2MB. Phần mềm sẽ tự cắt và lưu.
+::: steps
+1. Ở tab **Thông tin cá nhân**, bấm **Đổi ảnh đại diện**.
+2. Chọn ảnh JPG, PNG, GIF hoặc WEBP, dung lượng tối đa 5MB.
+:::
 
-#### 2. Thông tin cơ bản
+Ảnh được tải lên và cập nhật ngay.
 
-- **Họ tên** — tên hiển thị trên toàn phần mềm (tin nhắn, lịch dạy, báo cáo…)
-- **Email** — vẫn là email đăng nhập, không đổi được ở đây (cần Chủ trung tâm đổi giúp)
-- **Số điện thoại** — nên điền để đồng nghiệp gọi nhanh
-- **Vai trò** — chỉ xem, không tự đổi được
+## Đổi mật khẩu
 
-#### 3. Cài đặt thông báo
+Làm ở tab **Bảo mật**, xem [Đổi mật khẩu](doi-mat-khau.md).
 
-- Nhận email khi có Lead mới?
-- Nhận email khi học sinh đóng học phí?
-- Nhận email khi sắp đến giờ dạy?
+## Cài đặt thông báo
 
-Tắt bớt nếu thấy email quá nhiều.
+Ở tab **Cài đặt**, bạn gạt bật hoặc tắt bốn loại thông báo: **Email notifications**, **SMS notifications**, **Thông báo học phí** và **Thông báo điểm danh**. Bấm nút lưu của khối đó để áp dụng. Khối **Thông báo đẩy** bên dưới cho phép bật thông báo hiện trên thiết bị đang dùng.
 
-#### 4. Đổi mật khẩu
-
-Có liên kết nhanh sang trang [Đổi mật khẩu](doi-mat-khau.md).
-
-#### 5. Phiên đăng nhập
-
-Danh sách các thiết bị đã đăng nhập tài khoản của anh chị. Bấm **"Đăng xuất"** ở từng thiết bị nếu thấy có máy lạ.
-
-## Lưu ý
-
-- **Đổi tên hiển thị**: ảnh hưởng đến mọi nơi trong phần mềm — phụ huynh chat sẽ thấy tên mới luôn.
-- **Tắt thông báo email**: vẫn nhận thông báo trong phần mềm, chỉ là không gửi qua email.
+::: warning Lưu ý
+Tab **Cài đặt** còn có các lựa chọn về giao diện (theme, ngôn ngữ, kích thước chữ, bố cục) và tuỳ chọn khác. Phần mềm chỉ ghi nhớ các lựa chọn này, chưa dùng chúng để đổi cách hiển thị. Để đổi nền sáng hoặc tối, bấm biểu tượng mặt trời hoặc mặt trăng ở thanh trên cùng.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi đổi ảnh nhưng người khác vẫn thấy ảnh cũ?**
-Trình duyệt của họ đang nhớ ảnh cũ. Họ cần làm mới trang (F5) hoặc đợi vài phút.
+::: details Tôi bị báo "Họ và tên không được để trống"?
+Ô **Họ và tên** là bắt buộc. Điền lại rồi bấm **Lưu thay đổi**.
+:::
 
-**Tôi muốn đổi email đăng nhập, làm sao?**
-Email là khoá định danh tài khoản, không tự đổi được. Liên hệ Chủ trung tâm để được hỗ trợ.
+::: details Ảnh tải lên không được?
+Chỉ nhận ảnh JPG, PNG, GIF, WEBP và tối đa 5MB. Thử ảnh nhỏ hơn hoặc đổi định dạng.
+:::
+
+::: details Phụ huynh và học sinh sửa hồ sơ ở đâu?
+Phụ huynh vào mục **Hồ sơ** trong cổng phụ huynh, xem [Hồ sơ của phụ huynh](../cong-phu-huynh/ho-so.md). Học sinh dùng khu học của mình.
+:::

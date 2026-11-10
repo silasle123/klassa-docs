@@ -1,75 +1,69 @@
-# Báo cáo nhân sự
+---
+title: "Báo cáo HR"
+description: "Xem số liệu nhân sự theo tháng và tải các báo cáo chấm công, lương, bảo hiểm, thuế thu nhập cá nhân."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 140
+group: "Hồ sơ & tổ chức"
+---
 
-## Khi nào dùng
+# Báo cáo HR
 
-- Báo cáo định kỳ cho cấp trên (tháng / quý / năm)
-- Khai báo BHXH / cơ quan thuế
-- Phân tích cơ cấu nhân sự để ra quyết định tuyển dụng
+Trang này tổng hợp số liệu nhân sự của một tháng và cho bạn tải các báo cáo ra tệp CSV để gửi kế toán hoặc nộp cơ quan bảo hiểm, thuế.
 
-## Truy cập
+## Xem báo cáo của một tháng
 
-Menu trái → **Nhân sự → Báo cáo** (hoặc **/hr/reports**).
+::: steps
+1. Vào **Quản lý HR → Báo cáo HR**.
+2. Ở khung **Chọn kỳ báo cáo**, chọn **Tháng** và **Năm**.
+3. Xem bốn ô tổng hợp ở đầu trang.
+4. Chuyển giữa các thẻ **Chấm công**, **Bảng công tháng**, **Giảng dạy**, **Lương** để xem chi tiết.
+:::
 
-## Các báo cáo có sẵn
+![Trang Báo cáo HR với bốn ô tổng hợp và các thẻ](../assets/screenshots/hr-bao-cao.webp)
 
-### 1. Báo cáo cơ cấu nhân sự
+Bốn ô tổng hợp:
 
-- Số nhân viên theo phòng ban, theo cơ sở
-- Tỷ lệ giáo viên / nhân viên hỗ trợ
-- Phân bố giới tính, tuổi, thâm niên
+| Ô | Cho biết |
+|---|---|
+| **Tổng nhân viên** | Số người đang hoạt động trên tổng số hồ sơ |
+| **Tỷ lệ chấm công** | Tỷ lệ chấm công trung bình của tháng |
+| **Tổng giờ dạy** | Tổng giờ dạy của tất cả giáo viên |
+| **Tổng chi lương** | Tổng chi lương của tháng đã chọn |
 
-### 2. Báo cáo tuyển dụng
+## Nội dung từng thẻ
 
-- Số ứng viên nhận trong kỳ
-- Tỷ lệ chuyển đổi (ứng viên → ký hợp đồng)
-- Nguồn ứng viên hiệu quả nhất
-- Thời gian tuyển trung bình
+- **Chấm công**: ba chỉ số **Có mặt đúng giờ**, **Đi muộn**, **Vắng mặt**, mỗi chỉ số là một tỷ lệ phần trăm.
+- **Bảng công tháng**: không còn bảng ở đây. Thẻ này dẫn sang trang **Bảng công tháng** riêng, nơi gộp giờ vào ra, buổi dạy và ca trực của mọi vai vào một bảng. Bấm **Mở Bảng công tháng**.
+- **Giảng dạy**: **Tổng buổi dạy**, **Tổng giờ dạy**, **Trung bình/GV**.
+- **Lương**: **Lương cơ bản**, **Lương giảng dạy**, **Thưởng & phụ cấp**.
 
-### 3. Báo cáo nghỉ việc (Turnover)
+Chi tiết cách tính lương xem ở [Quản lý lương](bang-luong.md), chấm công xem ở [Chấm công](cham-cong.md).
 
-- Tỷ lệ nghỉ việc theo tháng
-- Lý do nghỉ phổ biến
-- Thâm niên trung bình khi nghỉ
-- So sánh kỳ trước
+## Tải báo cáo
 
-### 4. Báo cáo quỹ lương
+Các nút tải đều cho ra tệp CSV theo tháng và năm đang chọn:
 
-- Tổng chi lương theo tháng
-- Chi theo vai trò / phòng ban / cơ sở
-- Tỷ lệ chi lương / doanh thu
+- **Export chấm công** và **Export lương** ở đầu trang.
+- **Kê khai BHXH tháng**: bảng số tiền bảo hiểm xã hội, y tế, thất nghiệp của từng người, để kê khai hằng tháng. Nút này nằm trong thẻ **Lương**.
+- **Quyết toán TNCN năm**: bảng thuế thu nhập cá nhân cả năm, để quyết toán thuế. Nút này cũng nằm trong thẻ **Lương**.
 
-### 5. Báo cáo chấm công
+Tệp tải về đặt tên có loại báo cáo, năm và tháng, ví dụ `attendance_2026_10.csv`. Mở được bằng Excel.
 
-- Tỷ lệ đi làm đầy đủ
-- Tỷ lệ đi muộn
-- Phân tích pattern
+::: tip Mẹo
+Chọn đúng tháng trước khi bấm tải. Tệp luôn lấy theo ô **Tháng** và **Năm** đang hiển thị.
+:::
 
-### 6. Báo cáo phép
-
-- Tổng phép đã dùng
-- Số dư phép còn lại toàn trung tâm
-- Phép dồn năm sau
-
-### 7. Báo cáo hợp đồng
-
-- Hợp đồng sắp hết hạn
-- Hợp đồng theo loại
-- Lịch sử gia hạn
-
-## Xuất file
-
-- **Excel** — dữ liệu thô để phân tích
-- **PDF** — báo cáo trình bày đẹp cho cấp trên
-
-## Lưu ý
-
-- **Báo cáo BHXH chuẩn**: có sẵn mẫu khai báo theo Bảo hiểm Xã hội Việt Nam.
-- **Tự động gửi định kỳ**: cấu hình trong Cài đặt → Báo cáo định kỳ → gửi email cho Chủ trung tâm vào ngày 1 hàng tháng.
+::: warning Lưu ý
+Số liệu bảo hiểm và thuế chỉ chính xác khi các kỳ lương của tháng đó đã được tính xong. Kiểm tra bảng lương trước khi nộp cho cơ quan nhà nước.
+:::
 
 ## Câu hỏi thường gặp
 
-**Báo cáo có thể tuỳ chỉnh cột không?**
-Mỗi báo cáo có nút "Tuỳ chỉnh cột" — chọn cột hiển thị, sắp xếp theo cột nào.
+::: details Muốn xuất danh sách nhân viên thì làm sao?
+Dùng nút **Export** ở trang [Danh sách nhân viên](danh-sach-nhan-vien.md).
+:::
 
-**Có thể tạo báo cáo mới ngoài 7 mẫu trên không?**
-Plugin "Báo cáo HR tuỳ chỉnh" cho phép tạo báo cáo riêng theo công thức.
+::: details Không tải được tệp?
+Thông báo lỗi hiện ngay trên màn hình. Nếu là lỗi quyền, hãy đăng nhập bằng Quản trị viên hoặc Quản lý chi nhánh.
+:::

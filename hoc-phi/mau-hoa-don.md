@@ -1,80 +1,77 @@
-# Tuỳ chỉnh mẫu hoá đơn
+---
+title: "Mẫu hoá đơn"
+description: "Tuỳ chỉnh logo, màu sắc, nội dung, mã QR và thông tin chuyển khoản trên phiếu học phí gửi phụ huynh."
+roles: [Quản trị viên, Quản lý chi nhánh]
+order: 90
+---
 
-## Khi nào dùng
+# Mẫu hoá đơn
 
-- Trung tâm muốn hoá đơn có logo riêng, màu sắc thương hiệu
-- Cần thêm thông tin đặc biệt (lời cảm ơn, mã QR thanh toán)
-- Khác biệt giữa các cơ sở (mỗi cơ sở có mẫu riêng)
+Mẫu hoá đơn quyết định phiếu học phí trông ra sao khi in, tải PDF hoặc gửi ảnh cho phụ huynh: tên và logo trung tâm, màu sắc, lời nhắc, mã QR chuyển khoản. Chỉ Quản trị viên và Quản lý chi nhánh chỉnh được.
 
-## Truy cập
+Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang có tiêu đề **Cài đặt mẫu phiếu học phí**, chia ba tab: **Thông tin trung tâm**, **Thiết kế**, **Nội dung**. [Phiếu phụ thu](phieu-phu-thu.md) khi in cũng lấy tên, địa chỉ, số điện thoại, thông tin ngân hàng và dòng chân trang từ mẫu này.
 
-Menu trái → **Cài đặt → Mẫu hoá đơn** (hoặc **/settings/invoice-template**).
+::: warning Chưa lưu mẫu thì phiếu mang thông tin mẫu
+Khi trung tâm chưa bấm **Lưu cài đặt** lần nào, trang này và phiếu học phí in ra dùng thông tin mẫu có sẵn: địa chỉ, số điện thoại, thông tin ngân hàng chưa phải của trung tâm bạn (tên trung tâm lấy theo tên thương hiệu đã đặt), và chưa có mã QR chuyển khoản đúng vì chưa chọn ngân hàng nhận. Hãy nhập lại đủ thông tin của trung tâm, chọn **Ngân hàng nhận** rồi bấm **Lưu cài đặt** trước khi gửi phiếu đầu tiên cho phụ huynh.
+:::
 
-![Trang tuỳ chỉnh mẫu hoá đơn](../assets/screenshots/mau-hoa-don.png)
+## Ba nút ở đầu trang
 
-## Các phần có thể tuỳ chỉnh
+- **Xem trước**: mở phiếu với dữ liệu mẫu để bạn thấy kết quả, chưa ghi gì.
+- **Khôi phục**: đưa các ô về giá trị mặc định, có hỏi lại trước khi làm.
+- **Lưu cài đặt**: lưu mọi thay đổi. Chỉnh xong nhớ bấm nút này.
 
-### 1. Logo
+## Tab Thông tin trung tâm
 
-Upload logo trung tâm (PNG hoặc SVG, kích thước khuyến nghị 200×200px).
+::: steps
+1. Điền **Tên trung tâm**, **Số điện thoại**, **Địa chỉ**, và **Địa chỉ dòng 2 (tuỳ chọn)** nếu có.
+2. Điền **Email** và **Website** nếu muốn hiện trên phiếu.
+3. Ở **Logo**, bấm **Chọn logo từ máy**. Chấp nhận PNG, JPG, WebP, SVG, tối đa 2MB. Logo hiện ở góc trên bên trái phiếu.
+4. Chỉnh **Kích thước logo (px)** từ 32 đến 160. Muốn ẩn logo thì tắt công tắc **Hiển thị logo**.
+5. Bấm **Lưu cài đặt**.
+:::
 
-### 2. Thông tin trung tâm
+## Tab Thiết kế
 
-- Tên đầy đủ
-- Địa chỉ
-- Số điện thoại
-- Email
-- Website
-- Mã số thuế (nếu có)
+Chọn **Màu chủ đạo** và **Màu phụ** (nhập mã màu hoặc chọn trên bảng màu), **Font chữ** (Arial, Times New Roman, Helvetica hoặc Courier) và **Cỡ chữ** từ 8 đến 16. Bấm **Xem trước** để kiểm tra phiếu có dễ đọc không.
 
-### 3. Màu sắc thương hiệu
+## Tab Nội dung
 
-- Màu chính (đầu trang, viền)
-- Màu phụ (số liệu, nhấn mạnh)
+Các ô chữ trên phiếu:
 
-Mặc định KLASSA dùng tông xanh dương — trung tâm có thể đổi theo brand.
+- **Tiêu đề chính** (mặc định là "PHIẾU THÔNG BÁO HỌC PHÍ") và **Tiêu đề phụ**.
+- **Dòng chân trang**: lời cảm ơn cuối phiếu.
+- **Đoạn hướng dẫn thanh toán**: lời nhắc phụ huynh đóng đúng hạn, ghi đúng nội dung chuyển khoản.
+- Công tắc **Hiển thị tổng tiền bằng chữ**: thêm dòng "Số tiền bằng chữ" dưới bảng tổng cộng.
 
-### 4. Nội dung
+### Mã QR và thông tin chuyển khoản
 
-- **Lời chào** trên đầu hoá đơn ("Kính gửi quý phụ huynh...")
-- **Lời cảm ơn** cuối hoá đơn
-- **Điều khoản** (đóng học phí, hoàn trả, đổi lớp)
-- **Số tài khoản ngân hàng** để chuyển khoản
-- **Mã QR thanh toán** (VietQR) — phụ huynh quét bằng app NH
+Bật **Hiển thị QR Code** rồi chọn **Kiểu QR thanh toán**:
 
-### 5. Mẫu A4 vs A5
+| Kiểu | Cách hoạt động |
+|---|---|
+| **QR động VietQR** (khuyến nghị) | Mỗi phiếu có mã QR riêng, đã điền sẵn số tiền và nội dung chuyển khoản. Phụ huynh quét bằng app ngân hàng và chỉ cần xác nhận. Không phải đăng ký thêm gì. Hệ thống không tự ghi nhận thanh toán từ kiểu này. |
+| **VNPay (tự động)** | Cần đăng ký tài khoản kinh doanh VNPay. Mã QR dẫn tới cổng VNPay với số tiền còn phải thu, và hoá đơn tự cập nhật khi thanh toán thành công. |
+| **QR ảnh tĩnh** | Tải lên một ảnh QR cố định dùng cho mọi phiếu (tối đa 2MB). Phụ huynh tự nhập số tiền và nội dung. Dùng khi ngân hàng không hỗ trợ VietQR. |
 
-- **A4** — chuẩn, có nhiều chỗ ghi thông tin
-- **A5** — nhỏ gọn, tiết kiệm giấy in
+Với **QR động VietQR**, chọn **Ngân hàng nhận** trong danh sách (ô **Tên ngân hàng** tự điền theo), rồi điền **Số tài khoản**, **Chủ tài khoản** ở phần thông tin chuyển khoản bên dưới. Thiếu ngân hàng hoặc số tài khoản thì hệ thống nhắc "Cần chọn ngân hàng và điền số tài khoản" và chưa tạo được mã QR. Khi đủ thông tin, khung **Xem trước QR** hiện mã với số tiền mẫu 500.000đ, bạn quét thử bằng app ngân hàng để kiểm tra.
 
-## Xem trước
+Công tắc **Hiển thị thông tin ngân hàng** bật phần **Thông tin chuyển khoản** gồm **Tên ngân hàng**, **Số tài khoản**, **Chủ tài khoản**. Ba ô này chỉ hiện khi công tắc đang bật, nên muốn nhập hoặc đổi số tài khoản thì để công tắc bật.
 
-Bấm nút **"Xem trước"** → hiển thị hoá đơn mẫu với dữ liệu thật của 1 học sinh.
+::: warning Lưu ý
+Các ô ngân hàng mặc định là thông tin giả (Ngân hàng XYZ, số tài khoản 1234567890). Nhớ thay bằng tài khoản thật của trung tâm trước khi gửi phiếu cho phụ huynh, nếu không phụ huynh sẽ chuyển nhầm.
+:::
 
-## Áp dụng
-
-- **Áp dụng cho toàn trung tâm** — mọi cơ sở dùng chung mẫu
-- **Áp dụng riêng từng cơ sở** — mỗi cơ sở 1 mẫu
-
-## Mẫu có sẵn
-
-KLASSA cung cấp 3 mẫu sẵn:
-
-1. **Cổ điển** — trang trọng, viền đậm, logo lớn
-2. **Hiện đại** — thiết kế tối giản, nhiều khoảng trắng
-3. **Vui tươi** — màu sắc, biểu tượng — phù hợp trung tâm trẻ em
-
-Bấm **"Dùng mẫu"** → áp dụng ngay rồi tuỳ chỉnh tiếp.
-
-## Lưu ý
-
-- **Hoá đơn điện tử** dùng mẫu của nhà cung cấp e-Invoice, không phải mẫu này. Mẫu này áp dụng cho hoá đơn KLASSA + phiếu thu.
-- **Test in trước** khi triển khai chính thức để chắc chắn layout đúng.
+::: tip Mẹo
+Muốn tiền chuyển khoản tự khớp vào hoá đơn, hãy dùng kiểu **QR động VietQR** cùng việc kết nối ngân hàng ở [Kết nối ngân hàng](../tich-hop/ngan-hang.md). Nội dung chuyển khoản mang số hoá đơn nên hệ thống nhận ra được.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi không có logo, dùng tên trung tâm chữ thay được không?**
-Được. Bỏ trống ô logo → phần mềm tự dùng tên trung tâm in đậm thay vào.
+::: details Sửa mẫu có làm đổi các phiếu đã gửi không?
+Phiếu đã gửi là ảnh hoặc PDF đã xuất nên không đổi. Mẫu mới áp dụng khi bạn in, tải hoặc gửi lại từ lúc lưu trở đi.
+:::
 
-**Có thể thêm chữ ký + dấu trung tâm vào hoá đơn không?**
-Có. Upload ảnh chữ ký + dấu (PNG nền trong suốt) → phần mềm chèn vào cuối hoá đơn.
+::: details Mỗi cơ sở có mẫu riêng không?
+Không. Mẫu dùng chung cho toàn trung tâm, không chia theo cơ sở.
+:::

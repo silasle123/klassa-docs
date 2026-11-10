@@ -1,99 +1,110 @@
-# Quản lý học phí
+---
+title: "Gói học phí và cách thu tiền"
+description: "Tạo gói học phí và chọn một trong ba chế độ thu: thu trước có khấu trừ, thu trước trọn gói, thu sau theo buổi thực."
+roles: [Quản trị viên, Quản lý chi nhánh, Kế toán]
+order: 20
+---
 
-## Khái niệm
+# Gói học phí và cách thu tiền
 
-KLASSA quản lý học phí qua **gói học phí** gán cho từng học sinh khi ghi danh. Điểm cốt lõi (mới từ 2026) là **3 chế độ thu học phí (mô hình thu phí)** — quyết định trung tâm thu tiền *trước* hay *sau* khi học, và có *bù tiền buổi vắng* hay không.
+Gói học phí quy định học sinh đóng bao nhiêu cho mỗi tháng và **thu theo cách nào**. Cách thu quyết định hoá đơn đầu tháng có thu tiền hay không, và buổi học sinh nghỉ được xử lý ra sao. Chọn đúng chế độ ngay từ đầu sẽ đỡ phải sửa hoá đơn về sau.
 
-## 3 chế độ thu học phí
+## Trang Học phí có gì
 
-Đây là phần quan trọng nhất. Mỗi gói học phí (hoặc từng học sinh) chọn 1 trong 3:
+Vào **Tài chính → Học phí**. Trang có ba tab:
 
-| Chế độ | Thu khi nào | Học sinh vắng buổi | Dùng cho |
-|--------|-------------|--------------------|----------|
-| **Thu trước có khấu trừ** *(mặc định)* | Đầu tháng, thu theo gói (số buổi × đơn giá) | **Sinh tín chỉ bù** = số buổi vắng × giá → tự trừ vào hoá đơn tháng sau | Trung tâm thu trước, công bằng cho phụ huynh |
-| **Thu trước trọn gói** *(không trừ credit)* | Đầu tháng, thu đủ tiền gói | **KHÔNG bù** — coi như mất tiền buổi đó | Lớp đóng trọn gói, không hoàn buổi vắng |
-| **Thu sau theo buổi thực** *(học trước thu sau)* | **Cuối tháng**, tính theo số buổi **đã học thật** | Không liên quan (chỉ trả buổi đã đi) | Lớp linh hoạt, học bao nhiêu trả bấy nhiêu |
+- **Tổng quan**: bốn thẻ **Tổng doanh thu**, **Doanh thu tháng**, **Hóa đơn chưa thu**, **Tỷ lệ thu phí**; khối **Cơ cấu học phí** (nội dung hiển thị do trung tâm tự soạn, xem [Cấu hình tài chính](cai-dat.md)); danh sách **Hóa đơn gần đây** và biểu đồ **Xu hướng doanh thu 5 tháng gần đây**.
+- **Gói học phí**: các thẻ gói, nơi tạo, sửa, bật tắt gói.
+- **Thanh toán**: ghi nhận tiền thu, xem [Ghi nhận thanh toán](thu-chi.md).
 
-### Giải thích từng chế độ
+Ở đầu trang có thêm nút **Tạo gói học phí**, **Tạo hóa đơn**, **Xem Hoá đơn** (mở danh sách hoá đơn) và **Quản lý Tài chính**.
 
-**1. Thu trước có khấu trừ** (`PREPAY_WITH_CREDIT`)
-- Đầu tháng xuất hoá đơn thu theo gói.
-- Học sinh vắng → cuối tháng (khi [chốt sổ](ke-toan.md)) hệ thống sinh **tín chỉ bù** (tính bằng tiền) = số buổi vắng × giá buổi.
-- Tín chỉ này tự **trừ vào hoá đơn tháng sau của đúng môn đó**.
-- Đây là chế độ **CÓ trừ credit** — phổ biến nhất, công bằng.
+![Trang Học phí tab Tổng quan với bốn thẻ số liệu và khối Cơ cấu học phí](../assets/screenshots/hoc-phi-tab-tong-quan.webp)
 
-**2. Thu trước trọn gói — KHÔNG trừ credit** (`PREPAY_NO_CREDIT`)
-- Đầu tháng vẫn thu **đủ tiền gói** như chế độ 1.
-- Học sinh vắng → **KHÔNG sinh tín chỉ, không bù tiền** (đúng nghĩa "đóng trọn gói").
-- Đây chính là chế độ **"KHÔNG trừ credit"**.
-- *Ngoại lệ:* tín chỉ admin **tặng / chuyển / hoàn thủ công** vẫn được áp (chỉ tín chỉ do *vắng* mới không sinh).
+## Tạo một gói học phí
 
-**3. Thu sau theo buổi thực — học trước thu sau** (`POSTPAY_ACTUAL`)
-- **KHÔNG** xuất hoá đơn đầu tháng.
-- Cuối tháng mới tính tiền = tổng các buổi **đã đi** (có mặt / đi muộn / học bù) × đơn giá × **hệ số loại buổi**.
-- Hệ số loại buổi: buổi thường/học bù/bổ trợ = **100%**, buổi **online = 50%**, buổi **hỗ trợ miễn phí = 0%**.
-- Buổi trung tâm huỷ + buổi vắng có phép: **không tính tiền**.
-- Chế độ này **không dùng tín chỉ** (đã tính đúng buổi thực).
+::: steps
+1. Vào **Tài chính → Học phí**, bấm **Tạo gói học phí** (hoặc mở tab **Gói học phí** rồi bấm **Thêm gói mới**). Hộp **Tạo gói học phí mới** hiện ra.
+2. Điền **Tên gói học phí**, ví dụ "Gói Tháng".
+3. Điền **Thời hạn (tháng)**, nhập 1.
+4. Điền **Số buổi học / tháng**, ví dụ 8 (2 buổi mỗi tuần).
+5. Điền **Học phí (VNĐ)** của cả tháng, ví dụ 1600000. Nếu có giảm riêng cho gói, nhập **Giảm giá (%)** từ 0 đến 100.
+6. Ở mục **Mô hình thu phí**, chọn một trong ba chế độ (giải thích bên dưới).
+7. Bấm **Tạo gói học phí** ở cuối hộp. Các ô bắt buộc có dấu sao: tên gói, thời hạn, số buổi mỗi tháng và học phí.
+:::
 
-## Tạo gói học phí + chọn chế độ thu
+![Hộp tạo gói học phí với mục Mô hình thu phí](../assets/screenshots/tuition-plan-billing-mode.webp)
 
-1. Vào **Học phí → Quản lý học phí** (`/finance/tuition`) → tab **"Gói học phí"**.
-2. Bấm **"Tạo gói học phí"** (hoặc Sửa gói có sẵn) → hộp thoại.
+Cuối hộp có công tắc **Trạng thái hoạt động** (bật là dùng được ngay) và khung **Tính toán tự động** cho biết đơn giá mỗi buổi bằng học phí chia số buổi. Ví dụ 1.600.000đ chia 8 buổi là 200.000đ một buổi.
 
-![Tạo gói học phí — chọn mô hình thu phí](../assets/screenshots/tuition-plan-billing-mode.png)
+::: warning Lưu ý
+Ô **Thời hạn (tháng)** chỉ để hiển thị trên thẻ gói, không làm thay đổi cách tính hoá đơn. Gói 3, 6 hoặc 12 tháng trả một lần chưa có trong phần mềm, vì vậy đừng tạo gói như vậy ở đây.
+:::
 
-3. Điền: tên gói, đơn giá buổi, số buổi/kỳ, chu kỳ (mặc định theo tháng), và **"Mô hình thu phí"** (chọn 1 trong 3 chế độ trên).
-   - Chọn "Thu sau theo buổi thực" sẽ hiện cảnh báo "không xuất hoá đơn đầu tháng".
+## Ba chế độ thu
 
-## Ghi đè chế độ cho từng học sinh
+Các ví dụ dưới đây dùng gói 8 buổi một tháng, giá 1.600.000đ (200.000đ một buổi), học sinh Nguyễn Minh An lớp Toán 9A1.
 
-Mặc định học sinh theo chế độ của gói. Nhưng có thể **ghi đè riêng cho 1 học sinh** khi [ghi danh](../lop-hoc/ghi-danh.md):
+### Thu trước có khấu trừ (mặc định)
 
-- Trang **Ghi danh** (tạo / sửa) có khối **"💳 Mô hình thu phí"** → tick "ghi đè" → chọn 1 trong 3 chế độ.
-- Không tick = theo gói.
+Đầu tháng thu đủ tiền gói. Cuối tháng, buổi nào học sinh vắng được **trừ vào hoá đơn tháng sau**.
 
-![Ghi đè mô hình thu phí khi ghi danh](../assets/screenshots/enrollment-billing-override-create.png)
-- Danh sách ghi danh hiển thị nhãn "Riêng: Thu trọn gói / Thu sau / Thu trước + khấu trừ" nếu học sinh có ghi đè.
+- Tháng 9: phiếu thu 1.600.000đ. An chỉ đi 6 buổi, vắng 2 buổi.
+- Tháng 10: phiếu của An được trừ 2 buổi, tức 400.000đ.
+- Nếu An đi nhiều hơn số buổi đã đóng (học dư), tháng sau phiếu có thêm một dòng phụ thu theo đơn giá buổi.
 
-> Quy tắc: **ghi đè của học sinh thắng mặc định của gói.** Cả hai không đặt → mặc định "Thu trước có khấu trừ".
+### Thu trước trọn gói
 
-## Tín chỉ (credit) khi học sinh nghỉ
+Đầu tháng thu đủ tiền gói, **vắng coi như mất tiền**: không hoàn, không trừ sang tháng sau. Hợp với trung tâm có chính sách "đã đóng là giữ chỗ".
 
-- **Tín chỉ tính bằng TIỀN** (VNĐ), không phải đếm số buổi.
-- Sinh khi: học sinh vắng (chế độ "Thu trước có khấu trừ") + **đã có hoá đơn kỳ đó** (đã trả tiền gói).
-- Mỗi tín chỉ gắn với **đúng một môn** → trừ vào hoá đơn kỳ sau của môn đó.
-- Học sinh **nghỉ hẳn một môn** → tín chỉ dư của môn đó **tự tràn sang môn còn học** của cùng học sinh.
-- **Buổi trung tâm huỷ** không tính vắng, không sinh tín chỉ.
-- Theo dõi tín chỉ ở [Kế toán nội bộ](ke-toan.md) + [Báo cáo tín chỉ](../bao-cao/tin-chi.md).
+- Tháng 9: phiếu thu 1.600.000đ, An vắng 2 buổi.
+- Tháng 10: phiếu không có khoản trừ nào cho 2 buổi vắng đó.
 
-## Khuyến mãi / giảm giá
+### Thu sau theo buổi thực
 
-Khi ghi danh, người nhập **tự chọn** chương trình giảm giá (server KHÔNG tự áp theo điều kiện). Các chương trình mặc định:
+**Không thu đầu tháng.** Cuối tháng, tiền bằng số buổi đã học nhân đơn giá, nhân hệ số của loại buổi: buổi học online tính 50%, buổi hỗ trợ miễn phí tính 0%.
 
-| Chương trình | Mức giảm |
-|--------------|----------|
-| Anh chị em (con thứ 2 trở đi) | 25% |
-| Học nhiều môn (mỗi môn) | 5% |
-| Nhóm bạn | 5% |
-| Khuyến mãi | 50% |
-| Học bổng | 100% |
-| Tuỳ chỉnh | nhập tay |
+- Tháng 9: An đi 6 buổi thường, tiền là 6 x 200.000 = 1.200.000đ.
+- Nếu 1 trong 6 buổi là buổi online, tiền là 5 x 200.000 + 100.000 = 1.100.000đ.
 
-Quản lý chương trình ở [Kế toán nội bộ](ke-toan.md) → Chương trình giảm giá; mức % tenant tự đổi được. **Mã giảm giá / coupon** (vd `SUMMER2026`) thuộc **plugin "Giới thiệu & Coupon"** (trả phí), không có sẵn trong core.
+Chế độ này không xuất hoá đơn đầu tháng. Số buổi một tháng của gói chỉ để tham khảo. Cách tạo phiếu cuối tháng xem ở [Tạo hoá đơn](tao-hoa-don.md).
 
-## Cách tính tiền trên 1 hoá đơn
+::: tip Mẹo
+Trên thẻ gói, chế độ thu trước có khấu trừ không hiện nhãn gì. Hai chế độ còn lại hiện nhãn **Thu trọn gói** hoặc **Thu sau buổi thực** để bạn nhìn là biết.
+:::
 
-Đơn giá gói × số kỳ → trừ giảm giá gói → trừ giảm giá ghi danh (% hoặc số tiền) → cộng phụ thu (nếu bật) → **tổng cuối**.
+## Đổi chế độ thu cho riêng một học sinh
 
-> Hoá đơn học phí thường **không có dòng thuế VAT**. VAT chỉ áp dụng khi dùng [Hoá đơn điện tử](hoa-don-dien-tu.md).
+Một học sinh có thể thu khác chế độ của gói. Khi ghi danh (hoặc sửa ghi danh), ở mục **Mô hình thu phí**, tích **Ghi đè cho HS này** rồi chọn chế độ mong muốn. Cách ghi danh xem [Ghi danh](../hoc-sinh/ghi-danh.md).
+
+## Ưu đãi anh chị em và học nhiều môn
+
+Ưu đãi gắn vào từng ghi danh của học sinh, không nằm trong gói. Khi ghi danh, nếu em đủ điều kiện, form ghi danh gợi ý sẵn mức giảm (ví dụ "Ưu đãi anh chị em, giảm 25%"). Hai ưu đãi phổ biến:
+
+- **Ưu đãi anh chị em, 25%**: nhà có n con đang học thì có n trừ 1 suất giảm, gắn cho bé nào cũng được. Anh chị em chỉ học lớp linh hoạt không được tính là đang học.
+- **Ưu đãi học nhiều môn, 5%**: học sinh học từ 2 môn chính thức trở lên thì mọi môn đều giảm 5%. Hai lớp cùng một môn chỉ tính là một môn, lớp linh hoạt không tính là môn.
+
+Mỗi ghi danh chỉ nhận **một ưu đãi cao nhất**, không cộng dồn, và không đè lên mức giảm 50% hoặc 100%. Danh sách chương trình và mức giảm do trung tâm đặt ở mục quản lý khuyến mãi của phần Kế toán: **Tài chính → Kế toán → Quản lý khuyến mãi**.
+
+## Sửa, tắt và xoá gói
+
+Trên mỗi thẻ gói có các nút:
+
+- **Sửa**: mở lại hộp để đổi thông tin, bấm **Cập nhật** để lưu.
+- **Tạo HĐ**: mở hộp **Tạo hóa đơn** với gói này.
+- **Tắt** hoặc **Bật**: gói tắt sẽ ẩn khỏi danh sách (bật công tắc **Hiện gói không hoạt động** để xem lại).
+- Nút thùng rác: xoá gói, có hỏi lại trước khi xoá. Chỉ Quản trị viên xoá được.
+
+::: danger Không thể hoàn tác
+Gói đã xoá không lấy lại được. Gói đã có học sinh dùng thì nên bấm **Tắt** thay vì xoá.
+:::
 
 ## Câu hỏi thường gặp
 
-**Học sinh nghỉ giữa tháng, học phí xử lý sao?**
-Tuỳ chế độ thu: "Thu trước có khấu trừ" → sinh tín chỉ bù trừ kỳ sau; "Thu trước trọn gói" → mất tiền buổi vắng; "Thu sau theo buổi thực" → vốn chỉ trả buổi đã học. **Không có hoàn tiền mặt tự động** — hệ thống dùng tín chỉ khấu trừ.
+::: details Đổi chế độ thu của gói có làm đổi hoá đơn đã xuất không?
+Không. Hoá đơn đã tạo giữ nguyên. Chế độ mới áp dụng cho các hoá đơn tạo sau đó.
+:::
 
-**Đổi chế độ thu giữa chừng được không?**
-Được — sửa ở gói (áp cho HS mới) hoặc ghi đè từng HS ở trang Ghi danh. Hoá đơn đã xuất không đổi.
-
-**Tại sao subtitle ghi "200.000đ/2 tiếng"?**
-Đó là dòng mô tả cấu hình theo từng trung tâm — đổi được trong [Cài đặt tài chính](cai-dat.md), không phải con số cố định.
+::: details Học sinh học bù ở lớp khác thì tính thế nào?
+Máy tính hoá đơn có đối chiếu buổi học theo cả môn, nên buổi học bù cùng môn được trừ vào phần vắng. Với lớp linh hoạt, có công tắc riêng trong [Cấu hình tài chính](cai-dat.md).
+:::

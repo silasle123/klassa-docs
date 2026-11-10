@@ -1,65 +1,76 @@
+---
+title: "Danh sách học sinh"
+description: "Xem, lọc và xuất danh sách học sinh, biết ngay em nào cần gọi phụ huynh, thiếu Zalo hoặc chưa có lớp."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán]
+order: 10
+---
+
 # Danh sách học sinh
 
-## Khi nào dùng
+Trang này là nơi bạn tìm một học sinh, xem em đang học lớp nào, phụ huynh là ai và việc nào cần làm trước. Đầu trang còn có thẻ **Việc cần làm** để bạn thấy ngay những em có vấn đề.
 
-- Tra cứu thông tin một học sinh cụ thể
-- Xem ai đang học, ai đã nghỉ, ai sắp hết hạn học phí
-- Xuất danh sách báo cáo theo cơ sở / lớp / khoá
-- Lọc học sinh sinh nhật tháng này để gửi lời chúc
+![Trang Học sinh với thẻ Việc cần làm và các nút Thêm học sinh, Nhập Excel, Tài khoản học sinh](../assets/screenshots/hoc-sinh-danh-sach-moi.webp)
 
-## Truy cập
+## Mở danh sách và tìm một học sinh
 
-Menu trái → **Học sinh**.
+::: steps
+1. Vào **Học viên → Học sinh**.
+2. Gõ vào ô tìm kiếm phía trên bảng (chữ mờ trong ô là **Tìm tên, mã, SĐT học sinh / phụ huynh**): tên, mã học sinh, số điện thoại của em hoặc của phụ huynh.
+3. Muốn thu hẹp, dùng các nút lọc **Khối**, **Lớp**, hoặc bấm các thẻ trạng thái: **Tất cả**, **Đang học**, **Tạm nghỉ**, **Đình chỉ**, **Đã tốt nghiệp**, **Chuyển trường**.
+4. Bấm **Bỏ lọc** để quay về danh sách đầy đủ.
+:::
 
-![Trang danh sách học sinh](../assets/screenshots/hoc-sinh-danh-sach.png)
+Quản trị viên có thêm bộ lọc **Cơ sở** khi trung tâm có nhiều hơn một cơ sở. Các vai khác chỉ thấy học sinh trong phạm vi của mình. Giáo viên và trợ giảng chỉ thấy học sinh thuộc lớp mình phụ trách. Quản trị viên có thể tắt hẳn quyền xem trang này của giáo viên và trợ giảng ở **Cài đặt**, mục **Môn học**, phần **Quyền truy cập trang Học sinh** (mặc định bật).
 
-## Bố cục trang
+Danh sách xếp theo ngày tạo hồ sơ, mới nhất trước. Nút **Bảng** và **Thẻ** ở phần **Kiểu xem** đổi cách hiển thị, nội dung giống nhau.
 
-### Khối số liệu
+## Đọc từng dòng
 
-- **Tổng học sinh đang học**
-- **Học sinh mới tháng này**
-- **Sắp hết hạn học phí** (trong 7 ngày tới)
-- **Đã nghỉ tháng này** (cần chăm sóc lại)
+Mỗi dòng cho biết mã học sinh, tên, khối, cơ sở, số điện thoại, các lớp đang học, phụ huynh chính, trạng thái và tỉ lệ **Đi học 30 ngày**. Cột **Nhập học** là ngày tạo hồ sơ.
 
-### Bộ lọc
+Dưới trạng thái có thể có nhãn về Zalo của phụ huynh:
 
-- **Trạng thái** — Đang học / Tạm nghỉ / Đã nghỉ / Hoàn thành khoá
-- **Khoá / Lớp** — chỉ xem học sinh của một lớp
-- **Cơ sở** — nếu trung tâm có nhiều chi nhánh
-- **Khối lớp** — Lớp 6, 7, 8…
-- **Sinh nhật tháng** — phục vụ marketing
-- **Tìm kiếm** — gõ tên, mã, SĐT phụ huynh
+| Nhãn | Ý nghĩa |
+| --- | --- |
+| **Zalo PH** kèm tên | Đã tìm thấy Zalo của phụ huynh theo số điện thoại. |
+| **Chưa có SĐT PH** | Hồ sơ chưa có số điện thoại phụ huynh. |
+| **Chưa tìm thấy Zalo PH** | Có số điện thoại nhưng không tìm ra Zalo theo số đó. |
 
-### Bảng danh sách
+Em đang học mà không có lớp nào hiện nhãn **Chưa xếp lớp**.
 
-Mỗi dòng có:
+## Thẻ Việc cần làm
 
-- Mã học sinh
-- Họ tên + ảnh
-- Khối lớp
-- Lớp đang học
-- Phụ huynh + SĐT
-- Trạng thái
-- Hạn học phí gần nhất
+Thẻ này gom bốn việc, mỗi việc có nút để lọc đúng nhóm em liên quan:
 
-Bấm vào dòng để mở [chi tiết học sinh](chi-tiet.md).
+- **Vắng nhiều, cần gọi phụ huynh**: em vắng liền 2 buổi gần nhất ở một lớp, hoặc vắng từ 3 buổi trong 14 ngày qua. Bấm **Xem từng em** để lọc.
+- **Thiếu Zalo phụ huynh**: bấm nút **Lọc ... em**. Thiếu Zalo thì phụ huynh không nhận được phiếu và nhắc lịch qua Zalo.
+- **Đang học nhưng chưa có lớp**: hồ sơ ghi **Đang học** nhưng không còn lớp nào. Hãy [ghi danh](ghi-danh.md) vào lớp, hoặc chuyển em sang **Tạm nghỉ**.
+- **Còn phiếu học phí quá hạn**: chỉ hiện với vai được xem tiền học phí. Bấm **Mở báo cáo nợ** để xem từng phiếu.
 
-## Thao tác nhanh
+Bên cạnh ô tìm kiếm có nút lọc **Thiếu Zalo PH** kèm số em, chỉ tính các em đang học.
 
-- **Xuất Excel** — danh sách lọc hiện tại
-- **Gửi tin Zalo hàng loạt** — chọn nhiều học sinh → gửi cùng nội dung cho phụ huynh
-- **Gắn thẻ** — đánh dấu nhóm học sinh để lọc lại sau (VIP, Học bổng, Cần chú ý…)
+## Các nút trên đầu trang
 
-## Lưu ý
+- **Thêm học sinh**: mở form tạo hồ sơ. Xem [Tạo hồ sơ học sinh](tao-moi.md). Có ở vai được thêm học sinh.
+- **Nhập Excel**: nhập nhiều em một lần. Xem [Nhập dữ liệu hàng loạt từ Excel](../tai-khoan/nhap-du-lieu-hang-loat.md).
+- **Tài khoản học sinh**: cấp tài khoản đăng nhập cho học sinh. Xem [Tài khoản học sinh](tai-khoan-hoc-sinh.md). Chỉ Quản trị viên và Quản lý chi nhánh thấy.
+- **Xuất dữ liệu**: xuất đúng danh sách đang lọc. Chọn **Xuất Excel (CSV)** để tải tệp, hoặc **Sao chép Google Sheets** để dán vào bảng tính. Chỉ Quản trị viên và Quản lý chi nhánh thấy.
+- Biểu tượng làm mới tải lại số liệu.
 
-- **Học sinh đã nghỉ** vẫn còn trong hệ thống, không xoá — phục vụ lịch sử và báo cáo.
-- **Mã học sinh** mặc định tự sinh, có thể tuỳ chỉnh format trong Cài đặt.
+::: tip Mẹo
+Muốn xuất danh sách một lớp, lọc theo **Lớp** trước rồi mới bấm **Xuất dữ liệu**. Mỗi lần xuất tối đa 5.000 em, nếu dài hơn hãy lọc bớt rồi xuất lại.
+:::
+
+## Mở hồ sơ hoặc sửa nhanh
+
+Bấm tên học sinh hoặc nút **Chi tiết** để mở [hồ sơ học sinh](chi-tiet.md). Biểu tượng cây bút ở cuối dòng mở trang sửa hồ sơ, chỉ hiện với vai được sửa học sinh.
 
 ## Câu hỏi thường gặp
 
-**Tôi muốn xem học sinh đã nghỉ, hiển thị thế nào?**
-Bộ lọc trạng thái → chọn "Đã nghỉ". Mặc định chỉ hiện học sinh đang học.
+::: details Em vừa nghỉ nhưng vẫn còn trong danh sách?
+Danh sách mặc định hiện **Tất cả** trạng thái. Bấm thẻ **Đang học** nếu chỉ muốn xem các em đang theo học.
+:::
 
-**Tại sao có học sinh không thấy SĐT phụ huynh?**
-Có thể nhập sót khi tạo hồ sơ. Bấm vào học sinh → tab Phụ huynh → bổ sung.
+::: details Tại sao tôi không thấy nút Xuất dữ liệu?
+Chỉ Quản trị viên và Quản lý chi nhánh được xuất danh sách. Nhờ họ xuất giúp nếu bạn cần.
+:::

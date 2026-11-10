@@ -1,61 +1,74 @@
+---
+title: "Đổi mật khẩu"
+description: "Cách đổi mật khẩu của chính bạn, gồm cả lần đổi bắt buộc khi dùng mật khẩu tạm."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự, Phụ huynh]
+order: 50
+---
+
 # Đổi mật khẩu
 
-## Khi nào dùng
+Đổi mật khẩu để giữ tài khoản an toàn, nhất là khi bạn đang dùng mật khẩu tạm do trung tâm cấp. Mật khẩu là của riêng bạn: không ai, kể cả Quản trị viên, nên biết mật khẩu mới.
 
-- **Lần đầu đăng nhập**: phần mềm sẽ tự yêu cầu anh chị đổi mật khẩu khởi tạo sang mật khẩu của riêng mình.
-- **Định kỳ**: nên đổi mật khẩu 3-6 tháng một lần để bảo mật.
-- **Khi nghi ngờ tài khoản bị lộ**: ví dụ vô tình đăng nhập trên máy lạ, hoặc bị ai đó nhìn thấy khi gõ mật khẩu.
+## Đổi mật khẩu khi đang dùng bình thường
 
-## Các bước thao tác
+::: steps
+1. Bấm tên hoặc ảnh của bạn ở góc trên bên phải, chọn **Hồ sơ cá nhân**.
+2. Chuyển sang tab **Bảo mật**.
+3. Nhập **Mật khẩu hiện tại**, **Mật khẩu mới** và **Xác nhận mật khẩu mới**.
+4. Bấm **Đổi mật khẩu**.
+:::
 
-### Bước 1 — Mở trang đổi mật khẩu
+Đổi xong, phần mềm báo "Đã đổi mật khẩu. Vui lòng đăng nhập lại bằng mật khẩu mới." và tự đưa bạn về trang **Đăng nhập** sau khoảng 1-2 giây. Mọi thiết bị đang đăng nhập bằng mật khẩu cũ cũng bị đăng xuất.
 
-Bấm vào **ảnh đại diện** ở góc trên bên phải màn hình, chọn **"Đổi mật khẩu"**.
+## Lần đầu đăng nhập: bắt buộc đổi
 
-![Menu tài khoản](../assets/screenshots/doi-mat-khau-menu.png)
+Tài khoản được trung tâm cấp với mật khẩu tạm sẽ bị đánh dấu phải đổi. Khi đăng nhập, bạn bị đưa thẳng đến trang **Đổi mật khẩu** với dòng nhắc "Bạn cần đổi mật khẩu mặc định trước khi tiếp tục sử dụng hệ thống". Bạn chưa vào được phần mềm cho tới khi đổi xong, và trang này không có nút **Hủy**.
 
-### Bước 2 — Nhập thông tin
+::: steps
+1. Nhập **Mật khẩu hiện tại** (chính là mật khẩu tạm được cấp). Dấu * nghĩa là ô bắt buộc.
+2. Nhập **Mật khẩu mới**. Danh sách "Yêu cầu mật khẩu" bên dưới sẽ đánh dấu từng điều kiện bạn đã đạt.
+3. Nhập lại vào **Xác nhận mật khẩu mới**. Phần mềm báo **Mật khẩu khớp** hoặc **Mật khẩu không khớp**.
+4. Bấm **Đổi mật khẩu**.
+5. Đăng nhập lại bằng mật khẩu mới, xem [Đăng nhập](dang-nhap.md).
+:::
 
-Phần mềm yêu cầu 3 thông tin:
+![Trang Đổi mật khẩu với ba ô Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới](../assets/screenshots/doi-mat-khau-bat-buoc.webp)
 
-- **Mật khẩu hiện tại** — mật khẩu anh chị đang dùng để đăng nhập
-- **Mật khẩu mới** — mật khẩu anh chị muốn đổi sang
-- **Nhập lại mật khẩu mới** — gõ lại y hệt để chắc chắn không gõ nhầm
+Yêu cầu của mật khẩu mới ở trang này:
 
-![Form đổi mật khẩu](../assets/screenshots/doi-mat-khau-form.png)
+- Ít nhất 8 ký tự
+- Ít nhất 1 chữ hoa
+- Ít nhất 1 chữ thường
+- Ít nhất 1 số
+- Ít nhất 1 ký tự đặc biệt, chỉ dùng được các ký tự **@ $ ! % * ? &**. Mật khẩu không được chứa ký tự nào khác ngoài chữ không dấu, số và các ký tự này (ví dụ dấu **#** hoặc khoảng trắng bị từ chối).
 
-### Bước 3 — Bấm "Đổi mật khẩu"
+::: tip Mẹo
+Nên dùng đúng các yêu cầu trên cả khi đổi ở tab **Bảo mật**. Tab này chỉ đòi tối thiểu 6 ký tự nhưng mật khẩu ngắn và dễ đoán thì dễ bị lộ.
+:::
 
-Nếu mọi thông tin hợp lệ, phần mềm sẽ báo thành công. Lần đăng nhập tiếp theo anh chị dùng mật khẩu mới.
+## Những lỗi thường gặp
 
-## Yêu cầu mật khẩu
+| Thông báo | Cách xử lý |
+|---|---|
+| Mật khẩu hiện tại không đúng | Nhập lại mật khẩu đang dùng. Mật khẩu tạm lấy từ người cấp tài khoản |
+| Mật khẩu xác nhận không khớp | Gõ lại hai ô mật khẩu mới cho giống nhau |
+| Mật khẩu mới phải khác mật khẩu hiện tại | Chọn mật khẩu khác mật khẩu cũ |
+| Mật khẩu mới cần ít nhất 8 ký tự, có chữ HOA, chữ thường, số và ký tự đặc biệt | Sửa theo yêu cầu ở trên |
 
-Mật khẩu mới phải đạt:
-
-- **Tối thiểu 8 ký tự**
-- **Có ít nhất 1 chữ hoa** (A-Z)
-- **Có ít nhất 1 chữ thường** (a-z)
-- **Có ít nhất 1 số** (0-9)
-
-Khuyến nghị: nên có thêm ký tự đặc biệt (`@`, `#`, `!`...) để mật khẩu mạnh hơn.
-
-**Ví dụ mật khẩu tốt**: `Klassa@2026`, `TrungTam#1234`, `Hocsinh!95`
-
-**Ví dụ mật khẩu yếu (không nên dùng)**: `12345678`, `password`, `abcdefgh`, ngày sinh, số điện thoại.
-
-## Lưu ý
-
-- **Không dùng lại mật khẩu cũ**: phần mềm cho phép, nhưng không an toàn.
-- **Không chia sẻ mật khẩu mới** với người khác, kể cả đồng nghiệp. Mỗi người nên có tài khoản riêng.
-- **Nhớ mật khẩu mới ngay**: tránh ghi mật khẩu ra giấy dán lên máy tính. Nếu sợ quên, dùng phần mềm quản lý mật khẩu (Bitwarden, 1Password) hoặc trình duyệt lưu giúp.
+::: warning Lưu ý
+Nhập sai mật khẩu hiện tại quá 5 lần trong 15 phút thì phần mềm tạm dừng việc đổi mật khẩu, bạn chờ một lúc rồi thử lại.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tôi quên mật khẩu cũ, làm sao đổi?**
-Nếu chưa đăng nhập được, dùng chức năng **"Quên mật khẩu?"** ở trang đăng nhập — phần mềm gửi link đặt lại qua email. Nếu vẫn không vào được email, liên hệ quản trị viên trung tâm để được hỗ trợ.
+::: details Tôi quên mật khẩu hiện tại thì đổi thế nào?
+Bạn không đổi được ở đây vì phải nhập mật khẩu hiện tại. Hãy nhờ Quản trị viên cấp lại mật khẩu, xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+:::
 
-**Phần mềm có nhớ mật khẩu cho tôi không?**
-Phần mềm không nhớ thay anh chị, nhưng trình duyệt sẽ hỏi có muốn lưu không. Bấm "Lưu" để lần sau khỏi gõ. Tuy nhiên không nên lưu mật khẩu trên máy tính chung.
+::: details Sao tôi bị đăng xuất sau khi đổi?
+Đây là cách bảo vệ tài khoản: mật khẩu đổi thì các phiên cũ hết hiệu lực. Đăng nhập lại bằng mật khẩu mới là dùng tiếp được.
+:::
 
-**Đổi mật khẩu có làm mất dữ liệu công việc đang làm không?**
-Không. Đổi mật khẩu chỉ ảnh hưởng cách đăng nhập, không liên quan đến dữ liệu học sinh, lớp học, hay bất kỳ thông tin nào trong phần mềm.
+::: details Phụ huynh có phải đổi mật khẩu không?
+Chỉ khi tài khoản được đánh dấu phải đổi mật khẩu. Khi đó phụ huynh cũng thấy trang **Đổi mật khẩu** bắt buộc, đổi xong thì vào cổng phụ huynh.
+:::

@@ -13,3 +13,7 @@ playwright/.cache/
 
 # Debug artifacts (local)
 debug-screenshots/
+
+# VitePress
+.vitepress/dist/
+.vitepress/cache/

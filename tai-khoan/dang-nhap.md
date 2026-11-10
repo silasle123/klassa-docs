@@ -1,52 +1,84 @@
-# Đăng nhập vào phần mềm
+---
+title: "Đăng nhập"
+description: "Cách đăng nhập vào KLASSA bằng email hoặc số điện thoại, và xử lý khi quên mật khẩu hoặc bị khoá tạm thời."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự, Phụ huynh, Học sinh]
+order: 10
+---
 
-## Khi nào dùng
+# Đăng nhập
 
-Đây là bước đầu tiên mỗi khi anh chị mở phần mềm để bắt đầu công việc. Mỗi nhân viên trong trung tâm sẽ có một tài khoản riêng, và phần mềm sẽ hiển thị các chức năng tương ứng với vai trò của tài khoản đó.
+Đăng nhập là bước đầu tiên mỗi khi dùng KLASSA. Sau khi vào, bạn chỉ thấy những chức năng đúng với vai của mình. Xem thêm [Vai trò người dùng](vai-tro-nguoi-dung.md).
 
-## Các bước thao tác
+## Đăng nhập bằng email hoặc số điện thoại
 
-### Bước 1 — Mở trang đăng nhập
+Ô đăng nhập dùng chung cho mọi người. Nhập gì tuỳ vai:
 
-Mở trình duyệt (Chrome, Edge, Cốc Cốc, Safari đều dùng được) rồi gõ địa chỉ phần mềm của trung tâm anh chị. Ví dụ:
+| Vai | Nhập vào ô đầu tiên |
+|---|---|
+| Nhân viên (Quản trị viên, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự) | Email do trung tâm cấp |
+| Phụ huynh | Email do trung tâm cấp |
+| Học sinh | Số điện thoại |
 
-```
-https://tên-trung-tâm.klassa.vn
-```
+::: steps
+1. Mở địa chỉ phần mềm của trung tâm bạn bằng trình duyệt (Chrome, Edge, Cốc Cốc, Safari đều dùng được). Trang **Đăng nhập** hiện ra.
+2. Nhập email hoặc số điện thoại vào ô **Email hoặc số điện thoại**.
+3. Nhập mật khẩu vào ô **Mật khẩu**. Bấm biểu tượng con mắt cạnh ô nếu muốn xem lại mật khẩu đang gõ.
+4. Bấm **Đăng nhập vào hệ thống**.
+:::
 
-Phần mềm sẽ tự động đưa anh chị đến trang đăng nhập.
+![Trang Đăng nhập với ô Email hoặc số điện thoại, ô Mật khẩu và nút Đăng nhập vào hệ thống](../assets/screenshots/dang-nhap-moi.webp)
 
-![Trang đăng nhập KLASSA](../assets/screenshots/dang-nhap-trang-chinh.png)
+Đăng nhập thành công, phần mềm báo **Đăng nhập thành công!** rồi chuyển bạn đến trang đầu tiên của vai mình. Xem [Trang chủ theo vai](trang-chu.md).
 
-### Bước 2 — Nhập tài khoản
+::: tip Mẹo
+Nếu trung tâm cấp tài khoản mới, mật khẩu ban đầu là mật khẩu tạm. Lần đầu vào, phần mềm sẽ buộc bạn đổi sang mật khẩu của riêng mình. Xem [Đổi mật khẩu](doi-mat-khau.md).
+:::
 
-Phần mềm yêu cầu hai thông tin:
+## Khi một số điện thoại có nhiều học sinh
 
-- **Email**: chính là email mà quản trị viên đã tạo cho anh chị, ví dụ `consultant@trungtam.vn`
-- **Mật khẩu**: mật khẩu khởi tạo do quản trị viên cung cấp (lần đầu đăng nhập, phần mềm sẽ yêu cầu anh chị đổi sang mật khẩu của riêng mình)
+Nhiều anh chị em có thể dùng chung một số điện thoại và cùng mật khẩu. Khi đó, sau khi bấm **Đăng nhập vào hệ thống**, phần mềm hỏi **Bạn là ai?** và hiện danh sách các em (kèm khối lớp và lớp đang học). Chọn đúng tên của mình để vào học. Bấm **Không phải bạn? Đăng nhập số khác** nếu muốn quay lại.
 
-Sau đó bấm nút **Đăng nhập**.
+## Quên mật khẩu
 
-### Bước 3 — Vào màn hình làm việc
+KLASSA không tự gửi thư đặt lại mật khẩu. Dưới nút đăng nhập có dòng nhắc: liên hệ trung tâm của bạn để được cấp lại. Người cấp lại là Quản trị viên của trung tâm (xem [Quản lý người dùng](../cai-dat/nguoi-dung.md)).
 
-Nếu thông tin đúng, phần mềm sẽ chuyển sang **Bảng tổng quan** — đây là màn hình chính để anh chị bắt đầu mọi công việc trong ngày.
+## Khi đăng nhập không được
 
-## Lưu ý
+Phần mềm hiện một hộp thông báo ngay trên form. Các câu thường gặp:
 
-- **Quên mật khẩu?** Bấm vào dòng "Quên mật khẩu?" ngay dưới ô đăng nhập, hệ thống sẽ gửi link đặt lại mật khẩu về email của anh chị.
-- **Sai mật khẩu nhiều lần** sẽ bị khoá tạm thời 15 phút để bảo vệ tài khoản. Nếu bị khoá, hãy đợi hoặc liên hệ quản trị viên trung tâm.
-- **Không chia sẻ mật khẩu** với người khác. Mỗi hành động trong phần mềm đều được ghi lại theo tài khoản đăng nhập, nên việc chia sẻ có thể gây hiểu nhầm trách nhiệm.
+| Thông báo | Nghĩa là | Cách xử lý |
+|---|---|---|
+| Email hoặc mật khẩu không đúng | Sai email hoặc sai mật khẩu. Học sinh sẽ thấy "Số điện thoại hoặc mật khẩu không đúng" | Kiểm tra lại, chú ý chữ hoa và chữ thường |
+| Tài khoản đang chờ phê duyệt từ quản trị viên | Bạn mới tự đăng ký và chưa được duyệt | Chờ hoặc nhờ Quản trị viên duyệt, xem [Đăng ký tài khoản](dang-ky.md) |
+| Tài khoản đã bị vô hiệu hóa | Tài khoản bị tắt | Liên hệ Quản trị viên |
+| Tài khoản đã bị từ chối. Vui lòng liên hệ hỗ trợ | Đăng ký của bạn bị từ chối | Liên hệ trung tâm |
+| Tài khoản tạm khóa 30 phút... | Bạn nhập sai mật khẩu 5 lần | Chờ hết thời gian khoá, hoặc nhờ Quản trị viên mở khoá (xem bên dưới) |
+| Quá nhiều lần thử từ mạng này... | Mạng bạn đang dùng thử sai quá nhiều lần | Thử lại sau số phút được báo |
+| Có lỗi xảy ra. Vui lòng thử lại. | Lỗi mạng hoặc lỗi bất ngờ | Kiểm tra kết nối rồi thử lại |
+
+### Mở khoá tài khoản (Quản trị viên)
+
+::: steps
+1. Vào **Quản trị hệ thống → Quản lý Users**.
+2. Ở dòng của người bị khoá, bấm nút ba chấm, chọn **Mở khóa tài khoản**. Lệnh này chỉ hiện khi tài khoản đang bị khoá.
+:::
+
+Để bảo vệ tài khoản, phần mềm không cho biết email có tồn tại hay không khi bạn nhập sai.
+
+::: warning Lưu ý
+Không dùng chung mật khẩu. Mọi thao tác trong phần mềm được ghi theo tài khoản đăng nhập.
+:::
 
 ## Câu hỏi thường gặp
 
-**Chưa có tài khoản thì làm sao?**
-Dưới ô đăng nhập có dòng **"Chưa có tài khoản? Đăng ký ngay"** → xem [Đăng ký tài khoản](dang-ky.md). Hoặc nhờ Chủ trung tâm tạo sẵn tài khoản trong [Quản lý người dùng](../cai-dat/nguoi-dung.md).
+::: details Chưa có tài khoản thì làm sao?
+Bấm **Đăng ký ngay** ở cuối form, xem [Đăng ký tài khoản](dang-ky.md). Hoặc nhờ Quản trị viên tạo sẵn tài khoản cho bạn.
+:::
 
-**Tôi có thể đăng nhập trên điện thoại không?**
-Có. Phần mềm hoạt động tốt trên trình duyệt điện thoại. Anh chị mở Chrome/Safari trên điện thoại và truy cập cùng địa chỉ.
+::: details Có đăng nhập cùng lúc trên nhiều thiết bị được không?
+Được. Một tài khoản có thể mở trên máy tính và điện thoại cùng lúc. Phiên đăng nhập giữ được tối đa 30 ngày.
+:::
 
-**Tôi có thể đăng nhập cùng lúc trên nhiều thiết bị không?**
-Được. Cùng một tài khoản có thể mở trên máy tính và điện thoại cùng lúc. Tuy nhiên mọi thao tác đều được đồng bộ ngay, nên cẩn thận khi nhiều người dùng chung một tài khoản.
-
-**Quản trị viên là ai?**
-Là người đầu tiên đăng ký phần mềm cho trung tâm — thường là chủ trung tâm hoặc người được uỷ quyền. Quản trị viên có quyền tạo và quản lý tài khoản cho các nhân viên khác.
+::: details Sau khi đăng nhập, tôi bị đưa đến một trang khác ngoài trang chủ?
+Nếu bạn bấm vào một đường dẫn trong phần mềm khi chưa đăng nhập, phần mềm hiện dòng "Vui lòng đăng nhập để tiếp tục" và đưa bạn về đúng trang đó sau khi đăng nhập. Phụ huynh vào cổng phụ huynh, học sinh vào khu học.
+:::

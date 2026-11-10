@@ -1,73 +1,81 @@
-# Lên lớp / Chuyển lớp hàng loạt
+---
+title: "Lên lớp và chuyển lớp hàng loạt"
+description: "Cuối năm học, nâng khối, chuyển cả nhóm học sinh sang lớp khác hoặc cho học sinh ra trường trong một lần làm."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý]
+order: 50
+---
 
-## Khi nào dùng
+# Lên lớp và chuyển lớp hàng loạt
 
-Cuối năm học hoặc mùa **chuyển cấp** (đầu năm học mới), trung tâm cần:
-- Học sinh lớp 9 lên lớp 10 → chuyển sang khoá Lớp 10
-- Học sinh lớp 12 ra trường → kết thúc khoá
-- Học sinh giữa kỳ cần chuyển lớp khác (cùng môn, đổi giáo viên, đổi ca)
+Dùng khi sang năm học mới hoặc khi cần chuyển nhiều em cùng lúc. Bạn không phải mở từng hồ sơ học sinh. Trang chạy theo ba bước: chọn lớp và học sinh, chọn cách lên lớp, xem lại và xác nhận.
 
-Trợ lý lên lớp / chuyển lớp **HÀNG LOẠT** thay vì phải vào từng hồ sơ HS đổi.
+## Làm một đợt lên lớp
 
-## Truy cập
+::: steps
+1. Vào **Lớp học**, bấm **Lên lớp**. Trang **Lên lớp / Chuyển lớp hàng loạt** mở, tab **Đợt lên lớp mới** đang chọn.
+2. Bước **1. Chọn lớp & học sinh**: ở ô **Lớp nguồn**, chọn lớp đang học (lọc nhanh bằng **Lọc theo khối** và **Lọc theo giáo viên**). Bảng hiện từng em kèm **Lớp hiện tại**, **Ưu đãi hiện tại**, **Công nợ**. Mặc định chọn tất cả, bỏ tích em nào chưa lên lớp. Bấm **Tiếp tục**.
+3. Bước **2. Chọn cách lên lớp**: chọn một trong ba cách ở phần dưới.
 
-Menu trái → **Lớp học → Lên lớp / Chuyển lớp** (hoặc **/classes/promote**).
+   ![Bước 2 Chọn cách lên lớp với ba tab A Nâng cấp tại chỗ, B Chuyển sang lớp khác, C Ra trường](../assets/screenshots/lop-hoc-len-lop-buoc-2.webp)
 
-![Trợ lý lên lớp / chuyển lớp](../assets/screenshots/lop-hoc-len-lop.png)
+4. Bước **3. Xem lại & xác nhận**: kiểm tra tóm tắt, bấm nút **Xác nhận lên lớp N HS** (hoặc **Xác nhận cho N HS ra trường**).
+:::
 
-## Quy trình
+Kết quả hiện bằng thông báo. Nếu có em bị lỗi, hệ thống ghi số em lỗi và lý do, các em còn lại vẫn được xử lý.
 
-### Bước 1 — Chọn lớp nguồn
+## Ba cách lên lớp
 
-Lớp đang muốn xử lý — ví dụ "Toán 9A — Sáng T7".
+### A. Nâng cấp tại chỗ
 
-### Bước 2 — Lọc học sinh
+Giữ nguyên giáo viên, lịch học, nhóm Zalo và hoá đơn cũ. Chỉ đổi thông tin lớp và lớp văn hoá của học sinh. Hợp với lớp "Toán 9" lên thành "Toán 10" mà không đổi người dạy.
 
-Có thể chọn:
-- **Tất cả HS** trong lớp
-- **Lọc theo trạng thái** (chỉ đang ACTIVE, đã hoàn thành khoá)
-- **Lọc theo khối lớp năm tới** (HS đang lớp 9 → lên lớp 10)
-- **Tick chọn thủ công** từng em
+- **Khối lớp mới của lớp học**: để trống nghĩa là **Giữ nguyên**.
+- **Tên lớp mới** và **Mã lớp mới** (tuỳ chọn).
+- Công tắc **Cập nhật lớp văn hoá của học sinh** (mặc định bật), rồi chọn **Lớp mới của học sinh**.
+- Công tắc **Cập nhật mã học sinh theo khối mới** (mặc định tắt): sinh lại mã theo khối mới.
 
-### Bước 3 — Chọn lớp đích
+::: warning Lưu ý
+Mã học sinh cũ in trên biên lai hoặc tin nhắn đã gửi sẽ không còn khớp. Chỉ bật khi trung tâm dùng mã theo khối.
+:::
 
-- **Lớp đã có** trong hệ thống — ví dụ "Toán 10A — Sáng T7"
-- **Tạo lớp mới** ngay từ trang này (gắn cùng GV, cùng ca, đổi khối lớp)
+Phải đổi ít nhất một thứ (khối, tên, mã, lớp văn hoá hoặc mã học sinh) thì mới sang được bước 3.
 
-### Bước 4 — Áp dụng quy tắc chuyển
+### B. Chuyển sang lớp khác
 
-- **Giữ học phí cũ** (nếu HS đã đóng dài hạn, không tính thêm)
-- **Tính học phí mới** (theo bảng giá lớp đích)
-- **Áp dụng khuyến mãi tiếp tục** (giảm 10% cho HS cũ)
+Chuyển các em đã chọn sang lớp đích. Chọn một trong hai:
 
-### Bước 5 — Xem trước + Xác nhận
+- **Lớp có sẵn**: chọn **Lớp đích** (phải khác lớp nguồn).
+- **Tạo lớp mới**: điền **Tên lớp**, **Mã lớp**, **Môn học**, **Khối lớp** (bắt buộc), **Sĩ số tối đa**, **Giáo viên**, và ít nhất một buổi trong **Lịch học**.
 
-Bảng preview hiển thị:
-- HS nào sẽ chuyển từ đâu → đến đâu
-- Hoá đơn mới phải tạo (nếu có)
-- Buổi học dở dang xử lý thế nào
+Các tuỳ chọn đi kèm:
 
-Bấm **"Xác nhận chuyển"** → hệ thống thực hiện hàng loạt.
+- **Gói học phí áp dụng (chung)**: mặc định **Giữ gói cũ của từng học sinh**, hoặc chọn một gói cho cả nhóm.
+- **Giữ ưu đãi cũ** (mặc định bật).
+- **Tạo hoá đơn khoá mới** (mặc định tắt).
+- **Đối soát công nợ lớp cũ** (mặc định tắt): hoàn phần học phí đã đóng mà chưa học thành credit để trừ vào phiếu lớp mới. Phiếu chưa trả của lớp cũ giữ nguyên để thu. Bật mục này thì **Tạo hoá đơn khoá mới** tự bật theo, và bạn phải bật nó thì mới xác nhận được. Có thêm mục xác nhận điều chỉnh cả phiếu đã gửi phụ huynh.
+- **Đóng lớp nguồn sau khi chuyển hết** (mặc định tắt, lớp nguồn được giữ).
+- **Cập nhật mã HS theo khối lớp đích**.
 
-## Lịch sử + Bộ lọc
+Ở bước 3, bảng cho từng em cho phép sửa **Ưu đãi** (theo % hoặc VNĐ) và **Gói học phí** riêng, đồng thời hiện **Công nợ cũ** (ví dụ "N HĐ chưa trả") trước khi bạn xác nhận. Việc tính phiếu xem thêm ở [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md).
 
-Tab **"Lịch sử"** ghi lại mỗi đợt chuyển:
-- Ai thực hiện + Khi nào
-- Bao nhiêu HS đã chuyển
-- Từ lớp nào sang lớp nào
+### C. Ra trường
 
-Có thể **lọc** theo: ngày, người thực hiện, lớp nguồn, lớp đích.
+Dành cho khối cuối. Học sinh chuyển sang trạng thái **Đã tốt nghiệp** và các ghi danh được kết thúc. Hệ thống không tạo lớp hay hoá đơn mới. Công nợ cũ giữ nguyên để vẫn thu. Công tắc **Đóng lớp sau khi cho ra trường hết** quyết định lớp có đóng không (khi chọn cách này, công tắc mặc định bật).
 
-## Lưu ý
+## Xem lại các đợt đã làm
 
-- **Thông báo phụ huynh** — bật để gửi Zalo / email báo HS đã chuyển lớp
-- **Hoàn tác** trong 24h nếu nhầm lẫn
-- **Khuyến nghị** chạy thử với 1-2 HS trước khi áp dụng hàng loạt
+Bấm tab **Lịch sử chuyển lớp**. Mỗi đợt ghi cách làm (**Nâng cấp tại chỗ**, **Chuyển lớp** hoặc **Ra trường**), số em lỗi nếu có. Bấm vào đợt để xem từng học sinh, hoá đơn mới, credit hoặc nợ cũ và trạng thái.
+
+::: tip Mẹo
+Làm thử với một lớp nhỏ trước, rồi xem kết quả ở **Lịch sử chuyển lớp** và hồ sơ học sinh trước khi làm hàng loạt.
+:::
 
 ## Câu hỏi thường gặp
 
-**HS đang nợ học phí có chuyển được không?**
-Có nhưng phần mềm cảnh báo. Phải xử lý nợ (cho gia hạn / hoãn) trước khi chuyển.
+::: details Chuyển một em đơn lẻ giữa năm thì sao?
+Vẫn dùng cách B và chỉ tích đúng em đó ở bước 1.
+:::
 
-**HS chuyển sang lớp khác cơ sở, được không?**
-Được nếu lớp đích thuộc cơ sở khác — phải có quyền truy cập cơ sở đó (Chủ trung tâm hoặc Quản lý nhiều cơ sở).
+::: details Có hoàn tác cả đợt được không?
+Không có nút hoàn tác. Hãy kiểm tra kỹ ở bước 3. Nếu sai, sửa lại từng em ở hồ sơ học sinh hoặc ghi danh.
+:::

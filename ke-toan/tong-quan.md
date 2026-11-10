@@ -1,85 +1,65 @@
-# Kế toán nội bộ
+---
+title: "Kế toán, công nợ và báo cáo tài chính"
+description: "Bản đồ các trang Kế toán và Báo cáo tài chính: trang nào dùng để làm gì và vai nào được vào."
+roles: [Quản trị viên, Quản lý chi nhánh, Kế toán]
+order: 10
+---
 
-## Khái niệm
+# Kế toán, công nợ và báo cáo tài chính
 
-Module **Kế toán** hỗ trợ trung tâm theo dõi sổ sách kế toán nội bộ (không thay thế phần mềm kế toán chuyên nghiệp như MISA / FAST nhưng đủ cho trung tâm nhỏ-vừa).
+Nhóm **Kế toán** gom các trang giúp bạn theo dõi hoá đơn, ai còn nợ, tiền thừa của học sinh (credit), ưu đãi giảm giá và việc chốt số liệu cuối tháng. Bài này chỉ đường: cần làm việc gì thì vào trang nào.
 
-## Truy cập
+Việc tạo hoá đơn, gửi hoá đơn và cài gói học phí nằm ở nhóm [Học phí](../hoc-phi/quan-ly-hoc-phi.md), không nằm ở đây.
 
-Menu trái → **Học phí & Hoá đơn → Kế toán** (hoặc **/finance/accounting**).
+## Ai thấy nhóm Kế toán
 
-![Module kế toán](../assets/screenshots/ke-toan-trang-chinh.png)
+Quản trị viên, Quản lý chi nhánh và Kế toán thấy nhóm này. Một số trang hẹp hơn, xem cột "Ai dùng" bên dưới. Các vai khác không thấy menu kế toán.
 
-## Các sổ kế toán có sẵn
+## Các trang trong nhóm Kế toán
 
-### 1. Sổ nhật ký chung
+Vào **Tài chính → Kế toán** rồi chọn trang.
 
-Mọi giao dịch ghi theo thứ tự thời gian:
-- Ngày
-- Số chứng từ
-- Diễn giải
-- Tài khoản Nợ / Có
-- Số tiền
+| Trang | Dùng để | Ai dùng |
+|---|---|---|
+| **Hoá đơn chi tiết** | Tìm, xem, sửa, thu tiền, xoá hoá đơn. Xem [Hoá đơn chi tiết](hoa-don-chi-tiet.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
+| **Quản lý công nợ** | Xem từng học sinh đang nợ bao nhiêu. Xem [Quản lý công nợ](cong-no.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
+| **Sổ cái công nợ** | Sổ ghi tiền thừa (credit) của học sinh. Xem [Sổ credit](so-cai-credit.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
+| **Báo cáo credit khả dụng** | Danh sách học sinh còn credit chưa dùng. Xem [Credit khả dụng](credit-kha-dung.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
+| **Rà soát & đồng bộ credit** | Tìm và sửa chỗ sổ credit lệch với hoá đơn. Xem [Rà soát credit](ra-soat-credit.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
+| **Quản lý khuyến mãi** | Xem và chỉnh ưu đãi giảm giá của học sinh. Xem [Khuyến mãi](khuyen-mai.md). | Quản trị viên |
+| **Khoá sổ kỳ** | Chốt số liệu một tháng. Xem [Khoá sổ kỳ](khoa-so-ky.md). | Quản trị viên |
 
-### 2. Sổ cái
+Hai trang cùng nhóm Kế toán nhưng thuộc bài khác: **Mẫu hóa đơn** và **Cấu hình tài chính** (xem [Cài đặt tài chính](../hoc-phi/cai-dat.md)).
 
-Phân loại theo tài khoản kế toán Việt Nam:
-- 111 — Tiền mặt
-- 112 — Tiền gửi ngân hàng
-- 131 — Phải thu khách hàng
-- 331 — Phải trả người bán
-- 511 — Doanh thu
-- 642 — Chi phí quản lý
-- ... v.v.
+## Trang nằm ngoài nhóm Kế toán
 
-### 3. Bảng cân đối kế toán
+| Trang | Đường vào | Dùng để |
+|---|---|---|
+| **Thu hồi công nợ** | **Tài chính → Thu hồi công nợ** | Xem nợ quá hạn, nhắc phụ huynh, tra lịch sử nhắc. Chỉ Quản trị viên và Quản lý chi nhánh. Xem [Thu hồi công nợ](thu-hoi-cong-no.md). |
+| **Báo cáo doanh thu** | **Tài chính → Báo cáo → Báo cáo doanh thu** | Doanh thu theo tháng, môn, cơ sở. Xem [Báo cáo doanh thu](bao-cao-doanh-thu.md). |
+| **Báo cáo nợ** | **Tài chính → Báo cáo → Báo cáo nợ** | Danh sách phiếu quá hạn. Xem [Báo cáo nợ quá hạn](qua-han.md). |
+| **Nợ kế toán** | **Tài chính → Báo cáo → Nợ kế toán** | Tổng nợ còn phải thu theo mức nguy cấp. Xem [Nợ kế toán](bao-cao-no-ke-toan.md). |
+| **Báo cáo Credit** | **Tài chính → Báo cáo → Báo cáo Credit** | Credit phát sinh và đã dùng theo tháng. Xem [Báo cáo Credit](tin-chi.md). |
 
-Tài sản = Nguồn vốn — báo cáo cuối kỳ.
+Bốn báo cáo cuối dành cho Quản trị viên, Quản lý chi nhánh và Kế toán.
 
-### 4. Báo cáo lưu chuyển tiền tệ
+## Trang Tổng quan tài chính
 
-Tiền vào - tiền ra theo 3 nhóm: hoạt động kinh doanh / đầu tư / tài chính.
+Trang có tiêu đề **Tổng quan Tài chính**, mở bằng nút bên dưới (khác với mục **Tổng quan tài chính** trong menu, là trang tổng quan dòng tiền riêng). Trang tóm tắt nhanh: tổng hoá đơn, tổng doanh thu, tổng nợ, credit khả dụng, số liệu của tháng hiện tại và 10 học sinh nợ nhiều nhất. Từ đây bấm vào các ô để đi tới Quản lý công nợ, Hoá đơn, Sổ credit, Khuyến mãi và Khoá sổ kỳ.
 
-## Cấu hình tài khoản kế toán
+::: steps
+1. Vào **Tài chính → Học phí**.
+2. Bấm nút **Quản lý Tài chính** ở đầu trang. Nút này chỉ hiện với vai có quyền xem tài chính.
+:::
 
-Vào **Cài đặt → Kế toán → Danh mục tài khoản**:
-
-- Mặc định theo thông tư 200/2014/TT-BTC
-- Có thể tuỳ chỉnh: thêm tài khoản con, đổi tên
-
-## Hạch toán tự động
-
-Mỗi giao dịch thu/chi trong KLASSA **tự sinh bút toán**:
-
-- Phụ huynh đóng học phí qua chuyển khoản:
-  - Nợ 112 (tiền gửi NH)
-  - Có 511 (doanh thu)
-- Chi lương giáo viên:
-  - Nợ 642 (chi phí quản lý)
-  - Có 111 (tiền mặt)
-
-→ Kế toán không phải gõ tay từng bút toán.
-
-## Khoá kỳ
-
-Cuối tháng / quý: **Khoá kỳ** để không ai sửa được giao dịch trong kỳ đã khoá.
-
-Chỉ Chủ trung tâm mở khoá kỳ lại được (cần lý do).
-
-## Xuất file cho kế toán thuế
-
-- **Excel chuẩn** — gửi cho kế toán thuế ngoài để khai báo
-- **Báo cáo VAT** — nếu trung tâm nộp VAT
-
-## Lưu ý
-
-- KLASSA **không thay thế** phần mềm kế toán chuyên nghiệp. Trung tâm có doanh thu lớn nên dùng MISA / FAST song song.
-- **Số liệu phải khớp** giữa KLASSA và phần mềm kế toán chính — đối chiếu hàng tháng.
+![Trang Tổng quan Tài chính với bốn ô tổng, khối tháng hiện tại, Học sinh nợ nhiều nhất và Truy cập nhanh](../assets/screenshots/tong-quan-tai-chinh.webp)
 
 ## Câu hỏi thường gặp
 
-**Tôi không có kiến thức kế toán, dùng module này có hiểu được không?**
-Dùng được phần thu chi cơ bản (như xem doanh thu, chi phí). Phần sổ cái + cân đối kế toán cần nghiệp vụ — nếu không hiểu, để Kế toán làm.
+::: details Credit là gì?
+Credit là khoản tiền thừa của học sinh mà trung tâm giữ lại để trừ vào phiếu kỳ sau. Giải thích đầy đủ ở [Báo cáo Credit](tin-chi.md).
+:::
 
-**Có thể xuất hoá đơn VAT trong module này không?**
-Có. Xem [Hoá đơn điện tử (e-Invoice)](hoa-don-dien-tu.md).
+::: details Kế toán có tự nhắc nợ phụ huynh không?
+Có hai cách: nhắc tay hàng loạt và nhắc tự động theo lịch. Cả hai nằm ở [Thu hồi công nợ](thu-hoi-cong-no.md).
+:::

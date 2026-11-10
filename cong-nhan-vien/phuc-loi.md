@@ -1,52 +1,55 @@
-# Phúc lợi
+---
+title: "Phúc lợi của tôi"
+description: "Xem số dư phép năm, phụ cấp, khấu trừ định kỳ và gửi đơn tạm ứng lương."
+roles: [Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự]
+order: 70
+---
 
-## Khi nào dùng
+# Phúc lợi của tôi
 
-Xem các phúc lợi mà trung tâm cung cấp cho nhân viên:
-- Bảo hiểm (BHXH, BHYT, BHTN)
-- Bảo hiểm sức khoẻ bổ sung
-- Du lịch / nghỉ dưỡng hàng năm
-- Quà sinh nhật / cưới / tang lễ
-- Trợ cấp ăn trưa, đi lại, điện thoại
-- Học bổng cho con NV
-- Thưởng tết, lương tháng 13
+Một trang gom các khoản liên quan đến quyền lợi của bạn: số ngày phép còn lại, phụ cấp đang hưởng, khoản bị trừ định kỳ và tạm ứng lương.
 
-## Truy cập
+## Xem phúc lợi
 
-Cổng Nhân viên → tab **"Phúc lợi"** (hoặc **/employee-portal/benefits**).
+Vào **Cổng nhân viên → Phúc lợi**. Trang có bốn khối:
 
-![Phúc lợi nhân viên](../assets/screenshots/nv-phuc-loi.png)
+- **Số dư phép năm**: từng loại phép, số đã dùng và số đang chờ duyệt. Nếu chưa được cấp số dư, trang báo "Chưa được cấp số dư phép" và bạn liên hệ nhân sự.
+- **Phụ cấp đang hưởng**: tên khoản và tần suất (ví dụ hàng tháng).
+- **Khấu trừ định kỳ**: các khoản trừ vào lương theo kỳ.
+- **Tạm ứng lương**: danh sách phiếu tạm ứng của bạn và nơi gửi đơn mới.
 
-## Bố cục
+## Gửi đơn tạm ứng lương
 
-### Danh sách phúc lợi đang được hưởng
+::: steps
+1. Vào **Cổng nhân viên → Phúc lợi**, kéo tới khối **Tạm ứng lương**.
+2. Trong **Tạo đơn tạm ứng**, nhập **Số tiền (đ)**.
+3. Chọn **Trừ vào kỳ lương** (tháng sẽ bị trừ khoản này).
+4. Nhập **Lý do** nếu muốn, ví dụ "việc gia đình".
+5. Bấm **Gửi đơn tạm ứng**. Màn hình báo "Đã gửi đơn tạm ứng, chờ HR duyệt".
+:::
 
-Mỗi phúc lợi hiển thị:
-- Tên + Mô tả
-- Giá trị (nếu có thể quy đổi tiền)
-- Trạng thái: 🟢 Đang hưởng / 🟡 Chờ kích hoạt / ⚪ Đã hết kỳ
-- Ngày bắt đầu — ngày kết thúc
+Trạng thái đơn trong danh sách:
 
-### Phúc lợi sắp đến hạn
+| Trạng thái | Ý nghĩa |
+|---|---|
+| **Chờ duyệt** | Nhân sự chưa xem. |
+| **Đã duyệt (sẽ trừ vào lương)** | Đã đồng ý, sẽ trừ vào kỳ bạn chọn. |
+| **Từ chối** | Không được duyệt. |
+| **Đã trừ vào lương** | Đã trừ xong. |
 
-Cảnh báo phúc lợi sắp hết:
-- Bảo hiểm sức khoẻ sắp hết hạn → cần gia hạn
-- Phép năm còn 5 ngày → nên đăng ký nghỉ trước cuối năm
+Khi có khoản đã duyệt chưa trừ, đầu khối hiện **Sẽ trừ kỳ tới** kèm số tiền.
 
-### Đăng ký phúc lợi mới
-
-Một số phúc lợi NV chủ động đăng ký:
-- Du lịch hè 2026 — chọn địa điểm + đi cùng vợ/chồng
-- Khoá học nâng cao (trung tâm tài trợ 50% học phí)
-- Đăng ký dùng phòng tập gym đối tác
+::: warning Lưu ý
+- Tạm ứng tối đa 1 tháng lương cơ bản. Cần nhiều hơn thì liên hệ nhân sự.
+- Mỗi kỳ lương chỉ gửi được một đơn đang chờ duyệt.
+:::
 
 ## Câu hỏi thường gặp
 
-**Tại sao tôi không thấy phúc lợi A mà đồng nghiệp khác có?**
-Phúc lợi tuỳ vai trò + cấp bậc. NV chính thức có nhiều phúc lợi hơn cộng tác viên. Liên hệ HR để hỏi chi tiết.
+::: details Tôi xin nghỉ phép ở đâu?
+Ở [Nghỉ phép](nghi-phep.md). Trang Phúc lợi chỉ để xem số dư.
+:::
 
-**Tôi muốn đổi phúc lợi (không nhận quà sinh nhật, đổi sang ngày phép thêm)?**
-Một số phúc lợi cho phép trao đổi. Vào trang này → bấm **"Đề xuất trao đổi"** → HR xét duyệt.
-
-**Quyền lợi BHXH thì sao?**
-NV xem chi tiết quá trình đóng BHXH trong tab **"Bảo hiểm"** (con của Phúc lợi) — bao gồm thâm niên + dự toán hưu trí.
+::: details Ai duyệt đơn tạm ứng?
+Nhân sự. Cách duyệt xem [Tạm ứng lương](../nhan-su/tam-ung-luong.md).
+:::

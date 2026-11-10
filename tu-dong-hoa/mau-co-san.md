@@ -1,46 +1,67 @@
-# Mẫu workflow có sẵn
+---
+title: "Mẫu quy trình có sẵn"
+description: "Danh sách 12 mẫu quy trình tự động của KLASSA: khi nào chạy, gồm những bước nào, gửi cho ai."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Tự động hoá"
+order: 70
+---
 
-KLASSA cung cấp 8 mẫu workflow phổ biến — bật là dùng được, không cần cấu hình từ đầu.
+# Mẫu quy trình có sẵn
 
-## Truy cập
+KLASSA có sẵn 12 mẫu quy trình. Bạn xem chúng ở **AI Hub → Tự động hóa → Quy Trình → Templates** và bật bằng nút **Kích Hoạt**. Cách bật và quản lý xem [Quy trình tự động](quy-trinh.md).
 
-Trang **Tự động hoá** → tab **"Mẫu"**.
+Thời gian ghi trong bảng là thời gian chờ kể từ khi sự kiện xảy ra. Ví dụ "SMS sau 30 phút" nghĩa là tin SMS đi sau sự kiện 30 phút.
 
-## Danh sách mẫu
+## Nhóm tuyển sinh
 
-### 1. Chào mừng Lead mới
-Khi có Lead mới → Zalo "Xin chào" + gán tư vấn viên trực.
+| Mẫu | Chạy khi | Các bước |
+| --- | --- | --- |
+| **Quy trình chăm sóc Lead** | Có lead mới | Email ngay, SMS sau 30 phút, giao việc sau 1 giờ, email sau 1 ngày, giao việc sau 3 ngày |
+| **Follow-up leads sau 24h không phản hồi** | Lead im lặng 24 giờ | Email ngay cho lead, SMS sau 1 giờ, Zalo sau 2 giờ, giao việc sau 3 giờ |
+| **Chuyển đổi học thử sang ghi danh** | Hoàn thành buổi học thử | SMS cho phụ huynh sau 30 phút, giao việc sau 2 giờ, email sau 1 ngày, email sau 3 ngày, giao việc sau 7 ngày |
 
-### 2. Nhắc đóng học phí
-3 ngày trước hạn → Zalo nhắc. Quá hạn 1 ngày → Zalo lần 2. Quá hạn 7 ngày → tạo task gọi.
+## Nhóm ghi danh và học sinh
 
-### 3. Nhắc buổi học
-Trước buổi 2 giờ → Zalo phụ huynh "Con bạn có buổi học lúc... tại...".
+| Mẫu | Chạy khi | Các bước |
+| --- | --- | --- |
+| **Quy trình onboard học sinh mới** | Học sinh ghi danh mới | Email cho phụ huynh ngay, tạo hoá đơn, email nhắc, SMS sau 1 ngày, giao việc sau 7 ngày |
+| **Chào mừng học sinh mới** | Học sinh mới được tạo trong hệ thống | Zalo cho phụ huynh ngay, email sau 30 phút, giao việc sau 1 ngày |
+| **Phê duyệt đăng ký lớp** | Một đăng ký lớp được duyệt | Zalo xác nhận cho phụ huynh ngay, email sau 10 phút, giao việc theo dõi sau 1 giờ |
+| **Từ chối đăng ký lớp** | Một đăng ký lớp bị từ chối | Email báo lý do cho phụ huynh ngay, giao việc sau 30 phút, Zalo sau 4 giờ |
+| **Chúc mừng sinh nhật học sinh** | Sinh nhật học sinh | Email và SMS cho học sinh, Zalo cho phụ huynh, giao việc |
 
-### 4. Báo cáo điểm danh tuần
-Mỗi tối Chủ Nhật → Zalo phụ huynh "Báo cáo chuyên cần tuần con: X buổi, Y vắng".
+## Nhóm học phí và điểm danh
 
-### 5. Cảnh báo HS nghỉ nhiều
-HS nghỉ 3 buổi liên tiếp → tạo task lễ tân gọi phụ huynh.
+| Mẫu | Chạy khi | Các bước |
+| --- | --- | --- |
+| **Quy trình thu học phí** | Có hoá đơn mới | Email cho phụ huynh ngay, rồi các lần nhắc bằng SMS, email, email và SMS cùng lúc, cuối cùng là giao việc cho nhân viên khi quá hạn |
+| **Cảnh báo điểm danh thấp** | Học sinh vắng học | Email cho phụ huynh ngay, giao việc sau 1 giờ, email sau 1 ngày, giao việc sau 3 ngày |
 
-### 6. Chúc mừng sinh nhật
-Đến ngày sinh nhật HS → Zalo "Chúc con sinh nhật vui vẻ".
+## Nhóm vận hành
 
-### 7. Cảnh báo hợp đồng GV sắp hết hạn
-30 ngày trước hạn → email HR.
+| Mẫu | Chạy khi | Các bước |
+| --- | --- | --- |
+| **Nhắc admin tổng hợp báo cáo tháng** | Đầu tháng | Giao việc ngay cho quản trị để tổng hợp và duyệt báo cáo trước khi gửi phụ huynh |
+| **Cảnh báo xung đột lịch học** | Hệ thống phát hiện xung đột lịch | Giao việc ngay, email cho giáo viên liên quan sau 5 phút, Zalo cho Quản lý chi nhánh sau 10 phút |
 
-### 8. Báo cáo tuần cho Chủ trung tâm
-Mỗi sáng T2 → email tóm tắt tuần qua.
+::: tip Mẹo
+Mẫu có bước Zalo chỉ gửi được khi trung tâm đã kết nối Zalo. Chưa kết nối thì bước đó thất bại, trừ khi bạn đã chọn bỏ qua bước thiếu thông tin ở hộp **Cài Đặt Workflow**.
+:::
 
-## Bật mẫu
-
-Bấm vào mẫu → chỉnh nội dung Zalo / email theo phong cách trung tâm → bấm "Bật". Chạy ngay.
-
-## Tuỳ chỉnh
-
-Sau khi bật, mẫu trở thành workflow của bạn — có thể chỉnh trigger / điều kiện / hành động theo nhu cầu.
+::: warning Lưu ý
+Mẫu **Quy trình onboard học sinh mới** có bước tạo hoá đơn. Hãy đối chiếu với cách tính học phí của trung tâm trước khi bật, để tránh phát sinh phiếu không mong muốn.
+:::
 
 ## Câu hỏi thường gặp
 
-**Bật cả 8 mẫu, có ảnh hưởng gì không?**
-Có thể quá nhiều tin nhắn → phụ huynh khó chịu. Khuyến nghị bật 3-4 mẫu phù hợp nhất.
+::: details Mẫu có đúng 8 cái như tài liệu cũ không?
+Không. Hiện có 12 mẫu, như bảng trên.
+:::
+
+::: details Một số mẫu hiện ở dòng Kích hoạt khi bằng chữ tiếng Anh, có sao không?
+Bốn mẫu (Chào mừng học sinh mới, Phê duyệt đăng ký lớp, Từ chối đăng ký lớp, Cảnh báo xung đột lịch học) hiện tên sự kiện gốc thay vì câu tiếng Việt. Chúng vẫn chạy bình thường theo mô tả trong bảng.
+:::
+
+::: details Tôi muốn thêm mẫu riêng được không?
+Hiện chưa có công cụ tự tạo mẫu trên giao diện. Bạn chỉ dùng được các mẫu có sẵn.
+:::

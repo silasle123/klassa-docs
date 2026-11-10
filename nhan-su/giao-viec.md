@@ -1,70 +1,72 @@
+---
+title: "Giao việc nội bộ"
+description: "Quản lý giao việc cho nhân viên, theo dõi hạn chót, và nhân viên xem việc của mình."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Giáo viên, Trợ giảng, Lễ tân, Kế toán, Nhân sự]
+plugin: "Giao việc Nội bộ"
+order: 110
+group: "Hồ sơ & tổ chức"
+---
+
 # Giao việc nội bộ
 
-## Khi nào dùng
+Công cụ này giúp quản lý giao việc cho nhân viên, đặt độ ưu tiên và hạn chót, chia việc thành các bước nhỏ và trao đổi ngay trong từng việc. Nhân viên có màn riêng để xem và hoàn thành việc của mình.
 
-Quản lý giao việc cho nhân viên và theo dõi tiến độ — khác với "Việc cần làm hôm nay" tự sinh trên dashboard (nhắc chấm điểm danh, nhận xét buổi học…). Đây là module **giao việc thật**: có người giao, người nhận, hạn chót, mức ưu tiên, các bước con.
+Cần gói mở rộng **Giao việc Nội bộ**. Cùng một địa chỉ nhưng nội dung khác theo vai: Quản trị viên, Quản lý chi nhánh và Quản lý thấy màn quản lý (**Giao việc**), các vai còn lại thấy màn **Việc của tôi** (mục **Công việc** trong menu).
 
-Ví dụ: giao lễ tân gọi 20 lead tồn, giao kế toán đối soát công nợ cuối tháng, giao giáo viên soạn đề kiểm tra giữa kỳ.
+## Quản lý giao việc cho nhân viên
 
-## Điều kiện
+::: steps
+1. Vào **Quản lý HR → Giao việc**. Tiêu đề trang là **Giao việc nội bộ**.
+2. Bấm **Giao việc**. Hộp **Giao việc mới** hiện ra.
+3. Điền **Tiêu đề** (bắt buộc) và **Mô tả**.
+4. Chọn **Giao cho** (bắt buộc), **Độ ưu tiên** (**Thấp**, **Trung bình**, **Cao**, **Gấp**) và **Hạn chót**.
+5. Nếu việc thuộc một nhóm, chọn **Dự án**. Mặc định là **Không thuộc dự án**.
+6. Muốn chia nhỏ, bấm thêm ô trong mục **Các bước con (tuỳ chọn)** và gõ từng bước. Bấm biểu tượng xoá để bỏ một bước.
+7. Bấm **Giao việc**.
+:::
 
-- Trung tâm đã bật **plugin "Giao việc Nội bộ"**. Chưa bật → trang trắng / menu ẩn (vào Plugin Marketplace bấm "Liên hệ KLASSA").
-- **Ai giao được việc:** Chủ trung tâm, Quản lý, Quản lý chi nhánh (thấy menu **"Giao việc"** trong Nhân sự).
-- **Ai nhận việc:** mọi nhân viên (xem việc của mình trong **Cổng nhân viên → Việc của tôi**).
+![Trang Giao việc nội bộ với bốn ô số liệu và bộ lọc](../assets/screenshots/hr-giao-viec.webp)
 
-## Truy cập
+Quản trị viên giao được cho nhân viên mọi chi nhánh. Quản lý chi nhánh và Quản lý giao được trong chi nhánh của mình.
 
-Menu trái → **Nhân sự → Giao việc** (`/hr/tasks`).
+### Theo dõi các việc đã giao
 
-![Trang Giao việc nội bộ](../assets/screenshots/hr-tasks-list.png)
+- Bốn ô số liệu: **Tổng công việc**, **Đang thực hiện**, **Hoàn thành**, **Quá hạn**.
+- Ô tìm **Tìm theo tiêu đề...** và các bộ lọc **Tất cả trạng thái** (**Chưa làm**, **Đang làm**, **Hoàn thành**, **Đã huỷ**), **Mọi ưu tiên**, **Mọi người nhận**, **Mọi dự án**.
+- Bấm vào một việc để mở chi tiết: đổi trạng thái, tick các bước con, thêm bước con, đọc và viết bình luận.
+- Nút **Làm mới** tải lại danh sách.
 
-Trang có:
-- **4 thẻ thống kê**: Tổng công việc · Đang thực hiện · Hoàn thành · Quá hạn
-- **Thanh lọc**: tìm theo tiêu đề + lọc trạng thái + mức ưu tiên + người nhận
-- **Danh sách việc**: mỗi việc có dropdown đổi trạng thái + nút xoá
+### Quản lý dự án
 
-## Giao một việc mới
-
-Bấm **"+ Giao việc"** → hộp thoại **"Giao việc mới"**:
-
-![Hộp thoại giao việc mới](../assets/screenshots/hr-tasks-create-dialog.png)
-
-- **Tiêu đề \*** — bắt buộc (nội dung công việc)
-- **Mô tả** — chi tiết
-- **Giao cho \*** — chọn nhân viên nhận việc
-- **Độ ưu tiên** — Thấp / Trung bình / Cao / Gấp
-- **Hạn chót** — ngày phải xong
-- **Các bước con** (tuỳ chọn) — bấm **"+ Thêm bước"** để chia việc lớn thành nhiều bước nhỏ
-
-Bấm **"Giao việc"** → nhân viên nhận thông báo (trong app, và email/Zalo nội bộ nếu trung tâm đã bật).
-
-## Trạng thái công việc
-
-- **Chờ thực hiện** → **Đang thực hiện** → **Hoàn thành**
-- **Quá hạn** — quá ngày hạn chót mà chưa xong (đếm vào thẻ thống kê)
-
-Người giao đổi trạng thái bằng dropdown trên dòng việc; người nhận cập nhật tiến độ trong Cổng nhân viên.
+Bấm **Dự án** để mở hộp **Quản lý dự án**. Gõ **Tên dự án mới...** rồi bấm **Thêm**. Mỗi dự án có nút **Đổi tên** và **Lưu trữ** (hoặc **Khôi phục**). Dự án đã lưu trữ có nhãn **Lưu trữ** và vẫn giữ các việc cũ.
 
 ## Nhân viên xem việc của mình
 
-Nhân viên vào **Cổng nhân viên → Việc của tôi** để thấy danh sách việc được giao, hạn chót, mức ưu tiên, và tick hoàn thành từng bước con.
+Nhân viên vào **Công việc** trong menu, trang **Việc của tôi**.
 
-## Phân biệt với "Việc cần làm hôm nay"
+::: steps
+1. Xem ba ô: **Tổng công việc**, **Đang thực hiện**, **Đã hoàn thành**.
+2. Chọn thẻ **Tất cả**, **Đang làm** hoặc **Đã xong**, hoặc gõ vào **Tìm kiếm công việc...**.
+3. Bấm vào việc để xem chi tiết, đổi trạng thái, tick bước con và bình luận.
+4. Việc hết hạn mà chưa xong có nhãn đỏ. Việc xong có nhãn **Đã hoàn thành**. Việc do người khác giao ghi **Giao bởi** kèm tên.
+:::
 
-| | **Giao việc** (bài này) | **Việc cần làm hôm nay** |
-|--|------------------------|--------------------------|
-| Nguồn | Người quản lý giao thủ công | Hệ thống tự sinh từ dữ liệu (lead chưa gọi, buổi chưa chấm…) |
-| Có hạn/ưu tiên | Có | Không |
-| Giao cho người khác | Có | Không (chỉ việc của chính mình) |
-| Lưu lịch sử | Có | Không |
+Nhân viên cũng tạo được việc cho mình: bấm nút tạo, hộp **Tạo công việc mới** gồm **Tiêu đề**, **Mô tả**, **Hạn chót**, **Độ ưu tiên**, rồi bấm **Tạo công việc**. Ô **Giao cho** chỉ hiện khi Quản trị viên đã cho phép nhân viên giao việc cho nhau.
+
+::: tip Mẹo
+Quản trị viên bật công tắc **Cho phép nhân viên tự giao việc cho nhau** ở [Cấu hình nhân sự](cau-hinh-hr.md) (thẻ **Pháp luật VN**). Mặc định tắt, chỉ quản lý giao xuống. Bật thì nhân viên giao được cho đồng nghiệp cùng chi nhánh và giao ngược lên quản lý.
+:::
+
+::: danger Không thể hoàn tác
+Ở màn quản lý, biểu tượng thùng rác ở dòng việc xoá hẳn công việc đó sau khi bạn xác nhận. Nếu chỉ muốn dừng việc, hãy đổi trạng thái sang **Đã huỷ**.
+:::
 
 ## Câu hỏi thường gặp
 
-**Giao 1 việc cho nhiều người cùng lúc?**
-Hiện mỗi việc giao cho 1 người. Để giao nhóm, tạo nhiều việc hoặc dùng các bước con phân cho từng người.
+::: details Giao việc khác gì Nhắc việc nhân sự?
+Giao việc là việc cụ thể giao cho một người. [Nhắc việc nhân sự](nhac-viec.md) là các cảnh báo tự động về hợp đồng, thử việc, sinh nhật gửi cho bộ phận nhân sự.
+:::
 
-**Nhân viên không thấy việc được giao?**
-Kiểm tra họ đã đăng nhập đúng tài khoản + có hồ sơ nhân viên. Việc hiện trong Cổng nhân viên → Việc của tôi.
-
-**Xoá việc giao nhầm?**
-Người giao bấm nút xoá trên dòng việc trong trang Giao việc.
+::: details Việc dành riêng cho phòng Truyền thông thì làm ở đâu?
+Dùng [Quản lý Truyền thông](truyen-thong-noi-bo.md), có bảng, kanban và lịch đăng riêng.
+:::

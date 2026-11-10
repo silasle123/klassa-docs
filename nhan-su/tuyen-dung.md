@@ -1,64 +1,77 @@
+---
+title: "Tuyển dụng"
+description: "Mở vị trí cần tuyển, theo dõi ứng viên qua các giai đoạn và tạo hồ sơ nhân viên khi chốt tuyển."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 70
+group: "Hồ sơ & tổ chức"
+---
+
 # Tuyển dụng
 
-## Khi nào dùng
+Trang này giúp bạn quản lý chuyện tuyển người: mở vị trí, ghi nhận ứng viên, đưa họ qua từng giai đoạn và khi chốt tuyển thì tạo luôn hồ sơ nhân viên. Mọi ứng viên do bạn nhập tay, trang không có biểu mẫu công khai cho ứng viên tự điền.
 
-- Quản lý vòng đời ứng viên từ lúc nhận hồ sơ → phỏng vấn → ra offer → ký hợp đồng
-- Theo dõi vị trí đang tuyển + số lượng ứng viên / vòng
-- Tích hợp liền mạch với [Onboarding](onboarding.md) khi ứng viên trúng tuyển
+## Mở một vị trí tuyển
 
-## Truy cập
+::: steps
+1. Vào **Quản lý HR → Tuyển dụng**.
+2. Bấm **Mở vị trí tuyển**. Hộp **Mở vị trí tuyển dụng** hiện ra.
+3. Điền **Tên vị trí** (bắt buộc).
+4. Ở ô **Chức vụ tương ứng (dùng khi tạo hồ sơ NV)**, chọn chức vụ nếu đã biết. Có thể để **Chọn sau**.
+5. Điền **Khoảng lương** (ví dụ 8-12 triệu), **Số lượng cần** và **Mô tả**.
+6. Bấm **Tạo vị trí**.
+:::
 
-Menu trái → **Nhân sự → Tuyển dụng** (hoặc **/hr/recruitment**).
+Thẻ **Vị trí đang tuyển** liệt kê vị trí kèm số người cần, khoảng lương, số ứng viên và số người đã tuyển. Mỗi vị trí có nút **Đóng vị trí** (đổi thành **Mở lại** khi đã đóng) và nút thùng rác.
 
-![Trang tuyển dụng](../assets/screenshots/hr-tuyen-dung.png)
+::: danger Không thể hoàn tác
+Xoá một vị trí xoá luôn toàn bộ ứng viên của vị trí đó. Hệ thống hỏi xác nhận và ghi rõ số ứng viên sẽ mất. Muốn dừng tuyển mà vẫn giữ lịch sử, hãy dùng **Đóng vị trí**.
+:::
 
-## Quy trình
+## Thêm ứng viên
 
-### 1. Tạo vị trí tuyển dụng
+::: steps
+1. Bấm **Thêm ứng viên**. Hộp **Thêm ứng viên** hiện ra.
+2. Chọn **Vị trí ứng tuyển** (chỉ liệt kê vị trí đang tuyển) và điền **Họ tên**. Hai ô này bắt buộc.
+3. Điền **Điện thoại**, **Email**, **Nguồn** (ví dụ Facebook, giới thiệu, TopCV) và **Ghi chú** nếu có.
+4. Bấm **Thêm ứng viên**.
+:::
 
-Bấm **"+ Vị trí mới"**:
-- Tên vị trí (Giáo viên Toán, Lễ tân, Kế toán...)
-- Phòng ban + Cơ sở
-- Số lượng cần
-- Mức lương dự kiến
-- Yêu cầu / mô tả công việc
+## Đưa ứng viên qua các giai đoạn
 
-### 2. Nhận ứng viên
+Thẻ **Ứng viên** chia thành năm cột: **Ứng tuyển**, **Phỏng vấn**, **Đã offer**, **Đã tuyển**, **Từ chối**. Mỗi ứng viên là một thẻ nhỏ ghi tên, vị trí, điện thoại và ghi chú. Dùng ô **Lọc theo vị trí** để xem một vị trí.
 
-3 cách thêm ứng viên:
-- **Form công khai** — tạo link đăng ký, gắn vào website
-- **Nhập tay** — HR nhập thông tin từ hồ sơ giấy
-- **Nhập Excel** — danh sách từ headhunter
+![Thẻ Ứng viên với năm cột Ứng tuyển, Phỏng vấn, Đã offer, Đã tuyển, Từ chối](../assets/screenshots/hr-tuyen-dung-ung-vien.webp)
 
-### 3. Theo dõi qua các giai đoạn
+Cách chuyển giai đoạn là bấm nút trên thẻ, không phải kéo thả:
 
-Mỗi ứng viên đi qua các stage:
-- 🟡 **Mới** → ⚪ **Sàng lọc hồ sơ** → 🔵 **Phỏng vấn vòng 1** → 🟣 **Phỏng vấn vòng 2** → 🟢 **Trúng tuyển** / 🔴 **Loại**
+- **Tiến bước** chuyển sang giai đoạn kế (Ứng tuyển, Phỏng vấn, Đã offer).
+- **Lùi bước** quay lại giai đoạn trước.
+- **Từ chối** (thùng rác đỏ) chuyển ứng viên sang cột **Từ chối** sau khi bạn xác nhận.
+- **Chốt tuyển** chỉ hiện ở cột **Đã offer**.
 
-Kéo thả ứng viên giữa các cột (Kanban) để đổi stage.
+## Chốt tuyển và tạo hồ sơ nhân viên
 
-### 4. Ra offer
+::: steps
+1. Ở thẻ ứng viên trong cột **Đã offer**, bấm **Chốt tuyển**. Hộp **Chốt tuyển** kèm tên ứng viên hiện ra.
+2. Chọn **Chức vụ** (bắt buộc, tự điền nếu vị trí tuyển đã gắn chức vụ).
+3. Chọn **Loại hình**: **Thử việc**, **Toàn thời gian** hoặc **Bán thời gian**.
+4. Chọn **Ngày vào làm**. Ô **Hết thử việc** để trống thì hệ thống tính thêm 2 tháng.
+5. Nhập **Lương cơ bản (VNĐ)**, bấm **Tạo hồ sơ nhân viên**.
+:::
 
-Ở stage "Trúng tuyển", bấm **"Tạo offer"**:
-- Vị trí + Mức lương + Phúc lợi
-- Sinh email offer + PDF tự động
-- Gửi qua email
+Ứng viên chuyển sang cột **Đã tuyển** và có liên kết **Xem hồ sơ NV**. Nếu ứng viên có email, hệ thống tạo luôn tài khoản đăng nhập với mật khẩu mặc định chung của hệ thống, bắt đổi khi vào lần đầu. Hãy đặt lại mật khẩu riêng cho người đó ở **Quản lý Users** rồi mới báo họ đăng nhập.
 
-### 5. Chuyển sang onboarding
-
-Ứng viên ký offer → bấm **"Tiếp nhận"** → tự sang [Onboarding](onboarding.md) → tạo hợp đồng + cấp tài khoản.
-
-## Báo cáo
-
-- Vị trí đang tuyển + tiến độ
-- Thời gian tuyển trung bình (TTH — Time To Hire)
-- Nguồn ứng viên hiệu quả
-- Tỷ lệ chuyển đổi (ứng viên → trúng tuyển)
+::: warning Lưu ý
+Chốt tuyển chỉ tạo hồ sơ nhân viên. Việc ký hợp đồng và danh sách hội nhập bạn làm tiếp ở [Hợp đồng lao động](hop-dong.md) và [Onboarding](onboarding.md). Ứng viên đã có hồ sơ thì không chốt lại được.
+:::
 
 ## Câu hỏi thường gặp
 
-**Ứng viên cũ ứng tuyển lại được không?**
-Được. Hệ thống nhận diện theo SĐT/email — gắn vào hồ sơ cũ thay vì tạo mới.
+::: details Ứng viên đã bị từ chối có đưa lại được không?
+Thẻ ở cột **Từ chối** không còn nút chuyển giai đoạn. Bạn thêm lại họ bằng **Thêm ứng viên** nếu muốn xét lần nữa.
+:::
 
-**Có thể chia sẻ ứng viên giữa các vị trí không?**
-Có. Một ứng viên có thể được gán vào nhiều vị trí đang tuyển song song.
+::: details Có gửi thư mời nhận việc (offer) cho ứng viên từ đây không?
+Không. **Đã offer** chỉ là nhãn giai đoạn để bạn theo dõi, trang không gửi thư.
+:::

@@ -1,85 +1,81 @@
-# Quy trình tiếp nhận (onboarding)
+---
+title: "Onboarding và nghỉ việc"
+description: "Danh sách việc cần làm khi nhận nhân viên mới và khi nhân viên nghỉ việc, tick từng mục để theo dõi tiến độ."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 90
+group: "Hồ sơ & tổ chức"
+---
 
-## Khái niệm
+# Onboarding và nghỉ việc
 
-**Onboarding** = quy trình tiếp nhận nhân viên mới — từ nộp hồ sơ → ký hợp đồng → đào tạo → bắt đầu làm việc chính thức.
+Onboarding là danh sách việc cần làm để nhân viên mới vào việc suôn sẻ (cấp email, thiết bị, hướng dẫn, giấy tờ). Với người nghỉ việc, hệ thống có danh sách tương ứng để bàn giao và thu hồi. Bạn tick từng mục khi xong để theo dõi tiến độ.
 
-## Truy cập
+## Tạo danh sách cho một nhân viên
 
-Menu trái → **Nhân sự → Onboarding** (hoặc **/hr/onboarding**).
+Mỗi nhân viên có hai danh sách riêng: một cho lúc vào, một cho lúc nghỉ. Danh sách được tạo trong hồ sơ nhân viên.
 
-![Onboarding](../assets/screenshots/hr-onboarding.png)
+::: steps
+1. Vào **Quản lý HR → Nhân viên**, bấm biểu tượng con mắt (**Xem chi tiết**) ở dòng nhân viên.
+2. Mở thẻ **Onboarding** (hoặc **Nghỉ việc** nếu người này sắp nghỉ).
+3. Nếu chưa có danh sách, bấm **Tạo checklist onboarding mặc định** (hoặc **Tạo checklist nghỉ việc mặc định**). Danh sách nghỉ việc được hệ thống tự tạo ngay khi bạn chuyển hồ sơ sang **Đã nghỉ việc**, nên thường đã có sẵn.
+4. Tick ô vuông ở từng mục khi đã làm xong. Thanh tiến độ và số mục hoàn thành cập nhật ngay.
+:::
 
-## Các bước onboarding chuẩn KLASSA gợi ý
+Bộ mục mặc định khi vào làm:
 
-### Bước 1 — Nhập hồ sơ ứng viên
+- **Tạo email công ty**
+- **Cấp laptop/thiết bị**
+- **Cấp quyền hệ thống**
+- **Orientation training**
+- **Assign mentor**
+- **Setup bàn làm việc**
+- **Tài liệu nhân viên**
+- **Hoàn tất giấy tờ** (ký hợp đồng, đăng ký BHXH, mở tài khoản lương)
+- **Kế hoạch thử việc**
 
-- Họ tên, ngày sinh, SĐT, email
-- CMND / CCCD (upload ảnh 2 mặt)
-- Bằng cấp (upload PDF)
-- CV
-- Ảnh chân dung
+Bộ mục mặc định khi nghỉ việc:
 
-### Bước 2 — Kiểm tra hồ sơ
+- **Exit interview**
+- **Thu hồi thiết bị**
+- **Khóa quyền truy cập**
+- **Thanh toán lương cuối**
+- **Giấy xác nhận**
+- **Clearance form**
+- **Chuyển giao công việc**
+- **Exit survey**
 
-HR kiểm tra:
-- Bằng cấp đúng yêu cầu vị trí?
-- CMND còn hạn?
-- Không trùng nhân viên cũ?
+Khi tick hết các mục, danh sách chuyển sang **Hoàn thành**.
 
-### Bước 3 — Phỏng vấn
+::: warning Lưu ý
+Tick một mục chỉ để đánh dấu, không tự làm việc đó. Riêng quyền đăng nhập thì hệ thống đã lo: khi bạn chuyển hồ sơ nhân viên sang trạng thái **Đã nghỉ việc**, tài khoản của người đó tự bị khoá và các phiên đăng nhập, thông báo trên điện thoại bị thu hồi, nên mục **Khóa quyền truy cập** chỉ cần tick lại cho đủ danh sách. Việc bạn phải tự làm là bàn giao lớp: các phân công giáo viên, trợ giảng ở lớp không tự đóng khi người đó nghỉ việc, hãy đổi giáo viên, trợ giảng ở từng lớp người đó đang phụ trách (xem [Chỉnh sửa lớp học](../lop-hoc/chinh-sua.md)).
+:::
 
-Có thể có nhiều vòng. Ghi lại kết quả từng vòng + người phỏng vấn.
+## Theo dõi chung tất cả nhân viên
 
-### Bước 4 — Đề xuất offer
+::: steps
+1. Vào **Quản lý HR → Onboarding**. Trang tên **Quy trình onboarding**.
+2. Chọn thẻ **Onboarding (NV mới)** hoặc **Nghỉ việc (offboarding)**.
+3. Xem các ô đếm: **Tổng số**, **Chờ bắt đầu**, **Đang thực hiện**, **Hoàn thành**, **Quá hạn**.
+4. Tìm theo tên hoặc mã nhân viên, hoặc lọc theo **Trạng thái**.
+:::
 
-- Vị trí
-- Lương dự kiến
-- Phúc lợi
-- Ngày bắt đầu thử việc
+![Trang Quy trình onboarding với các ô đếm và danh sách](../assets/screenshots/hr-onboarding-danh-sach.webp)
 
-Phần mềm sinh thư offer PDF gửi email cho ứng viên.
+Bảng có các cột **Nhân viên**, **Chức vụ**, **Phòng ban**, **Ngày bắt đầu**, **Mục tiêu hoàn thành**, **Tiến độ** (thanh và số mục đã xong), **Trạng thái**.
 
-### Bước 5 — Ký hợp đồng thử việc
+Ở cuối mỗi dòng, biểu tượng con mắt mở hồ sơ nhân viên, thùng rác xoá danh sách. Ở đầu trang có **Làm mới**, **Xuất CSV** và **Quay lại**.
 
-Tạo hợp đồng (xem [Hợp đồng lao động](hop-dong.md)). Thử việc thường 1-2 tháng.
-
-### Bước 6 — Cấp tài khoản KLASSA
-
-- Tạo tài khoản với vai trò phù hợp
-- Gán cơ sở làm việc
-- Phát mật khẩu khởi tạo
-
-### Bước 7 — Đào tạo
-
-Checklist đào tạo:
-
-- [ ] Giới thiệu công ty + nội quy
-- [ ] Hướng dẫn dùng KLASSA
-- [ ] Đào tạo nghiệp vụ (giáo viên dạy thử, lễ tân tư vấn thử)
-- [ ] Gặp đồng nghiệp + sếp trực tiếp
-
-### Bước 8 — Bàn giao
-
-- Phát thiết bị (laptop, key thẻ ra vào)
-- Bàn giao tài liệu
-
-### Bước 9 — Theo dõi thử việc
-
-Sau 1 tháng / 2 tháng — đánh giá thử việc:
-
-- **Đạt** → ký hợp đồng chính thức
-- **Chưa đạt** → kéo dài thử việc hoặc chấm dứt
-
-## Lưu ý
-
-- **Mỗi vị trí có checklist riêng** — giáo viên khác lễ tân khác kế toán. Cấu hình trong **Nhân sự → Cấu hình → Checklist onboarding**.
-- **Nhân viên mới có ID** từ ngày ký offer, không phải ngày bắt đầu làm.
+::: danger Không thể hoàn tác
+Xoá một danh sách xoá cả tiến độ đã tick của nhân viên đó. Hệ thống hỏi xác nhận trước khi xoá. Bạn tạo lại được bản mặc định nhưng phải tick lại từ đầu.
+:::
 
 ## Câu hỏi thường gặp
 
-**Onboarding mất bao lâu?**
-Trung bình 1-2 tuần từ nộp hồ sơ đến chính thức làm. Trung tâm có thể nhanh hơn (giáo viên cộng tác) hoặc lâu hơn (vị trí quản lý).
+::: details Tôi có sửa được các mục trong danh sách không?
+Không. Danh sách mặc định cố định như trên, bạn chỉ tick hoàn thành. Việc riêng của trung tâm có thể ghi ở [Giao việc](giao-viec.md).
+:::
 
-**Tự động hoá được khâu nào?**
-KLASSA tự sinh email offer, hợp đồng PDF, tài khoản hệ thống. Khâu phỏng vấn + đánh giá vẫn cần con người.
+::: details Thêm nhân viên có tự tạo danh sách onboarding không?
+Không. Bạn tạo danh sách trong thẻ **Onboarding** ở hồ sơ nhân viên như hướng dẫn trên.
+:::

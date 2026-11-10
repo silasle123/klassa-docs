@@ -1,68 +1,79 @@
-# Lịch học thử (trial test)
+---
+title: "Lịch học thử"
+description: "Xem các buổi học thử theo tuần, lọc theo trạng thái, môn, giáo viên và xử lý buổi chưa điểm danh."
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng]
+order: 80
+---
 
-## Khái niệm
+# Lịch học thử
 
-**Học thử** là buổi học miễn phí hoặc giảm giá để khách quan tâm trải nghiệm trước khi đăng ký chính thức. Nhiều trung tâm dùng học thử như **bước trung gian** giữa "Đã hẹn" và "Đã chuyển đổi" trong phễu.
+Lịch học thử cho bạn thấy mọi buổi học thử của cơ sở trong một tuần: ai học, môn gì, giờ nào, giáo viên nào, đã điểm danh chưa. Lễ tân dùng lịch này để chuẩn bị đón học sinh và nhắc việc quên điểm danh. Giáo viên và trợ giảng dùng để biết buổi học thử mình được giao.
 
-## Khi nào dùng
+## Mở lịch và đọc lịch
 
-- Khách muốn xem lớp học thực tế trước khi đăng ký
-- Trung tâm tổ chức "Ngày trải nghiệm" tập trung nhiều Lead cùng đến
-- Đo trình độ học sinh để xếp lớp phù hợp
+::: steps
+1. Vào **Lịch học → Lịch học thử**, hoặc bấm **Lịch học thử** ở dải trên cùng trang **Tuyển sinh**.
+2. Dùng hai nút mũi tên **Tuần trước** và **Tuần sau** để xem tuần khác. Nút **Tuần này** chỉ hiện khi bạn đang xem tuần khác, bấm để quay về tuần hiện tại. Tuần tính từ Thứ Hai đến Chủ nhật.
+3. Chọn kiểu xem: **Lịch tuần** (mỗi ngày một cột) hoặc **Danh sách** (mỗi ngày một nhóm).
+:::
 
-## Các bước
+![Trang Lịch học thử kiểu Lịch tuần và khối Cần xử lý](../assets/screenshots/tuyen-sinh-lich-hoc-thu-tuan.webp)
 
-### Bước 1 — Mở trang Lịch học thử
+Ở góc dải đầu trang có hai nút tắt: **Tuyển sinh** (về trang Tuyển sinh, giáo viên và trợ giảng không thấy nút này) và **Thời khoá biểu** (sang thời khoá biểu lớp học). Dải đầu trang tóm tắt tuần đang xem: tổng số buổi, số buổi **Có mặt**, **Vắng**, **Chưa điểm danh**. Mỗi thẻ buổi học thử có một trong các nhãn:
 
-Vào **Tuyển sinh → Lịch học thử**.
+| Nhãn | Nghĩa là |
+| --- | --- |
+| **Đã hẹn** | Đã đặt lịch, chưa đến giờ. |
+| **Chưa điểm danh** | Đã qua giờ mà chưa ai ghi có mặt hay vắng. |
+| **Có mặt** | Học sinh đã đến học thử. |
+| **Vắng** | Học sinh không đến. |
+| **Đổi lịch** | Buổi này từng được dời giờ. |
 
-![Trang lịch học thử](../assets/screenshots/lich-hoc-thu.png)
+## Lọc và tìm
 
-### Bước 2 — Tạo buổi học thử mới
+- Bấm các nhãn trên hàng đếm (**Tất cả**, **Đã hẹn**, **Chưa điểm danh**, **Có mặt**, **Vắng**, **Đổi lịch**) để lọc theo trạng thái.
+- Gõ vào ô **Tìm học sinh, SĐT** để tìm theo tên học sinh hoặc số điện thoại.
+- Dùng bộ lọc **Môn**, **Giáo viên** (có lựa chọn **Chưa có giáo viên**) và **Chi nhánh** (Quản trị viên, khi hệ thống có nhiều cơ sở).
 
-Bấm **"+ Tạo buổi học thử"**.
+## Xử lý việc cần làm trong tuần
 
-Điền:
+Khối **Cần xử lý** liệt kê các việc còn tồn:
 
-- **Tên buổi** — ví dụ "Học thử Toán lớp 9 — sáng T7"
-- **Ngày, giờ bắt đầu, giờ kết thúc**
-- **Phòng học**
-- **Giáo viên phụ trách**
-- **Sức chứa tối đa** — bao nhiêu Lead có thể đăng ký
-- **Mô tả** — nội dung buổi (làm bài test đầu vào, học thử…)
+| Việc | Nút | Ý nghĩa |
+| --- | --- | --- |
+| **Học sinh vắng buổi học thử** | **Xem** | Gọi phụ huynh hẹn buổi khác. |
+| **Buổi đã qua chưa điểm danh** | **Điểm danh** | Ghi có mặt hoặc vắng cho buổi đã qua. |
+| **Buổi học thử chưa có giáo viên** | **Xem** | Mở các buổi chưa có giáo viên, báo quản lý xếp giáo viên. |
+| **Đã học thử, chưa chốt** | **Xem** | Gọi phụ huynh để chốt. |
 
-### Bước 3 — Mời Lead
+Không còn việc nào thì khối hiện **Không có việc cần xử lý**.
 
-Sau khi tạo, từ trang chi tiết buổi:
+## Thao tác trên một buổi
 
-- Bấm **"+ Thêm Lead"** → chọn từ danh sách Lead có sẵn
-- Hoặc dán link đăng ký → gửi qua Zalo cho khách tự bấm
+Bấm vào thẻ buổi học thử để mở danh sách thao tác (Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân):
 
-### Bước 4 — Ngày học thử
+- **Ghi có mặt / vắng** (hoặc **Sửa điểm danh** với buổi đã ghi).
+- **Đổi lịch** (với buổi còn đang chờ).
+- **Đặt lịch buổi 2**, **Đặt lịch buổi 3**.
+- **Mở hồ sơ, ghi cuộc gọi**.
+- **Mọi buổi học thử của lead**.
+- **Phiếu tư vấn**. Xem [Lập phiếu tư vấn học phí](phieu-tu-van-hoc-phi.md).
+- Gọi số điện thoại phụ huynh.
 
-Trước buổi 1 ngày, phần mềm tự nhắc các Lead đã đăng ký qua Zalo / email (nếu trung tâm đã kết nối).
+Chi tiết từng thao tác xem [Đặt lịch và ghi kết quả học thử](dat-lich-hoc-thu.md). Lịch học thử không có nút huỷ buổi. Muốn đổi giờ, dùng **Đổi lịch**.
 
-Tại buổi học:
+## Giáo viên và trợ giảng
 
-- Điểm danh Lead đến / không đến trong trang chi tiết buổi
-- Sau buổi, tư vấn viên gọi follow-up từng Lead
+Giáo viên và trợ giảng thấy trang tên **Lịch học thử của bạn**, chỉ gồm các buổi mình được giao. Họ chỉ xem, không thao tác trên buổi học thử và không thấy số điện thoại của lead. Bộ lọc giáo viên và chi nhánh không hiện.
 
-### Bước 5 — Sau học thử
-
-- Lead đến và quan tâm → chuyển giai đoạn sang **"Đã đến"** trong phễu
-- Lead đến và đăng ký → [Chuyển thành Học sinh](chuyen-lead-thanh-hoc-sinh.md)
-- Lead không đến → ghi chú lý do, hẹn buổi khác
-
-## Lưu ý
-
-- **Không vượt sức chứa**: phần mềm khoá đăng ký khi đủ số.
-- **Đặt phòng**: nếu phòng đang dùng cho lớp khác, hệ thống cảnh báo trùng lịch.
-- **Hợp tác với giáo viên**: thông báo trước để giáo viên chuẩn bị bài test phù hợp.
+![Trang Lịch học thử của bạn dành cho giáo viên](../assets/screenshots/tuyen-sinh-lich-hoc-thu-giao-vien.webp)
 
 ## Câu hỏi thường gặp
 
-**Lead chưa có trong hệ thống nhưng muốn đăng ký học thử qua link, có được không?**
-Được. Link đăng ký công khai cho phép khách tự điền thông tin — phần mềm tự tạo Lead mới và gắn vào buổi.
+::: details Vì sao không thấy buổi học thử của tuần trước?
+Lịch chỉ tải tuần đang xem. Dùng nút chuyển tuần để quay lại.
+:::
 
-**Tỷ lệ chuyển đổi từ học thử thì xem ở đâu?**
-Mục **Báo cáo → Phễu tuyển sinh** có chỉ số "Đã đến → Đã chuyển đổi" cho biết hiệu quả buổi học thử.
+::: details Tôi là giáo viên, tại sao không bấm được vào buổi học thử?
+Giáo viên chỉ xem lịch. Việc điểm danh và đổi lịch do Lễ tân hoặc quản lý làm.
+:::

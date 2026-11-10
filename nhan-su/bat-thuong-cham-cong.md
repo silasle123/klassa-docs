@@ -1,50 +1,62 @@
+---
+title: "Phát hiện bất thường chấm công"
+description: "Quét dữ liệu chấm công trong một khoảng ngày để tìm vị trí nhảy bất thường, WiFi lạ, thiếu giờ vào hoặc ra và ca làm quá dài."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "AI — Gợi ý & Trợ lý Vận hành"
+order: 80
+group: "Lương, chấm công & ca"
+---
+
 # Phát hiện bất thường chấm công
 
-## Khái niệm
+Trang này giúp bạn soát lại chấm công của một cơ sở trong một khoảng ngày, để thấy ngay những lần chấm đáng ngờ như nghi giả vị trí hay quên chấm ra. Trang không tự sửa công, bạn xem rồi quyết định.
 
-KLASSA phát hiện tự động các pattern bất thường trong chấm công — giúp HR và Quản lý nắm tình hình + xử lý sớm.
+Vào **Quản lý HR → Phát hiện Bất thường**. Trang cần hai gói mở rộng: **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**.
 
-## Truy cập
+Hệ thống soát theo quy tắc cố định. Một cảnh báo có nghĩa là "nên xem lại", không phải kết luận nhân viên sai.
 
-Menu trái → **Nhân sự → Bất thường chấm công** (hoặc **/hr/timesheet-anomaly**).
+## Quét bất thường
 
-## Các pattern phát hiện
+::: steps
+1. Vào **Quản lý HR → Phát hiện Bất thường**.
+2. Chọn **Cơ sở** (bắt buộc), **Từ ngày** và **Đến ngày**.
+3. Bấm **Quét bất thường**. Hệ thống báo số bất thường tìm thấy.
+4. Xem **Danh sách bất thường**. Dùng ô **Mức độ** (cao, **Trung bình**, **Thấp**) và **Trạng thái** (**Chờ xử lý**, **Đã giải quyết**, **Đã bỏ qua**) để lọc.
+:::
 
-| Pattern | Ý nghĩa |
-|---------|---------|
-| **Đi muộn liên tục** | >3 lần / tuần |
-| **Về sớm liên tục** | >3 lần / tuần |
-| **Quên check-out** | Cả ngày không check-out |
-| **Check-in sai vị trí** | GPS không trùng văn phòng |
-| **Check-in giờ lạ** | Trước giờ làm 2 tiếng / sau 22h |
-| **Chấm công hộ** | Cùng 1 IP / thiết bị nhiều nhân viên |
-| **Pattern lạ** | AI phát hiện thay đổi đột biến |
+Bốn ô số ở đầu trang cho biết **Tổng bất thường**, số mức cao và trung bình còn chờ, và số **Chờ xử lý**.
 
-## Cách xử lý
+## Hệ thống tìm những gì
 
-Mỗi cảnh báo có:
+| Loại | Khi nào báo | Mức độ |
+|------|-------------|--------|
+| **Nhảy vị trí GPS** | Hai lần chấm liên tiếp cách nhau một quãng đường mà phải di chuyển nhanh hơn khoảng 180 km/h, thường do giả vị trí. | Cao |
+| **WiFi không hợp lệ** | Lần chấm dùng WiFi có mã BSSID không nằm trong danh sách WiFi được phép. | Trung bình |
+| Thiếu giờ ra hoặc thiếu giờ vào | Trong ngày chỉ có giờ vào mà không có giờ ra, hoặc ngược lại. Loại này hiện bằng mã tiếng Anh ở cột **Loại**, hãy đọc cột **Mô tả**. | Trung bình |
+| Giờ làm quá nhiều | Một ngày làm hơn 12 giờ. Hiện bằng mã tiếng Anh ở cột **Loại**. | Trung bình, cao nếu hơn 16 giờ |
 
-- Nhân viên bị nghi vấn
-- Loại bất thường + tần suất
-- Đề xuất hành động:
-  - Gặp đối thoại
-  - Yêu cầu giải trình
-  - Cảnh cáo / nhắc nhở
-  - Bỏ qua nếu có lý do chính đáng
+Danh sách WiFi được phép khai ở [Cấu hình chấm công](cau-hinh-cham-cong.md).
 
-## Báo cáo định kỳ
+## Xử lý một bất thường
 
-Tự gửi email Tóm tắt cho Quản lý:
+::: steps
+1. Ở dòng cần xem, bấm **Chi tiết** hoặc **Giải quyết**. Hộp **Chi tiết bất thường** hiện ra với nhân viên, ngày, loại, mức độ và mô tả.
+2. Ghi **Ghi chú giải quyết** nếu muốn lưu lại lý do.
+3. Bấm **Giải quyết** nếu đã xử lý xong, hoặc **Bỏ qua** nếu bạn thấy đây là trường hợp bình thường.
+:::
 
-- Hàng tuần: nhân viên có bất thường trong tuần
-- Hàng tháng: tổng hợp tháng + pattern
+Việc đổi trạng thái chỉ để theo dõi. Nếu cần sửa giờ công, dùng **Chấm công thủ công** ở [Điểm danh nhân viên](cham-cong.md).
 
-## Lưu ý
-
-- **Không trừng phạt theo dữ liệu mù** — luôn hỏi nhân viên trước để có context (có thể nhân viên có lý do chính đáng).
-- **Cảnh báo lặp** = vấn đề thật. Cảnh báo 1 lần có thể là sự cố ngẫu nhiên.
+::: tip Mẹo
+Quét định kỳ cuối tuần hoặc trước khi chốt lương. Với nhân viên bị báo **Nhảy vị trí GPS**, hỏi trực tiếp trước khi kết luận, vì tín hiệu định vị đôi khi sai lệch.
+:::
 
 ## Câu hỏi thường gặp
 
-**Nhân viên đi công tác, check-in xa văn phòng có bị báo sai vị trí không?**
-Có. Khi đi công tác, vào Cổng Nhân viên đánh dấu "Đi công tác từ X đến Y" trước → hệ thống không cảnh báo.
+::: details Quét lại có tạo cảnh báo trùng không?
+Có. Mỗi lần quét ghi thêm cảnh báo mới, nên quét lại cùng một khoảng ngày sẽ có dòng lặp. Hãy quét mỗi khoảng ngày một lần và dùng ô **Trạng thái** để chỉ xem các dòng còn **Chờ xử lý**.
+:::
+
+::: details Giáo viên không bấm giờ vào ra thì sao?
+Trang chỉ soát dữ liệu chấm công giờ vào ra. Giáo viên và trợ giảng tính công theo buổi dạy nên thường không có gì để soát ở đây, xem [Bảng công tháng](bang-cong-thang.md).
+:::

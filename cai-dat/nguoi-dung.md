@@ -1,72 +1,94 @@
-# Quản lý người dùng nội bộ
+---
+title: "Quản lý người dùng"
+description: "Tạo tài khoản nhân viên, đổi vai, đặt lại mật khẩu, khoá hoặc xoá tài khoản ở trang Quản lý Users."
+roles: [Quản trị viên]
+order: 10
+---
 
-## Khi nào dùng
+# Quản lý người dùng
 
-- Tạo tài khoản cho nhân viên mới (kích hoạt ngay, không cần duyệt)
-- Đổi vai trò khi nhân viên thăng chức / chuyển vị trí
-- Vô hiệu hoá tài khoản khi nhân viên nghỉ việc
-- Đặt lại mật khẩu cho người quên
+Trang này là nơi Quản trị viên tạo tài khoản cho nhân viên, đổi vai, đặt lại mật khẩu và khoá hoặc xoá tài khoản khi cần. Tài khoản tạo ở đây dùng được ngay, không phải chờ duyệt.
 
-## Truy cập
+Chỉ **Quản trị viên** vào được trang này. Các vai khác sẽ thấy thông báo không đủ quyền.
 
-Menu trái → **Cài đặt → Người dùng** (`/admin/users`). Quyền: Chủ trung tâm (ADMIN).
+## Mở trang
 
-![Trang Quản lý người dùng](../assets/screenshots/admin-users.png)
+Vào **Quản trị hệ thống → Quản lý Users**. Đầu trang có 4 ô thống kê (**Tổng Users**, **Active**, **Inactive**, **This Page**), thanh tìm kiếm và bảng **Danh Sách Users**.
 
-## Tạo tài khoản mới
+Bảng có các cột: tên, email, số điện thoại, vai, chi nhánh, trạng thái (**Active** hoặc **Inactive**, kèm **Bị khóa** nếu đang bị khoá), trạng thái đăng ký, lần đăng nhập gần nhất (hoặc **Chưa đăng nhập**) và nút thao tác.
 
-Bấm **"+ Tạo người dùng"** → hộp thoại:
+Để tìm người, gõ tên, email hoặc số điện thoại vào ô tìm kiếm rồi bấm **Tìm kiếm**. Lọc theo vai ở ô **Tất cả Role**. Bấm **Reset** để xoá bộ lọc. Mỗi trang hiện 20 người.
 
-1. **Họ và tên** \*
-2. **Email** \* (không trùng)
-3. **Số điện thoại** (tuỳ chọn)
-4. **Vai trò** \* (xem [vai trò người dùng](../bat-dau/vai-tro-nguoi-dung.md))
-5. **Cơ sở / Chi nhánh** (chọn nếu vai trò ≠ Phụ huynh)
-6. **Mật khẩu** \* — **phải nhập** (không có tự sinh)
-7. **Kích hoạt** (bật sẵn)
+![Trang Quản Lý Users với 4 ô thống kê, bộ lọc và bảng Danh Sách Users](../assets/screenshots/quan-ly-users-danh-sach.webp)
 
-Bấm lưu → tài khoản tạo ở trạng thái **đã duyệt + hoạt động ngay** (đăng nhập được luôn, không qua bước chờ duyệt).
+## Tạo tài khoản cho nhân viên
 
-> **Tài khoản vai trò nhân viên** (giáo viên, lễ tân, kế toán, nhân sự, quản lý…) → hệ thống **tự tạo hồ sơ nhân sự (Employee)** để dùng [Cổng nhân viên](../cong-nhan-vien/gioi-thieu.md). Phụ huynh không tạo hồ sơ nhân sự.
+::: steps
+1. Vào **Quản trị hệ thống → Quản lý Users**.
+2. Bấm **Thêm User**, hộp **Tạo User Mới** hiện ra.
+   ![Hộp Tạo User Mới](../assets/screenshots/quan-ly-users-tao-moi.webp)
+3. Điền **Tên đầy đủ**, **Email**, **Số điện thoại** (không bắt buộc).
+4. Nhập **Password**. Ô này bắt buộc khi tạo mới, hệ thống không tự sinh mật khẩu.
+5. Chọn **Role** (vai) và **Chi nhánh**. Chọn **Không gán** nếu người này không thuộc chi nhánh nào.
+6. Giữ công tắc **Tài khoản đang hoạt động** ở trạng thái bật, rồi bấm **Tạo User**.
+:::
 
-> Hệ thống **không tự gửi email** thông tin đăng nhập. Anh chị báo email + mật khẩu cho nhân viên thủ công (hoặc dùng chức năng đặt lại mật khẩu để họ tự đổi).
+Ô bắt buộc: **Tên đầy đủ**, **Email**, **Password**. Email không được trùng với tài khoản đang có.
 
-## Danh sách + thao tác
+Nếu bỏ trống vai, hệ thống đặt là **Phụ huynh**, vì vậy hãy chọn vai cho đúng trước khi lưu.
 
-Bảng: Tên · Email · SĐT · Vai trò · Chi nhánh · Hoạt động · Lần đăng nhập cuối · Ngày tạo. Lọc theo tên/email/SĐT, vai trò, chi nhánh.
+Khi vai là nhân viên (Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Giáo viên, Trợ giảng, Kế toán, Nhân sự), hệ thống tự tạo luôn hồ sơ nhân sự cho tài khoản đó. Nhờ vậy người này vào được **Cổng nhân viên** ngay. Phụ huynh không có hồ sơ nhân sự.
 
-Mỗi user có menu thao tác:
-- **Chỉnh sửa** — đổi tên, SĐT, vai trò, chi nhánh, kích hoạt (email không đổi được)
-- **Đổi vai trò**
-- **Đặt lại mật khẩu**
-- **Vô hiệu hoá** — tắt hoạt động, không đăng nhập được
-- **Xem lịch sử**
+::: warning Lưu ý
+- Hệ thống không tự gửi email thông tin đăng nhập. Bạn cần báo email và mật khẩu cho nhân viên, và nên dặn họ đổi mật khẩu ở lần đăng nhập đầu.
+- Số tài khoản nhân viên bị giới hạn theo gói của trung tâm. Khi đủ số lượng hoặc gói hết hạn, hệ thống báo lỗi và không cho tạo thêm. Tài khoản **Phụ huynh** không tính vào giới hạn này. Khi gặp thông báo này, liên hệ KLASSA để nâng gói hoặc gia hạn.
+- Không tạo tài khoản **Học sinh** ở đây. Hãy cấp từ hồ sơ học sinh, xem [Tài khoản học sinh](../hoc-sinh/tai-khoan-hoc-sinh.md).
+:::
 
-## Khoá vs vô hiệu hoá
+## Sửa thông tin, đổi vai, khoá tài khoản
 
-- **Vô hiệu hoá** (tắt công tắc Hoạt động) — chủ động khoá tài khoản (vd nhân viên nghỉ). Tài khoản còn nhưng không đăng nhập.
-- **Khoá tạm thời tự động** — khi ai đó nhập sai mật khẩu nhiều lần, hệ thống tự khoá ~15 phút rồi tự mở (bảo vệ chống dò mật khẩu).
+Bấm nút ba chấm ở cuối dòng để mở menu thao tác.
 
-## Xoá người dùng
+| Thao tác | Dùng để làm gì |
+|---|---|
+| **Chỉnh sửa** | Đổi tên, số điện thoại, vai, chi nhánh, trạng thái hoạt động. Email không đổi được. Để trống **Password** nếu không muốn đổi mật khẩu. Bấm **Cập nhật** để lưu. |
+| **Vô hiệu hóa** / **Kích hoạt** | Tắt hoặc bật lại tài khoản, ví dụ khi nhân viên nghỉ việc. Tài khoản tắt không đăng nhập được. |
+| **Mở khóa tài khoản** | Chỉ hiện khi tài khoản đang bị khoá do nhập sai mật khẩu nhiều lần. Bấm để mở lại ngay, không cần chờ. |
+| **Đặt lại mật khẩu** | Đặt mật khẩu mới cho người quên. |
+| **Xóa** | Chuyển tài khoản vào thùng rác. |
 
-Không xoá cứng — chỉ **vô hiệu hoá** (giữ lịch sử thao tác). Tài khoản đã xoá có thể khôi phục trong **Thùng rác**.
+### Đặt lại mật khẩu
 
-## Khác biệt: Tạo user vs Duyệt đăng ký
+::: steps
+1. Ở dòng người cần đổi, bấm nút ba chấm, chọn **Đặt lại mật khẩu**.
+2. Nhập **Mật khẩu mới** (tối thiểu 6 ký tự).
+3. Bấm **Đặt lại**, rồi báo mật khẩu mới cho người đó.
+:::
 
-| | **Quản lý người dùng** (`/admin/users`) | **Duyệt đăng ký** (`/admin/registrations`) |
-|--|------------------------------------------|---------------------------------------------|
-| Ai tạo | Admin tạo thẳng | Người dùng [tự đăng ký](../bat-dau/dang-ky.md) |
-| Trạng thái ban đầu | Hoạt động ngay | Chờ duyệt |
-| Tự tạo hồ sơ nhân sự | Có (vai trò nhân viên) | Có (khi duyệt) |
-| Khi dùng | Chủ trung tâm chủ động thêm NV | NV tự đăng ký, admin duyệt |
+Khi bạn đổi mật khẩu, vai hoặc chi nhánh của một người, mọi phiên đăng nhập cũ của họ trên web và app bị đăng xuất. Họ đăng nhập lại để nhận quyền mới. Khi vô hiệu hóa tài khoản, họ cũng bị đăng xuất.
+
+## Xóa và khôi phục tài khoản
+
+Bấm **Xóa** ở menu thao tác, hộp **Xóa user** hiện ra. Ô **Lý do xóa** không bắt buộc (nếu để trống, hệ thống ghi "Không có lý do cụ thể"). Bấm **Xóa** để xác nhận.
+
+Tài khoản bị xoá chỉ được chuyển vào thùng rác, dữ liệu không mất. Bạn không thể tự xoá chính tài khoản của mình.
+
+Để khôi phục: bấm **Thùng rác** ở đầu trang, tìm người cần lấy lại, bấm **Khôi phục**.
 
 ## Câu hỏi thường gặp
 
-**Nhân viên báo không đăng nhập được dù đã tạo?**
-Kiểm tra công tắc "Hoạt động" có bật không, và báo đúng email + mật khẩu đã đặt cho họ.
+::: details Nhân viên đã được tạo tài khoản nhưng không đăng nhập được?
+Kiểm tra cột trạng thái: nếu là **Inactive**, bấm **Kích hoạt**. Nếu có nhãn **Bị khóa**, bấm **Mở khóa tài khoản**. Sau đó xác nhận lại email và mật khẩu đã báo cho họ.
+:::
 
-**Tạo nhầm vai trò?**
-Dùng "Đổi vai trò" trên dòng user.
+::: details Tạo nhầm vai thì sửa thế nào?
+Bấm **Chỉnh sửa** ở dòng người đó, đổi **Role**, bấm **Cập nhật**. Người đó cần đăng nhập lại để nhận quyền mới.
+:::
 
-**Nhân viên vào Cổng nhân viên báo "chưa có hồ sơ nhân sự"?**
-Hiếm gặp với tài khoản tạo mới (hệ thống tự tạo hồ sơ). Nếu xảy ra với tài khoản cũ, liên hệ KLASSA để bổ sung hồ sơ nhân sự.
+::: details Khác gì với duyệt đăng ký?
+Ở đây Quản trị viên tạo thẳng tài khoản và dùng được ngay. Còn người tự đăng ký thì chờ ở [Duyệt đăng ký người dùng](duyet-dang-ky-nguoi-dung.md) đến khi được duyệt.
+:::
+
+::: details Có thể tự tạo vai mới hoặc chỉnh quyền từng vai không?
+Không. Các vai có bộ quyền cố định, xem [Vai trò người dùng](../tai-khoan/vai-tro-nguoi-dung.md).
+:::

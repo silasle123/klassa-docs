@@ -1,74 +1,83 @@
+---
+title: "Cấu hình chấm công"
+description: "Khai WiFi, vùng GPS và thiết bị để nhân viên chỉ chấm công được khi đang ở trung tâm."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "Nhân sự (HRIS)"
+order: 70
+group: "Lương, chấm công & ca"
+---
+
 # Cấu hình chấm công
 
-## Khi nào dùng
+Để tránh việc nhân viên chấm công từ xa, bạn khai nơi nào được phép chấm: mạng WiFi của trung tâm, vùng GPS quanh cơ sở, hoặc máy chấm công. Hệ thống kiểm tra mỗi lần nhân viên bấm chấm công theo cách bạn đã khai.
 
-Thiết lập các phương thức chấm công + quy tắc xác thực cho nhân viên:
-- **WiFi** — chỉ chấm khi đang nối Wi-Fi của trung tâm
-- **Geofence** — chỉ chấm khi GPS trong bán kính X mét quanh cơ sở
-- **Thiết bị được phép** — chỉ chấm từ máy đã đăng ký (chống share tài khoản)
-- **QR Code** — quét mã ở văn phòng để xác thực
+Vào **Quản lý HR → Điểm danh nhân viên**, bấm **Cài đặt**. Trang **Cài đặt chấm công** có 3 tab: **WiFi cho phép**, **Phạm vi GPS** và **Thiết bị**.
 
-## Truy cập
+## Chọn chế độ kiểm tra
 
-Menu trái → **Nhân sự → Chấm công → Cài đặt** (hoặc **/hr/attendance/settings**).
+Chế độ phụ thuộc vào việc bạn khai gì:
 
-![Cấu hình chấm công](../assets/screenshots/hr-cau-hinh-cham-cong.png)
+| Bạn khai | Hệ thống làm gì |
+|----------|-----------------|
+| Chỉ WiFi (điền IP mạng, không tạo vùng GPS) | Nhân viên phải đang nối WiFi của trung tâm. Không cần bật định vị. |
+| Chỉ GPS (tạo vùng, không điền IP) | Nhân viên phải đang ở trong vùng. |
+| Cả hai | Thoả một trong hai là chấm được. |
+| Không khai gì | Chấm công tự do, không kiểm tra. |
 
-## 4 phương thức xác thực
+Lần chấm không qua được kiểm tra sẽ bị từ chối. Trên app điện thoại, nhân viên có thể ghi lý do và gửi lại, lần chấm đó vào hàng chờ để quản lý xem và duyệt (xem [Điểm danh nhân viên](cham-cong.md)).
 
-### 1. WiFi của trung tâm
+## Thêm WiFi được phép
 
-- Khai báo **tên Wi-Fi (SSID)** của trung tâm
-- Có thể nhiều SSID (mỗi cơ sở 1 SSID)
-- Khi NV bấm Check-in, hệ thống đọc Wi-Fi đang nối → so sánh
+::: steps
+1. Vào tab **WiFi cho phép**, bấm **Thêm WiFi**. Hộp **Thêm WiFi Whitelist** hiện ra.
+2. Điền **Tên WiFi (SSID)** (bắt buộc).
+3. Điền **IP mạng (dùng cho chấm công)** (bắt buộc). Nếu bạn đang ngồi ở trung tâm, bấm **Dùng IP hiện tại** để điền sẵn.
+4. Điền **BSSID (MAC router)** nếu muốn, không bắt buộc.
+5. Ghi **Tên mô tả**, ví dụ "WiFi văn phòng tầng 5".
+6. Bấm **Thêm**.
+:::
 
-Ưu: chống chấm công từ nhà.
+![Hộp Thêm WiFi Whitelist](../assets/screenshots/cai-dat-cham-cong-wifi.webp)
 
-### 2. Geofence (vị trí GPS)
+Bảng liệt kê **SSID**, **IP mạng**, **BSSID**, **Mô tả** và **Trạng thái**. Ở mỗi dòng bạn bật tắt hoặc xoá được.
 
-- Khai báo **toạ độ** từng cơ sở (lấy từ Google Maps)
-- Đặt **bán kính cho phép** (mặc định 50m)
-- NV bấm Check-in → app đọc GPS → kiểm tra trong vùng
+::: warning IP mạng thay đổi
+Nếu trung tâm đổi gói mạng hoặc nhà mạng, IP công cộng có thể đổi theo. Khi đó nhân viên chấm công bằng WiFi bị từ chối, bạn cần cập nhật lại IP ở đây.
+:::
 
-Ưu: linh hoạt khi NV ra ngoài đi sự kiện gần trung tâm. Nhược: GPS sai số nội đô.
+Với app điện thoại, người quản lý có thể lưu WiFi đang nối ngay trên app để khai mã của cục phát (BSSID). Mỗi cục phát và mỗi băng tần 2.4G, 5G có mã riêng, nên hãy lưu từng cái.
 
-### 3. Thiết bị được phép
+## Thêm vùng GPS
 
-Mỗi NV chỉ chấm công từ thiết bị **đã đăng ký**:
-- Lần đầu Check-in trên máy mới → yêu cầu HR duyệt
-- Sau khi duyệt, máy đó vĩnh viễn được phép cho user đó
-- Mất máy → HR thu hồi quyền
+::: steps
+1. Vào tab **Phạm vi GPS**, bấm **Thêm Geofence**. Hộp **Thêm GPS Geofence** hiện ra.
+2. Điền **Tên geofence** (bắt buộc), ví dụ "Cơ sở Cầu Giấy".
+3. Giữ **Loại** là **Hình tròn**.
+4. Điền **Latitude** và **Longitude** (bắt buộc). Lấy toạ độ từ Google Maps: bấm chuột phải vào vị trí trung tâm, chọn dòng toạ độ đầu tiên.
+5. Điền **Bán kính (meters)** (bắt buộc), ví dụ 100.
+6. Bấm **Thêm**.
+:::
 
-Ưu: chống share tài khoản. Nhược: NV đổi máy phải làm thủ tục.
+Bảng hiện **Tên**, **Tọa độ trung tâm**, **Bán kính** và **Trạng thái**. Bán kính quá nhỏ làm nhân viên đứng trong nhà cũng bị tính là ngoài vùng vì sai số định vị, hãy thử vài giá trị.
 
-### 4. QR Code văn phòng
+## Thiết bị
 
-- In QR code dán ở cửa văn phòng
-- NV mở app → quét QR → check-in
+Tab **Thiết bị** để ghi danh sách máy chấm công. Bấm **Thêm thiết bị**, điền **Tên thiết bị**, **Loại thiết bị** (**Vân tay**, **Nhận diện khuôn mặt (FaceID)** hoặc **Thẻ từ**) và **Serial Number** (bắt buộc), kèm **IP Address** và **Vị trí** nếu có. Cột **Trạng thái** cho biết thiết bị đang **Online**, đã kết nối bao lâu trước, hoặc **Chưa kết nối**.
 
-Ưu: đảm bảo NV đã đến văn phòng. Nhược: ai cũng quét được nếu QR bị chụp lại.
-
-## Kết hợp nhiều phương thức
-
-Có thể bật **AND** (NV phải đạt CẢ 2 điều kiện) hoặc **OR** (đạt 1 trong 2):
-- Ví dụ: Wi-Fi **AND** Geofence — vừa nối Wi-Fi văn phòng vừa trong bán kính
-- Ví dụ: QR **OR** Geofence — quét QR hoặc trong bán kính đều OK
-
-## Cấu hình thêm
-
-- **Cho phép check-in trước giờ làm** — bao nhiêu phút (mặc định 30 phút)
-- **Bắt buộc chụp ảnh selfie** khi check-in
-- **Ghi nhật ký vị trí** trong ca làm để theo dõi
-
-## Lưu ý
-
-- **Bật quá nhiều phương thức** → khó NV → mất thời gian
-- **Đi công tác**: NV báo trước trong **Cổng Nhân viên → Đi công tác** → không bị cảnh báo
+::: tip Mẹo
+Máy chấm công cần được cài đặt để gửi dữ liệu về hệ thống. Nếu bạn muốn dùng máy vân tay hoặc thẻ từ, hãy liên hệ KLASSA để được hỗ trợ nối máy.
+:::
 
 ## Câu hỏi thường gặp
 
-**Quên Wi-Fi văn phòng đổi mật khẩu, NV không check-in được?**
-Phải vào trang này khai báo SSID mới (Wi-Fi mới). Hệ thống không tự nhận.
+::: details Nhân viên chấm công ở nhà thì sao?
+Nếu trung tâm đã khai WiFi hoặc GPS, lần chấm đó bị từ chối. Nhân viên có thể ghi lý do và gửi lại trên app, lúc đó lần chấm vào hàng chờ duyệt. Quản lý xem bằng chứng rồi duyệt hoặc từ chối.
+:::
 
-**NV bị mất điện thoại, máy mới chưa duyệt — chấm công thế nào?**
-HR truy cập trang này → Quản lý thiết bị → Duyệt thiết bị mới của NV.
+::: details Vì sao app chỉ báo "Chỉ GPS"?
+Cơ sở đó đã lưu WiFi nhưng lần chấm này chỉ có định vị, không nối được WiFi trung tâm. Lần chấm vẫn được chấp nhận, chỉ gắn nhãn để quản lý lưu ý.
+:::
+
+::: details Cấu hình này có áp cho trợ giảng bấm Có mặt theo buổi không?
+Có. Ca trợ giảng cũng kiểm tra theo WiFi hoặc GPS của cơ sở mà lớp thuộc về. Cơ sở chưa khai gì thì chấp nhận thủ công. Xem [Ca trợ giảng](ca-tro-giang.md).
+:::

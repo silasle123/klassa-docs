@@ -1,52 +1,66 @@
-# Thu lead từ web (form đăng ký công khai)
+---
+title: "Form đăng ký học thử trên web"
+description: "Bật trang đăng ký học thử công khai để phụ huynh tự điền thông tin và tự thành lead trong hệ thống."
+roles: [Quản trị viên, Quản lý chi nhánh]
+plugin: "CRM Tuyển sinh + AI"
+order: 120
+---
 
-## Khái niệm
+# Form đăng ký học thử trên web
 
-KLASSA có sẵn **trang đăng ký công khai** để phụ huynh tự điền thông tin từ website / quảng cáo → tự động tạo **Lead** trong hệ thống mà không cần nhân viên nhập tay.
+Trung tâm có sẵn một trang đăng ký học thử công khai, phụ huynh không cần đăng nhập. Dán link trang này lên website, quảng cáo hay tin nhắn Zalo. Mỗi phụ huynh điền form là một lead mới tự xuất hiện trong [danh sách lead](danh-sach-lead.md), lễ tân không phải nhập tay.
 
-- **Trang công khai**: `/dang-ky-hoc-thu` (không cần đăng nhập) — phụ huynh điền họ tên con, SĐT, môn quan tâm…
-- **Cấu hình** trang này tại: **Tích hợp & API** (`/integrations`) → tab **"Lead từ web"**.
+Trang cần gói mở rộng **CRM Tuyển sinh + AI**. Mặc định trang tắt: phụ huynh vào sẽ thấy "Hiện chưa mở đăng ký online" cho đến khi Quản trị viên hoặc Quản lý chi nhánh bật.
 
-> Khác Lead thường (nhân viên nhập): lead từ web là khách **chủ động liên hệ trước**, mức quan tâm cao hơn — cần gọi lại nhanh.
+## Bật và cấu hình trang đăng ký
 
-## Bước 1 — Cấu hình trang đăng ký
+::: steps
+1. Vào **Tích hợp**, mở tab **Lead từ web**.
+2. Bật công tắc **Bật trang đăng ký công khai**. Link trang hiện ngay bên cạnh công tắc.
+3. Bấm **Sao chép link** để lấy link dán vào website hoặc quảng cáo. Bấm **Xem trước** để xem trang trong tab mới.
+4. Chỉnh giao diện trang: **Tiêu đề** (để trống thì dùng tên trung tâm), **Dòng chữ pill (nhãn nhỏ)** là dòng chữ nhỏ phía trên tiêu đề (mặc định là "ĐĂNG KÝ HỌC THỬ"), phụ đề, logo riêng, ảnh banner, màu nút, tiêu đề và lời cảm ơn hiển thị sau khi gửi, link sau khi gửi, dòng đồng ý.
+5. Ở bảng **Các trường trên form**, chọn trường nào **Hiện**, trường nào **Bắt buộc**, và sửa **Nhãn hiển thị**.
+6. Nhập **Danh sách môn quan tâm** (mỗi dòng một môn), chọn **Cơ sở mặc định**.
+7. Bấm **Lưu cấu hình**.
+:::
 
-Vào **Tích hợp & API** → tab **"Lead từ web"**.
+![Tab Lead từ web trong Tích hợp: công tắc Bật trang đăng ký công khai](../assets/screenshots/tuyen-sinh-cau-hinh-lead-tu-web.webp)
 
-![Tab Lead từ web](../assets/screenshots/tich-hop-lead-tu-web.png)
+Các trường có thể bật hoặc tắt: Tên phụ huynh, SĐT phụ huynh, Email, Khối/Lớp, Trường đang học, Môn quan tâm, Nguyện vọng / Ghi chú. Hai trường **Họ tên học sinh** và **Số điện thoại** luôn bật và luôn bắt buộc. Mặc định đang bật: Tên phụ huynh, Khối/Lớp, Nguyện vọng / Ghi chú.
 
-Tại đây tuỳ biến:
+### Cấu hình chống đăng ký rác
 
-- **Bật/tắt** trang đăng ký công khai
-- **Thương hiệu** (logo, tiêu đề, lời mời) hiển thị trên trang
-- **Các trường** muốn thu (tên con, khối lớp, môn quan tâm, SĐT phụ huynh…) — bật/tắt + đặt bắt buộc
-- **Môn học** cho phụ huynh chọn
-- **Chống spam** (giới hạn, xác thực)
-- **Webhook** — đẩy lead sang hệ thống ngoài nếu cần
+Cũng ở tab này bạn có thể đặt:
 
-## Bước 2 — Phụ huynh điền form
+- **Trần số đăng ký / ngày / cơ sở**: số lead tối đa mỗi ngày mỗi cơ sở.
+- **Chặn trùng SĐT trong (ngày)**: đặt 0 là tắt chặn theo ngày. Dù vậy hệ thống vẫn bỏ qua lần gửi thứ hai nếu cùng số điện thoại gửi lại trong vòng khoảng 1 phút.
+- **Chống bot (captcha)**: chọn dịch vụ xác nhận chống bot nếu cần.
+- **Bắt phụ huynh chọn cơ sở (nếu nhiều cơ sở)**: bật khi trung tâm có nhiều cơ sở.
 
-Gửi link `/dang-ky-hoc-thu` (hoặc nhúng vào website / chạy quảng cáo trỏ về). Phụ huynh điền và gửi → KLASSA tạo Lead mới với nguồn ghi rõ "từ web", đồng thời kích hoạt sự kiện **"Lead mới"** trong hệ thống thông báo (nhân viên trực nhận cảnh báo).
+## Phụ huynh điền form như thế nào
 
-![Trang đăng ký học thử công khai](../assets/screenshots/trang-dang-ky-cong-khai.png)
+Trang hiện tên trung tâm, các ô theo cấu hình của bạn và nút **Gửi đăng ký**. Phụ huynh phải điền họ tên học sinh (từ 2 ký tự) và số điện thoại. Điền xong, trang hiện lời cảm ơn.
 
-## Bước 3 — Xử lý lead mới
+![Trang Đăng ký học thử công khai với nút Gửi đăng ký](../assets/screenshots/tuyen-sinh-form-dang-ky-web.webp)
 
-Lead từ web vào thẳng [Danh sách Lead](danh-sach-lead.md) với giai đoạn "Mới". Tư vấn viên gọi lại, đẩy qua [phễu tuyển sinh](pheu-tuyen-sinh.md), rồi [chuyển thành học sinh](chuyen-lead-thanh-hoc-sinh.md) khi đăng ký.
+## Lead từ web về đâu
 
-## Lưu ý
+- Lead có trạng thái **Mới** và tự giao cho một Lễ tân đang hoạt động cùng cơ sở.
+- Nếu số điện thoại trùng học sinh đang học, lead vẫn được tạo và có ghi chú "SĐT trùng học sinh đang học" để bạn kiểm tra.
+- Hệ thống gửi thông báo "Lead mới" cho các vai được bật trong cấu hình thông báo. Có nút **Mở cấu hình thông báo** ngay trong tab **Lead từ web**.
 
-- **Phản hồi nhanh**: lead càng tươi càng dễ chuyển đổi — nên gọi trong vòng 30 phút.
-- **Chống spam**: nếu form công khai, bật giới hạn/xác thực trong tab "Lead từ web" để tránh bot.
-- Lead từ web tính vào **báo cáo phễu theo nguồn** — đo hiệu quả kênh website/quảng cáo.
+Lễ tân gọi lại trong ngày. Xem [Trang Tuyển sinh](ban-tuyen-sinh.md) và [Ghi chăm sóc và hẹn gọi lại](hoat-dong-tu-van.md).
 
 ## Câu hỏi thường gặp
 
-**Làm sao đưa form lên website trung tâm?**
-Dùng thẳng link `/dang-ky-hoc-thu` (gửi Zalo / gắn nút trên website / trỏ quảng cáo về). Cấu hình giao diện trong tab "Lead từ web".
+::: details Phụ huynh báo vào link thấy "Hiện chưa mở đăng ký online"?
+Công tắc **Bật trang đăng ký công khai** chưa bật, hoặc trung tâm chưa có gói **CRM Tuyển sinh + AI**. Kiểm tra ở tab **Lead từ web**.
+:::
 
-**Phụ huynh điền sai SĐT thì sao?**
-Lead vẫn được tạo. Khi gọi không liên hệ được, đổi trạng thái Lead sang "Không hợp lệ".
+::: details Một phụ huynh đăng ký cho hai con cùng số điện thoại được không?
+Được, khi **Chặn trùng SĐT trong (ngày)** đang là 0 và hai lần gửi cách nhau hơn 1 phút. Mỗi con là một lead riêng. Nếu ô này lớn hơn 0, lần gửi thứ hai cùng số điện thoại trong khoảng ngày đã đặt sẽ không tạo lead mới.
+:::
 
-**Lead từ web có tự thành học sinh không?**
-Không. Lead từ web vẫn cần tư vấn rồi [chuyển thành học sinh](chuyen-lead-thanh-hoc-sinh.md) thủ công như lead thường.
+::: details Có xem trước trang khi chưa bật được không?
+Được. Bấm **Xem trước** trong tab **Lead từ web**. Trang xem trước có dòng báo chỉ quản trị mới thấy.
+:::
