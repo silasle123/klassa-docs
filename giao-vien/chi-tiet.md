@@ -31,11 +31,15 @@ Nếu giáo viên chưa được phân lớp nào, trang ghi "Chưa có giáo vi
 
 ::: steps
 1. Ở đầu trang, bấm **Chỉnh sửa**. Hộp **Chỉnh sửa thông tin giảng viên** mở ra.
-2. Sửa **Họ và tên** và **Email** (bắt buộc), **Số điện thoại**, **Cơ sở**, **Chuyên môn**, **Kinh nghiệm (năm)**, **Loại hợp đồng** (**Toàn thời gian**, **Bán thời gian** hoặc **Hợp đồng**), **Lương (VNĐ)**. Hai ô **Trình độ học vấn** và **Chứng chỉ** có trong hộp nhưng chưa lưu được, nhập vào sẽ không giữ lại.
+2. Sửa **Họ và tên** và **Email** (bắt buộc), **Số điện thoại**, **Cơ sở**, **Chuyên môn**, **Kinh nghiệm (năm)**, **Loại hợp đồng** (**Toàn thời gian**, **Bán thời gian** hoặc **Hợp đồng**), **Lương (VNĐ)**.
 3. Bấm **Cập nhật**. Hệ thống báo "Cập nhật giảng viên thành công".
 :::
 
 Chỉ Quản trị viên và Quản lý chi nhánh thấy nút **Chỉnh sửa** và lưu được thay đổi. Vai **Quản lý** mở được trang này để xem nhưng không có nút **Chỉnh sửa**.
+
+Quản lý chi nhánh chỉ được chọn cơ sở mình quản lý ở ô **Cơ sở**. Chọn cơ sở khác rồi bấm **Cập nhật** thì hệ thống báo "Bạn chỉ được chọn cơ sở mình quản lý. Muốn chuyển giáo viên sang cơ sở khác, nhờ quản trị viên thực hiện." và không lưu. Quản trị viên chuyển được giáo viên sang bất kỳ cơ sở nào.
+
+Hộp này không có ô bằng cấp hay chứng chỉ. Chứng chỉ của giáo viên ghi ở hồ sơ nhân sự: vào **Quản lý HR → Nhân viên**, mở hồ sơ người đó, thẻ **Thưởng/CC**, mục **Chứng chỉ & Đào tạo** (xem [Danh sách nhân viên](../nhan-su/danh-sach-nhan-vien.md)).
 
 ::: warning Lưu ý
 Họ tên, email, số điện thoại và cơ sở sửa ở đây được cập nhật sang hồ sơ nhân sự. Còn **Loại hợp đồng** và **Lương (VNĐ)** chỉ lưu trong hồ sơ giáo viên, không đổi lương cơ bản, loại hình làm việc hay trạng thái dùng để tính phiếu lương. Muốn đổi các mục đó, sửa ở [Danh sách nhân viên](../nhan-su/danh-sach-nhan-vien.md).

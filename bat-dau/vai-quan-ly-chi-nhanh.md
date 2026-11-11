@@ -86,7 +86,7 @@ Chuyển nhân viên sang **Đã nghỉ việc** khoá tài khoản của họ v
 4. Vào **Quản lý HR → Nhân viên**, bấm nút **Chỉnh sửa** (biểu tượng cây bút) ở dòng người đó, đổi ô **Trạng thái** sang **Đã nghỉ việc**, sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng thật của người đó, rồi bấm **Cập nhật** (làm cả hai trong cùng một lần lưu).
 :::
 
-Hệ thống lấy ngày ở ô **Ngày kết thúc** làm ngày đóng lớp khi bạn vừa sửa ô này trong lần lưu đó và ngày ấy không ở tương lai. Không thì dùng ngày hôm nay, nên hãy đổi trạng thái đúng vào ngày người đó nghỉ. Nếu đổi trạng thái trước khi giao lớp, người đó không còn trong bộ lọc **Giáo viên** của **Lớp học**. Lớp thường mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong thẻ **Việc cần làm** của trang **Lớp học**.
+Hệ thống lấy ngày ở ô **Ngày kết thúc** làm ngày đóng lớp khi bạn vừa sửa ô này trong lần lưu đó, kể cả ngày ở tương lai. Không sửa ô này thì dùng ngày hôm nay. Ngày ở tương lai thì người đó vẫn được gỡ khỏi lớp ngay, còn các buổi họ dạy đến hết ngày đó vẫn được tính lương. Nếu đổi trạng thái trước khi giao lớp, người đó không còn trong bộ lọc **Giáo viên** của **Lớp học**. Lớp thường mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong thẻ **Việc cần làm** của trang **Lớp học**.
 
 Biểu tượng thùng rác ở cuối dòng chỉ Quản trị viên dùng được. Muốn xoá hẳn hồ sơ, nhờ Quản trị viên.
 

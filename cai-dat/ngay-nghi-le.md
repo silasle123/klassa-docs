@@ -7,7 +7,7 @@ order: 50
 
 # Ngày nghỉ lễ
 
-Khai báo các ngày trung tâm nghỉ để buổi học rơi vào ngày đó được tính là trung tâm cho nghỉ. Bạn cũng chọn được ngày nghỉ đó có bị trừ vào học phí hay không. **Quản trị viên** và **Quản lý chi nhánh** thêm, sửa, xoá được. Các vai khác không có nút chỉnh sửa.
+Khai báo các ngày trung tâm nghỉ để buổi học chưa điểm danh rơi vào ngày đó hiện là ngày nghỉ trên **Thời khóa biểu**. Hệ thống không tự huỷ buổi hay ghi "Trung tâm huỷ" cho các buổi này. Bạn chọn được ngày nghỉ đó có bị trừ vào học phí hay không. Khi thêm mới, phụ huynh trong phạm vi áp dụng nhận thông báo lịch nghỉ. **Quản trị viên** và **Quản lý chi nhánh** thêm, sửa, xoá được. Các vai khác không có nút chỉnh sửa.
 
 ## Mở trang
 

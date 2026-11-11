@@ -137,7 +137,7 @@ Buổi chỉ được ghi vào hệ thống khi có người điểm danh hoặc
 
 ## Nhân viên nghỉ việc
 
-Chuyển nhân viên sang **Đã nghỉ việc** khoá tài khoản của họ và tự gỡ họ khỏi mọi lớp họ đang dạy hoặc làm trợ giảng. Phân công không bị xoá mà được đóng lại, **Ngày kết thúc** của phân công là ngày nghỉ, nên các buổi người đó đã dạy trước ngày nghỉ vẫn được tính lương như cũ. Ngày nghỉ là ngày bạn điền ở ô **Ngày kết thúc** của hồ sơ, với điều kiện bạn vừa sửa ô này trong chính lần lưu đó và ngày ấy không ở tương lai. Không thì hệ thống lấy ngày hôm nay. Nếu sau này người đó quay lại làm (đổi về **Đang làm việc**), các lớp cũ không tự gắn lại, bạn phải xếp lớp bằng tay.
+Chuyển nhân viên sang **Đã nghỉ việc** khoá tài khoản của họ và tự gỡ họ khỏi mọi lớp họ đang dạy hoặc làm trợ giảng. Phân công không bị xoá mà được đóng lại, **Ngày kết thúc** của phân công là ngày nghỉ, nên các buổi người đó đã dạy trước ngày nghỉ vẫn được tính lương như cũ. Ngày nghỉ là ngày bạn điền ở ô **Ngày kết thúc** của hồ sơ, với điều kiện bạn vừa sửa ô này trong chính lần lưu đó, kể cả ngày ở tương lai. Không sửa ô này thì hệ thống lấy ngày hôm nay. Ngày nghỉ ở tương lai thì người đó vẫn được gỡ khỏi lớp ngay, còn các buổi họ dạy đến hết ngày đó vẫn được tính lương. Tài khoản bị khoá ngay khi lưu, nên nếu người đó còn đi làm thêm một thời gian, tốt nhất chỉ đổi sang **Đã nghỉ việc** vào đúng ngày làm cuối. Xếp người mới vào lớp trước ngày nghỉ ở tương lai thì các buổi trùng được tính cho cả hai người. Nếu sau này người đó quay lại làm (đổi về **Đang làm việc**), các lớp cũ không tự gắn lại, bạn phải xếp lớp bằng tay.
 
 Vì vậy bạn không còn bắt buộc phải đổi người ở từng lớp trước khi cho nghỉ. Nhưng nên làm, để phụ huynh luôn thấy đúng giáo viên và lớp không bị trống người dạy. Thứ tự gợi ý:
 
@@ -149,14 +149,14 @@ Vì vậy bạn không còn bắt buộc phải đổi người ở từng lớp
 5. Quản trị viên vào **Quản lý HR → Nhân viên**, bấm biểu tượng thùng rác ở dòng người đó. Trình duyệt hỏi xác nhận chuyển sang **Đã nghỉ việc**, bấm xác nhận (OK).
 :::
 
-Biểu tượng thùng rác chỉ Quản trị viên dùng được, và ngày nghỉ khi đó là ngày bạn bấm. Quản lý chi nhánh đổi **Trạng thái** thành **Đã nghỉ việc** bằng nút chỉnh sửa (hình cây bút) ở dòng nhân viên, đồng thời sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng thật của người đó trong cùng lần lưu (ô này có thể đang giữ hạn hợp đồng cũ), rồi bấm **Cập nhật**. Nếu ngày làm việc cuối cùng còn ở tương lai, hệ thống dùng ngày hôm nay để đóng lớp, nên hãy đổi trạng thái đúng vào ngày người đó nghỉ. Danh sách việc cần làm khi nghỉ việc (bàn giao, thu hồi tài khoản) ở [Onboarding và nghỉ việc](../nhan-su/onboarding.md) không có mục đổi người ở lớp, nên bước 1-3 bạn tự làm.
+Biểu tượng thùng rác chỉ Quản trị viên dùng được, và ngày nghỉ khi đó là ngày bạn bấm. Quản lý chi nhánh đổi **Trạng thái** thành **Đã nghỉ việc** bằng nút chỉnh sửa (hình cây bút) ở dòng nhân viên, đồng thời sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng thật của người đó trong cùng lần lưu (ô này có thể đang giữ hạn hợp đồng cũ), rồi bấm **Cập nhật**. Ngày làm việc cuối cùng còn ở tương lai cũng được: người đó được gỡ khỏi lớp ngay, nhưng các buổi họ dạy đến hết ngày đó vẫn được tính lương. Danh sách việc cần làm khi nghỉ việc (bàn giao, thu hồi tài khoản) ở [Onboarding và nghỉ việc](../nhan-su/onboarding.md) không có mục đổi người ở lớp, nên bước 1-3 bạn tự làm.
 
 ::: tip Mẹo
 Đã đổi trạng thái rồi mới nhớ chưa giao lớp thì người đó không còn trong bộ lọc **Giáo viên** của **Lớp học** nữa. Lớp thường mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong thẻ **Việc cần làm** của trang **Lớp học**, bạn mở lớp và chọn giáo viên mới ở ô **Giáo viên**. Lớp mà người đó làm trợ giảng thì không có mục nhắc, nên nếu muốn chắc, hãy ghi lại các lớp của họ trước khi đổi trạng thái.
 :::
 
 ::: danger Không bấm thùng rác lần hai
-Sau khi người đó đã ở **Đã nghỉ việc**, biểu tượng thùng rác ở dòng đó chuyển thành **Xóa vĩnh viễn**, không khôi phục được. Chỉ bấm khi chắc chắn.
+Sau khi người đó đã ở **Đã nghỉ việc**, biểu tượng thùng rác ở dòng đó chuyển thành **Xóa vĩnh viễn**, không khôi phục được. Chỉ bấm khi chắc chắn. Người đã từng dạy hoặc trợ giảng ở lớp có buổi học, hoặc đã có phiếu lương, thì không xoá được: hệ thống báo "Không thể xóa vĩnh viễn nhân viên có dữ liệu liên quan".
 :::
 
 ::: warning Đừng tính lại bảng lương của tháng trước tháng nghỉ việc

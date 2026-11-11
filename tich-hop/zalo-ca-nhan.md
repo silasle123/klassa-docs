@@ -60,7 +60,7 @@ Nếu tin phụ huynh không về, hoặc tin không gửi đi được, việc 
 ## Hai cài đặt nằm cùng tab Tài khoản
 
 - **Nick gửi mặc định (hoá đơn / thông báo gửi tay)**: để **Tự động** thì tin đi từ nick đang chat với phụ huynh đó. Nếu chọn một nick cụ thể, mọi hoá đơn gửi tay đều đi từ nick này, phụ huynh chưa từng chat với nick đó sẽ bị bỏ qua.
-- **Tự động tạo nhóm lớp Zalo**: mặc định tắt, Quản trị viên bật ở đây. Bật thì khi có học sinh ghi danh vào lớp chưa có nhóm, hệ thống tự tạo nhóm Zalo. Lớp đã có nhóm tạo tay thì vào trang lớp, bấm **Gắn nhóm** để liên kết, tránh tạo trùng. Dù tắt, phụ huynh mới vẫn được thêm vào nhóm đã gắn.
+- **Tự động tạo nhóm lớp Zalo**: mặc định tắt, Quản trị viên bật ở đây. Bật thì khi có học sinh ghi danh vào lớp chưa có nhóm, hệ thống tự tạo nhóm Zalo. Lớp đã có nhóm tạo tay thì vào trang lớp, bấm **Gán nhóm có sẵn** để liên kết, tránh tạo trùng. Dù tắt, phụ huynh mới vẫn được thêm vào nhóm đã gắn.
 
 ![Tab Tài khoản: Nick gửi mặc định (hoá đơn / thông báo gửi tay)](../assets/screenshots/zalo-ca-nhan-nick-mac-dinh.webp)
 

@@ -64,7 +64,9 @@ Lễ tân, Quản lý, Quản lý chi nhánh và Quản trị viên ghi danh th�
 
 ## Nhóm Zalo của lớp
 
-Các vai dùng được Zalo (không gồm giáo viên và trợ giảng) thấy thanh nhóm Zalo ở đầu trang. Ở đó bạn gán nhóm Zalo có sẵn cho lớp bằng **ID nhóm Zalo**, hoặc gỡ nhóm. Gỡ nhóm không xoá nhóm trên Zalo. Lớp chưa có nhóm thì chưa gửi được nhận xét và thông báo vào nhóm.
+Các vai dùng được Zalo (không gồm giáo viên và trợ giảng) thấy thanh nhóm Zalo ở đầu trang. Ở đó bạn gán nhóm Zalo có sẵn cho lớp bằng **ID nhóm Zalo**, hoặc gỡ nhóm. Gỡ nhóm không xoá nhóm trên Zalo.
+
+Để chọn nhóm từ danh sách, bấm **Gán nhóm có sẵn** rồi **Tải danh sách nhóm Zalo**. Danh sách lấy từ nick Zalo đang đăng nhập mà bạn được dùng. Với Lễ tân và Quản lý, đó là nick được **Chia sẻ** cho mình hoặc nick tự liên kết ở **Zalo của tôi**. Nếu bạn chưa được cấp nick nào, hộp thoại báo "Bạn chưa được cấp nick Zalo nào nên chưa tải được danh sách nhóm. Nhờ Quản trị viên chia sẻ nick ở Tích hợp → Zalo cá nhân. Bạn vẫn có thể dán ID nhóm ở dưới." Khi đó bạn dán tay ID nhóm vào ô **ID nhóm Zalo**. Lớp chưa có nhóm thì chưa gửi được nhận xét và thông báo vào nhóm.
 
 ## Câu hỏi thường gặp
 

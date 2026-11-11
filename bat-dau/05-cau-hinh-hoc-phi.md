@@ -104,7 +104,7 @@ Khi nhập học sinh ở [Bước 8](08-them-hoc-sinh-phu-huynh.md), hãy nhậ
 
 ## Điền mẫu hoá đơn và tài khoản nhận tiền
 
-Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ, số điện thoại và tài khoản nhận tiền từ mẫu này. Tên trung tâm và ngân hàng trên tin nhắc nộp tiền và khối thanh toán trong cổng phụ huynh cũng lấy từ đây. Phần thông tin chuyển khoản trong khối **Hướng dẫn thanh toán** ở tab **Thanh toán** của trang **Học phí** cũng lấy ngân hàng, số tài khoản, chủ tài khoản từ mẫu đã lưu này. Khi chưa lưu mẫu lần nào, địa chỉ và số điện thoại lấy theo thông tin công ty của trung tâm nếu đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md), chưa khai thì để trống. Ngân hàng, số tài khoản và chủ tài khoản đều trống, nên phiếu không có khung **Thông tin thanh toán** và không có mã QR. Phụ huynh nhận phiếu như vậy sẽ không biết chuyển tiền đi đâu, vì vậy hãy điền và lưu thông tin ngân hàng trước khi gửi phiếu.
+Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ, số điện thoại và tài khoản nhận tiền từ mẫu này. Tên trung tâm và ngân hàng trên tin nhắc nộp tiền và khối thanh toán trong cổng phụ huynh cũng lấy từ đây. Phần thông tin chuyển khoản trong khối **Hướng dẫn thanh toán** ở tab **Thanh toán** của trang **Học phí** cũng lấy ngân hàng, số tài khoản, chủ tài khoản từ mẫu đã lưu này. Khi chưa lưu mẫu lần nào, địa chỉ và số điện thoại lấy theo thông tin công ty của trung tâm nếu đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md), chưa khai thì để trống. Ngân hàng, số tài khoản và chủ tài khoản đều trống, nên phiếu không có khung **Thông tin thanh toán** và không có mã QR (trừ khi trung tâm đang bật VNPay, khi đó phiếu có mã QR VNPay). Phụ huynh nhận phiếu như vậy sẽ không biết chuyển tiền đi đâu, vì vậy hãy điền và lưu thông tin ngân hàng trước khi gửi phiếu.
 
 ::: steps
 1. Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang **Cài đặt mẫu phiếu học phí** hiện ra, chỉ Quản trị viên và Quản lý chi nhánh vào được. Nếu trung tâm chưa lưu lần nào, các ô ngân hàng đang trống, còn địa chỉ và số điện thoại có thể trống, bạn điền vào.
@@ -122,7 +122,7 @@ Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ
 Nếu ở khung chọn ngân hàng còn dòng cảnh báo cần chọn ngân hàng và điền số tài khoản thì mã QR chưa tạo được. Đừng bấm **Khôi phục** nếu không cần: nút này đưa toàn bộ các ô trên màn hình về mặc định, xoá trống địa chỉ, số điện thoại, email, website và thông tin ngân hàng bạn đã nhập (chỉ lưu thật khi bạn bấm **Lưu cài đặt**).
 :::
 
-Hai kiểu QR còn lại là **VNPay (tự động)** (cần đăng ký tài khoản VNPay cho trung tâm) và **QR ảnh tĩnh** (một ảnh cố định cho mọi phiếu, phụ huynh tự nhập số tiền). Với **QR động VietQR**, hệ thống không tự ghi nhận tiền vào. Cách ghi nhận thanh toán xem ở [Bước 14](14-gui-phieu-va-thu-tien.md) và [Mẫu hoá đơn](../hoc-phi/mau-hoa-don.md).
+Hai kiểu QR còn lại là **VNPay (tự động)** (cần đăng ký tài khoản VNPay cho trung tâm) và **QR ảnh tĩnh** (một ảnh cố định cho mọi phiếu, phụ huynh tự nhập số tiền). Nếu trung tâm đang bật VNPay mà chưa từng chọn kiểu QR, trang chọn sẵn **VNPay (tự động)**. Muốn dùng **QR động VietQR** thì chọn lại ở bước 3 rồi lưu. Với **QR động VietQR**, hệ thống không tự ghi nhận tiền vào. Cách ghi nhận thanh toán xem ở [Bước 14](14-gui-phieu-va-thu-tien.md) và [Mẫu hoá đơn](../hoc-phi/mau-hoa-don.md).
 
 ## Xem lại Cấu hình tài chính
 

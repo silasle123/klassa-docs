@@ -58,7 +58,7 @@ Thẻ này gom các công tắc chung của nhân sự. Ba khối đầu thuộc
 | **Tự động gửi email nhắc việc** | Tắt | Tắt thì hệ thống chỉ báo chuông, bạn vào [Nhắc việc nhân sự](nhac-viec.md) xem trước rồi bấm gửi. Bật thì 8 giờ sáng tự gửi, không ai xem trước |
 | **Gửi nhắc việc HR vào nhóm Zalo** | Tắt | Gửi bản tóm tắt 8 giờ sáng vào nhóm Zalo nội bộ. Cần gói Zalo cá nhân, tài khoản Zalo đã đăng nhập và đã chọn nhóm |
 
-Khi bật gửi Zalo, bấm **Tải danh sách nhóm** rồi chọn nhóm nhận.
+Khi bật gửi Zalo, bấm **Tải danh sách nhóm** rồi chọn nhóm nhận. Danh sách lấy từ nick Zalo đang đăng nhập mà bạn được dùng. Quản lý chi nhánh chưa được cấp nick nào sẽ thấy báo "Bạn chưa được cấp nick Zalo nào nên chưa tải được danh sách nhóm. Nhờ Quản trị viên chia sẻ nick ở Tích hợp → Zalo cá nhân."
 
 Khối **Người nhận nhắc việc nhân sự** cho bạn tick những tài khoản nhận chuông, thông báo đẩy và email tự gửi (nhắc sinh nhật, thử việc, hợp đồng, chứng chỉ, bản tổng đầu tuần, chu kỳ đánh giá). Để trống thì mọi Quản trị viên, Quản lý chi nhánh và Kế toán đang hoạt động đều nhận. Đơn nghỉ phép, tạm ứng và tăng ca luôn báo cho tất cả quản trị, không theo danh sách này.
 

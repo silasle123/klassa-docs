@@ -12,7 +12,7 @@ Mẫu hoá đơn quyết định phiếu học phí trông ra sao khi in, tải 
 Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang có tiêu đề **Cài đặt mẫu phiếu học phí**, chia ba tab: **Thông tin trung tâm**, **Thiết kế**, **Nội dung**. [Phiếu phụ thu](phieu-phu-thu.md) khi in cũng lấy tên, địa chỉ, số điện thoại, thông tin ngân hàng và dòng chân trang từ mẫu này.
 
 ::: warning Nhập và lưu thông tin ngân hàng trước khi gửi phiếu
-Khi trung tâm chưa bấm **Lưu cài đặt** lần nào, tên trung tâm lấy theo tên thương hiệu đã đặt. Địa chỉ, số điện thoại và email lấy theo thông tin công ty đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md); website lấy theo tên miền của trung tâm. Chưa khai thì địa chỉ, số điện thoại để trống, còn email có thể là email mặc định không phải của trung tâm bạn, nên hãy kiểm tra ô **Email** và **Website** trước khi gửi phiếu. Các ô ngân hàng, số tài khoản, chủ tài khoản đều để trống. Phiếu in lúc đó không có khung **Thông tin thanh toán** (ngân hàng, số tài khoản, nội dung chuyển khoản) và không có mã QR, nên phụ huynh không biết chuyển tiền đi đâu. Hãy điền đủ thông tin của trung tâm, chọn **Ngân hàng nhận** rồi bấm **Lưu cài đặt** trước khi gửi phiếu đầu tiên cho phụ huynh.
+Khi trung tâm chưa bấm **Lưu cài đặt** lần nào, tên trung tâm lấy theo tên thương hiệu đã đặt. Địa chỉ, số điện thoại và email lấy theo thông tin công ty đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md); website lấy theo tên miền của trung tâm. Chưa khai thì địa chỉ, số điện thoại để trống, còn email có thể là email mặc định không phải của trung tâm bạn, nên hãy kiểm tra ô **Email** và **Website** trước khi gửi phiếu. Các ô ngân hàng, số tài khoản, chủ tài khoản đều để trống. Phiếu in lúc đó không có khung **Thông tin thanh toán** (ngân hàng, số tài khoản, nội dung chuyển khoản) và không có mã QR (trừ khi trung tâm đang bật VNPay, khi đó phiếu có mã QR VNPay), nên phụ huynh không biết chuyển tiền đi đâu. Hãy điền đủ thông tin của trung tâm, chọn **Ngân hàng nhận** rồi bấm **Lưu cài đặt** trước khi gửi phiếu đầu tiên cho phụ huynh.
 :::
 
 ## Ba nút ở đầu trang
@@ -46,7 +46,7 @@ Các ô chữ trên phiếu:
 
 ### Mã QR và thông tin chuyển khoản
 
-Bật **Hiển thị QR Code** rồi chọn **Kiểu QR thanh toán**. Chưa chọn kiểu nào thì hệ thống dùng **QR động VietQR**.
+Bật **Hiển thị QR Code** rồi chọn **Kiểu QR thanh toán**. Khi trung tâm chưa lưu mẫu, hoặc mẫu đã lưu từ trước chưa có mục kiểu QR, hệ thống dùng **VNPay (tự động)** nếu công tắc **Kích hoạt** ở tab **VNPay** của **Tài chính → Thanh toán** đang bật, còn không thì dùng **QR động VietQR**. Trang này cũng chọn sẵn đúng kiểu đó. Kiểu bạn đã tự chọn và lưu thì giữ nguyên.
 
 | Kiểu | Cách hoạt động |
 |---|---|
