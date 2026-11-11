@@ -11,7 +11,7 @@ import * as fs from 'fs'
 const CONFIG = {
   BASE_URL: 'https://demo.klassa.vn',
   EMAIL: 'admin@klassa.vn',
-  PASSWORD: 'Klassa@2026',
+  PASSWORD: process.env.KLASSA_DEMO_PASSWORD ?? '', // đặt biến môi trường KLASSA_DEMO_PASSWORD trước khi chụp
   SCREENSHOT_DIR: 'D:/klassa-website/public/images/blog',
   VIEWPORT: { width: 1440, height: 900 },
   TIMEOUT: 30_000,

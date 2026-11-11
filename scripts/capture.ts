@@ -34,7 +34,7 @@ import * as path from 'path'
 
 const CONFIG = {
   SITE: 'https://demo.klassa.vn',
-  PWD: 'Klassa@2026',
+  PWD: process.env.KLASSA_DEMO_PASSWORD ?? '', // đặt biến môi trường KLASSA_DEMO_PASSWORD trước khi chụp
   OUT: process.env.SHOT_OUT || path.join(__dirname, '..', 'assets', 'screenshots'),
   VIEWPORT: { width: 1440, height: 900 },
   ROLES: {
