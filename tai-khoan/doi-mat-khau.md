@@ -34,13 +34,16 @@ Tài khoản được trung tâm cấp với mật khẩu tạm sẽ bị đánh
 
 ![Trang Đổi mật khẩu với ba ô Mật khẩu hiện tại, Mật khẩu mới và Xác nhận mật khẩu mới](../assets/screenshots/doi-mat-khau-bat-buoc.webp)
 
-Yêu cầu của mật khẩu mới ở trang này:
+Danh sách **Yêu cầu mật khẩu** ở trang này hiện đúng những điều kiện mà phần mềm kiểm. Điều kiện nào bạn đã đạt thì có dấu tích xanh:
 
 - Ít nhất 8 ký tự
-- Ít nhất 1 chữ hoa
+- Ít nhất 1 chữ HOA
 - Ít nhất 1 chữ thường
 - Ít nhất 1 số
-- Ít nhất 1 ký tự đặc biệt, chỉ dùng được các ký tự **@ $ ! % * ? &**. Mật khẩu không được chứa ký tự nào khác ngoài chữ không dấu, số và các ký tự này (ví dụ dấu **#** hoặc khoảng trắng bị từ chối).
+- Ít nhất 1 ký tự đặc biệt trong: **@ $ ! % * ? &**
+- Chỉ gồm chữ không dấu, số và các ký tự **@ $ ! % * ? &**
+
+Dòng cuối chuyển sang màu đỏ nếu mật khẩu có ký tự khác, ví dụ dấu **#**, khoảng trắng hoặc chữ có dấu. Nút **Đổi mật khẩu** chỉ bấm được khi mọi điều kiện đều đạt.
 
 ::: tip Mẹo
 Nên dùng đúng các yêu cầu trên cả khi đổi ở tab **Bảo mật**. Tab này chỉ đòi tối thiểu 6 ký tự nhưng mật khẩu ngắn và dễ đoán thì dễ bị lộ.
@@ -53,7 +56,7 @@ Nên dùng đúng các yêu cầu trên cả khi đổi ở tab **Bảo mật**.
 | Mật khẩu hiện tại không đúng | Nhập lại mật khẩu đang dùng. Mật khẩu tạm lấy từ người cấp tài khoản |
 | Mật khẩu xác nhận không khớp | Gõ lại hai ô mật khẩu mới cho giống nhau |
 | Mật khẩu mới phải khác mật khẩu hiện tại | Chọn mật khẩu khác mật khẩu cũ |
-| Mật khẩu mới cần ít nhất 8 ký tự, có chữ HOA, chữ thường, số và ký tự đặc biệt | Sửa theo yêu cầu ở trên |
+| Mật khẩu mới cần ít nhất 8 ký tự, có chữ HOA, chữ thường, số và ký tự đặc biệt (chỉ dùng @ $ ! % * ? &) | Sửa theo yêu cầu ở trên |
 
 ::: warning Lưu ý
 Nhập sai mật khẩu hiện tại quá 5 lần trong 15 phút thì phần mềm tạm dừng việc đổi mật khẩu, bạn chờ một lúc rồi thử lại.

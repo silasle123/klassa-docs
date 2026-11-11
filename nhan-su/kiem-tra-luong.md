@@ -11,7 +11,7 @@ group: "Lương, chấm công & ca"
 
 Trước khi duyệt kỳ lương, bạn có thể nhờ hệ thống rà qua toàn bộ phiếu để tìm chỗ đáng ngờ. Trang này không tự sửa phiếu. Nó chỉ liệt kê vấn đề và gợi ý, bạn tự quyết định sửa hay bỏ qua.
 
-Vào **Quản lý HR → Kiểm tra Lương AI**. Trang cần hai gói mở rộng: **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**. Thiếu một trong hai, trang báo gói chưa kích hoạt.
+Vào **Quản lý HR → Kiểm tra Lương AI**. Trang cần hai gói mở rộng: **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**. Thiếu gói **AI — Gợi ý & Trợ lý Vận hành** thì mục này không hiện trong menu. Thiếu gói **Nền tảng AI** thì mục vẫn hiện nhưng trang không tải được danh sách vấn đề và không chạy kiểm tra được.
 
 Hệ thống kiểm theo các quy tắc cố định, không đọc ý định của bạn, nên một cảnh báo chỉ có nghĩa là "nên xem lại", không có nghĩa là phiếu chắc chắn sai.
 

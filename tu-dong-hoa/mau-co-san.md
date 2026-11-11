@@ -42,7 +42,7 @@ Thời gian ghi trong bảng là thời gian chờ kể từ khi sự kiện x�
 | Mẫu | Chạy khi | Các bước |
 | --- | --- | --- |
 | **Nhắc admin tổng hợp báo cáo tháng** | Đầu tháng | Giao việc ngay cho quản trị để tổng hợp và duyệt báo cáo trước khi gửi phụ huynh |
-| **Cảnh báo xung đột lịch học** | Hệ thống phát hiện xung đột lịch | Giao việc ngay, email cho giáo viên liên quan sau 5 phút, Zalo cho Quản lý chi nhánh sau 10 phút |
+| **Cảnh báo xung đột lịch học** | Giáo viên và lễ tân chấm điểm danh một học sinh khác nhau (xung đột điểm danh) | Giao việc ngay, email cho giáo viên liên quan sau 5 phút, Zalo cho Quản lý chi nhánh sau 10 phút |
 
 ::: tip Mẹo
 Mẫu có bước Zalo chỉ gửi được khi trung tâm đã kết nối Zalo. Chưa kết nối thì bước đó thất bại, trừ khi bạn đã chọn bỏ qua bước thiếu thông tin ở hộp **Cài Đặt Workflow**.
@@ -58,8 +58,8 @@ Mẫu **Quy trình onboard học sinh mới** có bước tạo hoá đơn. Hãy
 Không. Hiện có 12 mẫu, như bảng trên.
 :::
 
-::: details Một số mẫu hiện ở dòng Kích hoạt khi bằng chữ tiếng Anh, có sao không?
-Bốn mẫu (Chào mừng học sinh mới, Phê duyệt đăng ký lớp, Từ chối đăng ký lớp, Cảnh báo xung đột lịch học) hiện tên sự kiện gốc thay vì câu tiếng Việt. Chúng vẫn chạy bình thường theo mô tả trong bảng.
+::: details Dòng Kích hoạt khi của bốn mẫu liên quan đến học sinh, đăng ký lớp và xung đột ghi gì?
+Mẫu **Chào mừng học sinh mới** ghi **Thêm học sinh mới**. Mẫu **Phê duyệt đăng ký lớp** ghi **Đơn ghi danh được duyệt**. Mẫu **Từ chối đăng ký lớp** ghi **Đơn ghi danh bị từ chối**. Mẫu **Cảnh báo xung đột lịch học** ghi **Phát sinh xung đột điểm danh**.
 :::
 
 ::: details Tôi muốn thêm mẫu riêng được không?

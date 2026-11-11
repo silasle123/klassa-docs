@@ -12,6 +12,8 @@ order: 10
 
 Khu này cần gói mở rộng **Nhân sự (HRIS)**. Chỉ Quản trị viên và Quản lý chi nhánh vào được. Các vai khác dùng [Cổng nhân viên](../cong-nhan-vien/gioi-thieu.md) cho việc của riêng mình.
 
+Trong menu **Quản lý HR**, mục nào thuộc gói trung tâm chưa có thì không hiện. **Quản lý lương** và **Mẫu phiếu lương** thuộc gói **Lương giáo viên**, **Giao việc** thuộc gói **Giao việc Nội bộ**, các trang AI nhân sự thuộc gói **AI — Gợi ý & Trợ lý Vận hành**, còn lại thuộc gói **Nhân sự (HRIS)**. Mục **Dạy thay** luôn hiện.
+
 ## Mở trang tổng quan
 
 ::: steps
@@ -69,7 +71,7 @@ Thẻ **Nhân viên** có chấm đỏ khi có người sắp hết thử việc
 ## Câu hỏi thường gặp
 
 ::: details Quản lý (vai Quản lý) có vào được trang này không?
-Không. Vai Quản lý chỉ vào được vài mục lẻ trong khu này: **Dạy thay**, **Giao việc**, **Lịch ca lễ tân** và **Quản lý Truyền thông** (cần gói mở rộng). Quản trị viên và Quản lý chi nhánh mới mở được trang tổng quan.
+Không. Trong menu **Quản lý HR**, vai Quản lý chỉ thấy **Dạy thay** (luôn hiện), **Giao việc** (cần gói **Giao việc Nội bộ**), **Đội của tôi** và **Lịch ca lễ tân** (cần gói **Nhân sự (HRIS)**). **Lịch ca lễ tân** chỉ mở được khi bạn đã được thêm vào danh sách **Người được xếp & quản lý ca lễ tân**. Mục **Quản lý Truyền thông** nằm ở nhóm **Chat** và cần gói **Quản lý Truyền thông**. Quản trị viên và Quản lý chi nhánh mới mở được trang tổng quan.
 :::
 
 ::: details Nhân viên hết thử việc được tính theo ngày nào?

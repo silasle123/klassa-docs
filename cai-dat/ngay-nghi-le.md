@@ -42,8 +42,6 @@ Các ngày cài sẵn mặc định **không** trừ tiền học. Muốn trừ,
 7. Bấm **Thêm mới**.
 :::
 
-![Hộp Thêm ngày nghỉ lễ mới với Cách xử lý và Phạm vi áp dụng](../assets/screenshots/ngay-nghi-le-them.webp)
-
 Nếu để trống ô bắt buộc, hệ thống báo **Vui lòng điền đầy đủ thông tin**. Nếu **Đến ngày** không sau **Từ ngày**, hệ thống báo lỗi và không lưu.
 
 ## Cách xử lý
@@ -77,5 +75,5 @@ Chỉ Quản trị viên và Quản lý chi nhánh có nút **Thêm ngày nghỉ
 :::
 
 ::: details Ngày nghỉ có được tính vào buổi học của lớp không?
-Các buổi học rơi vào ngày nghỉ được đánh dấu là trung tâm cho nghỉ. Xem thêm cách tính tiền ở [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
+Hệ thống không tự ghi điểm danh cho buổi rơi vào ngày nghỉ. Trên trang **Thời khóa biểu**, buổi chưa điểm danh của ngày đó hiện chữ **Nghỉ:** kèm tên ngày lễ. Có bị trừ tiền hay không tuỳ **Cách xử lý** ở trên, xem thêm [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
 :::

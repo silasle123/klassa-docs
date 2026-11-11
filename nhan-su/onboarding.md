@@ -48,7 +48,7 @@ Bộ mục mặc định khi nghỉ việc:
 Khi tick hết các mục, danh sách chuyển sang **Hoàn thành**.
 
 ::: warning Lưu ý
-Tick một mục chỉ để đánh dấu, không tự làm việc đó. Riêng quyền đăng nhập thì hệ thống đã lo: khi bạn chuyển hồ sơ nhân viên sang trạng thái **Đã nghỉ việc**, tài khoản của người đó tự bị khoá và các phiên đăng nhập, thông báo trên điện thoại bị thu hồi, nên mục **Khóa quyền truy cập** chỉ cần tick lại cho đủ danh sách. Việc bạn phải tự làm là bàn giao lớp: các phân công giáo viên, trợ giảng ở lớp không tự đóng khi người đó nghỉ việc, hãy đổi giáo viên, trợ giảng ở từng lớp người đó đang phụ trách (xem [Chỉnh sửa lớp học](../lop-hoc/chinh-sua.md)).
+Tick một mục chỉ để đánh dấu, không tự làm việc đó. Riêng quyền đăng nhập thì hệ thống đã lo: khi bạn chuyển hồ sơ nhân viên sang trạng thái **Đã nghỉ việc**, tài khoản của người đó tự bị khoá và các phiên đăng nhập, thông báo trên điện thoại bị thu hồi, nên mục **Khóa quyền truy cập** chỉ cần tick lại cho đủ danh sách. Hệ thống cũng tự gỡ người đó khỏi các lớp họ dạy hoặc làm trợ giảng (phân công được đóng lại, buổi đã dạy trước ngày nghỉ vẫn được tính lương). Việc còn lại là giao lớp cho người mới để phụ huynh thấy đúng giáo viên: mở từng lớp người đó từng phụ trách và chọn người thay (xem [Chỉnh sửa lớp học](../lop-hoc/chinh-sua.md)). Mục **Chuyển giao công việc** trong danh sách chỉ để tick, không tự đổi giáo viên ở lớp.
 :::
 
 ## Theo dõi chung tất cả nhân viên

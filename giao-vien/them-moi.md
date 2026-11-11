@@ -23,7 +23,7 @@ Bạn tạo giáo viên trước, sau đó mới chọn được người này �
 Giáo viên đăng nhập bằng email và mật khẩu bạn vừa đặt. Hãy gửi mật khẩu cho họ và nhắc đổi sau lần đăng nhập đầu, xem [Đổi mật khẩu](../tai-khoan/doi-mat-khau.md).
 
 ::: warning Lưu ý
-Chỉ Quản trị viên và Quản lý chi nhánh tạo được giáo viên. Với vai khác, nút **Thêm giáo viên mới** vẫn hiện nhưng hệ thống từ chối khi bạn bấm **Tạo giáo viên**.
+Chỉ Quản trị viên và Quản lý chi nhánh thấy nút **Thêm giáo viên mới** và tạo được giáo viên. Vai **Quản lý** mở được trang **Giáo viên** nhưng không có nút này.
 :::
 
 ## Cách khác

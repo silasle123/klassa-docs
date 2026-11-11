@@ -1,6 +1,6 @@
 ---
 title: "Bước 16: Theo dõi báo cáo và khoá sổ kỳ"
-description: "Cách xem tình hình trung tâm mỗi ngày ở trang chủ, đối chiếu doanh thu và công nợ cuối tháng, rồi Quản trị viên khoá kỳ để chốt số liệu."
+description: "Cách xem tình hình trung tâm mỗi ngày ở trang chủ, đối chiếu doanh thu và công nợ cuối tháng, rồi Quản trị viên hoặc Kế toán khoá kỳ để chốt số liệu."
 roles: [Quản trị viên, Quản lý chi nhánh, Kế toán]
 order: 160
 ---
@@ -29,7 +29,7 @@ Sau bước này, bạn biết xem gì mỗi sáng, xem gì cuối tháng, và b
 | Hằng tháng | Rà các phiếu kết quả học tập đã gửi phụ huynh (xem [Bước 12](12-bao-ket-qua-hoc-tap.md)) | Menu **Phiếu tháng** |
 | Cuối tháng | Doanh thu, nợ quá hạn, tỷ lệ điểm danh | **Tài chính → Báo cáo** |
 | Đầu tháng sau | Chốt lương tháng vừa rồi (xem [Bước 15](15-chot-luong-cuoi-thang.md)) | **Quản lý HR → Quản lý lương** |
-| Sau khi đối soát | Khoá kỳ (chỉ Quản trị viên) | **Tài chính → Kế toán → Khoá sổ kỳ** |
+| Sau khi đối soát | Khoá kỳ (Quản trị viên hoặc Kế toán) | **Tài chính → Kế toán → Khoá sổ kỳ** |
 
 ## Xem tình hình mỗi ngày ở trang chủ
 
@@ -91,7 +91,7 @@ Vào **Tài chính → Báo cáo → Báo cáo nợ** (tên đầy đủ trên t
 
 ## Chốt số liệu một kỳ bằng Khoá sổ kỳ
 
-Sau khi soát phiếu và đối soát tiền xong, khoá kỳ để số liệu không bị sửa nhầm. Chỉ Quản trị viên mở được trang này và khoá được kỳ. Quản lý chi nhánh và Kế toán không thấy mục **Khoá sổ kỳ**, nên hãy nhờ Quản trị viên khoá khi bạn đã đối soát xong. Xem thêm [Khoá sổ kỳ](../ke-toan/khoa-so-ky.md).
+Sau khi soát phiếu và đối soát tiền xong, khoá kỳ để số liệu không bị sửa nhầm. Quản trị viên và Kế toán mở được trang này và khoá được kỳ. Quản lý chi nhánh không thấy mục **Khoá sổ kỳ**, nên hãy nhờ Quản trị viên hoặc Kế toán khoá khi bạn đã đối soát xong. Việc mở lại một kỳ đã khoá thì chỉ Quản trị viên làm được. Xem thêm [Khoá sổ kỳ](../ke-toan/khoa-so-ky.md).
 
 ::: steps
 1. Vào **Tài chính → Kế toán → Khoá sổ kỳ**. Trang này rà soát phiếu của kỳ rồi khoá số liệu.
@@ -110,7 +110,7 @@ Kỳ đã khoá thì không xuất thêm phiếu cho kỳ đó, và chỉ Quản
 - [ ] Bạn đọc được khung **Việc cần xử lý** ở trang chủ (hoặc trang chủ của vai mình) và hiểu từng mục.
 - [ ] Đã tạo thử **Báo cáo doanh thu** cho tháng vừa rồi.
 - [ ] Đã xem **Báo cáo nợ** và biết cần nhắc những ai.
-- [ ] Biết cách khoá kỳ khi đối soát xong, và biết việc này do Quản trị viên làm.
+- [ ] Biết cách khoá kỳ khi đối soát xong, và biết việc này do Quản trị viên hoặc Kế toán làm.
 
 ## Câu hỏi thường gặp
 
@@ -127,7 +127,7 @@ Kiểm tra lại bộ lọc kỳ, cơ sở, môn. Nếu vẫn trống, xem phi�
 :::
 
 ::: details Tôi khoá nhầm kỳ, làm sao mở lại?
-Quản trị viên vào lại **Khoá sổ kỳ**, tìm dòng của kỳ đó trong bảng và bấm **Mở lại**, rồi **Xác nhận mở lại**. Với kỳ khoá theo cách hiện nay, thao tác này chỉ mở lại trạng thái, không đụng tới phiếu.
+Chỉ Quản trị viên mở lại được. Quản trị viên vào lại **Khoá sổ kỳ**, tìm dòng của kỳ đó trong bảng và bấm **Mở lại**, rồi **Xác nhận mở lại**. Kế toán không có nút **Mở lại**, nên Kế toán khoá nhầm thì nhờ Quản trị viên. Với kỳ khoá theo cách hiện nay, thao tác này chỉ mở lại trạng thái, không đụng tới phiếu.
 :::
 
 ::: details Bấm khoá kỳ mà báo lỗi?

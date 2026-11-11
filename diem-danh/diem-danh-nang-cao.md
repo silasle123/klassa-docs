@@ -18,7 +18,7 @@ Trong nhóm này, các mục sau dùng được:
 - **Cài đặt** (phần Gamification)
 
 ::: warning Lưu ý
-Mục **Thao tác hàng loạt** và **Xác minh Media** vẫn hiện trong menu nhưng chưa vận hành được trọn vẹn, nên chưa dùng. Các tab **Media Verification**, **Xung đột**, **Bulk Operations** trong trang **Cài đặt** cũng chưa có tác dụng thực tế.
+Mục **Thao tác hàng loạt** và **Xác minh Media** chưa vận hành được trọn vẹn, nên chưa dùng. **Thao tác hàng loạt** chỉ hiện với Quản trị viên, Quản lý chi nhánh và Quản lý. **Xác minh Media** hiện với ba vai đó cùng Giáo viên và Trợ giảng, còn Lễ tân không thấy mục này. Các tab **Media Verification**, **Xung đột**, **Bulk Operations** trong trang **Cài đặt** cũng chưa có tác dụng thực tế.
 :::
 
 ## Giải quyết xung đột điểm danh
@@ -27,7 +27,7 @@ Khi giáo viên chấm một em khác với lễ tân (hoặc quản lý) chấm
 
 Hai trạng thái **Vắng** và **Vắng có phép** được coi là cùng nhóm, nên chấm lệch giữa hai nhãn này không tạo xung đột.
 
-Trang này chỉ dành cho Quản trị viên, Quản lý chi nhánh và Quản lý. Giáo viên, Trợ giảng và Lễ tân vào sẽ thấy thông báo không có quyền.
+Trang này chỉ dành cho Quản trị viên, Quản lý chi nhánh và Quản lý. Giáo viên, Trợ giảng và Lễ tân không thấy mục **Đối chiếu xung đột** trong menu.
 
 ::: steps
 1. Vào **Điểm danh → Nâng cao → Đối chiếu xung đột**. Trang **Giải quyết xung đột điểm danh** hiện ra, đầu trang có bốn ô đếm: **Chờ xử lý**, **Đang điều tra**, **Đã giải quyết**, **Đã leo thang**.
@@ -86,7 +86,18 @@ Vài điều cần biết về cách tính:
 - Học sinh có mặt sớm hơn giờ học hơn 15 phút (khi có ghi giờ đến) được cộng thêm điểm đến sớm.
 - Buổi **Vắng có phép** không bị trừ điểm.
 
-Khi bật **Huy hiệu**, phần **Cấu hình Huy hiệu** cho phép đổi biểu tượng, tên và mô tả từng huy hiệu: tuần chuyên cần, tháng chuyên cần, đến sớm, chuỗi đi học dài, luôn đúng giờ. Tên huy hiệu hiển thị đúng như bạn nhập ở đây, nên hãy đặt tên tiếng Việt cho thân thiện.
+Khi bật **Huy hiệu**, phần **Cấu hình Huy hiệu** cho phép đổi biểu tượng, tên và mô tả từng huy hiệu. Trung tâm mới có sẵn sáu huy hiệu tên tiếng Việt, bạn giữ nguyên hoặc đổi theo ý:
+
+| Huy hiệu | Mô tả sẵn có |
+| --- | --- |
+| **Tuần chuyên cần** | Hoàn thành 1 tuần không vắng |
+| **Tháng chuyên cần** | Hoàn thành 1 tháng không vắng |
+| **Trở lại đều đặn** | Trở lại đều đặn sau khi vắng |
+| **Luôn đúng giờ** | Không trễ giờ trong 30 ngày |
+| **Chuỗi đi học dài** | Chuỗi liên tục từ 20 buổi trở lên |
+| **Đến sớm** | Đến sớm ít nhất 10 lần |
+
+Tên và mô tả bạn sửa ở đây sẽ hiển thị đúng như bạn nhập.
 
 ## Xem bảng xếp hạng
 
@@ -164,7 +175,7 @@ Xoá một thẻ trong lịch sử sẽ làm link cũ của thẻ đó không c�
 ## Câu hỏi thường gặp
 
 ::: details Giáo viên có vào được các trang Nâng cao không?
-Menu hiện nhóm **Nâng cao** cho giáo viên, trợ giảng và lễ tân, nhưng họ chỉ xem được **Gamification** (bảng xếp hạng). Giải quyết xung đột, phần thưởng, thẻ năng lực và cài đặt chỉ dành cho quản lý.
+Menu hiện nhóm **Nâng cao** cho giáo viên, trợ giảng và lễ tân. Lễ tân chỉ thấy **Gamification** (bảng xếp hạng). Giáo viên và Trợ giảng thấy **Gamification** và **Xác minh Media**. **Đối chiếu xung đột**, **Thao tác hàng loạt**, phần thưởng, thẻ năng lực và cài đặt chỉ dành cho quản lý.
 :::
 
 ::: details Bật Gamification xong mà bảng xếp hạng trống?

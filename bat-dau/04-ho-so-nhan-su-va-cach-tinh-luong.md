@@ -23,12 +23,12 @@ Không. Khi tạo lớp ([Bước 7](07-tao-lop-va-lich-hoc.md)), danh sách gi�
 ## Cần có trước
 
 - Đã tạo tài khoản cho giáo viên, trợ giảng, lễ tân và các nhân viên khác ([Bước 3](03-tao-tai-khoan-nhan-vien.md)).
-- Trung tâm đã có hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**. Kiểm tra ở **Cài đặt → Plugin Marketplace**. Menu **Quản lý HR** vẫn hiện khi chưa có gói, nhưng bấm vào chỉ thấy thẻ báo gói chưa được kích hoạt hoặc thông báo "Liên hệ KLASSA để mua hoặc dùng thử". Nếu chưa có đủ hai gói, bạn bỏ qua bước này và [Bước 15](15-chot-luong-cuoi-thang.md), phần còn lại của lộ trình vẫn làm được.
+- Trung tâm đã có hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**. Kiểm tra ở **Cài đặt → Plugin Marketplace**. Thiếu gói nào thì mục thuộc gói đó không hiện trong menu **Quản lý HR**. Gói **Nhân sự (HRIS)** lo **Nhân viên**, **Điểm danh nhân viên**, **Cấu hình HR** và các mục nhân sự còn lại. Gói **Lương giáo viên** lo **Quản lý lương** và **Mẫu phiếu lương**. Riêng mục **Dạy thay** luôn hiện. Nếu chưa có đủ hai gói, bạn bỏ qua bước này và [Bước 15](15-chot-luong-cuoi-thang.md), phần còn lại của lộ trình vẫn làm được.
 - Biết trung tâm trả lương cho từng người theo kiểu nào: lương tháng cố định, hay trả theo giờ dạy hoặc theo ca.
 
 ## A. Sửa hồ sơ nhân sự của từng người
 
-Hồ sơ tự sinh luôn có các giá trị sau: **Loại hình làm việc** là Toàn thời gian, **Loại hợp đồng** là Thử việc, **Ngày bắt đầu** là ngày tạo tài khoản, **Ngày kết thúc** là 60 ngày sau, **Lương cơ bản** để trống. Chức vụ được gán theo vai tài khoản.
+Hồ sơ tự sinh có các giá trị đặt sẵn sau. **Loại hình làm việc** là Bán thời gian với vai Giáo viên, Trợ giảng và Lễ tân, và là Toàn thời gian với các vai còn lại (Quản trị viên, Quản lý chi nhánh, Quản lý, Kế toán, Nhân sự). **Loại hợp đồng** là Thử việc, **Ngày bắt đầu** là ngày hồ sơ được tạo (ngày tạo tài khoản, hoặc ngày duyệt nếu người đó tự đăng ký), **Ngày kết thúc** là 60 ngày sau, **Lương cơ bản** để trống. Chức vụ được gán theo vai tài khoản.
 
 ::: steps
 1. Vào **Quản lý HR → Nhân viên**. Trang **Quản lý nhân viên** hiện danh sách. Gõ tên vào ô **Tìm kiếm theo tên, mã NV, email...** nếu danh sách dài.
@@ -58,7 +58,7 @@ Loại hình điều khiển cách tính tiền thật, nên chọn theo đúng 
 Với người **Bán thời gian**, nhập 8.000.000 vào **Lương cơ bản** nghĩa là 8 triệu đồng cho MỖI GIỜ. Ô này không có ghi chú nhắc điều đó. Nếu người này chỉ nhận tiền theo buổi dạy (đơn giá khai ở phần C), hãy để **Lương cơ bản** là 0.
 :::
 
-Quy ước ai là toàn thời gian, ai là bán thời gian do trung tâm tự quyết. Giáo viên, trợ giảng và lễ tân làm theo buổi hay theo ca thường chọn **Bán thời gian**, còn quản lý, kế toán hưởng lương tháng cố định thường chọn **Toàn thời gian**. Hồ sơ tự sinh luôn là Toàn thời gian, nên chỉ những người thật sự hưởng lương tháng mới được để nguyên.
+Quy ước ai là toàn thời gian, ai là bán thời gian do trung tâm tự quyết. Giáo viên, trợ giảng và lễ tân làm theo buổi hay theo ca thường chọn **Bán thời gian**, còn quản lý, kế toán hưởng lương tháng cố định thường chọn **Toàn thời gian**. Hồ sơ tự sinh đã đặt sẵn đúng quy ước phổ biến này theo vai, nên bạn chỉ cần sửa những người trả lương khác mặc định. Hồ sơ tạo từ trước không tự đổi theo mặc định mới, nên vẫn nên rà lại cả danh sách.
 
 ::: tip Mẹo
 Làm lần lượt: lọc danh sách theo từng nhóm người (giáo viên, trợ giảng, lễ tân, kế toán) rồi sửa hết một nhóm trước khi sang nhóm khác để không bỏ sót ai.
@@ -67,8 +67,8 @@ Làm lần lượt: lọc danh sách theo từng nhóm người (giáo viên, tr
 ### Kiểm tra cơ sở và chức vụ
 
 - Ô **Cơ sở** trong hồ sơ phải là chi nhánh của người đó. Khi kỳ lương được tạo riêng cho một chi nhánh, người để trống **Cơ sở** sẽ không có phiếu lương.
-- Danh sách **Chức vụ** có thể xuất hiện hai dòng trùng tên (ví dụ hai dòng **Giáo viên**): một dòng có sẵn khi trung tâm được dựng, một dòng do hệ thống tự sinh khi tạo tài khoản. Nếu sau này bạn khai lương theo chức vụ ở **Quản lý HR → Quản lý lương → Cấu hình lương NV**, hãy chọn đúng dòng đang gắn với người đó. Cách đơn giản nhất là đưa mọi người cùng loại về một dòng chức vụ duy nhất.
-- Ô **Mã nhân viên** trong hộp sửa bị khoá, không đổi được. Nếu sau này bạn có nhập mã bằng tay (ở hộp **Thêm nhân viên** hoặc tệp Excel), hãy giữ đúng dạng NV và bốn chữ số (NV0001, NV0002...), vì mã của người được tạo tài khoản tiếp theo do hệ thống tự cộng từ mã đang lớn nhất. Thấy mã nào lạ trong danh sách, báo bộ phận hỗ trợ KLASSA.
+- Khi tạo tài khoản, hệ thống dùng lại chức vụ có sẵn cùng tên (ví dụ **Giáo viên**) và không tạo thêm dòng trùng. Nếu danh sách **Chức vụ** của trung tâm bạn đã có hai dòng trùng tên từ trước, khi khai lương theo chức vụ ở **Quản lý HR → Quản lý lương → Cấu hình lương NV**, hãy chọn đúng dòng đang gắn với người đó.
+- Ô **Mã nhân viên** trong hộp sửa bị khoá, không đổi được. Mã do hệ thống tự cấp (khi duyệt đăng ký, tạo tài khoản, nhập từ Excel, tuyển ứng viên, hoặc khi bạn để trống ô **Mã nhân viên** ở hộp thêm nhân viên) có dạng NV và bốn chữ số (NV0001, NV0002...), bằng số lớn nhất trong các mã dạng này cộng thêm 1. Mã theo dạng khác (ví dụ chữ cái khác ở đầu) được giữ nguyên và không ảnh hưởng đến mã tự sinh tiếp theo. Riêng giáo viên tạo bằng nút **Thêm giáo viên mới** ở trang **Giáo viên** thì nhận mã dạng GV kèm sáu chữ số.
 
 ::: warning Đừng tạo nhân viên mới bằng nút Thêm nhân viên khi chưa có tài khoản
 Nút **Thêm nhân viên** ở **Quản lý HR → Nhân viên** nếu gặp email chưa có tài khoản sẽ tạo luôn tài khoản vai **Giáo viên**, dùng mật khẩu mặc định của hệ thống và không gắn chi nhánh. Lễ tân hay kế toán tạo bằng cách này sẽ mang nhầm vai Giáo viên. Hãy tạo tài khoản ở Bước 3 trước, hồ sơ sẽ tự sinh theo, rồi quay lại đây chỉ để sửa.
@@ -79,7 +79,7 @@ Nút **Thêm nhân viên** ở **Quản lý HR → Nhân viên** nếu gặp ema
 Lễ tân muốn tự đăng ký ca Sáng, Chiều, Tối trên **Cổng nhân viên → Đăng ký ca** cần được bật quyền, và ca phải có đơn giá. Làm hai việc sau, mỗi lễ tân một lần.
 
 ::: steps
-1. Ở hộp **Cập nhật thông tin nhân viên** của lễ tân, chọn **Loại hình làm việc** là **Bán thời gian**.
+1. Ở hộp **Cập nhật thông tin nhân viên** của lễ tân, kiểm tra **Loại hình làm việc** là **Bán thời gian** (hồ sơ lễ tân tự sinh đã đặt sẵn mức này, hồ sơ tạo từ trước có thể đang là Toàn thời gian thì đổi lại).
 2. Tick ô **Đăng ký ca lễ tân (part-time)** (ghi chú "Cho phép NV tự đăng ký ca (Sáng/Chiều/Tối) trên cổng nhân viên"), rồi bấm **Cập nhật**.
 3. Vào **Quản lý HR → Cấu hình HR**, mở tab **Ca lễ tân**. Với mỗi ô **Sáng**, **Chiều**, **Tối**, chọn một ca ở danh sách (mục "Chọn ca") và nhập **Đơn giá (đồng/giờ)**. Dưới mỗi ô hiện số giờ của ca và số tiền một ca.
 4. Bấm **Lưu khung giờ & đơn giá**. Hộp báo "Đã lưu khung giờ và đơn giá ca lễ tân" hiện ra.
@@ -118,7 +118,7 @@ Bảng đơn giá giáo viên và bảng đơn giá trợ giảng tách riêng. 
 Trang này còn khung **Đơn giá trợ giảng dạy thay giáo viên (mỗi ca)** với một ô nhập số tiền (gợi ý "VD 300000", đơn vị đ/ca) và nút **Lưu**. Dùng khi giáo viên nghỉ, đơn dạy thay chọn "Không có GV" và trợ giảng đứng lớp: trợ giảng được tính đúng số tiền này cho ca đó, thay cho đơn giá theo sĩ số. Để trống thì trợ giảng tính như bình thường. Chỉ Quản trị viên đổi được, và số mới chỉ áp dụng cho phiếu lương tính từ lúc lưu.
 
 ::: warning Những điều dễ sai
-- Các khoảng sĩ số của cùng một vai không được chồng lên nhau, và nên nối liền nhau từ sĩ số nhỏ nhất tới lớn nhất mà lớp có thể có. Buổi có sĩ số rơi vào khoảng trống (hoặc vượt mức cao nhất) thì không có mức nào khớp và không được tính lương. Nếu hai khoảng chồng nhau, hoặc **Sĩ số từ** lớn hơn **Đến**, hệ thống không cho lưu và báo lỗi bằng tiếng Anh. Chỉnh lại số cho đúng rồi lưu lại.
+- Các khoảng sĩ số của cùng một vai không được chồng lên nhau, và nên nối liền nhau từ sĩ số nhỏ nhất tới lớn nhất mà lớp có thể có. Buổi có sĩ số rơi vào khoảng trống (hoặc vượt mức cao nhất) thì không có mức nào khớp và không được tính lương. Nếu **Sĩ số từ** lớn hơn **Đến**, hệ thống không cho lưu và báo "Số học sinh tối thiểu không được lớn hơn số học sinh tối đa". Khi thêm mức mới chồng lên một mức đã có, hệ thống thường báo "Khoảng sĩ số này bị trùng với một mức lương đã có". Chỉnh lại số cho đúng rồi lưu lại. Hệ thống không bắt được mọi trường hợp (ví dụ khoảng mới bao trùm cả mức cũ, hoặc khi sửa một mức có sẵn), nên sau khi lưu hãy tự rà bảng để các khoảng không chồng nhau.
 - Sĩ số chỉ đếm học sinh được điểm danh **Có mặt**. Em **Trễ**, **Học bù**, **Phép** hay **Vắng** không được đếm. Lớp sát ranh giới giữa hai mức có thể ra mức thấp hơn giáo viên tưởng. Buổi không em nào **Có mặt** thì không có mức nào khớp và buổi đó không được tính lương.
 - Chỉ buổi đã điểm danh xong mới được trả. Xem thêm ở [Bước 10](10-diem-danh-buoi-dau.md).
 - Chọn **Cố định mỗi buổi** hoặc **Cố định theo giờ** mà tiền để 0 thì buổi đó cũng bị bỏ qua. Tiền cố định nhập ở hồ sơ từng người (ô **Tiền/buổi dạy (cố định)** hoặc **Tiền/giờ dạy (cố định)**) hoặc riêng cho từng lớp ở [Bước 7](07-tao-lop-va-lich-hoc.md). Khi trung tâm chọn chế độ cố định, bảng sĩ số chỉ áp cho người được đặt riêng **Theo sĩ số học sinh**.
@@ -167,8 +167,8 @@ Không tự đổi. Phiếu đã tính giữ số cũ. Sau khi sửa hồ sơ ho
 Hộp sửa hồ sơ chỉ cho chọn **Toàn thời gian** và **Bán thời gian**. Với người làm theo hợp đồng cộng tác, chọn **Bán thời gian** (trả theo giờ hoặc theo buổi). Loại hợp đồng thật ghi ở ô **Loại hợp đồng**.
 :::
 
-::: details Tôi không thấy mục Quản lý HR trong menu?
-Menu này chỉ hiện với Quản trị viên, Quản lý chi nhánh và Quản lý. Việc sửa hồ sơ và thêm mức đơn giá dạy chỉ Quản trị viên và Quản lý chi nhánh làm được. Vai Quản lý chỉ vào được **Dạy thay** và **Giao việc** (cùng **Lịch ca lễ tân** khi được giao quyền), không mở được danh sách nhân viên hay bảng lương (xem bảng vai ở [Bước 3](03-tao-tai-khoan-nhan-vien.md)).
+::: details Tôi không thấy mục Quản lý HR, hoặc thiếu mục bên trong?
+Có hai lý do. Thứ nhất, menu này chỉ hiện với Quản trị viên, Quản lý chi nhánh và Quản lý. Việc sửa hồ sơ và thêm mức đơn giá dạy chỉ Quản trị viên và Quản lý chi nhánh làm được. Vai Quản lý chỉ vào được **Dạy thay** và **Giao việc** (cùng **Lịch ca lễ tân** khi được giao quyền), không mở được danh sách nhân viên hay bảng lương (xem bảng vai ở [Bước 3](03-tao-tai-khoan-nhan-vien.md)). Thứ hai, nếu menu có nhưng thiếu mục bên trong, đó là do trung tâm chưa có gói: **Nhân viên** cần gói **Nhân sự (HRIS)**, **Quản lý lương** cần gói **Lương giáo viên**, **Giao việc** cần gói **Giao việc Nội bộ**.
 :::
 
 ::: details Có phải khai lương cho cả quản lý và kế toán không?

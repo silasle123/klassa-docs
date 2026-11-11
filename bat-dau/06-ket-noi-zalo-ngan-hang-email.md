@@ -107,7 +107,7 @@ Nút này tự gửi một giao dịch thử 1 đồng cho chính KLASSA, không
 
 ::: warning Điều kiện để tiền tự khớp
 - Phụ huynh phải ghi **mã hoá đơn** (dạng `INV-YYYYMM-XXXX`) trong nội dung chuyển khoản. Hãy dùng kiểu **QR động VietQR** ở **Mẫu hóa đơn**, mã này được điền sẵn vào nội dung khi phụ huynh quét QR.
-- **Số tài khoản** ở **Mẫu hóa đơn** (vào **Tài chính → Kế toán → Mẫu hóa đơn**) nên là đúng tài khoản đã gắn với SePay. Nếu tiền chuyển vào tài khoản khác, SePay không thấy giao dịch nên KLASSA không nhận được gì. Mẫu hoá đơn chưa lưu chỉ mang thông tin mẫu có sẵn, chưa phải của trung tâm bạn, cần nhập lại ở [Bước 5](05-cau-hinh-hoc-phi.md).
+- **Số tài khoản** ở **Mẫu hóa đơn** (vào **Tài chính → Kế toán → Mẫu hóa đơn**) nên là đúng tài khoản đã gắn với SePay. Nếu tiền chuyển vào tài khoản khác, SePay không thấy giao dịch nên KLASSA không nhận được gì. Mẫu hoá đơn chưa lưu thì chưa có số tài khoản nào, cần nhập ở [Bước 5](05-cau-hinh-hoc-phi.md).
 - Giao dịch không có mã hoặc không khớp phiếu nào được lưu ở trạng thái **Chưa khớp**. Kế toán xử lý ở tab **Đối soát**.
 :::
 
@@ -126,7 +126,7 @@ Email dùng để gửi phiếu học phí cho phụ huynh có email thật, g�
 6. Ở mục **Kiểm tra kết nối**, nhập một email của bạn rồi bấm **Gửi email test**. Mở hộp thư xem đã nhận chưa.
 :::
 
-Email phiếu học phí gửi từng phiếu ở **Tài chính → Kế toán → Hoá đơn chi tiết**: bấm nút ba chấm ở cuối dòng (chú thích **Thao tác khác**) rồi chọn **Gửi email**. Chưa cài email thì thao tác này báo "SMTP chưa được cấu hình", bạn dùng Zalo hoặc gửi tay. Thông báo đó có thể nhắc "Vào Cài đặt → Email", nhưng nơi cài đúng là **AI Hub → Tích hợp**, tab **Email** như trên. Muốn gửi email cho phụ huynh, học sinh phải có phụ huynh và phụ huynh phải có email thật, nếu không hệ thống báo "Học sinh chưa có phụ huynh hoặc phụ huynh chưa có email".
+Email phiếu học phí gửi từng phiếu ở **Tài chính → Kế toán → Hoá đơn chi tiết**: bấm nút ba chấm ở cuối dòng (chú thích **Thao tác khác**) rồi chọn **Gửi email**. Chưa cài email thì thao tác này báo "SMTP chưa được cấu hình" và nhắc bạn vào **AI Hub → Tích hợp → tab Email → mục SMTP** để thiết lập như các bước trên. Khi chưa cài xong, bạn dùng Zalo hoặc gửi tay. Muốn gửi email cho phụ huynh, học sinh phải có phụ huynh và phụ huynh phải có email thật, nếu không hệ thống báo "Học sinh chưa có phụ huynh hoặc phụ huynh chưa có email".
 
 ### Lưu mẫu email phiếu lương (nếu sẽ gửi phiếu lương)
 

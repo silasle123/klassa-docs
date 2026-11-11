@@ -72,7 +72,7 @@ Em nào chưa được nhập riêng thì máy tính theo giá ghi danh của em
 
 ## Tạo hoá đơn thu sau
 
-Dành cho học sinh dùng gói **Thu sau theo buổi thực**. Hệ thống có thể tự xuất vào đầu tháng kế tiếp (công tắc ở [Cấu hình tài chính](cai-dat.md)); nếu tắt, bạn tự bấm nút.
+Dành cho học sinh dùng gói **Thu sau theo buổi thực**. Hệ thống có thể tự xuất vào đầu tháng kế tiếp (công tắc ở [Cấu hình tài chính](cai-dat.md)); nếu tắt, bạn tự bấm nút. Nút này cũng có ở trang [Khoá sổ kỳ](../ke-toan/khoa-so-ky.md), nơi Quản trị viên và Kế toán đều dùng được.
 
 ::: steps
 1. Ở trang **Hoá đơn chi tiết**, bấm **Tạo hoá đơn thu sau**.

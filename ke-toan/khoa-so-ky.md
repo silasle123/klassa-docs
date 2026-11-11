@@ -1,7 +1,7 @@
 ---
 title: "Khoá sổ kỳ"
 description: "Rà soát phiếu của một tháng rồi khoá số liệu, xem lịch sử khoá và mở lại kỳ khi cần sửa."
-roles: [Quản trị viên]
+roles: [Quản trị viên, Kế toán]
 order: 120
 ---
 
@@ -9,7 +9,7 @@ order: 120
 
 Khoá sổ là bước chốt số liệu học phí của một tháng. Khi bấm khoá, hệ thống rà soát toàn bộ phiếu của tháng đó (12 loại kiểm tra) rồi đánh dấu kỳ đã khoá. Sau đó tiền trên phiếu của kỳ không bị sửa tuỳ tiện.
 
-Trang này cần quyền quản lý tài chính, nên chỉ Quản trị viên vào được.
+Quản trị viên và Kế toán vào được trang này và khoá được kỳ, mục **Khoá sổ kỳ** hiện trong menu của hai vai đó. Việc mở lại kỳ đã khoá chỉ Quản trị viên làm được. Quản lý chi nhánh và các vai khác không thấy mục này.
 
 ## Khoá một kỳ
 
@@ -45,7 +45,7 @@ Trạng thái có ba mức: **Đang xử lý**, **Đã khoá**, **Đã mở lạ
 
 ## Mở lại một kỳ đã khoá
 
-Dùng khi cần sửa tiền phiếu của tháng đã khoá.
+Dùng khi cần sửa tiền phiếu của tháng đã khoá. Chỉ Quản trị viên mở lại được. Với Kế toán, bảng **Lịch sử khoá sổ** không có cột **Hành động** và không có nút **Mở lại**, nên khoá nhầm thì nhờ Quản trị viên mở lại.
 
 ::: steps
 1. Trong bảng **Lịch sử khoá sổ**, bấm **Mở lại** ở dòng kỳ có trạng thái **Đã khoá**.
@@ -61,12 +61,12 @@ Mở lại kỳ cũ có thể làm thay đổi tiền trên phiếu. Chỉ mở 
 ## Kỳ đã khoá ảnh hưởng gì
 
 - Chỉnh tiền trên phiếu hoặc xoá phiếu của kỳ đã khoá chỉ Quản trị viên làm được. Các vai khác sẽ nhận thông báo "đã khoá sổ".
-- Điểm danh của buổi thuộc kỳ đã khoá vẫn lưu được, nhưng thay đổi đó không tự vào phiếu. Cần chỉnh học phí thì liên hệ kế toán sửa phiếu.
+- Điểm danh của buổi thuộc kỳ đã khoá vẫn lưu được, nhưng thay đổi đó không tự vào phiếu. Cần chỉnh học phí thì nhờ Quản trị viên sửa phiếu.
 - Hệ thống tính phiếu không truy lùi vào kỳ đã khoá.
 
 ## Tạo hoá đơn thu sau ngay trên trang này
 
-Trên trang còn có ô chọn kỳ và nút **Tạo hoá đơn thu sau**, dùng cho học sinh học theo gói thu sau theo buổi đã học. Cách dùng xem [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
+Trên trang còn có ô chọn kỳ và nút **Tạo hoá đơn thu sau**, dùng cho học sinh học theo gói thu sau theo buổi đã học. Quản trị viên và Kế toán đều dùng được nút này. Cách dùng xem [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
 
 ## Câu hỏi thường gặp
 
@@ -74,6 +74,10 @@ Trên trang còn có ô chọn kỳ và nút **Tạo hoá đơn thu sau**, dùng
 Không. Điểm danh vẫn lưu, chỉ có cảnh báo hiện ra là kỳ đã khoá và thay đổi không tự vào phiếu.
 :::
 
-::: details Tôi là Kế toán, sao không vào được Khoá sổ kỳ?
-Trang cần quyền quản lý tài chính, hiện chỉ Quản trị viên có. Hãy nhờ Quản trị viên khoá giúp.
+::: details Kế toán có khoá được kỳ không?
+Có. Kế toán vào **Tài chính → Kế toán → Khoá sổ kỳ**, khoá kỳ và tạo hoá đơn thu sau như Quản trị viên. Chỗ khác duy nhất là Kế toán không mở lại được kỳ đã khoá.
+:::
+
+::: details Tôi là Quản lý chi nhánh, sao không thấy Khoá sổ kỳ?
+Mục này chỉ dành cho Quản trị viên và Kế toán. Bạn soát số liệu xong thì nhờ một trong hai vai đó khoá kỳ.
 :::

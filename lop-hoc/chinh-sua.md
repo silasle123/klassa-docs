@@ -13,7 +13,7 @@ Dùng trang này khi đổi giáo viên, thêm trợ giảng, đổi phòng ho�
 
 ::: steps
 1. Vào **Lớp học**, mở lớp rồi bấm **Chỉnh sửa**. Hoặc bấm menu ba chấm của lớp và chọn **Chỉnh sửa lớp học** (Quản lý không thấy menu ba chấm, dùng nút **Chỉnh sửa** ở trang chi tiết).
-2. Sửa các ô ở phần **Thông tin cơ bản**: **Tên lớp học**, **Mã lớp**, **Môn học**, **Khối lớp** (bắt buộc), **Trình độ** (**Cơ bản** hoặc **Nâng cao**), **Sức chứa**, **Trạng thái** (**Đang hoạt động**, **Tạm dừng**, **Hoàn thành**), **Phòng học**. Ô **Mô tả** hiện chưa được lưu.
+2. Sửa các ô ở phần **Thông tin cơ bản**: **Tên lớp học**, **Mã lớp**, **Môn học**, **Khối lớp** (bắt buộc), **Trình độ** (**Cơ bản** hoặc **Nâng cao**), **Sức chứa**, **Trạng thái** (**Đang hoạt động**, **Tạm dừng**, **Hoàn thành**), **Phòng học**.
 
    ![Trang Chỉnh sửa lớp học với các ô Giáo viên, Trợ giảng và Cách tính lương dạy](../assets/screenshots/lop-hoc-chinh-sua.webp)
 
@@ -52,7 +52,7 @@ Xoá lớp đặt lớp ở trạng thái **Đã hủy** và huỷ ghi danh củ
 ## Câu hỏi thường gặp
 
 ::: details Giáo viên nghỉ việc thì lớp của họ ra sao?
-Khi cho nhân viên nghỉ việc, tài khoản bị khoá nhưng phân công lớp không tự đóng. Lớp vẫn ghi tên giáo viên đó. Hãy mở từng lớp của giáo viên đó (xem ở [chi tiết giáo viên](../giao-vien/chi-tiet.md)) và chọn giáo viên mới ở ô **Giáo viên**.
+Khi hồ sơ nhân viên chuyển sang **Đã nghỉ việc**, hệ thống khoá tài khoản và tự gỡ người đó khỏi mọi lớp họ dạy hoặc làm trợ giảng, nên lớp không còn ghi tên họ. Buổi đã dạy trước ngày nghỉ vẫn được tính lương. Lớp thường đang hoạt động (kể cả lớp **Đã đầy**) mà mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong [danh sách lớp](danh-sach.md). Lớp linh hoạt và lớp người đó chỉ làm trợ giảng không có mục nhắc, nên hãy ghi lại các lớp của họ trước khi đổi trạng thái. Hãy mở lớp đó và chọn giáo viên mới ở ô **Giáo viên** để phụ huynh thấy đúng người dạy (xem lớp của giáo viên ở [chi tiết giáo viên](../giao-vien/chi-tiet.md)). Giáo viên quay lại làm thì lớp cũ không tự gắn lại, bạn xếp lớp bằng tay.
 :::
 
 ::: details Đổi trạng thái ở đây và ở menu ba chấm có khác nhau không?

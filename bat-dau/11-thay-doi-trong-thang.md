@@ -28,7 +28,7 @@ Lớp đã chạy thì gần như tháng nào cũng có chuyện: phụ huynh b�
 | Học sinh bỏ một lớp nhưng vẫn học lớp khác | Sửa ghi danh của lớp đó, chọn **Hủy bỏ**, điền **Ngày kết thúc** | Chỉ ảnh hưởng lớp đó |
 | Học sinh đổi sang lớp khác | **Hành động → Chuyển lớp học** | Giữ nguyên phiếu hoặc tách phiếu theo ngày chuyển, xem mục dưới |
 | Giáo viên hoặc trợ giảng nghỉ một buổi | Tạo yêu cầu **Dạy thay**, quản lý duyệt | Lương buổi đó chuyển sang người dạy thay |
-| Nhân viên nghỉ việc | Đổi người ở từng lớp trước, rồi mới chuyển **Đã nghỉ việc** | Chốt lương các tháng đã làm của người đó trước, không tính lại kỳ cũ sau khi cho nghỉ |
+| Nhân viên nghỉ việc | Chuyển hồ sơ sang **Đã nghỉ việc**, hệ thống tự gỡ người đó khỏi các lớp. Nên giao lớp cho người mới ở **Chỉnh sửa** lớp | Buổi đã dạy trước ngày nghỉ vẫn được trả. Chốt lương các tháng đã làm của người đó trước, không tính lại kỳ cũ sau khi cho nghỉ |
 
 ## Học sinh nghỉ hoặc tạm nghỉ
 
@@ -137,7 +137,9 @@ Buổi chỉ được ghi vào hệ thống khi có người điểm danh hoặc
 
 ## Nhân viên nghỉ việc
 
-Chuyển nhân viên sang **Đã nghỉ việc** chỉ khoá tài khoản của họ. Hệ thống không đóng phân công lớp: lớp vẫn ghi tên giáo viên đã nghỉ, phiếu gửi phụ huynh vẫn mang tên người đó, và trợ giảng đã nghỉ vẫn có thể bị tính buổi vì phân công chưa kết thúc. Hãy làm đúng thứ tự sau.
+Chuyển nhân viên sang **Đã nghỉ việc** khoá tài khoản của họ và tự gỡ họ khỏi mọi lớp họ đang dạy hoặc làm trợ giảng. Phân công không bị xoá mà được đóng lại, **Ngày kết thúc** của phân công là ngày nghỉ, nên các buổi người đó đã dạy trước ngày nghỉ vẫn được tính lương như cũ. Ngày nghỉ là ngày bạn điền ở ô **Ngày kết thúc** của hồ sơ, với điều kiện bạn vừa sửa ô này trong chính lần lưu đó và ngày ấy không ở tương lai. Không thì hệ thống lấy ngày hôm nay. Nếu sau này người đó quay lại làm (đổi về **Đang làm việc**), các lớp cũ không tự gắn lại, bạn phải xếp lớp bằng tay.
+
+Vì vậy bạn không còn bắt buộc phải đổi người ở từng lớp trước khi cho nghỉ. Nhưng nên làm, để phụ huynh luôn thấy đúng giáo viên và lớp không bị trống người dạy. Thứ tự gợi ý:
 
 ::: steps
 1. Vào **Lớp học**, dùng bộ lọc **Giáo viên** chọn tên người đó (lọc cả lớp dạy chính lẫn lớp làm trợ giảng). Mở từng lớp, bấm **Chỉnh sửa**.
@@ -147,7 +149,11 @@ Chuyển nhân viên sang **Đã nghỉ việc** chỉ khoá tài khoản của 
 5. Quản trị viên vào **Quản lý HR → Nhân viên**, bấm biểu tượng thùng rác ở dòng người đó. Trình duyệt hỏi xác nhận chuyển sang **Đã nghỉ việc**, bấm xác nhận (OK).
 :::
 
-Biểu tượng thùng rác chỉ Quản trị viên dùng được. Quản lý chi nhánh đổi **Trạng thái** thành **Đã nghỉ việc** bằng nút chỉnh sửa (hình cây bút) ở dòng nhân viên, đồng thời sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng của người đó (ô này có thể đang giữ hạn hợp đồng cũ), rồi bấm **Cập nhật**. Danh sách việc cần làm khi nghỉ việc (bàn giao, thu hồi tài khoản) ở [Onboarding và nghỉ việc](../nhan-su/onboarding.md) không có mục đổi người ở lớp, nên bạn tự làm bước 1-3.
+Biểu tượng thùng rác chỉ Quản trị viên dùng được, và ngày nghỉ khi đó là ngày bạn bấm. Quản lý chi nhánh đổi **Trạng thái** thành **Đã nghỉ việc** bằng nút chỉnh sửa (hình cây bút) ở dòng nhân viên, đồng thời sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng thật của người đó trong cùng lần lưu (ô này có thể đang giữ hạn hợp đồng cũ), rồi bấm **Cập nhật**. Nếu ngày làm việc cuối cùng còn ở tương lai, hệ thống dùng ngày hôm nay để đóng lớp, nên hãy đổi trạng thái đúng vào ngày người đó nghỉ. Danh sách việc cần làm khi nghỉ việc (bàn giao, thu hồi tài khoản) ở [Onboarding và nghỉ việc](../nhan-su/onboarding.md) không có mục đổi người ở lớp, nên bước 1-3 bạn tự làm.
+
+::: tip Mẹo
+Đã đổi trạng thái rồi mới nhớ chưa giao lớp thì người đó không còn trong bộ lọc **Giáo viên** của **Lớp học** nữa. Lớp thường mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong thẻ **Việc cần làm** của trang **Lớp học**, bạn mở lớp và chọn giáo viên mới ở ô **Giáo viên**. Lớp mà người đó làm trợ giảng thì không có mục nhắc, nên nếu muốn chắc, hãy ghi lại các lớp của họ trước khi đổi trạng thái.
+:::
 
 ::: danger Không bấm thùng rác lần hai
 Sau khi người đó đã ở **Đã nghỉ việc**, biểu tượng thùng rác ở dòng đó chuyển thành **Xóa vĩnh viễn**, không khôi phục được. Chỉ bấm khi chắc chắn.
@@ -162,7 +168,7 @@ Bảng lương một tháng lấy nhân viên đang làm việc, hoặc đã ngh
 - [ ] Học sinh nghỉ: hồ sơ ở **Tạm nghỉ** hoặc ghi danh đã **Hủy bỏ** kèm **Ngày kết thúc**, và đã báo kế toán xử lý phần tiền đã đóng.
 - [ ] Học sinh chuyển lớp: mở hồ sơ thấy lớp cũ đã huỷ và lớp mới đang học.
 - [ ] Buổi giáo viên nghỉ: yêu cầu **Dạy thay** ở trạng thái **Đã duyệt**, trang **Điểm danh** hiện nhãn **Dạy thay** kèm tên người thay.
-- [ ] Nhân viên nghỉ việc: không lớp nào còn ghi tên người đó, lương các tháng đã làm đã chốt.
+- [ ] Nhân viên nghỉ việc: các lớp người đó phụ trách đã có người mới, lương các tháng đã làm đã chốt.
 
 ## Câu hỏi thường gặp
 

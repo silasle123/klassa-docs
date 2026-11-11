@@ -13,15 +13,15 @@ Gói học phí quy định học sinh đóng bao nhiêu cho mỗi tháng và **
 
 Vào **Tài chính → Học phí**. Trang có ba tab:
 
-- **Tổng quan**: bốn thẻ **Tổng doanh thu**, **Doanh thu tháng**, **Hóa đơn chưa thu**, **Tỷ lệ thu phí**; khối **Cơ cấu học phí** (nội dung hiển thị do trung tâm tự soạn, xem [Cấu hình tài chính](cai-dat.md)); danh sách **Hóa đơn gần đây** và biểu đồ **Xu hướng doanh thu 5 tháng gần đây**.
-- **Gói học phí**: các thẻ gói, nơi tạo, sửa, bật tắt gói.
-- **Thanh toán**: ghi nhận tiền thu, xem [Ghi nhận thanh toán](thu-chi.md).
+- **Tổng quan**: bốn thẻ **Tổng doanh thu**, **Doanh thu tháng**, **Hóa đơn chưa thu**, **Tỷ lệ thu phí**; khối **Cơ cấu học phí** (nội dung hiển thị do trung tâm tự soạn, xem [Cấu hình tài chính](cai-dat.md)); danh sách **Hóa đơn gần đây** và biểu đồ **Xu hướng doanh thu 5 tháng gần đây**. Thẻ **Doanh thu tháng** tính theo tiền thực thu trong tháng, không có mục tiêu doanh thu cài sẵn. Ở biểu đồ xu hướng, tháng thu cao nhất trong 5 tháng là mốc đầy thanh, các tháng còn lại so với tháng đó.
+- **Gói học phí**: các thẻ gói, nơi tạo, sửa, bật tắt gói. Quản trị viên và Quản lý chi nhánh làm được các việc này. Kế toán xem được gói và bấm **Tạo HĐ** để lập hoá đơn từ gói, nhưng không tạo, sửa hay bật tắt gói được.
+- **Thanh toán**: ghi nhận tiền thu, xem [Ghi nhận thanh toán](thu-chi.md). Cuối tab có khối **Hướng dẫn thanh toán** kèm tên thương hiệu. Phần **Thông tin chuyển khoản** của khối này (**Ngân hàng**, **STK**, **Chủ TK**, **Nội dung**) lấy từ [Mẫu hoá đơn](mau-hoa-don.md) đã lưu, chỉ Quản trị viên và Quản lý chi nhánh thấy, và ẩn đi khi trung tâm chưa nhập số tài khoản.
 
-Ở đầu trang có thêm nút **Tạo gói học phí**, **Tạo hóa đơn**, **Xem Hoá đơn** (mở danh sách hoá đơn) và **Quản lý Tài chính**.
-
-![Trang Học phí tab Tổng quan với bốn thẻ số liệu và khối Cơ cấu học phí](../assets/screenshots/hoc-phi-tab-tong-quan.webp)
+Ở đầu trang có thêm nút **Tạo gói học phí**, **Tạo hóa đơn**, **Xem Hoá đơn** (mở danh sách hoá đơn) và **Quản lý Tài chính**. Nút **Tạo gói học phí** chỉ hiện với Quản trị viên và Quản lý chi nhánh.
 
 ## Tạo một gói học phí
+
+Chỉ Quản trị viên và Quản lý chi nhánh tạo được gói. Kế toán không thấy các nút tạo gói.
 
 ::: steps
 1. Vào **Tài chính → Học phí**, bấm **Tạo gói học phí** (hoặc mở tab **Gói học phí** rồi bấm **Thêm gói mới**). Hộp **Tạo gói học phí mới** hiện ra.
@@ -90,10 +90,10 @@ Mỗi ghi danh chỉ nhận **một ưu đãi cao nhất**, không cộng dồn,
 
 Trên mỗi thẻ gói có các nút:
 
-- **Sửa**: mở lại hộp để đổi thông tin, bấm **Cập nhật** để lưu.
-- **Tạo HĐ**: mở hộp **Tạo hóa đơn** với gói này.
-- **Tắt** hoặc **Bật**: gói tắt sẽ ẩn khỏi danh sách (bật công tắc **Hiện gói không hoạt động** để xem lại).
-- Nút thùng rác: xoá gói, có hỏi lại trước khi xoá. Chỉ Quản trị viên xoá được.
+- **Sửa**: mở lại hộp để đổi thông tin, bấm **Cập nhật** để lưu. Nút này hiện với Quản trị viên và Quản lý chi nhánh.
+- **Tạo HĐ**: mở hộp **Tạo hóa đơn** với gói này. Cả Kế toán cũng dùng được nút này.
+- **Tắt** hoặc **Bật**: gói tắt sẽ ẩn khỏi danh sách (bật công tắc **Hiện gói không hoạt động** để xem lại). Nút này hiện với Quản trị viên và Quản lý chi nhánh.
+- Nút thùng rác: xoá gói, có hỏi lại trước khi xoá. Nút này chỉ hiện với Quản trị viên.
 
 ::: danger Không thể hoàn tác
 Gói đã xoá không lấy lại được. Gói đã có học sinh dùng thì nên bấm **Tắt** thay vì xoá.

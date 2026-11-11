@@ -1,7 +1,7 @@
 ---
 title: "Danh sách giáo viên"
 description: "Tra cứu giáo viên của trung tâm, số lớp đang phụ trách và đi nhanh tới lịch dạy."
-roles: [Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân, Kế toán]
+roles: [Quản trị viên, Quản lý chi nhánh, Quản lý]
 order: 80
 ---
 
@@ -31,7 +31,7 @@ Nút **Làm mới** tải lại danh sách. Nút **Thêm giáo viên mới** xem
 
 ## Ai xem được gì
 
-Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân và Kế toán mở được trang này. Giáo viên và trợ giảng không xem được danh sách đồng nghiệp. Lương, số tài khoản, mã số thuế, giấy tờ cá nhân chỉ hiện cho Quản trị viên và Quản lý chi nhánh, các vai còn lại không thấy.
+Quản trị viên, Quản lý chi nhánh và Quản lý mở được trang này (mục **Giáo viên** trong menu). Lễ tân, Kế toán, Giáo viên và Trợ giảng không mở được. Nút **Thêm giáo viên mới** và nút **Chỉnh sửa** ở hồ sơ chỉ hiện với Quản trị viên và Quản lý chi nhánh, vai Quản lý chỉ xem. Lương, số tài khoản, mã số thuế, giấy tờ cá nhân chỉ hiện cho Quản trị viên và Quản lý chi nhánh, các vai còn lại không thấy.
 
 ## Câu hỏi thường gặp
 
@@ -44,5 +44,5 @@ Trang mặc định hiện **Tất cả**, nên bạn vẫn thấy người đã
 :::
 
 ::: details Giáo viên nghỉ việc rồi, lớp của họ có tự chuyển người khác không?
-Không. Phân công lớp không tự đóng khi nghỉ việc. Hãy vào [chi tiết giáo viên](chi-tiet.md), xem các lớp còn ghi tên họ rồi đổi giáo viên ở từng lớp.
+Không tự chuyển người khác. Khi hồ sơ chuyển sang **Đã nghỉ việc**, hệ thống chỉ gỡ giáo viên khỏi các lớp đang dạy, lớp sẽ chưa có giáo viên chính cho đến khi bạn chọn người mới. Hãy vào [chi tiết giáo viên](chi-tiet.md), mở từng lớp và chọn giáo viên mới, để phụ huynh thấy đúng người dạy.
 :::

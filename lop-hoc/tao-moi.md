@@ -17,15 +17,14 @@ Bạn tạo lớp trước, sau đó mới [ghi danh học sinh](../hoc-sinh/ghi
 3. Chọn **Môn học** và **Khối lớp** (bắt buộc).
 4. Chọn **Giáo viên** nếu đã biết người dạy. Để **Chưa phân công** thì thêm sau cũng được. Danh sách này chỉ có người mang vai Giáo viên.
 5. Nhập **Số học sinh tối đa** (từ 1 đến 50, mặc định 15) và chọn **Phòng học** nếu có.
-6. Ở phần **Lịch học**, chọn **Số buổi học/tuần** (1 đến 5). Với mỗi buổi, chọn **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**.
-7. Bấm **Tạo lớp học**. Khi thành công, hệ thống báo "Tạo lớp học thành công!" và quay về danh sách lớp.
+6. Chọn **Trạng thái** của lớp: **Đang hoạt động** (mặc định) hoặc **Tạm dừng**. Lớp **Tạm dừng** chưa nhận ghi danh cho đến khi bạn mở lại.
+7. Ở phần **Lịch học**, chọn **Số buổi học/tuần** (1 đến 5). Với mỗi buổi, chọn **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**.
+8. Bấm **Tạo lớp học**. Khi thành công, hệ thống báo "Tạo lớp học thành công!" và quay về danh sách lớp.
 :::
 
-![Trang Tạo lớp học mới với phần Thông tin cơ bản](../assets/screenshots/lop-hoc-tao-moi.webp)
-
 ::: warning Lưu ý
-- Lớp mới luôn ở trạng thái **Đang hoạt động** và có cấp độ **Cơ bản**. Muốn đổi cấp độ hoặc trạng thái, dùng [Chỉnh sửa lớp học](chinh-sua.md).
-- Các ô **Mô tả**, **Học phí (VNĐ)** và **Trạng thái** trên form tạo lớp hiện chưa được lưu. Học phí không gắn theo lớp mà theo gói học phí khi ghi danh, xem [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md).
+- Lớp mới có cấp độ **Cơ bản**. Muốn đổi cấp độ, dùng [Chỉnh sửa lớp học](chinh-sua.md).
+- Form tạo lớp không có ô học phí. Học phí không gắn theo lớp mà theo gói học phí chọn lúc ghi danh, xem [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md).
 - Trợ giảng không chọn được ở form này. Thêm trợ giảng ở [Chỉnh sửa lớp học](chinh-sua.md).
 :::
 

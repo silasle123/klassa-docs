@@ -17,8 +17,8 @@ Học thử là bước để phụ huynh và học sinh trải nghiệm trướ
 2. Hộp **Đặt lịch học thử** hiện ra. Chọn **Buổi số** (1, 2 hoặc 3) và **Môn học** (bắt buộc).
 3. Chọn **Ngày** và điền **Giờ** (bắt buộc). Giờ học thử phải từ 7:00 đến 21:00.
 4. Chọn **Giáo viên** nếu đã biết. Ô này không bắt buộc.
-5. Muốn báo lịch cho phụ huynh, tích ô **Gửi SMS thông báo cho phụ huynh**. Hệ thống ưu tiên gửi qua Zalo, không được thì gửi SMS. Ô này mặc định không tích. Khi tích, hộp **Xác nhận gửi thông báo** hiện ra để bạn kiểm lại nội dung.
-6. Bấm **Đặt lịch ngay**.
+5. Muốn báo lịch cho phụ huynh, tích ô **Gửi thông báo cho phụ huynh (ưu tiên Zalo, không có Zalo thì gửi SMS)**. Hệ thống gửi qua Zalo trước, nếu phụ huynh chưa liên kết Zalo thì gửi SMS. Ô này mặc định không tích.
+6. Bấm **Đặt lịch ngay**. Khi ô gửi thông báo đang tích, hộp **Xác nhận gửi thông báo** hiện ra để bạn kiểm lại nội dung. Bấm **Xác nhận gửi** để đặt lịch và gửi. Bấm **Không gửi** thì ô tự bỏ tích và bạn quay lại hộp đặt lịch. Lịch chỉ được đặt khi bạn bấm **Đặt lịch ngay** lần nữa.
 :::
 
 Đặt buổi 1 thì lead tự chuyển sang **Đã hẹn học thử**. Gửi thông báo không được thì hệ thống báo rõ lý do, khi đó hãy gọi hoặc nhắn tay cho phụ huynh.
@@ -41,9 +41,9 @@ Làm ngay sau buổi học. Buổi không ghi sẽ hiện **Chưa điểm danh**
 1. Bấm ô buổi đó (**◷ B1** hoặc **! B1**), hoặc nút **Điểm danh** ở khối **Học thử hôm nay**, hoặc nút **Ghi có mặt / vắng** trong hồ sơ.
 2. Hộp **Đánh dấu tham gia** hiện ra. Chọn **Đã tham gia** hoặc **Không tham gia**.
 3. Chọn **Không tham gia** thì phải ghi lý do (ví dụ ốm, gia đình có việc).
-4. Ghi **Phản hồi từ phụ huynh** nếu có (không bắt buộc).
-5. Muốn nhắn cảm ơn phụ huynh, tích ô **Gửi SMS cảm ơn và phản hồi cho phụ huynh**. Hệ thống ưu tiên Zalo, không có thì SMS.
-6. Bấm **Cập nhật**.
+4. Nếu chọn **Đã tham gia**, hộp hiện thêm ô **Phản hồi từ phụ huynh (tùy chọn)**. Ghi phản hồi nếu có.
+5. Nếu chọn **Đã tham gia** và muốn nhắn cảm ơn phụ huynh, tích ô **Gửi thông báo cảm ơn và phản hồi cho phụ huynh (ưu tiên Zalo, không có Zalo thì gửi SMS)**. Hệ thống gửi qua Zalo trước, nếu phụ huynh chưa liên kết Zalo thì gửi SMS. Ô này không hiện khi chọn **Không tham gia**.
+6. Bấm **Cập nhật**. Khi ô gửi cảm ơn đang tích, hộp **Xác nhận gửi thông báo** hiện ra, bấm **Xác nhận gửi**. Bấm **Không gửi** thì ô tự bỏ tích và bạn quay lại hộp, bấm **Cập nhật** lần nữa để lưu.
 :::
 
 Ghi **Đã tham gia** thì lead tự chuyển sang **Hoàn thành học thử** và vào nhóm **Chờ chốt**. Ghi nhầm kết quả thì vào **Lịch học → Lịch học thử**, bấm thẻ buổi đó và chọn **Sửa điểm danh**. Hộp hiện sẵn trạng thái và ghi chú cũ, bạn sửa rồi bấm **Cập nhật**. Trong danh sách lead, ô buổi đã có kết quả không bấm được.
@@ -56,7 +56,8 @@ Phụ huynh xin đổi buổi, hoặc học sinh vắng muốn học lại:
 1. Bấm ô buổi học thử đã hẹn, chọn **Đổi lịch**.
 2. Hộp **Đổi lịch học thử** hiện ra. Chọn **Ngày mới** và **Giờ mới** (bắt buộc, trong khoảng 7:00 đến 21:00).
 3. Ghi **Lý do đổi lịch** nếu cần (không bắt buộc).
-4. Tích ô gửi thông báo đổi lịch cho phụ huynh nếu muốn, rồi bấm **Đổi lịch**.
+4. Muốn báo phụ huynh, tích ô **Gửi thông báo đổi lịch cho phụ huynh (ưu tiên Zalo, không có Zalo thì gửi SMS)**. Hệ thống gửi qua Zalo trước, nếu phụ huynh chưa liên kết Zalo thì gửi SMS.
+5. Bấm **Đổi lịch**.
 :::
 
 Học sinh đã bị ghi vắng mà muốn học lại thì đặt buổi tiếp theo (ô kế bên được mở sau khi buổi trước có kết quả). **Đổi lịch** dùng cho buổi còn đang chờ, chưa ghi kết quả.
@@ -68,7 +69,7 @@ Giờ phải nằm trong khoảng 7:00 đến 21:00. Buổi 2, buổi 3 chỉ đ
 :::
 
 ::: details Tin nhắn cho phụ huynh không gửi được?
-Hệ thống hiện lý do (ví dụ phụ huynh chưa kết bạn Zalo). Hãy gọi hoặc nhắn tay, rồi ghi vào [Ghi chăm sóc](hoat-dong-tu-van.md).
+Hệ thống hiện lý do, ví dụ phụ huynh chưa liên kết Zalo, hoặc trung tâm chưa cấu hình SMS để gửi dự phòng (xem [Kết nối SMS](../tich-hop/sms.md)). Hãy gọi hoặc nhắn tay, rồi ghi vào [Ghi chăm sóc](hoat-dong-tu-van.md).
 :::
 
 ::: details Có nút huỷ buổi học thử không?

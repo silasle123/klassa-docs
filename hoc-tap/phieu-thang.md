@@ -79,7 +79,7 @@ Bảng chưa lưu cho tới khi bạn bấm **Lưu tất cả**. Phiếu đã ch
 **Nhờ AI soạn.** Bấm **AI soạn riêng từng em**. AI đọc điểm và chuyên cần của từng em rồi viết riêng, bám giọng văn các câu mẫu của trung tâm. Ô soạn phía trên dùng làm yêu cầu thêm cho AI. Kết quả chỉ điền vào bảng, chưa lưu.
 
 ::: warning Cần gói AI và công tắc AI
-Nút này chỉ dùng được khi trung tâm có hai gói mở rộng **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**, và công tắc **AI viết nhận xét phiếu tháng** đang bật. Công tắc mặc định bật, Quản trị viên chỉnh ở **Cài đặt**, thẻ **AI & Tự động**, mục **Tính năng AI**. Thiếu gói hoặc đã tắt công tắc thì hệ thống từ chối, bạn nhập nhận xét tay hoặc điền bằng câu mẫu như trên.
+Nút **AI soạn riêng từng em** chỉ hiện khi trung tâm có hai gói mở rộng **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**. Trung tâm thiếu một trong hai gói thì bảng không có nút này. Ngoài ra công tắc **AI viết nhận xét phiếu tháng** phải đang bật. Công tắc mặc định bật, Quản trị viên chỉnh ở **Cài đặt**, thẻ **AI & Tự động**, mục **Tính năng AI**. Nếu công tắc đã tắt, bấm nút sẽ hiện dòng báo AI soạn nhận xét đang tắt và nút bị khoá cho tới lần mở bảng sau. Khi đó bạn nhập nhận xét tay hoặc điền bằng câu mẫu như trên.
 :::
 
 ::: tip Mẹo
@@ -104,7 +104,7 @@ Biểu mẫu bên trái gồm: **Mẫu thiết kế** (đổi mẫu riêng cho p
 
 ## Chốt phiếu
 
-Chốt nghĩa là xác nhận phiếu đã hoàn chỉnh. Chỉ phiếu đã chốt mới có link xem công khai, mã QR hoạt động và hiện trong cổng phụ huynh.
+Chốt nghĩa là xác nhận phiếu đã hoàn chỉnh. Chỉ phiếu đã chốt mới có link xem công khai, mã QR hoạt động và hiện trong cổng phụ huynh. Ngay khi phiếu được chốt, phụ huynh dùng app nhận thông báo có phiếu mới (mỗi phiếu chỉ báo một lần, mở lại rồi chốt lại không báo thêm). Phụ huynh chỉ nhận thông báo khi mục **Phiếu tháng** đang bật ở cổng phụ huynh.
 
 ::: steps
 1. Chốt một em: bấm **Chốt** ở dòng học sinh.
@@ -117,16 +117,22 @@ Chốt nghĩa là xác nhận phiếu đã hoàn chỉnh. Chỉ phiếu đã ch�
 
 Gửi Zalo cần gói mở rộng **Zalo (Cá nhân + OA)**.
 
-Bạn cần liên kết Zalo cá nhân của mình ở **Cổng nhân viên → Zalo của tôi**. Phiếu được gửi bằng chính Zalo đó, và phụ huynh phải là bạn bè của nick này.
+Giáo viên và Trợ giảng gửi phiếu bằng Zalo cá nhân của chính mình, nên cần liên kết trước ở **Cổng nhân viên → Zalo của tôi**. Quản trị viên, Quản lý chi nhánh, Quản lý và Lễ tân gửi bằng nick Zalo chung của trung tâm, không cần liên kết nick riêng.
 
 ::: steps
 1. Tích chọn các em cần gửi (không chọn ai là gửi mọi phiếu đã tạo).
 2. Bấm **Gửi Zalo**. Hộp **Gửi phiếu qua Zalo cho phụ huynh** hiện danh sách các em.
 3. Sửa lời nhắn kèm ảnh nếu muốn. Mặc định có hai biến: `[ten_hoc_sinh]` và `[thang]`.
-4. Bấm **Bắt đầu gửi**. Phiếu nháp được chốt tự động trước khi gửi.
+4. Bấm **Bắt đầu gửi**. Nếu trong số đã chọn có phiếu nháp, hệ thống hỏi xác nhận trước: phiếu nháp sẽ được chốt tự động rồi mới gửi. Bấm đồng ý để tiếp tục.
 :::
 
-Hệ thống gửi lần lượt từng em, giãn cách vài giây giữa các tin để nick Zalo an toàn. Muốn dừng giữa chừng, bấm **Dừng**. Em nào lỗi sẽ có lý do ngay ở dòng đó, ví dụ chưa có Zalo của phụ huynh hoặc ảnh phiếu quá 4MB.
+::: warning Chốt phiếu là phụ huynh thấy ngay
+Hộp xác nhận nhắc rõ: phiếu đã chốt hiện trên cổng phụ huynh và phụ huynh dùng app nhận thông báo ngay, kể cả khi gửi Zalo không thành công. Muốn xem lại nội dung lần cuối, hãy rà phiếu nháp trước khi bấm **Bắt đầu gửi**.
+:::
+
+Hệ thống gửi lần lượt từng em, giãn cách vài giây giữa các tin để nick Zalo an toàn. Muốn dừng giữa chừng, bấm **Dừng**. Em nào lỗi sẽ có lý do bằng tiếng Việt ngay ở dòng đó, ví dụ chưa có Zalo của phụ huynh, nick Zalo đang gặp sự cố, mất kết nối mạng hoặc ảnh phiếu quá 4MB.
+
+Trạng thái **Đã gửi Zalo** chỉ được ghi sau khi Zalo gửi thành công. Nếu Zalo báo lỗi, phiếu giữ ở trạng thái **Đã chốt** (không thành **Đã gửi Zalo**) và dòng lỗi ghi rõ phiếu đã chốt, phụ huynh vẫn xem được trong app nhưng chưa gửi qua Zalo. Bạn gửi lại cho những em này sau khi xử lý nguyên nhân. Khi lượt gửi kết thúc, danh sách phiếu tự tải lại để hiện đúng trạng thái từng em.
 
 ## Tải về, lấy link và xoá
 
@@ -173,7 +179,7 @@ Hai thứ này chỉ dành cho Quản trị viên, Quản lý chi nhánh và Qu�
 :::
 
 ::: details Gửi Zalo báo lỗi thì làm sao?
-Đọc lý do ở dòng của em đó. Thường gặp: bạn chưa liên kết Zalo cá nhân, chưa bật gói Zalo, nick Zalo đang đăng xuất, hoặc phụ huynh chưa có số Zalo trong hồ sơ.
+Đọc lý do ở dòng của em đó. Thường gặp: bạn chưa liên kết Zalo cá nhân, chưa bật gói Zalo, nick Zalo đang đăng xuất hoặc gặp sự cố, mất kết nối mạng, hoặc phụ huynh chưa có số Zalo trong hồ sơ. Phiếu của em đó vẫn ở trạng thái **Đã chốt** và phụ huynh vẫn xem được trong app, chỉ chưa được gửi qua Zalo. Xử lý xong thì chọn lại em đó và bấm **Gửi Zalo**.
 :::
 
 ::: details Giáo viên có xem được phiếu lớp khác không?

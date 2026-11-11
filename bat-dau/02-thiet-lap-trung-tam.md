@@ -20,10 +20,10 @@ Bước này đặt nền cho mọi thứ sau đó. Lớp học chỉ tạo đư
 Trung tâm vừa được cấp có thể đã có sẵn dữ liệu mẫu để bạn xem thử. Bạn rà lại, đổi tên cái cần dùng và tắt hoặc xoá cái không dùng, đừng để nguyên:
 
 - 1 chi nhánh mẫu, với tên mẫu (bạn đổi sang tên và địa chỉ thật ở phần **Tạo chi nhánh** bên dưới).
-- 5 môn học: Toán, Lý, Hóa, Tiếng Anh, Ngữ Văn (xem phần **Thêm môn học**).
+- 5 môn học: Toán, Văn, Vật Lý, Hóa học, Tiếng Anh (xem phần **Thêm môn học**).
 - 5 phòng ban và 8 chức vụ mẫu, dùng khi tạo hồ sơ nhân sự (xem [Bước 4](04-ho-so-nhan-su-va-cach-tinh-luong.md) và [Cấu hình nhân sự](../nhan-su/cau-hinh-hr.md)).
 - 4 gói học phí mẫu (rà ở [Bước 5](05-cau-hinh-hoc-phi.md)).
-- Một tài khoản Quản lý chi nhánh mẫu và một tài khoản Phụ huynh mẫu. Nếu không dùng, hãy khoá hai tài khoản này để người ngoài không đăng nhập được: vào **Quản trị hệ thống → Quản lý Users**, bấm nút ba chấm ở cuối dòng tài khoản rồi chọn **Vô hiệu hóa**. Nếu vẫn dùng, chọn **Đặt lại mật khẩu** để đặt mật khẩu mới của riêng bạn. Xem thêm [Người dùng](../cai-dat/nguoi-dung.md).
+- Ba tài khoản mẫu: Quản trị viên, Quản lý chi nhánh và Phụ huynh. Mật khẩu Quản trị viên do KLASSA đặt cho trung tâm khi bàn giao, đó là tài khoản bạn đang dùng. Hãy khoá hoặc đặt lại mật khẩu hai tài khoản Quản lý chi nhánh và Phụ huynh mẫu ngay khi nhận trung tâm, dù có dùng hay không. Nếu không dùng, hãy khoá hai tài khoản này: vào **Quản trị hệ thống → Quản lý Users**, bấm nút ba chấm ở cuối dòng tài khoản rồi chọn **Vô hiệu hóa**. Nếu vẫn dùng, chọn **Đặt lại mật khẩu** để đặt mật khẩu mới của riêng bạn. Xem thêm [Người dùng](../cai-dat/nguoi-dung.md).
 
 ::: warning Lưu ý
 Dữ liệu mẫu có thể có hoặc không, tuỳ trung tâm của bạn được dựng thế nào. Cái gì thấy trong danh sách mà bạn không tự tạo, hãy coi là dữ liệu mẫu và rà trước khi dùng.
@@ -75,7 +75,7 @@ Chỉ Quản trị viên được thêm, sửa, xoá chi nhánh. Quản lý chi 
 - Gói dịch vụ đã hết hạn quá thời gian ân hạn thì không tạo thêm được chi nhánh mới.
 :::
 
-Đừng nhầm với mục **Quản lý Chi nhánh** trong nhóm **Quản trị hệ thống**. Mục đó (giao diện tiếng Anh, tiêu đề "Campus Management") chỉ cho xem thống kê từng chi nhánh và tạo yêu cầu chuyển học sinh, giáo viên, nhân viên giữa các chi nhánh, không dùng để tạo chi nhánh. Chi tiết về chi nhánh xem [Chi nhánh và cơ sở](../cai-dat/co-so.md).
+Đừng nhầm với mục **Quản lý Chi nhánh** trong nhóm **Quản trị hệ thống**. Mục đó chỉ cho xem thống kê từng chi nhánh và tạo yêu cầu chuyển học sinh, giáo viên, nhân viên giữa các chi nhánh, không dùng để tạo chi nhánh. Chi tiết về chi nhánh xem [Chi nhánh và cơ sở](../cai-dat/co-so.md).
 
 ## Thêm môn học
 
@@ -84,15 +84,13 @@ Mỗi lớp thuộc một môn học, nên cần có môn học trước khi t�
 ::: steps
 1. Vào **Cài đặt → Tổng quan**.
 2. Chọn tab **Cấu hình**, rồi mục **Môn học**. Quản trị viên sẽ thấy hai thẻ **Chính sách ghi danh theo khối** và **Quyền truy cập trang Học sinh** ở trên cùng. Cuộn xuống dưới để tới phần **Quản lý môn học**.
-3. Xem danh sách môn hiện có trước (các cột **Tên môn học**, **Mô tả**, **Số lớp đang hoạt động**, **GV / Trợ giảng**, **Trạng thái**, **Thao tác**). Trung tâm mới thường đã có sẵn Toán, Lý, Hóa, Tiếng Anh, Ngữ Văn. Môn nào dùng được thì giữ nguyên, không cần thêm lại.
+3. Xem danh sách môn hiện có trước (các cột **Tên môn học**, **Mô tả**, **Số lớp đang hoạt động**, **GV / Trợ giảng**, **Trạng thái**, **Thao tác**). Trung tâm mới thường đã có sẵn Toán, Văn, Vật Lý, Hóa học, Tiếng Anh. Môn nào dùng được thì giữ nguyên, không cần thêm lại.
 4. Thêm môn còn thiếu: bấm **Thêm môn học**, điền **Tên môn học** (bắt buộc) và **Mô tả**, giữ công tắc **Kích hoạt** bật, bấm **Thêm môn học** trong hộp.
 5. Môn nào trung tâm không dạy, bấm biểu tượng bút ở cuối dòng môn đó và tắt **Kích hoạt**, hoặc bấm biểu tượng thùng rác để xoá. Môn đã có lớp thì không xoá được (hệ thống báo "Không thể xóa môn học đang được sử dụng trong các lớp học"), khi đó hãy tắt **Kích hoạt**. Thêm môn trùng tên thì hệ thống báo "Môn học đã tồn tại". Chỉ Quản trị viên thêm, sửa, xoá được môn học.
 :::
 
-![Mục Môn học trong tab Cấu hình, trang Quản lý môn học với nút Thêm mặc định và Thêm môn học](../assets/screenshots/cai-dat-mon-hoc.webp)
-
-::: warning Lưu ý
-Nút **Thêm mặc định** thêm Toán, Văn, Vật Lý, Hóa học, KHTN, HSA, TSA. Tên các môn này gần trùng môn có sẵn (Văn với Ngữ Văn, Vật Lý với Lý, Hóa học với Hóa), nên bấm nút này dễ sinh hai môn cho cùng một môn dạy. Chỉ bấm khi danh sách đang trống. Lỡ bấm thì xoá hoặc tắt **Kích hoạt** bản trùng, đừng để cả hai, kẻo khi tạo lớp bạn chọn nhầm môn.
+::: tip Mẹo
+Nút **Thêm mặc định** thêm các môn chuẩn: Toán, Văn, Vật Lý, Hóa học, KHTN, HSA, TSA. Môn nào trung tâm đã có cùng tên thì được bỏ qua. Trung tâm mới đã có sẵn Toán, Văn, Vật Lý, Hóa học, nên bấm nút này chỉ bổ sung KHTN, HSA, TSA. Nếu danh sách của bạn đang có môn viết kiểu khác như Lý, Hóa, Ngữ Văn, nút này sẽ thêm Vật Lý, Hóa học, Văn thành môn gần trùng. Khi đó hãy thêm từng môn còn thiếu bằng **Thêm môn học**, hoặc tắt **Kích hoạt** bản trùng. Tiếng Anh không nằm trong danh sách mặc định của nút.
 :::
 
 ::: tip Mẹo
@@ -180,7 +178,7 @@ Sửa lại ở **Cài đặt chung** và lưu. Từ lúc đó mã mới theo ti
 :::
 
 ::: details Môn học của tôi không có trong danh sách mặc định?
-Bấm **Thêm môn học** và nhập tên môn mới. Nút **Thêm mặc định** chỉ là gợi ý và có thể sinh môn trùng, nên không cần dùng.
+Bấm **Thêm môn học** và nhập tên môn mới. Nút **Thêm mặc định** chỉ thêm các môn chuẩn còn thiếu (Toán, Văn, Vật Lý, Hóa học, KHTN, HSA, TSA), bạn không bắt buộc dùng.
 :::
 
 ## Bước tiếp theo

@@ -23,7 +23,7 @@ Quản lý chi nhánh là người giữ sổ nhân sự và lương của một
 
 Vai **Nhân sự** (chữ trong danh sách vai) chỉ là nhân viên văn phòng dùng **Cổng nhân viên** để chấm công, xem phiếu lương và xin nghỉ phép của chính mình. Người làm hồ sơ và lương cho cả cơ sở là **Quản lý chi nhánh**, xem [Bước 3](03-tao-tai-khoan-nhan-vien.md).
 
-Vai **Quản lý** thấy mục **Quản lý HR** nhưng chỉ làm được vài việc trong đó: duyệt **Dạy thay**, **Giao việc** và (khi được giao quyền) **Lịch ca lễ tân**. Bấm vào **Quản lý lương** hay **Điểm danh nhân viên** thì Quản lý gặp thẻ **Không có quyền**.
+Vai **Quản lý** thấy mục **Quản lý HR** nhưng chỉ làm được vài việc trong đó: duyệt **Dạy thay**, **Giao việc** (khi trung tâm có gói **Giao việc Nội bộ**) và (khi được giao quyền) **Lịch ca lễ tân**. Bấm vào **Quản lý lương** hay **Điểm danh nhân viên** thì Quản lý gặp thẻ **Không có quyền**.
 
 ::: warning Chi nhánh phải được gán
 Tài khoản Quản lý chi nhánh chưa gắn chi nhánh sẽ không xem được bảng lương và danh sách nhân viên. Nếu gặp thông báo kiểu "Không có quyền: tài khoản chưa gán chi nhánh", nhờ Quản trị viên gắn chi nhánh cho bạn ở **Quản trị hệ thống → Quản lý Users**.
@@ -31,7 +31,7 @@ Tài khoản Quản lý chi nhánh chưa gắn chi nhánh sẽ không xem đư�
 
 ## Trước khi bắt đầu: kiểm tra hai gói
 
-Khu **Quản lý HR** cần gói **Nhân sự (HRIS)**, còn tạo kỳ lương và duyệt lương cần gói **Lương giáo viên**. Thiếu gói nào, hệ thống báo gói chưa kích hoạt và mời "Liên hệ KLASSA để mua hoặc dùng thử". Đây không phải lỗi hệ thống.
+Khu **Quản lý HR** cần gói **Nhân sự (HRIS)**, còn tạo kỳ lương và duyệt lương cần gói **Lương giáo viên**. Thiếu gói nào thì các mục thuộc gói đó không hiện trong menu: **Quản lý lương** và **Mẫu phiếu lương** thuộc gói **Lương giáo viên**, **Giao việc** thuộc gói **Giao việc Nội bộ**, các trang AI nhân sự (như **HR AI Insights**, **Kiểm tra Lương AI**) thuộc gói AI gợi ý và trợ lý vận hành, hầu hết mục còn lại thuộc gói **Nhân sự (HRIS)**. Riêng **Dạy thay** luôn hiện. Mục không thấy trong menu là do trung tâm chưa có gói, không phải lỗi hệ thống.
 
 Vào **Cài đặt → Plugin Marketplace** để xem gói nào đang bật, xem lại [Bước 1](01-dang-nhap-lan-dau.md). Chưa có gói thì nhờ Quản trị viên liên hệ KLASSA.
 
@@ -77,14 +77,16 @@ Nếu email chưa có tài khoản, nút **Thêm nhân viên** tạo luôn một
 
 ## Khi có người nghỉ việc
 
-Chuyển nhân viên sang **Đã nghỉ việc** chỉ khoá tài khoản của họ. Phân công lớp không tự đóng: lớp vẫn ghi tên giáo viên cũ, trợ giảng cũ vẫn có thể bị tính buổi. Làm theo thứ tự này.
+Chuyển nhân viên sang **Đã nghỉ việc** khoá tài khoản của họ và tự gỡ họ khỏi mọi lớp họ đang dạy hoặc làm trợ giảng. Phân công được đóng lại chứ không xoá, ngày kết thúc là ngày nghỉ, nên buổi người đó đã dạy trước ngày nghỉ vẫn được trả lương như cũ. Người đó quay lại làm thì các lớp cũ không tự gắn lại, bạn phải xếp lớp bằng tay. Vì vậy việc đổi người ở từng lớp không còn bắt buộc phải làm trước, nhưng nên làm để phụ huynh thấy đúng giáo viên. Thứ tự gợi ý:
 
 ::: steps
 1. Vào **Lớp học**, mở từng lớp của người đó, bấm **Chỉnh sửa**. Đổi **Giáo viên** (điền **Ngày nhận lớp** là ngày người mới bắt đầu dạy) hoặc bỏ tích người đó ở ô **Trợ giảng**, rồi bấm **Lưu thay đổi**. Xem [Bước 7](07-tao-lop-va-lich-hoc.md).
 2. Với các buổi sắp tới chưa kịp đổi lớp, dùng yêu cầu **Dạy thay**.
 3. Chốt lương tháng cuối của người đó ở [Bước 15](15-chot-luong-cuoi-thang.md).
-4. Vào **Quản lý HR → Nhân viên**, bấm nút **Chỉnh sửa** (biểu tượng cây bút) ở dòng người đó, đổi ô **Trạng thái** sang **Đã nghỉ việc**, sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng của người đó, rồi bấm **Cập nhật**.
+4. Vào **Quản lý HR → Nhân viên**, bấm nút **Chỉnh sửa** (biểu tượng cây bút) ở dòng người đó, đổi ô **Trạng thái** sang **Đã nghỉ việc**, sửa ô **Ngày kết thúc** thành ngày làm việc cuối cùng thật của người đó, rồi bấm **Cập nhật** (làm cả hai trong cùng một lần lưu).
 :::
+
+Hệ thống lấy ngày ở ô **Ngày kết thúc** làm ngày đóng lớp khi bạn vừa sửa ô này trong lần lưu đó và ngày ấy không ở tương lai. Không thì dùng ngày hôm nay, nên hãy đổi trạng thái đúng vào ngày người đó nghỉ. Nếu đổi trạng thái trước khi giao lớp, người đó không còn trong bộ lọc **Giáo viên** của **Lớp học**. Lớp thường mất giáo viên chính sẽ hiện ở việc **Chưa có giáo viên chính** trong thẻ **Việc cần làm** của trang **Lớp học**.
 
 Biểu tượng thùng rác ở cuối dòng chỉ Quản trị viên dùng được. Muốn xoá hẳn hồ sơ, nhờ Quản trị viên.
 
@@ -121,7 +123,7 @@ Mở **Quản lý HR → Quản lý lương**, tab **Tính lương**. Quản lý
 
 Sau khi chốt lương, bạn còn hai việc cuối tháng:
 
-- Khoá sổ kỳ ở **Tài chính → Kế toán → Khoá sổ kỳ**: chỉ Quản trị viên khoá được, bạn không thấy mục này. Soát số xong thì nhờ Quản trị viên khoá, xem [Bước 16](16-theo-doi-bao-cao.md).
+- Khoá sổ kỳ ở **Tài chính → Kế toán → Khoá sổ kỳ**: chỉ Quản trị viên và Kế toán khoá được, bạn không thấy mục này. Soát số xong thì nhờ Quản trị viên hoặc Kế toán khoá, xem [Bước 16](16-theo-doi-bao-cao.md).
 - Xem **Báo cáo HR** và tải các báo cáo chấm công, lương, bảo hiểm, thuế gửi kế toán: [Báo cáo HR](../nhan-su/bao-cao-hr.md).
 
 ## Việc của chính bạn
@@ -130,8 +132,8 @@ Bạn cũng là nhân viên nên có **Cổng nhân viên** như mọi người:
 
 ## Câu hỏi thường gặp
 
-::: details Tôi vào Quản lý HR mà báo gói chưa kích hoạt?
-Trung tâm chưa có gói **Nhân sự (HRIS)** hoặc gói **Lương giáo viên**, hoặc gói đã hết hạn. Nhờ Quản trị viên kiểm tra ở **Cài đặt → Plugin Marketplace** và liên hệ KLASSA.
+::: details Tôi không thấy một mục trong Quản lý HR (ví dụ Quản lý lương hoặc Nhân viên)?
+Trung tâm chưa có gói chứa mục đó, hoặc gói đã hết hạn. **Nhân viên** cần gói **Nhân sự (HRIS)**, **Quản lý lương** cần gói **Lương giáo viên**. Nhờ Quản trị viên kiểm tra ở **Cài đặt → Plugin Marketplace** và liên hệ KLASSA.
 :::
 
 ::: details Tôi không thấy nhân viên của chi nhánh khác?
@@ -147,5 +149,5 @@ Nhờ Quản trị viên, vì khu **Quản trị hệ thống** chỉ Quản tr�
 :::
 
 ::: details Tôi muốn khoá sổ kỳ nhưng không thấy quyền?
-Khoá sổ kỳ chỉ Quản trị viên làm. Quản lý chi nhánh xem báo cáo và chuẩn bị số liệu, rồi nhờ Quản trị viên khoá.
+Khoá sổ kỳ chỉ Quản trị viên và Kế toán làm được. Quản lý chi nhánh xem báo cáo và chuẩn bị số liệu, rồi nhờ Quản trị viên hoặc Kế toán khoá.
 :::

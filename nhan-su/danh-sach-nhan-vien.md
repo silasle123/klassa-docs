@@ -99,6 +99,8 @@ Biểu tượng thùng rác ở cuối dòng có hai cách hoạt động:
 - Với người đang làm hoặc đang nghỉ phép: chuyển trạng thái sang **Đã nghỉ việc**. Hồ sơ vẫn còn và khôi phục được.
 - Với người đã **Đã nghỉ việc**: **Xóa vĩnh viễn**.
 
+Quản trị viên chuyển người sang **Đã nghỉ việc** bằng biểu tượng thùng rác. Quản lý chi nhánh bấm biểu tượng này sẽ bị báo lỗi, nên hãy bấm nút chỉnh sửa và đổi ô **Trạng thái** trong hộp **Cập nhật thông tin nhân viên**. Làm cách nào thì tài khoản cũng bị khoá và hệ thống tự gỡ người đó khỏi mọi lớp họ đang dạy hoặc làm trợ giảng. Phân công được đóng lại chứ không xoá, nên buổi đã dạy trước ngày nghỉ vẫn được tính, với điều kiện người đó còn trong kỳ lương: kỳ lương một tháng chỉ lấy người đã nghỉ việc có **Ngày kết thúc** trong hồ sơ rơi vào tháng đó. Hãy chốt lương các tháng người đó đã làm trước khi cho nghỉ (xem [Bước 11](../bat-dau/11-thay-doi-trong-thang.md)). Ngày nghỉ là hôm nay, hoặc là ngày bạn điền ở ô **Ngày kết thúc** nếu bạn vừa sửa ô này trong cùng lần lưu và ngày đó không ở tương lai. Nên điền ngày làm việc cuối cùng thật vào ô **Ngày kết thúc** ngay lúc đổi trạng thái. Đổi lại sang **Đang làm việc** thì tài khoản mở lại, nhưng các lớp cũ không tự gắn lại, bạn xếp lớp bằng tay. Giao lớp cho người mới thế nào, xem [Bước 11](../bat-dau/11-thay-doi-trong-thang.md).
+
 ::: danger Không thể hoàn tác
 Xoá vĩnh viễn làm mất hồ sơ nhân viên, không khôi phục được. Hệ thống luôn hỏi xác nhận trước khi làm. Nếu chưa chắc, chỉ cần chuyển sang **Đã nghỉ việc**.
 :::

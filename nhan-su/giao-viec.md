@@ -11,7 +11,7 @@ group: "Hồ sơ & tổ chức"
 
 Công cụ này giúp quản lý giao việc cho nhân viên, đặt độ ưu tiên và hạn chót, chia việc thành các bước nhỏ và trao đổi ngay trong từng việc. Nhân viên có màn riêng để xem và hoàn thành việc của mình.
 
-Cần gói mở rộng **Giao việc Nội bộ**. Cùng một địa chỉ nhưng nội dung khác theo vai: Quản trị viên, Quản lý chi nhánh và Quản lý thấy màn quản lý (**Giao việc**), các vai còn lại thấy màn **Việc của tôi** (mục **Công việc** trong menu).
+Cần gói mở rộng **Giao việc Nội bộ**. Chưa có gói thì mục **Giao việc** (và mục **Công việc** của nhân viên) không hiện trong menu. Cùng một địa chỉ nhưng nội dung khác theo vai: Quản trị viên, Quản lý chi nhánh và Quản lý thấy màn quản lý (**Giao việc**), các vai còn lại thấy màn **Việc của tôi** (mục **Công việc** trong menu).
 
 ## Quản lý giao việc cho nhân viên
 

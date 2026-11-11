@@ -11,21 +11,21 @@ Mẫu hoá đơn quyết định phiếu học phí trông ra sao khi in, tải 
 
 Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang có tiêu đề **Cài đặt mẫu phiếu học phí**, chia ba tab: **Thông tin trung tâm**, **Thiết kế**, **Nội dung**. [Phiếu phụ thu](phieu-phu-thu.md) khi in cũng lấy tên, địa chỉ, số điện thoại, thông tin ngân hàng và dòng chân trang từ mẫu này.
 
-::: warning Chưa lưu mẫu thì phiếu mang thông tin mẫu
-Khi trung tâm chưa bấm **Lưu cài đặt** lần nào, trang này và phiếu học phí in ra dùng thông tin mẫu có sẵn: địa chỉ, số điện thoại, thông tin ngân hàng chưa phải của trung tâm bạn (tên trung tâm lấy theo tên thương hiệu đã đặt), và chưa có mã QR chuyển khoản đúng vì chưa chọn ngân hàng nhận. Hãy nhập lại đủ thông tin của trung tâm, chọn **Ngân hàng nhận** rồi bấm **Lưu cài đặt** trước khi gửi phiếu đầu tiên cho phụ huynh.
+::: warning Nhập và lưu thông tin ngân hàng trước khi gửi phiếu
+Khi trung tâm chưa bấm **Lưu cài đặt** lần nào, tên trung tâm lấy theo tên thương hiệu đã đặt. Địa chỉ, số điện thoại và email lấy theo thông tin công ty đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md); website lấy theo tên miền của trung tâm. Chưa khai thì địa chỉ, số điện thoại để trống, còn email có thể là email mặc định không phải của trung tâm bạn, nên hãy kiểm tra ô **Email** và **Website** trước khi gửi phiếu. Các ô ngân hàng, số tài khoản, chủ tài khoản đều để trống. Phiếu in lúc đó không có khung **Thông tin thanh toán** (ngân hàng, số tài khoản, nội dung chuyển khoản) và không có mã QR, nên phụ huynh không biết chuyển tiền đi đâu. Hãy điền đủ thông tin của trung tâm, chọn **Ngân hàng nhận** rồi bấm **Lưu cài đặt** trước khi gửi phiếu đầu tiên cho phụ huynh.
 :::
 
 ## Ba nút ở đầu trang
 
 - **Xem trước**: mở phiếu với dữ liệu mẫu để bạn thấy kết quả, chưa ghi gì.
-- **Khôi phục**: đưa các ô về giá trị mặc định, có hỏi lại trước khi làm.
+- **Khôi phục**: đưa các ô về giá trị mặc định, có hỏi lại trước khi làm. Địa chỉ, số điện thoại, email, website và các ô ngân hàng sẽ trở về trống, nên đừng bấm nếu không cần.
 - **Lưu cài đặt**: lưu mọi thay đổi. Chỉnh xong nhớ bấm nút này.
 
 ## Tab Thông tin trung tâm
 
 ::: steps
 1. Điền **Tên trung tâm**, **Số điện thoại**, **Địa chỉ**, và **Địa chỉ dòng 2 (tuỳ chọn)** nếu có.
-2. Điền **Email** và **Website** nếu muốn hiện trên phiếu.
+2. Điền **Email** và **Website** nếu muốn hiện trên phiếu. Ô nào để trống thì phiếu không in phần đó.
 3. Ở **Logo**, bấm **Chọn logo từ máy**. Chấp nhận PNG, JPG, WebP, SVG, tối đa 2MB. Logo hiện ở góc trên bên trái phiếu.
 4. Chỉnh **Kích thước logo (px)** từ 32 đến 160. Muốn ẩn logo thì tắt công tắc **Hiển thị logo**.
 5. Bấm **Lưu cài đặt**.
@@ -46,7 +46,7 @@ Các ô chữ trên phiếu:
 
 ### Mã QR và thông tin chuyển khoản
 
-Bật **Hiển thị QR Code** rồi chọn **Kiểu QR thanh toán**:
+Bật **Hiển thị QR Code** rồi chọn **Kiểu QR thanh toán**. Chưa chọn kiểu nào thì hệ thống dùng **QR động VietQR**.
 
 | Kiểu | Cách hoạt động |
 |---|---|
@@ -59,7 +59,7 @@ Với **QR động VietQR**, chọn **Ngân hàng nhận** trong danh sách (ô 
 Công tắc **Hiển thị thông tin ngân hàng** bật phần **Thông tin chuyển khoản** gồm **Tên ngân hàng**, **Số tài khoản**, **Chủ tài khoản**. Ba ô này chỉ hiện khi công tắc đang bật, nên muốn nhập hoặc đổi số tài khoản thì để công tắc bật.
 
 ::: warning Lưu ý
-Các ô ngân hàng mặc định là thông tin giả (Ngân hàng XYZ, số tài khoản 1234567890). Nhớ thay bằng tài khoản thật của trung tâm trước khi gửi phiếu cho phụ huynh, nếu không phụ huynh sẽ chuyển nhầm.
+Các ô ngân hàng lúc đầu để trống. Hãy nhập tài khoản thật của trung tâm và bấm **Lưu cài đặt** trước khi gửi phiếu cho phụ huynh. Nếu bạn đã lưu mà bỏ trống số tài khoản trong khi công tắc **Hiển thị thông tin ngân hàng** đang bật, khung **Thông tin thanh toán** vẫn hiện trên phiếu nhưng không có số tài khoản. Với kiểu **QR động VietQR**, phiếu cũng không có mã QR.
 :::
 
 ::: tip Mẹo

@@ -52,7 +52,7 @@ Mặc định phụ huynh thấy phiếu ngay khi trung tâm xuất. Muốn ch�
 Khi bật, phiếu còn ghi **Chưa gửi** ở trang Hoá đơn chưa hiện cho phụ huynh trên web và app. Phiếu đã có tiền thu luôn hiện. Nhắc học phí tự động bỏ qua phiếu chưa gửi. Xem thêm [Cấu hình tài chính](../hoc-phi/cai-dat.md).
 
 ::: tip Mẹo
-Thông tin ngân hàng và mã QR cài ở cấu hình tài chính. Không cài thì phụ huynh vẫn xem được phiếu nhưng không thấy ô **Thanh toán học phí**.
+Thông tin ngân hàng và mã QR lấy từ **Tài chính → Kế toán → Mẫu hóa đơn**, xem [Mẫu hoá đơn](../hoc-phi/mau-hoa-don.md). Trung tâm chưa lưu mẫu thì phụ huynh vẫn xem được phiếu nhưng không thấy ô **Thanh toán học phí**.
 :::
 
 ## Câu hỏi thường gặp

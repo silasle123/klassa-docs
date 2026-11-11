@@ -17,7 +17,7 @@ Sau bước này, phụ huynh đã nhận phiếu, mỗi khoản tiền thu đư
 ## Cần có trước
 
 - Phiếu của tháng đã được tạo và soát (xem [Bước 13](13-xuat-phieu-hoc-phi.md)).
-- **Mẫu hoá đơn** đã lưu thông tin thật của trung tâm, gồm ngân hàng nhận và số tài khoản (xem [Bước 5](05-cau-hinh-hoc-phi.md)). Chưa lưu thì phiếu mang thông tin mẫu có sẵn, chưa phải của trung tâm bạn, và không có mã QR.
+- **Mẫu hoá đơn** đã lưu thông tin thật của trung tâm, gồm ngân hàng nhận và số tài khoản (xem [Bước 5](05-cau-hinh-hoc-phi.md)). Chưa lưu thì phiếu chưa có thông tin ngân hàng và không có mã QR, phụ huynh sẽ không biết chuyển tiền đi đâu.
 - Muốn gửi Zalo: trung tâm có gói mở rộng **Zalo (Cá nhân + OA)** và đã đăng nhập ít nhất một nick Zalo cá nhân, có từ hai nick thì nên đặt nick gửi mặc định (xem [Bước 6](06-ket-noi-zalo-ngan-hang-email.md) và [Zalo cá nhân](../tich-hop/zalo-ca-nhan.md)). Hồ sơ phụ huynh cần có số điện thoại dùng Zalo.
 - Nếu người gửi là **Kế toán**: Quản trị viên phải chia sẻ nick Zalo cho Kế toán trước (mục **Chia sẻ nick cho Kế toán** ở [Bước 6](06-ket-noi-zalo-ngan-hang-email.md)). Chưa chia sẻ thì Kế toán không dùng được nick đó, kể cả nick mặc định, và hệ thống báo **Không có quyền truy cập account này**.
 - Muốn gửi email: đã nhập tài khoản email gửi đi ở [Bước 6](06-ket-noi-zalo-ngan-hang-email.md), và phụ huynh có địa chỉ email thật.
@@ -47,7 +47,7 @@ Sau bước này, phụ huynh đã nhận phiếu, mỗi khoản tiền thu đư
 5. Mở ô **Kỳ học phí** và chọn đúng tháng cần gửi. Mặc định là **Tất cả các kỳ còn phải thu (gom cả nợ cũ)**, nghĩa là cả phiếu các tháng trước còn nợ cũng bị gửi. Đầu tháng muốn chỉ gửi phiếu tháng mới thì chọn đúng một kỳ.
 6. Mở ô **Gửi từ nick** (chỉ hiện khi đã có nick Zalo cá nhân). **Tự động** nghĩa là nick nào đang trò chuyện với phụ huynh đó thì gửi bằng nick đó. Có thể chọn một nick cụ thể cho lần gửi này.
 7. Ở mục **Gửi đến**, chọn **Phụ huynh** (gửi riêng từng phụ huynh) hoặc **Nhóm lớp Zalo** (gửi vào nhóm Zalo của lớp, chỉ gửi được ảnh).
-8. Chọn **Gửi ảnh hoá đơn** hoặc **Gửi tin nhắn**. Ảnh hoá đơn chỉ có mã QR chuyển khoản khi Mẫu hoá đơn đã lưu đúng **Ngân hàng nhận** và **Số tài khoản**. Chưa lưu thì ảnh không có QR và mang thông tin mẫu có sẵn, hãy quay lại [Bước 5](05-cau-hinh-hoc-phi.md) trước khi gửi.
+8. Chọn **Gửi ảnh hoá đơn** hoặc **Gửi tin nhắn**. Ảnh hoá đơn chỉ có mã QR chuyển khoản khi Mẫu hoá đơn đã lưu đúng **Ngân hàng nhận** và **Số tài khoản**. Chưa lưu thì ảnh không có QR và chưa có thông tin ngân hàng, hãy quay lại [Bước 5](05-cau-hinh-hoc-phi.md) trước khi gửi.
 9. Soạn lời nhắn ở ô **Ghi chú kèm ảnh** (hoặc **Nội dung tin nhắn**). Bấm các biến ở dòng **Chèn biến** để hệ thống tự điền tên học sinh, số tiền theo từng em. Bấm **Xem trước mẫu** để xem bản gửi cho một em mẫu. Có thể lưu lời nhắn thành mẫu bằng **+ Lưu mẫu** hoặc **Đặt làm mặc định**.
 10. Xem mục **Danh sách sẽ gửi**. Ghi dạng (số sẽ gửi)/(tổng số). Bỏ tick ở em nào bạn không muốn gửi. Có **Chọn hết** và **Bỏ hết**.
 11. Hệ thống gửi từng người, giãn cách để tránh bị chặn thư rác, nên phải **giữ tab trình duyệt mở** đến khi xong. Khi gửi hơn 50 phiếu, dòng cảnh báo màu cam **Sẽ gửi ... hoá đơn** hiện kèm số phút ước tính.

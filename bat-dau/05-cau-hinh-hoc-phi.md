@@ -25,7 +25,7 @@ Mỗi lần ghi danh học sinh vào lớp, bạn phải chọn một **gói h�
 - Có sẵn tên, địa chỉ, số điện thoại của trung tâm và thông tin tài khoản ngân hàng nhận học phí (ngân hàng, số tài khoản, tên chủ tài khoản).
 
 ::: warning Tab Gói học phí đã có 4 gói mẫu
-Phần mềm tạo sẵn bốn gói mẫu: **Buổi lẻ**, **Gói Tuần**, **Gói Tháng**, **Gói Quý**. Các gói này không đặt số buổi, nên hệ thống tự coi là 8 buổi mỗi kỳ và lấy đơn giá một buổi bằng học phí chia 8. Ví dụ ở bộ gói mẫu ban đầu, **Buổi lẻ** (200.000đ) ra 25.000đ một buổi, **Gói Quý** (4.320.000đ) ra 540.000đ một buổi. Tên, số tiền và số buổi của các gói mẫu có thể khác ở từng trung tâm (có nơi được dựng sẵn thêm gói như **Gói Tháng x2 môn** và đã ghi số buổi), nên hãy xem thẻ gói thật trong tab trước khi dùng. Nếu chọn nhầm một gói mẫu khi ghi danh, phiếu sẽ sai tiền. **Gói Tháng** và **Gói Quý** còn có sẵn mức giảm giá 5% và 10%. Bạn hãy mở từng gói bấm **Sửa** cho đúng bảng giá, hoặc bấm **Tắt** gói không dùng (xem phần "Sửa, tắt hoặc xoá gói" bên dưới).
+Trung tâm mới có sẵn bốn gói mẫu: **Buổi lẻ** (1 buổi, 200.000đ một buổi), **Gói Tuần** (2 buổi, 200.000đ một buổi), **Gói Tháng** (8 buổi, 190.000đ một buổi) và **Gói Quý** (24 buổi, 180.000đ một buổi). Đây chỉ là giá mẫu, chưa phải bảng giá của trung tâm bạn. Tên, số tiền và số buổi của các gói mẫu có thể khác ở từng trung tâm (có nơi được dựng sẵn thêm gói như **Gói Tháng x2 môn**), nên hãy xem thẻ gói thật trong tab trước khi dùng. Nếu chọn nhầm một gói mẫu khi ghi danh, phiếu sẽ sai tiền. **Gói Tháng** và **Gói Quý** còn có sẵn mức giảm giá 5% và 10%. Bạn hãy mở từng gói bấm **Sửa** cho đúng bảng giá, hoặc bấm **Tắt** gói không dùng (xem phần "Sửa, tắt hoặc xoá gói" bên dưới).
 :::
 
 ## Tạo gói học phí đầu tiên
@@ -69,7 +69,7 @@ Trên mỗi thẻ gói có các nút:
 - **Sửa**: mở lại hộp **Sửa gói học phí** để đổi thông tin, rồi bấm **Cập nhật**. Nếu bạn đổi học phí hoặc số buổi, các ghi danh đang học dùng gói này được cập nhật số buổi và đơn giá theo.
 - **Tạo HĐ**: mở hộp tạo một hoá đơn lẻ theo gói này. Bước này chưa cần dùng, hoá đơn cả tháng xuất ở [Bước 13](13-xuat-phieu-hoc-phi.md).
 - **Bật** hoặc **Tắt**: gói tắt sẽ không còn xuất hiện khi ghi danh mới. Bật công tắc **Hiện gói không hoạt động** ở đầu tab để xem lại các gói đã tắt.
-- Nút thùng rác: xoá gói, có hộp hỏi xác nhận. Chỉ Quản trị viên xoá được. Gói đã có học sinh ghi danh thường không xoá được, khi đó hãy bấm **Tắt** thay vì xoá.
+- Nút thùng rác: xoá gói, có hộp hỏi xác nhận. Nút này chỉ hiện với Quản trị viên. Gói đã có học sinh ghi danh thường không xoá được, khi đó hãy bấm **Tắt** thay vì xoá.
 
 ::: warning Khi bấm Sửa, ô Giảm giá (%) luôn hiện 0
 Hộp **Sửa gói học phí** chưa nạp lại mức giảm giá cũ của gói: ô **Giảm giá (%)** luôn hiện 0 dù thẻ gói đang ghi "Giảm 5%". Bấm **Cập nhật** mà không nhập lại thì gói mất giảm giá. Vì vậy mỗi lần sửa gói, hãy nhập lại mức giảm mong muốn ở ô này (để 0 nếu gói không giảm), rồi đối chiếu thẻ gói sau khi lưu.
@@ -104,11 +104,11 @@ Khi nhập học sinh ở [Bước 8](08-them-hoc-sinh-phu-huynh.md), hãy nhậ
 
 ## Điền mẫu hoá đơn và tài khoản nhận tiền
 
-Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ, số điện thoại và tài khoản nhận tiền từ mẫu này. Tên trung tâm và ngân hàng trên tin nhắc nộp tiền và khối thanh toán trong cổng phụ huynh cũng lấy từ đây. Khi chưa lưu mẫu, phiếu mang thông tin mẫu có sẵn, chưa phải của trung tâm bạn: địa chỉ và số điện thoại lạ, ngân hàng và số tài khoản giả, không có mã QR. Phụ huynh nhận phiếu như vậy sẽ không biết chuyển tiền đi đâu.
+Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ, số điện thoại và tài khoản nhận tiền từ mẫu này. Tên trung tâm và ngân hàng trên tin nhắc nộp tiền và khối thanh toán trong cổng phụ huynh cũng lấy từ đây. Phần thông tin chuyển khoản trong khối **Hướng dẫn thanh toán** ở tab **Thanh toán** của trang **Học phí** cũng lấy ngân hàng, số tài khoản, chủ tài khoản từ mẫu đã lưu này. Khi chưa lưu mẫu lần nào, địa chỉ và số điện thoại lấy theo thông tin công ty của trung tâm nếu đã khai ở [Mẫu phiếu lương](../nhan-su/mau-phieu-luong.md), chưa khai thì để trống. Ngân hàng, số tài khoản và chủ tài khoản đều trống, nên phiếu không có khung **Thông tin thanh toán** và không có mã QR. Phụ huynh nhận phiếu như vậy sẽ không biết chuyển tiền đi đâu, vì vậy hãy điền và lưu thông tin ngân hàng trước khi gửi phiếu.
 
 ::: steps
-1. Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang **Cài đặt mẫu phiếu học phí** hiện ra, chỉ Quản trị viên và Quản lý chi nhánh vào được. Các ô đã điền sẵn thông tin mẫu, bạn nhập đè lên.
-2. Ở tab **Thông tin trung tâm**, điền **Tên trung tâm**, **Số điện thoại**, **Địa chỉ**, **Email** và **Website**. Cả năm ô này đều phải có thông tin thật: ô nào để trống thì phiếu vẫn in thông tin mẫu có sẵn. **Địa chỉ dòng 2** chỉ điền khi cần. Có thể tải thêm **Logo** (dưới 2MB).
+1. Vào **Tài chính → Kế toán → Mẫu hóa đơn**. Trang **Cài đặt mẫu phiếu học phí** hiện ra, chỉ Quản trị viên và Quản lý chi nhánh vào được. Nếu trung tâm chưa lưu lần nào, các ô ngân hàng đang trống, còn địa chỉ và số điện thoại có thể trống, bạn điền vào.
+2. Ở tab **Thông tin trung tâm**, điền **Tên trung tâm**, **Số điện thoại**, **Địa chỉ**, **Email** và **Website**. Kiểm tra cả năm ô này có thông tin thật của trung tâm: ô nào để trống thì phiếu không in phần đó. **Địa chỉ dòng 2** chỉ điền khi cần. Có thể tải thêm **Logo** (dưới 2MB).
 3. Mở tab **Nội dung**. Giữ công tắc **Hiển thị QR Code** bật và chọn **Kiểu QR thanh toán** là **QR động VietQR (khuyến nghị)**. Mỗi phiếu sinh một mã QR riêng đã có sẵn số tiền và nội dung chuyển khoản.
 4. Ở khung hiện ra, chọn **Ngân hàng nhận** trong danh sách.
 5. Bật **Hiển thị thông tin ngân hàng**, rồi điền **Số tài khoản** và **Chủ tài khoản**. Ô **Tên ngân hàng** tự điền theo ngân hàng đã chọn, nên kiểm tra lại.
@@ -119,7 +119,7 @@ Phiếu học phí in, xuất PDF hoặc gửi qua Zalo lấy tên, địa chỉ
 :::
 
 ::: warning Lưu ý
-Nếu ở khung chọn ngân hàng còn dòng cảnh báo cần chọn ngân hàng và điền số tài khoản thì mã QR chưa tạo được. Đừng bấm **Khôi phục** nếu không cần: nút này đưa toàn bộ các ô trên màn hình về thông tin mẫu có sẵn (chỉ lưu thật khi bạn bấm **Lưu cài đặt**).
+Nếu ở khung chọn ngân hàng còn dòng cảnh báo cần chọn ngân hàng và điền số tài khoản thì mã QR chưa tạo được. Đừng bấm **Khôi phục** nếu không cần: nút này đưa toàn bộ các ô trên màn hình về mặc định, xoá trống địa chỉ, số điện thoại, email, website và thông tin ngân hàng bạn đã nhập (chỉ lưu thật khi bạn bấm **Lưu cài đặt**).
 :::
 
 Hai kiểu QR còn lại là **VNPay (tự động)** (cần đăng ký tài khoản VNPay cho trung tâm) và **QR ảnh tĩnh** (một ảnh cố định cho mọi phiếu, phụ huynh tự nhập số tiền). Với **QR động VietQR**, hệ thống không tự ghi nhận tiền vào. Cách ghi nhận thanh toán xem ở [Bước 14](14-gui-phieu-va-thu-tien.md) và [Mẫu hoá đơn](../hoc-phi/mau-hoa-don.md).
@@ -166,7 +166,7 @@ Nên tắt **Tự động tạo hoá đơn mỗi khi ghi danh** trong những ng
 ## Câu hỏi thường gặp
 
 ::: details Quản lý, Lễ tân hay Kế toán có tạo được gói học phí không?
-Không. Chỉ Quản trị viên và Quản lý chi nhánh tạo và sửa được gói. Quản lý và Lễ tân không vào được trang **Học phí**. Kế toán vẫn thấy nút tạo gói nhưng khi bấm lưu hệ thống báo lỗi và không tạo.
+Không. Chỉ Quản trị viên và Quản lý chi nhánh tạo và sửa được gói, hai nút **Tạo gói học phí** và **Thêm gói mới** chỉ hiện với hai vai này. Kế toán xem được các gói và bấm **Tạo HĐ** để lập hoá đơn từ gói, nhưng không thấy nút tạo, sửa hay bật tắt gói. Xoá gói chỉ Quản trị viên làm. Quản lý và Lễ tân không vào được trang **Học phí**.
 :::
 
 ::: details Ô Thời hạn (tháng) có làm tính tiền theo quý hoặc năm không?
@@ -181,8 +181,8 @@ Không bắt buộc. Một gói dùng được cho nhiều lớp. Bạn chọn g
 Khi ghi danh hệ thống không gợi ý và không tự áp ưu đãi anh chị em hoặc học nhiều môn. Bạn vẫn chọn tay được chương trình trong form ghi danh. Lưu danh sách một lần để hệ thống tự làm.
 :::
 
-::: details Phụ huynh nhận phiếu có địa chỉ và số tài khoản lạ?
-Mẫu hoá đơn chưa được lưu. Vào **Tài chính → Kế toán → Mẫu hóa đơn**, điền thông tin thật rồi bấm **Lưu cài đặt**.
+::: details Phiếu gửi phụ huynh thiếu địa chỉ, khung chuyển khoản hoặc mã QR?
+Mẫu hoá đơn chưa được lưu, hoặc đã lưu nhưng chưa nhập đủ. Vào **Tài chính → Kế toán → Mẫu hóa đơn**, điền địa chỉ, số điện thoại, ngân hàng, số tài khoản, chủ tài khoản rồi bấm **Lưu cài đặt**.
 :::
 
 ::: details Học sinh học thêm buổi ngoài gói thì tính sao?

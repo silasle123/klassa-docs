@@ -9,7 +9,7 @@ group: "Lương, chấm công & ca"
 
 # Quản lý lương
 
-Trang này giúp bạn chốt lương mỗi tháng: tạo một **kỳ lương**, để hệ thống tính phiếu cho từng nhân sự, rà soát và sửa nếu cần, duyệt, ghi nhận đã chuyển khoản rồi gửi phiếu cho nhân viên. Trang cần cả hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**: gói Lương giáo viên để chạy kỳ lương, gói Nhân sự (HRIS) cho cấu hình lương và danh sách nhân viên.
+Trang này giúp bạn chốt lương mỗi tháng: tạo một **kỳ lương**, để hệ thống tính phiếu cho từng nhân sự, rà soát và sửa nếu cần, duyệt, ghi nhận đã chuyển khoản rồi gửi phiếu cho nhân viên. Trang cần cả hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**: gói Lương giáo viên để chạy kỳ lương, gói Nhân sự (HRIS) cho cấu hình lương và danh sách nhân viên. Thiếu gói Lương giáo viên thì mục **Quản lý lương** (cùng mục **Mẫu phiếu lương**) không hiện trong menu. Chỉ có gói Lương giáo viên thì hai mục này vẫn hiện, nhưng các tab dùng dữ liệu nhân sự như **Đơn giá dạy (GV/TG)** và **Cấu hình lương NV** chưa dùng được.
 
 Vào **Quản lý HR → Quản lý lương**. Trang có 5 tab: **Tính lương** (bài này), **Đơn giá dạy (GV/TG)** và **Cấu hình lương NV** (xem [Cấu hình lương](cau-hinh-luong.md)), **Tạm ứng** (xem [Tạm ứng lương](tam-ung-luong.md)) và **Lịch sử gửi phiếu**.
 

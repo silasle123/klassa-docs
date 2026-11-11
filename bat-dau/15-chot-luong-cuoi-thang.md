@@ -17,7 +17,7 @@ Sau bước này, kỳ lương của tháng đã ở trạng thái **Đã chi tr
 ## Cần có trước
 
 - Vai của bạn là Quản trị viên hoặc Quản lý chi nhánh. Quản lý, Kế toán và Nhân sự không vào được trang **Quản lý lương**. Quản lý chi nhánh chỉ thấy kỳ lương của chi nhánh mình.
-- Trung tâm có hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên**. Thiếu một trong hai thì trang báo gói chưa được kích hoạt (xem [Bước 1](01-dang-nhap-lan-dau.md)).
+- Trung tâm có hai gói mở rộng **Nhân sự (HRIS)** và **Lương giáo viên** (xem [Bước 1](01-dang-nhap-lan-dau.md)). Thiếu gói **Lương giáo viên** thì mục **Quản lý lương** không hiện trong menu **Quản lý HR**. Chỉ có gói **Lương giáo viên** mà thiếu **Nhân sự (HRIS)** thì mục vẫn hiện, nhưng các phần dùng dữ liệu nhân sự như danh sách nhân viên, **Đơn giá dạy (GV/TG)** và **Cấu hình lương NV** chưa dùng được.
 - Hồ sơ nhân sự, loại hình làm việc, chi nhánh và đơn giá dạy đã khai xong ([Bước 4](04-ho-so-nhan-su-va-cach-tinh-luong.md)). Chưa khai đơn giá thì lương dạy ra 0đ.
 - Giáo viên và trợ giảng đã điểm danh đủ các buổi trong tháng ([Bước 10](10-diem-danh-buoi-dau.md)). Buổi học được tạo ra lúc điểm danh, nên buổi quên điểm danh có thể không có để tính lương.
 - Các đơn dạy thay của tháng đã được duyệt ([Bước 11](11-thay-doi-trong-thang.md)).
@@ -49,7 +49,7 @@ Kỳ lương đi qua bốn trạng thái, mỗi trạng thái có một nút b�
 Tháng đã có kỳ lương thì nút **Tính lương mới** ẩn đi. Nếu cố tạo trùng, hệ thống báo **Đã có bảng lương cho kỳ này rồi**.
 
 ::: warning Chọn cách trừ bảo hiểm cho đúng
-Cách chọn sẵn chỉ trừ người có loại hình **Toàn thời gian** trong hồ sơ ([Bước 4](04-ho-so-nhan-su-va-cach-tinh-luong.md)). Nếu bạn chọn **Tất cả nhân viên (kể cả part-time)** thì mọi người, kể cả bán thời gian, đều bị trừ. Giáo viên, trợ giảng, lễ tân làm cộng tác mà hồ sơ vẫn để **Toàn thời gian** cũng bị trừ oan. Chưa chắc thì hỏi kế toán của trung tâm trước khi bấm. Sau khi tạo kỳ, ô này vẫn đổi được ở thẻ **Kỳ lương** khi kỳ còn **Nháp** hoặc **Chờ duyệt**. Đổi xong hệ thống chỉ lưu lựa chọn, bạn phải bấm **Tính lại cả kỳ** thì số mới áp dụng.
+Cách chọn sẵn chỉ trừ người có loại hình **Toàn thời gian** trong hồ sơ ([Bước 4](04-ho-so-nhan-su-va-cach-tinh-luong.md)). Nếu bạn chọn **Tất cả nhân viên (kể cả part-time)** thì mọi người, kể cả bán thời gian, đều bị trừ. Giáo viên, trợ giảng, lễ tân làm cộng tác mà hồ sơ để **Toàn thời gian** cũng bị trừ oan. Hồ sơ tự sinh mới đã đặt sẵn **Bán thời gian** cho ba vai này, nhưng hồ sơ tạo từ trước có thể vẫn là **Toàn thời gian**, nên hãy rà lại trước khi tạo kỳ. Chưa chắc thì hỏi kế toán của trung tâm trước khi bấm. Sau khi tạo kỳ, ô này vẫn đổi được ở thẻ **Kỳ lương** khi kỳ còn **Nháp** hoặc **Chờ duyệt**. Đổi xong hệ thống chỉ lưu lựa chọn, bạn phải bấm **Tính lại cả kỳ** thì số mới áp dụng.
 :::
 
 Sau khi tính xong:

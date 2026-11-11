@@ -64,21 +64,20 @@ Bấm **Bỏ chọn** nếu muốn chọn lại từ đầu.
 Nếu bạn tin một nguồn đăng ký (ví dụ email của chính trung tâm), có thể đặt quy tắc để hệ thống duyệt hoặc từ chối thay bạn. Bấm **Auto Rules** ở đầu trang, trang **Auto-Approval Rules** mở ra.
 
 ::: steps
-1. Bấm **Tạo quy tắc**.
-   ![Hộp Tạo quy tắc mới với phần Điều kiện](../assets/screenshots/quan-ly-dang-ky-auto-rules.webp)
-2. Nhập **Tên quy tắc** (bắt buộc) và **Mô tả** nếu muốn. Số **Priority** càng cao thì quy tắc được xét trước.
-3. Phần **Điều kiện**: nhập **Email domains** (ví dụ `@example.com`), tích **Roles** và **Campuses** nếu cần. Ô **Roles** chỉ có 6 lựa chọn và hiện bằng mã tiếng Anh: `ADMIN` (Quản trị viên), `BRANCH_MANAGER` (Quản lý chi nhánh), `CONSULTANT` (Lễ tân), `TEACHER` (Giáo viên), `ACCOUNTANT` (Kế toán), `PARENT` (Phụ huynh). Chưa có Quản lý, Trợ giảng, Nhân sự, Học sinh.
-4. Phần **Hành động**: bật **Auto Approve** để tự duyệt hoặc **Auto Reject** để tự từ chối. Có thể chọn thêm **Gán role** (chỉ chọn được `PARENT`, `TEACHER`, `CONSULTANT`) hoặc **Gán campus**.
+1. Bấm **Tạo quy tắc**, hộp **Tạo quy tắc mới** hiện ra.
+2. Nhập **Tên quy tắc** (bắt buộc) và **Mô tả** nếu muốn. Số **Mức ưu tiên** càng cao thì quy tắc được xét trước.
+3. Phần **Điều kiện**: nhập **Tên miền email** (ví dụ `@example.com`), tích **Vai trò** và **Chi nhánh** nếu cần. Ô **Vai trò** liệt kê đủ 10 vai bằng tên tiếng Việt: **Quản trị viên**, **Quản lý**, **Quản lý chi nhánh**, **Lễ tân**, **Giáo viên**, **Trợ giảng**, **Kế toán**, **Nhân sự**, **Phụ huynh**, **Học sinh**.
+4. Phần **Hành động**: bật **Auto Approve** để tự duyệt hoặc **Auto Reject** để tự từ chối. Có thể chọn thêm **Gán vai trò (tùy chọn)** (chỉ chọn được **Phụ huynh**, **Giáo viên**, **Lễ tân**, hoặc **Không gán**) hoặc **Gán campus (tùy chọn)** để chọn chi nhánh.
 5. Giữ công tắc **Kích hoạt** bật, rồi lưu quy tắc.
 6. Bấm **Xử lý tự động** để áp dụng các quy tắc đang bật lên toàn bộ đăng ký đang chờ.
 :::
 
-Mỗi quy tắc có nút sửa, xoá và bật hoặc tắt. Trang hiện số **Tổng quy tắc**, **Đang hoạt động**, **Đã tắt**.
+Mỗi quy tắc có nút sửa, xoá và bật hoặc tắt. Trang hiện số **Tổng quy tắc**, **Đang hoạt động**, **Đã tắt**. Bảng **Danh sách quy tắc** có cột **Điều kiện** (liệt kê email, **Vai trò** và **Chi nhánh** của quy tắc) và cột **Ưu tiên**.
 
 ::: warning Lưu ý
 - Quy tắc **không tự chạy** khi có người đăng ký. Chỉ khi bạn bấm **Xử lý tự động**, hệ thống mới xét các đăng ký đang chờ.
 - Một đăng ký khớp quy tắc khi thoả **bất kỳ** điều kiện nào (đúng đuôi email, hoặc đúng vai, hoặc đúng chi nhánh), không cần thoả tất cả. Hãy đặt điều kiện hẹp.
-- Đừng tick `ADMIN` hay `BRANCH_MANAGER` trong quy tắc **Auto Approve**, vì như vậy người lạ tự đăng ký vai quản trị cũng có thể được duyệt.
+- Đừng tích **Quản trị viên** hay **Quản lý chi nhánh** trong quy tắc **Auto Approve**, vì như vậy người lạ tự đăng ký vai quản trị cũng có thể được duyệt.
 - Tài khoản được duyệt tự động vẫn nhận hồ sơ nhân sự như khi duyệt tay.
 :::
 

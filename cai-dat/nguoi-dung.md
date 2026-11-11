@@ -52,7 +52,7 @@ Bấm nút ba chấm ở cuối dòng để mở menu thao tác.
 | Thao tác | Dùng để làm gì |
 |---|---|
 | **Chỉnh sửa** | Đổi tên, số điện thoại, vai, chi nhánh, trạng thái hoạt động. Email không đổi được. Để trống **Password** nếu không muốn đổi mật khẩu. Bấm **Cập nhật** để lưu. |
-| **Vô hiệu hóa** / **Kích hoạt** | Tắt hoặc bật lại tài khoản, ví dụ khi nhân viên nghỉ việc. Tài khoản tắt không đăng nhập được. |
+| **Vô hiệu hóa** / **Kích hoạt** | Tắt hoặc bật lại tài khoản. Tài khoản tắt không đăng nhập được. Khi nhân viên nghỉ việc, hãy đổi hồ sơ sang **Đã nghỉ việc** ở **Quản lý HR → Nhân viên** thay vì chỉ tắt ở đây: tắt ở đây không gỡ người đó khỏi các lớp đang dạy hoặc trợ giảng. |
 | **Mở khóa tài khoản** | Chỉ hiện khi tài khoản đang bị khoá do nhập sai mật khẩu nhiều lần. Bấm để mở lại ngay, không cần chờ. |
 | **Đặt lại mật khẩu** | Đặt mật khẩu mới cho người quên. |
 | **Xóa** | Chuyển tài khoản vào thùng rác. |

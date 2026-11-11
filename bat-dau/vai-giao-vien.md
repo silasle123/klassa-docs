@@ -126,7 +126,7 @@ Xem thêm [Bài đánh giá](../hoc-tap/bai-danh-gia.md) và [Công bố điểm
 Tạo phiếu sớm thì cột điểm và nhận xét còn trống, điểm công bố sau không tự chạy vào phiếu. Phiếu nháp thì bấm được **Tạo lại từ dữ liệu gốc**, nhưng thao tác này đè lên chỗ bạn đã sửa tay. Phiếu đã chốt thì phụ huynh đã nhận thông báo, và chỉ quản lý mới **Mở lại** được, nên hãy soát kỹ trước khi chốt.
 :::
 
-Nút **Gửi Zalo** cần gói mở rộng **Zalo (Cá nhân + OA)**, và bạn phải liên kết Zalo cá nhân ở **Cổng nhân viên → Zalo của tôi**. Bấm **Gửi Zalo** là chốt luôn các phiếu nháp: phụ huynh thấy phiếu và nhận thông báo ngay cả khi tin Zalo gửi lỗi. Chi tiết ở [Phiếu tháng](../hoc-tap/phieu-thang.md) và [Bước 12: Báo kết quả học tập cho phụ huynh](12-bao-ket-qua-hoc-tap.md).
+Nút **Gửi Zalo** cần gói mở rộng **Zalo (Cá nhân + OA)**, và bạn phải liên kết Zalo cá nhân ở **Cổng nhân viên → Zalo của tôi**. Bấm **Gửi Zalo** là chốt luôn các phiếu nháp (hệ thống hỏi xác nhận trước): phụ huynh thấy phiếu và nhận thông báo trong app ngay cả khi tin Zalo gửi lỗi. Phiếu gửi lỗi vẫn ở trạng thái **Đã chốt**, không ghi là **Đã gửi Zalo**, và dòng lỗi của em đó nói rõ điều này. Chi tiết ở [Phiếu tháng](../hoc-tap/phieu-thang.md) và [Bước 12: Báo kết quả học tập cho phụ huynh](12-bao-ket-qua-hoc-tap.md).
 
 ### Báo cáo, phiếu lương và nghỉ phép
 

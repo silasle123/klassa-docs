@@ -75,8 +75,8 @@ Nếu tin phụ huynh không về, hoặc tin không gửi đi được, việc 
 ## Ai được dùng Zalo cá nhân
 
 - Quản trị viên, Quản lý chi nhánh: cấu hình ở **Tích hợp** và chat ở **Chat Zalo**.
-- Quản lý, Lễ tân: chat ở **Chat Zalo**.
-- Kế toán: chỉ thấy hội thoại gắn nhãn hoá đơn.
+- Quản lý, Lễ tân: chỉ chat ở **Chat Zalo** với nick được **Chia sẻ** cho mình, hoặc nick tự liên kết ở **Zalo của tôi**. Chưa có nick nào thì không thấy mục **Chat Zalo**.
+- Kế toán: phải được **Chia sẻ** ít nhất một nick mới vào được **Chat Zalo**. Khi vào được, Kế toán thấy hội thoại của nick được chia sẻ và các hội thoại gắn nhãn hoá đơn.
 - Giáo viên và Trợ giảng: không vào hộp thư, chỉ liên kết nick riêng ở [Zalo của tôi](../tin-nhan/zalo-cua-toi.md).
 - Nhân sự và Phụ huynh: không dùng.
 

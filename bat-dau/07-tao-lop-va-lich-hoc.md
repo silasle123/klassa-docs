@@ -30,8 +30,6 @@ Mỗi lớp thuộc về một môn học. Môn học và phòng học đã đư
 
 ::: steps
 1. Vào **Lớp học**, bấm **Tạo lớp mới**. Trang **Tạo lớp học mới** mở ra.
-   ![Trang Tạo lớp học mới với khối Thông tin cơ bản, Lịch học và Thông tin học phí](../assets/screenshots/lop-hoc-tao-lop-form.webp)
-
 2. Ở khối **Thông tin cơ bản**, điền:
    - **Tên lớp học** (bắt buộc), ví dụ "Toán 9A1".
    - **Mã lớp học** (bắt buộc), ví dụ "TOAN-9A1". Mã không được trùng với lớp khác.
@@ -40,9 +38,10 @@ Mỗi lớp thuộc về một môn học. Môn học và phòng học đã đư
 3. Chọn **Giáo viên** nếu đã biết. Danh sách chỉ hiện tài khoản vai Giáo viên đang hoạt động (người đã nghỉ việc không hiện). Quản lý chi nhánh và Quản lý chỉ thấy giáo viên cùng chi nhánh với mình. Chưa biết thì giữ **Chưa phân công**.
 4. Điền **Số học sinh tối đa** (mặc định 15, tối đa 50). Khi lớp đủ số này, không ghi danh thêm được.
 5. Chọn **Phòng học** nếu có, hoặc giữ **Chưa phân phòng**.
-6. Ở khối **Lịch học**, chọn **Số buổi học/tuần** (từ 1 đến 5, mặc định 2 buổi/tuần). Hệ thống hiện đúng số dòng **Buổi 1**, **Buổi 2**...
-7. Với mỗi buổi, chọn **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**. Giờ hiển thị theo dạng 24 giờ.
-8. Bấm **Tạo lớp học**.
+6. Chọn **Trạng thái**: **Đang hoạt động** (mặc định) hoặc **Tạm dừng**. Lớp mới mở thì giữ **Đang hoạt động**.
+7. Ở khối **Lịch học**, chọn **Số buổi học/tuần** (từ 1 đến 5, mặc định 2 buổi/tuần). Hệ thống hiện đúng số dòng **Buổi 1**, **Buổi 2**...
+8. Với mỗi buổi, chọn **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**. Giờ hiển thị theo dạng 24 giờ.
+9. Bấm **Tạo lớp học**.
 :::
 
 Khi lưu xong, thông báo **Tạo lớp học thành công!** hiện lên và bạn được đưa về danh sách lớp.
@@ -55,8 +54,8 @@ Trang tạo lớp không có ô chọn cơ sở. Lớp do Quản lý chi nhánh 
 Phải có ít nhất một buổi điền đủ cả **Thứ**, **Giờ bắt đầu** và **Giờ kết thúc**, nếu không hệ thống báo **Vui lòng thiết lập ít nhất 1 lịch học!**. Dòng buổi nào còn thiếu thông tin sẽ bị bỏ qua, nên hãy kiểm tra kỹ từng dòng. Trang tạo lớp không tự kiểm giờ kết thúc phải sau giờ bắt đầu, bạn tự soát.
 :::
 
-::: warning Ba ô chưa có tác dụng khi tạo lớp
-Ô **Mô tả** ở khối **Thông tin cơ bản**, cùng ô **Học phí (VNĐ)** và **Trạng thái** ở khối **Thông tin học phí**, hiện chưa được lưu cùng lớp. Lớp mới luôn ở trạng thái **Đang hoạt động**, còn học phí do **gói học phí** chọn lúc ghi danh quyết định. Bạn không cần điền ba ô này.
+::: tip Học phí không nhập ở trang tạo lớp
+Trang tạo lớp không có ô học phí. Học phí do **gói học phí** chọn lúc ghi danh quyết định, nên bạn không cần nhập gì ở đây. Lớp chọn **Tạm dừng** chưa hiện trong ô chọn lớp khi ghi danh, nhớ đổi lại thành **Đang hoạt động** khi lớp sẵn sàng nhận học sinh.
 :::
 
 ### Nếu phòng bị trùng giờ
@@ -81,7 +80,7 @@ Trang tạo lớp chỉ chọn được giáo viên chính. Trợ giảng và c�
 
 Ở trang này, mọi dòng lịch phải đủ hai mốc giờ (nếu thiếu, hệ thống báo **Vui lòng điền đầy đủ thời gian cho tất cả lịch học**) và giờ bắt đầu phải trước giờ kết thúc (nếu không, hệ thống báo **Giờ bắt đầu phải trước giờ kết thúc**). Số học sinh tối đa ở trang này có tên ô là **Sức chứa** (tối đa 100).
 
-Trạng thái lớp chỉ đổi được ở trang sửa: **Đang hoạt động**, **Tạm dừng** hoặc **Hoàn thành**. Chỉ lớp **Đang hoạt động** mới chọn được khi ghi danh.
+Ở ô **Trạng thái** của trang sửa có thêm lựa chọn **Hoàn thành** (trang tạo lớp chỉ có **Đang hoạt động** và **Tạm dừng**). Chỉ lớp **Đang hoạt động** mới chọn được khi ghi danh.
 
 ### Ngày nhận lớp quyết định tiền lương
 
@@ -140,7 +139,7 @@ Chỉ Quản trị viên, Quản lý chi nhánh và Quản lý có nút này. Va
 :::
 
 ::: details Môn học cần có chưa nằm trong danh sách mặc định?
-Quản trị viên thêm môn mới bằng nút **Thêm môn học**, xem mục **Thêm môn học** ở [Bước 2](02-thiet-lap-trung-tam.md). Không nên bấm **Thêm mặc định** khi danh sách đã có môn, vì dễ sinh môn trùng.
+Quản trị viên thêm môn mới bằng nút **Thêm môn học**, xem mục **Thêm môn học** ở [Bước 2](02-thiet-lap-trung-tam.md). Nút **Thêm mặc định** chỉ thêm các môn chuẩn còn thiếu đúng tên, nên bấm trên danh sách môn có sẵn không sinh môn trùng. Nếu trung tâm đã tự đặt tên khác cho cùng một môn (ví dụ "Toán học"), nút vẫn thêm môn chuẩn bên cạnh, khi đó hãy tắt **Kích hoạt** môn thừa.
 :::
 
 ## Bước tiếp theo

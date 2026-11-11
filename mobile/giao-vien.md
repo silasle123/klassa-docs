@@ -47,5 +47,5 @@ Bản điểm danh chỉ được lưu khi bấm **Lưu điểm danh** và có m
 :::
 
 ::: details Sao tôi không thấy lớp hôm nay?
-Khung **Lớp học hôm nay** chỉ liệt kê lớp có lịch trong ngày của bạn. Kiểm tra lịch lớp và phân công giáo viên.
+Khung **Lớp học hôm nay** chỉ liệt kê lớp đang hoạt động có lịch hôm nay mà bạn đang là giáo viên chính. Lớp bạn làm trợ giảng, lớp **Đã đầy**, lớp đã bàn giao cho giáo viên khác hoặc đã bị gỡ khỏi phân công đều không hiện ở đây. Kiểm tra lịch lớp và phân công giáo viên.
 :::

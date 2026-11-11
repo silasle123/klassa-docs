@@ -24,7 +24,7 @@ Phụ huynh là người đóng tiền, hết tháng họ chỉ hỏi một câu
 - Học sinh đã ghi danh vào lớp ([Bước 9](09-ghi-danh-vao-lop.md)) và lớp đã có buổi điểm danh ([Bước 10](10-diem-danh-buoi-dau.md)). Phiếu tháng lấy số buổi đi học từ điểm danh.
 - **Tài khoản phụ huynh đã được duyệt.** Tài khoản mới tạo ở trạng thái chờ duyệt: phụ huynh chưa đăng nhập được và không nhận thông báo nào (nhận xét, điểm, bài tập, phiếu tháng). Quản trị viên duyệt ở **Quản trị hệ thống → Quản lý Đăng ký**, xem [Bước 8](08-them-hoc-sinh-phu-huynh.md).
 - Trung tâm đã bật gói mở rộng **Cổng Phụ huynh**. Mục **Bài tập về nhà** vẫn hiện trong menu dù chưa có gói, nhưng bấm vào hoặc giao bài sẽ bị báo gói chưa bật. Nhờ Quản trị viên kiểm ở **Cài đặt → Plugin Marketplace**.
-- Muốn gửi phiếu qua Zalo: gói **Zalo (Cá nhân + OA)** và Zalo cá nhân của bạn đã liên kết ở **Zalo của tôi** ([Bước 6](06-ket-noi-zalo-ngan-hang-email.md)).
+- Muốn gửi phiếu qua Zalo: cần gói **Zalo (Cá nhân + OA)**. Giáo viên và Trợ giảng cần liên kết Zalo cá nhân ở **Zalo của tôi** ([Bước 6](06-ket-noi-zalo-ngan-hang-email.md)); các vai quản lý và Lễ tân gửi bằng nick Zalo chung của trung tâm.
 - Giáo viên và trợ giảng chỉ làm được với lớp mình phụ trách. Lễ tân chỉ làm được ở lớp mình được xếp làm trợ giảng, và chỉ với nhận xét buổi và Phiếu tháng. **Bài tập về nhà** và **Đề kiểm tra** không dành cho lễ tân.
 
 ## Trong tháng: ba việc đều đặn
@@ -103,7 +103,7 @@ Bấm lại nhiều lần không sao: học sinh đã có phiếu được bỏ 
 
 ::: steps
 1. Bấm **Nhập nhanh cả lớp**. Bảng hiện ra, mỗi hàng một học sinh.
-2. Soát cột **Chuyên cần**, điểm và **Nhận xét**, sửa chỗ cần sửa. Có thể điền hàng loạt bằng câu mẫu hoặc nhờ AI soạn, nhớ đọc lại nội dung AI viết.
+2. Soát cột **Chuyên cần**, điểm và **Nhận xét**, sửa chỗ cần sửa. Có thể điền hàng loạt bằng câu mẫu hoặc bấm **AI soạn riêng từng em**, nhớ đọc lại nội dung AI viết. Nút AI chỉ hiện khi trung tâm có hai gói mở rộng **Nền tảng AI** và **AI — Gợi ý & Trợ lý Vận hành**. Nút chỉ chạy được khi công tắc **AI viết nhận xét phiếu tháng** đang bật ở **Cài đặt → AI & Tự động → Tính năng AI** (mặc định bật, Quản trị viên chỉnh). Không thấy nút hoặc nút bị khoá thì bạn nhập tay hoặc dùng câu mẫu.
 3. Bấm **Lưu tất cả**. Bảng chưa lưu cho tới khi bạn bấm nút này.
 :::
 
@@ -116,13 +116,13 @@ Nếu sau khi tạo phiếu bạn mới sửa điểm hoặc công bố thêm đ
 ::: steps
 1. Đọc lại từng phiếu nháp.
 2. Bấm **Chốt** ở dòng một em, hoặc tích chọn nhiều em rồi bấm **Chốt phiếu**. **Không chọn ai thì chốt tất cả phiếu nháp** của lớp, nên đọc kỹ trước khi bấm.
-3. Muốn gửi ngay cho phụ huynh, tích chọn các em rồi bấm **Gửi Zalo**, sau đó bấm **Bắt đầu gửi** trong hộp **Gửi phiếu qua Zalo cho phụ huynh**. Không tích ai thì nút gửi cho **tất cả** học sinh đã có phiếu, và phiếu nháp nào trong đó cũng bị chốt luôn.
+3. Muốn gửi ngay cho phụ huynh, tích chọn các em rồi bấm **Gửi Zalo**, sau đó bấm **Bắt đầu gửi** trong hộp **Gửi phiếu qua Zalo cho phụ huynh**. Không tích ai thì nút gửi cho **tất cả** học sinh đã có phiếu, và phiếu nháp nào trong đó cũng bị chốt luôn. Có phiếu nháp thì hệ thống hỏi xác nhận trước khi chốt.
 :::
 
 Hai hậu quả cần nhớ:
 
 - **Chốt xong là phụ huynh được báo.** Phụ huynh có tài khoản đã duyệt nhận thông báo "Phiếu kết quả tháng" ngay lúc chốt và thấy phiếu ở mục **Phiếu tháng** trong cổng phụ huynh.
-- **Bấm Gửi Zalo là chốt luôn.** Phiếu nháp được chốt trước khi gửi ảnh, nên dù tin Zalo gửi lỗi, phiếu vẫn đã chốt và phụ huynh vẫn nhận thông báo. Lý do lỗi hiện ngay ở dòng của em đó (ví dụ bạn chưa liên kết Zalo cá nhân, hoặc không tìm thấy Zalo của phụ huynh vì chưa có số điện thoại hay phụ huynh không dùng Zalo).
+- **Bấm Gửi Zalo là chốt luôn.** Phiếu nháp được chốt trước khi gửi ảnh, nên dù tin Zalo gửi lỗi, phiếu vẫn đã chốt và phụ huynh vẫn thấy phiếu trong app và nhận thông báo. Hộp xác nhận lúc bấm **Bắt đầu gửi** đã nhắc điều này. Khi Zalo lỗi, phiếu ở trạng thái **Đã chốt**, không chuyển thành **Đã gửi Zalo**, và dòng của em đó ghi lý do bằng tiếng Việt kèm lời giải thích rằng phụ huynh vẫn xem được trong app nhưng chưa gửi qua Zalo (ví dụ bạn chưa liên kết Zalo cá nhân, hoặc không tìm thấy Zalo của phụ huynh vì chưa có số điện thoại hay phụ huynh không dùng Zalo). Gửi xong, danh sách phiếu tự tải lại.
 
 ::: warning Lỡ chốt thiếu điểm
 Phiếu đã chốt không sửa trực tiếp được và không bị **Tạo phiếu cả lớp** tạo lại đè. Giáo viên và trợ giảng không tự mở lại được: chỉ Quản lý, Quản lý chi nhánh và Quản trị viên có nút **Mở lại** ở dòng của em. Phụ huynh đã nhận thông báo lúc chốt, nên hãy chốt khi chắc chắn. Nếu phiếu đã gửi Zalo mà phải sửa, nhớ gửi lại bản mới.
@@ -151,7 +151,7 @@ Kiểm tài khoản phụ huynh đã được duyệt chưa. Tài khoản chờ 
 :::
 
 ::: details Gửi Zalo báo lỗi thì có cần chốt lại không?
-Không. Phiếu đã chốt rồi. Sửa nguyên nhân (liên kết Zalo, kiểm số Zalo của phụ huynh) rồi chọn đúng em lỗi bấm **Gửi Zalo** lại, xem [Zalo của tôi](../tin-nhan/zalo-cua-toi.md).
+Không. Phiếu đã chốt rồi và phụ huynh vẫn xem được trong app, chỉ chưa được ghi là **Đã gửi Zalo**. Sửa nguyên nhân (liên kết Zalo, kiểm số Zalo của phụ huynh) rồi chọn đúng em lỗi bấm **Gửi Zalo** lại, xem [Zalo của tôi](../tin-nhan/zalo-cua-toi.md).
 :::
 
 ## Bước tiếp theo

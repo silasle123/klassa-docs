@@ -40,7 +40,7 @@ Lựa chọn tự lưu ngay khi bạn chọn. Cách này áp dụng cho mọi gi
 4. Bấm **Tạo mới**.
 :::
 
-Hai bảng **Giáo viên** và **Trợ giảng** hiển thị riêng. Mỗi dòng có nút sửa và xoá. Hãy để các khoảng sĩ số liền nhau và không chồng lên nhau (ví dụ 1-3, 4-7, 8-14). Thiếu một ô thì hệ thống báo "Vui lòng điền đầy đủ thông tin". Khoảng chồng lên bậc đã có thì bị từ chối, thông báo đỏ hiện bằng tiếng Anh "This range overlaps with an existing rate band". Nếu để hở khoảng giữa hai bậc thì buổi có sĩ số rơi vào chỗ hở không có bậc để tính.
+Hai bảng **Giáo viên** và **Trợ giảng** hiển thị riêng. Mỗi dòng có nút sửa và xoá. Hãy để các khoảng sĩ số liền nhau và không chồng lên nhau (ví dụ 1-3, 4-7, 8-14). Để trống một ô thì trình duyệt nhắc điền ô đó và chưa lưu. Nhập **Mức lương/giờ (VND)** bằng 0 thì hệ thống báo "Vui lòng nhập đủ vai trò, số học sinh tối thiểu, số học sinh tối đa và mức lương mỗi giờ". **Sĩ số từ** lớn hơn **Đến** thì báo "Số học sinh tối thiểu không được lớn hơn số học sinh tối đa". Khi thêm mức mới mà **Sĩ số từ** hoặc **Đến** rơi vào một bậc đã có, hệ thống từ chối, thông báo đỏ hiện "Khoảng sĩ số này bị trùng với một mức lương đã có". Khoảng mới bao trọn một bậc cũ (ví dụ thêm 1-14 khi đã có 4-7) thì không bị chặn, nên hãy tự soát các khoảng trước khi lưu. Nếu để hở khoảng giữa hai bậc thì buổi có sĩ số rơi vào chỗ hở không có bậc để tính.
 
 ### Đơn giá trợ giảng dạy thay giáo viên
 

@@ -51,7 +51,7 @@ Khai gói học phí, ưu đãi, mẫu hoá đơn; nối Zalo, ngân hàng, emai
 | 13 | Xuất phiếu học phí cuối tháng | Quản trị viên, Quản lý chi nhánh, Kế toán | [Xuất phiếu học phí cuối tháng](13-xuat-phieu-hoc-phi.md) |
 | 14 | Gửi phiếu cho phụ huynh và ghi nhận tiền thu | Quản trị viên, Quản lý chi nhánh, Kế toán | [Gửi phiếu cho phụ huynh và thu tiền](14-gui-phieu-va-thu-tien.md) |
 | 15 | Chốt lương cuối tháng | Quản trị viên, Quản lý chi nhánh | [Chốt lương cuối tháng](15-chot-luong-cuoi-thang.md) |
-| 16 | Theo dõi báo cáo và khoá sổ kỳ | Quản trị viên, Quản lý chi nhánh, Kế toán (xem báo cáo; chỉ Quản trị viên khoá sổ kỳ) | [Theo dõi báo cáo và khoá sổ kỳ](16-theo-doi-bao-cao.md) |
+| 16 | Theo dõi báo cáo và khoá sổ kỳ | Quản trị viên, Quản lý chi nhánh, Kế toán (xem báo cáo; khoá sổ kỳ do Quản trị viên và Kế toán làm) | [Theo dõi báo cáo và khoá sổ kỳ](16-theo-doi-bao-cao.md) |
 
 ::: tip Từ tháng thứ hai
 Bước 1 đến 9 chỉ làm một lần khi dựng trung tâm. Từ tháng thứ hai, mỗi tháng bạn chủ yếu lặp lại các bước 10 đến 16 (thêm học sinh mới thì lặp lại bước 8 và 9).
@@ -88,7 +88,7 @@ Bạn không cần làm mọi thứ trong một ngày. Làm trọn bước 1 đ�
 | **Kỳ** | Một tháng tính tiền. Phiếu học phí ghi theo kỳ, ví dụ kỳ tháng 12. |
 | **Kỳ lương** | Bảng lương của một tháng, tạo và chốt ở bước 15. |
 | **Đơn giá dạy** | Mức lương mỗi giờ dạy của giáo viên, trợ giảng theo sĩ số buổi học, khai ở bước 4. |
-| **Khoá sổ kỳ** | Chốt số liệu học phí của một tháng để không ai sửa nhầm, chỉ Quản trị viên làm (bước 16). |
+| **Khoá sổ kỳ** | Chốt số liệu học phí của một tháng để không ai sửa nhầm, Quản trị viên và Kế toán làm được (bước 16). |
 | **Gói mở rộng** | Phần chức năng có phí KLASSA bật thêm cho trung tâm, kiểm tra ở bước 1. |
 
 ## Bạn chỉ phụ trách một việc?

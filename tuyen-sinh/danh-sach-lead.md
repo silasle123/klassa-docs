@@ -80,6 +80,7 @@ Rê chuột lên một ô sẽ hiện chữ giải thích.
 
 - **Đổi trạng thái** hàng loạt bị khoá nếu trong nhóm đã chọn có lead **Đã chuyển đổi**. Chọn **Không chốt** thì phải chọn một lý do chung.
 - **Phân công** và **Đặt lịch học thử** dành cho Quản trị viên, Quản lý chi nhánh, Quản lý.
+- **Đặt lịch học thử** mở hộp **Đặt lịch học thử hàng loạt**, tối đa 100 lead mỗi lần. Lead đã có lịch cùng buổi số và cùng môn thì được bỏ qua. Ô **Gửi thông báo cho tất cả phụ huynh** (kèm số tin nhắn, ưu tiên Zalo, không có Zalo thì gửi SMS) mặc định không tích. Khi tích, mỗi phụ huynh nhận tin qua Zalo trước, nếu chưa liên kết Zalo thì nhận SMS.
 - **Xuất Excel** dành cho Quản trị viên và Quản lý chi nhánh.
 - **Xóa** dành cho vai có quyền xoá lead (Quản trị viên, Quản lý chi nhánh, Quản lý).
 

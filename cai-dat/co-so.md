@@ -52,12 +52,10 @@ Chi nhánh còn nhân viên, lớp hoặc học sinh thì không xoá được, 
 
 ## Xem số liệu từng chi nhánh
 
-Vào **Quản trị hệ thống → Quản lý Chi nhánh** (chỉ Quản trị viên). Trang này có tiêu đề **Campus Management** và giao diện tiếng Anh.
+Vào **Quản trị hệ thống → Quản lý Chi nhánh** (chỉ Quản trị viên). Đây là trang khác với trang **Chi nhánh** ở trên: dùng để so sánh số liệu và chuyển người giữa các chi nhánh, không dùng để thêm hay sửa chi nhánh.
 
-- Phần **Overall Statistics** cộng số liệu toàn trung tâm: **Total Students**, **Active Students**, **Total Classes**, **Revenue**.
-- Tab **Campus Statistics** có một thẻ cho mỗi chi nhánh: số học sinh đang học trên tổng số (kèm số học sinh mới trong tháng), số lớp, doanh thu và khoản còn nợ, tỷ lệ điểm danh trung bình.
-
-![Trang Campus Management, tab Campus Statistics](../assets/screenshots/campus-management-thong-ke.webp)
+- Phần **Thống kê tổng hợp** cộng số liệu toàn trung tâm: **Tổng số học sinh**, **Học sinh đang học**, **Tổng số lớp**, **Doanh thu**.
+- Tab **Thống kê chi nhánh** có một thẻ cho mỗi chi nhánh, ghi tên và **Mã** chi nhánh. Trong thẻ có số **Học sinh** đang học trên tổng số (kèm số học sinh mới trong tháng), số **Lớp học**, **Doanh thu** và khoản còn nợ, tỷ lệ **Chuyên cần** trung bình.
 
 ## Chuyển học sinh hoặc nhân sự sang chi nhánh khác
 
@@ -65,15 +63,15 @@ Dùng khi một học sinh, giáo viên hoặc nhân viên chuyển hẳn sang c
 
 ::: steps
 1. Vào **Quản trị hệ thống → Quản lý Chi nhánh**.
-2. Bấm **Create Transfer**, hộp **Create Transfer Request** hiện ra.
-3. Chọn **Entity Type**: **Student** (học sinh), **Teacher** (giáo viên) hoặc **Staff** (nhân viên).
-4. Nhập **Entity ID** (mã nội bộ của người cần chuyển), chọn **From Campus** và **To Campus**.
-5. Chọn **Transfer Date** và **Effective Date**, nhập **Reason** nếu cần.
-6. Bấm **Create Transfer**.
-7. Mở tab **Transfers**, bấm **Approve** để duyệt (hoặc **Cancel** để huỷ), rồi bấm **Complete** để thực hiện chuyển.
+2. Bấm **Tạo yêu cầu chuyển**, hộp **Tạo yêu cầu chuyển chi nhánh** hiện ra.
+3. Chọn **Đối tượng chuyển**: **Học sinh**, **Giáo viên** hoặc **Nhân viên**.
+4. Nhập **Mã đối tượng (ID)** (mã nội bộ của người cần chuyển), chọn **Từ chi nhánh** và **Đến chi nhánh**.
+5. Chọn **Ngày chuyển** và **Ngày có hiệu lực**, nhập **Lý do** nếu cần.
+6. Bấm **Tạo yêu cầu chuyển**. Hệ thống báo "Đã tạo yêu cầu chuyển chi nhánh".
+7. Mở tab **Yêu cầu chuyển** (con số bên cạnh là số yêu cầu đang **Chờ duyệt**). Ở yêu cầu cần xử lý, bấm **Duyệt** để duyệt (hoặc **Huỷ** để huỷ), rồi bấm **Hoàn tất** để thực hiện chuyển.
 :::
 
-Chỉ Quản trị viên duyệt, huỷ và hoàn tất được yêu cầu. Phải **Approve** trước rồi mới **Complete** được.
+Chỉ Quản trị viên duyệt, huỷ và hoàn tất được yêu cầu. Phải bấm **Duyệt** trước rồi mới bấm **Hoàn tất** được. Yêu cầu đã làm xong hiện nhãn **Đã hoàn tất**.
 
 ## Câu hỏi thường gặp
 

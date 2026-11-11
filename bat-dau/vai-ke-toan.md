@@ -77,7 +77,7 @@ Mỗi kỳ, Kế toán lập phiếu học phí cho học sinh theo gói đã ch
 Bấm **Rà soát phiếu chưa tạo** thay cho bước 2: hộp mở sẵn tháng hiện tại và tự chạy xem trước, danh sách chỉ gồm các em đang học mà chưa có phiếu tháng này. Chưa có gì được tạo cho tới khi bạn bấm **Xác nhận tạo ... hoá đơn**.
 :::
 
-Học sinh dùng gói thu sau theo buổi đã học có nút riêng là **Tạo hoá đơn thu sau**. Lập một phiếu lẻ cho một học sinh thì vào **Tài chính → Học phí** và bấm **Tạo hóa đơn**. Trang này cũng có thẻ **Gói học phí** để bạn xem các gói. Kế toán vẫn thấy nút **Tạo gói học phí** nhưng bấm lưu sẽ bị báo lỗi và không tạo được: tạo và sửa gói là việc của Quản trị viên hoặc Quản lý chi nhánh ở [Bước 5](05-cau-hinh-hoc-phi.md). Xem [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md) và [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
+Học sinh dùng gói thu sau theo buổi đã học có nút riêng là **Tạo hoá đơn thu sau**. Lập một phiếu lẻ cho một học sinh thì vào **Tài chính → Học phí** và bấm **Tạo hóa đơn**. Trang này cũng có tab **Gói học phí** để bạn xem các gói và bấm **Tạo HĐ** trên thẻ gói để lập phiếu từ gói đó. Kế toán không thấy nút **Tạo gói học phí**, **Thêm gói mới**, **Sửa**, **Tắt** hay nút xoá gói: tạo và sửa gói là việc của Quản trị viên hoặc Quản lý chi nhánh ở [Bước 5](05-cau-hinh-hoc-phi.md), còn xoá gói chỉ Quản trị viên làm. Xem [Quản lý học phí](../hoc-phi/quan-ly-hoc-phi.md) và [Tạo hoá đơn](../hoc-phi/tao-hoa-don.md).
 
 ::: info Phiếu có nhãn Đã gộp
 Khi phiếu mới đã cộng đủ nợ của phiếu cũ, phiếu cũ chuyển sang nhãn **Đã gộp** (kể cả phiếu đã gửi phụ huynh). Tiền vẫn thu theo phiếu mới nhất, đừng ghi nhận thanh toán vào phiếu **Đã gộp**. Xoá phiếu mới thì phiếu cũ được mở lại. Xem [Hoá đơn chi tiết](../ke-toan/hoa-don-chi-tiet.md).
@@ -97,14 +97,14 @@ Học sinh tạm nghỉ hoặc nghỉ hẳn thì hệ thống không tự hoàn 
 
 ::: steps
 1. Rà soát lại các phiếu của kỳ ở **Hoá đơn chi tiết**.
-2. Báo Quản trị viên khoá kỳ. Việc này làm ở **Tài chính → Kế toán → Khoá sổ kỳ**: bấm **Khoá kỳ**, chọn tháng, rồi bấm nút **Khoá kỳ** kèm tháng đó. Hiện trang này chỉ Quản trị viên mở được, menu không hiện mục **Khoá sổ kỳ** với Kế toán. Xem [Khoá sổ kỳ](../ke-toan/khoa-so-ky.md) và [Bước 16](16-theo-doi-bao-cao.md).
+2. Khoá kỳ ở **Tài chính → Kế toán → Khoá sổ kỳ**: bấm **Khoá kỳ**, chọn tháng, rồi bấm nút **Khoá kỳ** kèm tháng đó. Kế toán khoá được kỳ, và cũng tạo được hoá đơn thu sau ngay trên trang này. Nếu khoá nhầm thì nhờ Quản trị viên, vì chỉ Quản trị viên có nút **Mở lại**. Xem [Khoá sổ kỳ](../ke-toan/khoa-so-ky.md) và [Bước 16](16-theo-doi-bao-cao.md).
 3. Mở **Tài chính → Báo cáo → Báo cáo doanh thu** để xem tổng doanh thu, số đã thu, số chưa thu và số quá hạn. Xem [Báo cáo doanh thu](../ke-toan/bao-cao-doanh-thu.md).
 :::
 
 Ngoài ra bạn còn xem được **Báo cáo học sinh** và **Báo cáo Credit**. Mục **Chi tiết điểm danh** trong nhóm **Điểm danh** giúp bạn đối chiếu số buổi khi tính credit. Bạn cũng xem được danh sách **Học sinh**, **Phụ huynh** và **Lớp học** để tra cứu, nhưng không sửa được.
 
 ::: warning Lưu ý
-Khoá kỳ là bước chốt số liệu. Hãy rà soát phiếu xong rồi mới bấm.
+Khoá kỳ là bước chốt số liệu và Kế toán không tự mở lại được. Hãy rà soát phiếu xong rồi mới bấm.
 :::
 
 ## Việc của riêng bạn như một nhân viên
@@ -114,7 +114,7 @@ Khoá kỳ là bước chốt số liệu. Hãy rà soát phiếu xong rồi m�
 ## Những việc Kế toán không làm
 
 - Không quản lý lương của nhân viên. Bảng lương và phiếu lương cả trung tâm nằm ở mục **Quản lý HR**, Kế toán không thấy mục này. Kế toán chỉ xem phiếu lương của mình.
-- Không dùng mục **Thu hồi công nợ** (dành cho Quản trị viên và Quản lý chi nhánh). Các mục **Quản lý khuyến mãi**, **Mẫu hóa đơn** và **Khoá sổ kỳ** cũng không hiện trong menu của Kế toán.
+- Không dùng mục **Thu hồi công nợ** (dành cho Quản trị viên và Quản lý chi nhánh). Các mục **Quản lý khuyến mãi** và **Mẫu hóa đơn** cũng không hiện trong menu của Kế toán.
 - Không tạo hay sửa học sinh, lớp, điểm danh.
 
 ## Câu hỏi thường gặp

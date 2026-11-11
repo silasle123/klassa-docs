@@ -44,7 +44,7 @@ Có thể ai đó đã mở Zalo Web bằng cùng số. Bấm **Quét QR** hoặ
 :::
 
 ::: details Tôi có xem được tin phụ huynh nhắn đến không?
-Không. Trang này chỉ để liên kết nick. Hộp thư **Chat Zalo** dành cho Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân và Kế toán. Xem [Chat Zalo với phụ huynh](zalo.md).
+Trang này chỉ để liên kết nick. Tin phụ huynh nhắn đến nằm ở hộp thư **Chat Zalo**: Quản trị viên và Quản lý chi nhánh luôn dùng được. Quản lý và Lễ tân thấy hộp thư với nick mình đã liên kết ở đây hoặc nick được **Chia sẻ** cho mình. Giáo viên và Trợ giảng không dùng hộp thư. Xem [Chat Zalo với phụ huynh](zalo.md).
 :::
 
 ::: details Nick đã liên kết dùng để làm gì?

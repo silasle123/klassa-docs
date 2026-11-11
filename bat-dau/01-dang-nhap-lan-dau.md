@@ -56,7 +56,7 @@ Nếu tài khoản đang dùng mật khẩu mặc định, hệ thống đưa b�
 
 ::: steps
 1. Ở ô **Mật khẩu hiện tại**, gõ mật khẩu KLASSA gửi.
-2. Ở ô **Mật khẩu mới**, gõ mật khẩu bạn muốn dùng. Danh sách "Yêu cầu mật khẩu" bên dưới tick xanh dần khi bạn gõ đủ.
+2. Ở ô **Mật khẩu mới**, gõ mật khẩu bạn muốn dùng. Danh sách "Yêu cầu mật khẩu" bên dưới hiện dấu tích xanh dần khi bạn gõ đủ.
 3. Ở ô **Xác nhận mật khẩu mới**, gõ lại đúng mật khẩu đó. Khi khớp, dòng "Mật khẩu khớp" hiện ra.
 4. Bấm **Đổi mật khẩu**.
 5. Hệ thống báo đã đổi và đưa bạn về màn đăng nhập. Đăng nhập lại bằng mật khẩu mới.
@@ -66,10 +66,11 @@ Mật khẩu mới cần có:
 
 - Ít nhất 8 ký tự.
 - Ít nhất 1 chữ HOA, 1 chữ thường và 1 số.
-- Ít nhất 1 ký tự đặc biệt.
+- Ít nhất 1 ký tự đặc biệt trong: **@ $ ! % * ? &**.
+- Chỉ gồm chữ không dấu, số và các ký tự **@ $ ! % * ? &**.
 
-::: warning Lưu ý
-Dù trang gợi ý nhiều loại ký tự đặc biệt, hệ thống chỉ nhận các ký tự **@ $ ! % * ? &** và không nhận ký tự nào khác ngoài chữ cái, chữ số. Nếu bạn dùng dấu như # hay dấu chấm, bạn sẽ nhận câu: "Mật khẩu mới cần ít nhất 8 ký tự, có chữ HOA, chữ thường, số và ký tự đặc biệt (chỉ dùng @ $ ! % * ? &)". Ví dụ mật khẩu hợp lệ: `Trungtam@2026`.
+::: tip Mẹo
+Các điều kiện trong danh sách "Yêu cầu mật khẩu" đúng bằng những gì hệ thống kiểm. Dòng cuối chuyển sang màu đỏ nếu mật khẩu có ký tự khác, ví dụ dấu # hay dấu chấm, khoảng trắng hoặc chữ có dấu. Khi mọi dòng đều đạt, nút **Đổi mật khẩu** mới bấm được.
 :::
 
 Các lỗi khác trên trang này: "Mật khẩu hiện tại không đúng" và "Mật khẩu mới phải khác mật khẩu hiện tại". Nhập sai mật khẩu hiện tại quá 5 lần trong 15 phút thì hệ thống tạm dừng cho đổi, hãy chờ rồi thử lại.
@@ -125,7 +126,7 @@ Ngoài ra còn các gói tuỳ chọn như **CRM Tuyển sinh + AI**, **Học on
 - **Trung tâm không tự bật hoặc tắt gói được.** Chỉ KLASSA bật. Khi mở một chức năng thuộc gói chưa có, màn hình hiện thẻ **Plugin ... chưa được kích hoạt** hoặc thông báo lỗi "Tính năng ... chưa được kích hoạt cho trung tâm. Liên hệ KLASSA để mua hoặc dùng thử." Đây không phải lỗi hệ thống, chỉ là gói chưa có.
 - Muốn có thêm gói, bấm **Liên hệ KLASSA** trên thẻ gói, hộp **Liên hệ mua** hiện ra, điền thông tin liên hệ rồi bấm **Gửi yêu cầu**.
 - **Gói dùng thử có ngày hết hạn.** Hết hạn là chức năng bị chặn (có thể chậm vài phút mới thấy), thẻ gói về **Chưa bật**. Thẻ gói không ghi ngày hết hạn của từng gói, nên hãy hỏi KLASSA ngày hết hạn của các gói đang dùng thử.
-- Menu **Quản lý HR** luôn hiện với Quản trị viên dù trung tâm chưa có gói nhân sự. Bấm vào mới biết gói chưa bật.
+- Trong menu **Quản lý HR**, mục thuộc gói trung tâm chưa có sẽ không hiện (riêng **Dạy thay** luôn hiện). Chưa có gói **Nhân sự (HRIS)** thì phần lớn mục trong menu này không hiện, đó là do thiếu gói chứ không phải lỗi.
 :::
 
 ::: tip Mẹo

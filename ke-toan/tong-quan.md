@@ -27,7 +27,7 @@ Vào **Tài chính → Kế toán** rồi chọn trang.
 | **Báo cáo credit khả dụng** | Danh sách học sinh còn credit chưa dùng. Xem [Credit khả dụng](credit-kha-dung.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
 | **Rà soát & đồng bộ credit** | Tìm và sửa chỗ sổ credit lệch với hoá đơn. Xem [Rà soát credit](ra-soat-credit.md). | Quản trị viên, Quản lý chi nhánh, Kế toán |
 | **Quản lý khuyến mãi** | Xem và chỉnh ưu đãi giảm giá của học sinh. Xem [Khuyến mãi](khuyen-mai.md). | Quản trị viên |
-| **Khoá sổ kỳ** | Chốt số liệu một tháng. Xem [Khoá sổ kỳ](khoa-so-ky.md). | Quản trị viên |
+| **Khoá sổ kỳ** | Chốt số liệu một tháng và tạo hoá đơn thu sau. Chỉ Quản trị viên mở lại được kỳ đã khoá. Xem [Khoá sổ kỳ](khoa-so-ky.md). | Quản trị viên, Kế toán |
 
 Hai trang cùng nhóm Kế toán nhưng thuộc bài khác: **Mẫu hóa đơn** và **Cấu hình tài chính** (xem [Cài đặt tài chính](../hoc-phi/cai-dat.md)).
 
@@ -45,7 +45,7 @@ Bốn báo cáo cuối dành cho Quản trị viên, Quản lý chi nhánh và K
 
 ## Trang Tổng quan tài chính
 
-Trang có tiêu đề **Tổng quan Tài chính**, mở bằng nút bên dưới (khác với mục **Tổng quan tài chính** trong menu, là trang tổng quan dòng tiền riêng). Trang tóm tắt nhanh: tổng hoá đơn, tổng doanh thu, tổng nợ, credit khả dụng, số liệu của tháng hiện tại và 10 học sinh nợ nhiều nhất. Từ đây bấm vào các ô để đi tới Quản lý công nợ, Hoá đơn, Sổ credit, Khuyến mãi và Khoá sổ kỳ.
+Trang có tiêu đề **Tổng quan Tài chính**, mở bằng nút bên dưới (khác với mục **Tổng quan tài chính** trong menu, là trang tổng quan dòng tiền riêng). Trang tóm tắt nhanh: tổng hoá đơn, tổng doanh thu, tổng nợ, credit khả dụng, số liệu của tháng hiện tại và 10 học sinh nợ nhiều nhất. Từ đây bấm vào các ô để đi tới Quản lý công nợ, Hoá đơn, Sổ credit, Khuyến mãi và Khoá sổ kỳ. Ô **Khoá sổ kỳ** chỉ hiện với Quản trị viên và Kế toán.
 
 ::: steps
 1. Vào **Tài chính → Học phí**.

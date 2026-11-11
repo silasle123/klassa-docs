@@ -28,7 +28,7 @@ Cột cuối cho biết vai đó có vào được khu **Quản lý HR** (hồ s
 | --- | --- | --- |
 | Quản trị viên | Chủ trung tâm hoặc người quản trị toàn hệ thống | Có, toàn bộ |
 | Quản lý chi nhánh | Người phụ trách một cơ sở, kể cả việc nhân sự và lương của cơ sở đó | Có, trong phạm vi chi nhánh của mình |
-| Quản lý | Quản lý vận hành | Chỉ thấy **Dạy thay** và **Giao việc** (lịch ca lễ tân chỉ khi được giao quyền) |
+| Quản lý | Quản lý vận hành | Chỉ thấy **Dạy thay** và **Giao việc** (**Giao việc** cần gói **Giao việc Nội bộ**, lịch ca lễ tân chỉ khi được giao quyền) |
 | Lễ tân | Lễ tân, tư vấn tuyển sinh | Không |
 | Giáo viên | Giáo viên dạy lớp | Không |
 | Trợ giảng | Trợ giảng | Không |
@@ -43,7 +43,7 @@ Vai **Nhân sự** chỉ là nhân viên văn phòng. Người này không thấ
 Ba điểm khác nhau giữa **Quản trị viên** và **Quản lý chi nhánh** mà bạn nên biết ngay:
 
 - Chỉ **Quản trị viên** tạo được tài khoản người dùng và vào được khu **Quản trị hệ thống**.
-- Chỉ **Quản trị viên** khoá sổ kỳ ở Kế toán. **Quản lý chi nhánh** không khoá sổ được.
+- **Quản lý chi nhánh** không khoá sổ kỳ ở Kế toán được. Việc này do **Quản trị viên** và **Kế toán** làm, và chỉ **Quản trị viên** mở lại được kỳ đã khoá.
 - **Quản lý chi nhánh** bị giới hạn trong chi nhánh của mình: chỉ thấy người và dữ liệu thuộc chi nhánh đó. Bảng lương mà họ tạo cũng chỉ gồm nhân viên của chi nhánh đó.
 
 **Quản lý** (không phải Quản lý chi nhánh) không có học phí, tài chính và bảng lương (chỉ xem được phiếu lương của chính mình). Chi tiết từng vai xem [Vai trò người dùng](../tai-khoan/vai-tro-nguoi-dung.md).
@@ -70,7 +70,7 @@ Tài khoản **Học sinh** không tạo ở đây. Muốn cấp tài khoản ch
 Người không thuộc chi nhánh nào sẽ biến mất khỏi ô chọn giáo viên của Quản lý chi nhánh, và không có phiếu lương khi kỳ lương (bảng lương của một tháng, tạo ở [Bước 15](15-chot-luong-cuoi-thang.md)) được tạo theo một chi nhánh. Hệ thống không báo lỗi gì, nên rất dễ sót. Riêng tài khoản Quản lý chi nhánh để **Không gán** thì không mở được bảng lương. Nếu lỡ để trống, mở **Chỉnh sửa** và chọn lại chi nhánh (hồ sơ nhân sự của người đó đổi theo).
 :::
 
-Với các vai nhân viên (kể cả Quản trị viên và Quản lý), hệ thống tự tạo luôn một **hồ sơ nhân sự** cho người đó. Phụ huynh không có hồ sơ nhân sự. Hồ sơ tự tạo này mang giá trị mặc định chưa phản ánh đúng công việc thật: loại hình làm việc là Toàn thời gian, loại hợp đồng là Thử việc, lương cơ bản để trống. Bạn sẽ sửa lại ở [Bước 4: Hồ sơ nhân sự và cách tính lương](04-ho-so-nhan-su-va-cach-tinh-luong.md), nên đừng bỏ qua bước đó.
+Với các vai nhân viên (kể cả Quản trị viên và Quản lý), hệ thống tự tạo luôn một **hồ sơ nhân sự** cho người đó. Phụ huynh không có hồ sơ nhân sự. Hồ sơ tự tạo này mang giá trị mặc định, chưa chắc đúng với công việc thật: loại hình làm việc là Bán thời gian với vai Giáo viên, Trợ giảng và Lễ tân, là Toàn thời gian với các vai còn lại; loại hợp đồng là Thử việc 60 ngày; lương cơ bản để trống. Bạn sẽ rà và sửa lại ở [Bước 4: Hồ sơ nhân sự và cách tính lương](04-ho-so-nhan-su-va-cach-tinh-luong.md), nên đừng bỏ qua bước đó.
 
 ::: warning Lưu ý về mật khẩu
 Tài khoản tạo ở đây không bị bắt đổi mật khẩu khi đăng nhập lần đầu. Hãy gửi mật khẩu cho nhân viên và nhắc họ tự đổi: bấm ảnh đại diện (chữ cái đầu tên), chọn **Hồ sơ cá nhân**, tab **Bảo mật**, mục **Đổi mật khẩu**. Mục **Hồ sơ cá nhân** trong nhóm **Cổng nhân viên** không có phần đổi mật khẩu. Mật khẩu mới ở đó cần ít nhất 6 ký tự.
@@ -138,7 +138,7 @@ Sau khi tạo hoặc duyệt, vào **Quản lý HR → Nhân viên** (màn này 
    ![Hộp Thêm nhân viên mới với ô Mã nhân viên, Họ và tên, Email, Số điện thoại và Chức vụ](../assets/screenshots/hr-nhan-vien-them-nhan-vien-moi.webp)
 
 2. Nhập **Họ và tên** và **Email** đúng như tài khoản đã tạo ở Cách 1. Hệ thống nhận ra email đã có tài khoản và gắn hồ sơ vào tài khoản đó. **Số điện thoại** cũng bắt buộc (9-11 chữ số).
-3. Chọn **Chức vụ**, **Loại hình làm việc**, **Loại hợp đồng**, **Ngày bắt đầu** và **Cơ sở** (chọn đúng chi nhánh của người đó). Ô **Chức vụ** và **Ngày bắt đầu** đang để trống, bạn phải chọn. Ô **Mã nhân viên** được điền sẵn mã kế tiếp khi hộp mở ra, giữ nguyên mã đó (bấm **Tự động** nếu muốn lấy lại). Đừng xoá trống ô này.
+3. Chọn **Chức vụ**, **Loại hình làm việc**, **Loại hợp đồng**, **Ngày bắt đầu** và **Cơ sở** (chọn đúng chi nhánh của người đó). Ô **Chức vụ** và **Ngày bắt đầu** đang để trống, bạn phải chọn. Ô **Mã nhân viên** được điền sẵn một mã gợi ý khi hộp mở ra. Bạn có thể để trống ô này: khi bấm **Thêm nhân viên**, hệ thống tự cấp mã kế tiếp. Nếu hệ thống báo mã đã tồn tại, xoá trống ô **Mã nhân viên** rồi bấm lại.
 4. Bấm **Thêm nhân viên** ở cuối hộp.
 :::
 
@@ -152,7 +152,7 @@ Mỗi tài khoản chỉ có một hồ sơ. Nếu đã có, hệ thống báo t
 
 Ở **Quản Lý Users**, bấm nút ba chấm cuối mỗi dòng. Menu có các lựa chọn **Chỉnh sửa**, **Vô hiệu hóa** (hoặc **Kích hoạt**), **Đặt lại mật khẩu** (mật khẩu mới tối thiểu 6 ký tự), **Mở khóa tài khoản** khi người đó bị khoá do gõ sai nhiều lần, và xoá tài khoản. Ô **Tìm kiếm theo tên, email, phone...** và bộ lọc vai giúp tìm nhanh. Chi tiết xem [Quản lý người dùng](../cai-dat/nguoi-dung.md).
 
-Khi nhân viên thôi việc, đừng chỉ khoá tài khoản. Việc cho nghỉ việc (đổi trạng thái hồ sơ, xử lý các lớp người đó đang dạy) làm ở **Quản lý HR**, xem [Bước 11](11-thay-doi-trong-thang.md).
+Khi nhân viên thôi việc, đừng chỉ bấm **Vô hiệu hóa**: làm vậy người đó vẫn đứng tên ở các lớp. Hãy đổi trạng thái hồ sơ sang **Đã nghỉ việc** ở **Quản lý HR**, hệ thống sẽ khoá tài khoản và tự gỡ người đó khỏi các lớp đang dạy hoặc trợ giảng, xem [Bước 11](11-thay-doi-trong-thang.md).
 
 Có sẵn danh sách nhân viên trong file Excel thì bạn nhập hàng loạt thay vì tạo từng người, xem [Nhập dữ liệu hàng loạt từ Excel](../tai-khoan/nhap-du-lieu-hang-loat.md). Lưu ý: người có email trong file được tạo tài khoản với vai **Giáo viên**, bạn cần vào **Quản Lý Users** đổi vai cho người không phải giáo viên.
 

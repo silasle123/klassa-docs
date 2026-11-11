@@ -21,7 +21,8 @@ Bài này giúp bạn tự gỡ những sự cố hay gặp trước khi nhờ n
 
 1. Kiểm tra vai của bạn. Mỗi vai chỉ thấy các mục dành cho mình, xem [Vai trò người dùng](../tai-khoan/vai-tro-nguoi-dung.md).
 2. Nếu mục thuộc gói mở rộng (Zalo, học online, tuyển sinh có AI...), kiểm tra gói đã bật chưa ở **Plugin Marketplace**, xem [Giới thiệu Plugin Marketplace](../plugin/gioi-thieu.md).
-3. Vẫn không thấy, nhờ Quản trị viên xem lại vai và chi nhánh của tài khoản.
+3. Riêng mục **Chat Zalo**: Quản lý, Lễ tân và Kế toán chỉ thấy khi được chia sẻ ít nhất một nick (Quản lý, Lễ tân tự liên kết nick ở **Zalo của tôi** cũng được). Nhờ Quản trị viên bấm **Chia sẻ** trên nick ở **Tích hợp → Zalo → Zalo cá nhân** rồi tải lại trang.
+4. Vẫn không thấy, nhờ Quản trị viên xem lại vai và chi nhánh của tài khoản.
 
 ## Phụ huynh không thấy phiếu học phí
 

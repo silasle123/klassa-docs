@@ -102,7 +102,7 @@ Duyệt đơn nghỉ phép của giáo viên không tự đổi người đứng
 
 ## Nhắn tin với phụ huynh
 
-Nếu trung tâm dùng gói mở rộng Zalo (Cá nhân + OA), bạn nhắn tin với phụ huynh ở **Chat → Chat Zalo**. Nick Zalo của chính bạn nằm ở **Cổng nhân viên → Zalo của tôi**. Xem thêm [Zalo](../tin-nhan/zalo.md).
+Nếu trung tâm dùng gói mở rộng Zalo (Cá nhân + OA), bạn nhắn tin với phụ huynh ở **Chat → Chat Zalo**, với nick được **Chia sẻ** cho bạn hoặc nick bạn tự liên kết ở **Cổng nhân viên → Zalo của tôi**. Chưa có nick nào thì mục **Chat Zalo** không hiện, nhờ Quản trị viên chia sẻ nick cho bạn. Xem thêm [Zalo](../tin-nhan/zalo.md).
 
 ## Khi bạn kiêm trợ giảng
 

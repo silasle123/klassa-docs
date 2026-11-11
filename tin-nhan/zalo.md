@@ -27,7 +27,7 @@ Trung tâm chọn kênh nào để gửi thông báo tự động cho phụ huyn
 
 ::: steps
 1. Vào **Chat Zalo**.
-2. Nếu trung tâm có nhiều nick Zalo, chọn nick ở ô **Lọc theo nick Zalo** (mặc định **Tất cả nick**).
+2. Nếu bạn được dùng từ hai nick trở lên, chọn nick ở ô **Lọc theo nick Zalo** (mặc định **Tất cả nick**). Danh sách chỉ có những nick bạn được dùng.
 3. Lọc danh sách bên trái bằng **Tất cả**, **Chưa đọc** hoặc **Nhóm**. Gõ vào ô **Tìm tên / SĐT / nội dung…** để tìm nhanh.
 4. Bấm một hội thoại, gõ tin vào ô nhập rồi bấm Enter để gửi (Shift+Enter để xuống dòng).
 :::
@@ -71,8 +71,10 @@ Phần cấu hình nằm ở **Tích hợp → Zalo → Zalo cá nhân** (chỉ 
 
 ## Ai dùng được
 
-- Quản trị viên, Quản lý chi nhánh, Quản lý, Lễ tân thấy mục **Chat Zalo** trong menu.
-- Kế toán cũng thấy mục này nhưng chỉ xem được hội thoại đã gắn nhãn hoá đơn.
+- Quản trị viên và Quản lý chi nhánh luôn thấy mục **Chat Zalo**. Quản lý chi nhánh dùng được nick của chi nhánh mình và mọi nick đang bật chia sẻ.
+- Quản lý và Lễ tân chỉ thấy mục này khi đã được cấp quyền: Quản trị viên hoặc Quản lý chi nhánh bấm **Chia sẻ** trên thẻ nick ở **Tích hợp → Zalo → Zalo cá nhân**, tick **Bật chia sẻ**, tick tên người đó rồi bấm **Lưu cấu hình chia sẻ**. Người tự liên kết nick ở **Zalo của tôi** cũng thấy mục này, nhưng chỉ với nick của mình. Được cấp xong thì tải lại trang để thấy mục.
+- Kế toán chỉ thấy mục này khi đã được **Chia sẻ** ít nhất một nick. Khi vào được, Kế toán xem hội thoại của nick được chia sẻ và các hội thoại đã gắn nhãn hoá đơn.
+- Chưa được cấp mà mở trang thì màn hình báo **Bạn chưa được cấp quyền dùng Chat Zalo**.
 - Giáo viên, Trợ giảng, Nhân sự, Phụ huynh không dùng được hộp thư. Giáo viên và Trợ giảng chỉ liên kết nick của chính mình ở [Zalo của tôi](zalo-cua-toi.md).
 
 ## Câu hỏi thường gặp
